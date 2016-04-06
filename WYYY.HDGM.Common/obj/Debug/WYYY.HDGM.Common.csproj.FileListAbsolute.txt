@@ -1,0 +1,5 @@
+C:\jay\Workstation\Team\Projects\WenZhouHospitalSolution\HospitalDirectorGeneralManagement\WYYY.HDGM.Common\bin\Debug\WYYY.HDGM.Common.dll
+C:\jay\Workstation\Team\Projects\WenZhouHospitalSolution\HospitalDirectorGeneralManagement\WYYY.HDGM.Common\bin\Debug\WYYY.HDGM.Common.pdb
+C:\jay\Workstation\Team\Projects\WenZhouHospitalSolution\HospitalDirectorGeneralManagement\WYYY.HDGM.Common\obj\Debug\WYYY.HDGM.Common.dll
+C:\jay\Workstation\Team\Projects\WenZhouHospitalSolution\HospitalDirectorGeneralManagement\WYYY.HDGM.Common\obj\Debug\WYYY.HDGM.Common.pdb
+C:\jay\Workstation\Team\Projects\WenZhouHospitalSolution\HospitalDirectorGeneralManagement\WYYY.HDGM.Common\obj\Debug\WYYY.HDGM.Common.csprojResolveAssemblyReference.cache

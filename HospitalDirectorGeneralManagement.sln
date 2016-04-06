@@ -1,0 +1,141 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Modeling and Design", "0-Modeling and Design", "{81A1356A-A9F3-4759-B3E3-692852C8ABB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Layers", "1-Layers", "{12D73156-F881-49C8-B7DE-7DFA5F6C0868}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Database", "2-Database", "{9A470A0A-8C44-4B52-8F4D-8104BC8CBCB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CAA04F95-56A8-4F98-9542-33C6455CA25D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 Common Component", "1.1 Common Component", "{0B54BDFA-48BA-40D7-899D-08EFBF30674A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 Data Access Layer", "1.2 Data Access Layer", "{D3B97F08-3F0C-4FC2-A024-854751DEDD36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3 Web Application", "1.3 Web Application", "{E704C6DC-D725-4E62-829F-9393AAB7AEB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WYYY.HDGM.Web", "WYYY.HDGM.Web\WYYY.HDGM.Web.csproj", "{7FBC061F-985F-4242-8497-AD44239A576B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WYYY.HDGM.DataContext", "WYYY.HDGM.DataContext\WYYY.HDGM.DataContext.csproj", "{7AF5CCF3-3146-47EA-BC7A-B6A1A39ED647}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WYYY.HDGM.DataContext.Test", "WYYY.HDGM.DataContext.Test\WYYY.HDGM.DataContext.Test.csproj", "{D9C97512-E009-464F-B308-C16B7017E8A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{79207464-1EA7-4E65-9E0A-AB074DD3C95A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WYYY.HDGM.DataService", "WYYY.HDGM.DataService\WYYY.HDGM.DataService.csproj", "{9849D477-1E2A-4E7A-8BF3-F966F271FAE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.4 Identity Authentication", "1.4 Identity Authentication", "{C8910EC3-8988-4261-A818-04B4ACB61B6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C15C7E43-6AD0-4285-AB1F-076BC2B30AB5}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WYYY.HDGM.Common", "WYYY.HDGM.Common\WYYY.HDGM.Common.csproj", "{2C748BF9-B453-4152-B8AB-B5A0A3D4B1EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WYYY.HDGM.API", "WYYY.HDGM.API\WYYY.HDGM.API.csproj", "{9481F749-C40E-4F27-A676-7D37D26453DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FBC061F-985F-4242-8497-AD44239A576B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FBC061F-985F-4242-8497-AD44239A576B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FBC061F-985F-4242-8497-AD44239A576B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7FBC061F-985F-4242-8497-AD44239A576B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FBC061F-985F-4242-8497-AD44239A576B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FBC061F-985F-4242-8497-AD44239A576B}.Release|x86.ActiveCfg = Release|Any CPU
+		{7AF5CCF3-3146-47EA-BC7A-B6A1A39ED647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF5CCF3-3146-47EA-BC7A-B6A1A39ED647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF5CCF3-3146-47EA-BC7A-B6A1A39ED647}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7AF5CCF3-3146-47EA-BC7A-B6A1A39ED647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF5CCF3-3146-47EA-BC7A-B6A1A39ED647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF5CCF3-3146-47EA-BC7A-B6A1A39ED647}.Release|x86.ActiveCfg = Release|Any CPU
+		{D9C97512-E009-464F-B308-C16B7017E8A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C97512-E009-464F-B308-C16B7017E8A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C97512-E009-464F-B308-C16B7017E8A3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D9C97512-E009-464F-B308-C16B7017E8A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9C97512-E009-464F-B308-C16B7017E8A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C97512-E009-464F-B308-C16B7017E8A3}.Release|x86.ActiveCfg = Release|Any CPU
+		{9849D477-1E2A-4E7A-8BF3-F966F271FAE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9849D477-1E2A-4E7A-8BF3-F966F271FAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9849D477-1E2A-4E7A-8BF3-F966F271FAE8}.Debug|x86.ActiveCfg = Debug|x86
+		{9849D477-1E2A-4E7A-8BF3-F966F271FAE8}.Debug|x86.Build.0 = Debug|x86
+		{9849D477-1E2A-4E7A-8BF3-F966F271FAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9849D477-1E2A-4E7A-8BF3-F966F271FAE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9849D477-1E2A-4E7A-8BF3-F966F271FAE8}.Release|x86.ActiveCfg = Release|Any CPU
+		{2C748BF9-B453-4152-B8AB-B5A0A3D4B1EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C748BF9-B453-4152-B8AB-B5A0A3D4B1EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C748BF9-B453-4152-B8AB-B5A0A3D4B1EC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2C748BF9-B453-4152-B8AB-B5A0A3D4B1EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C748BF9-B453-4152-B8AB-B5A0A3D4B1EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C748BF9-B453-4152-B8AB-B5A0A3D4B1EC}.Release|x86.ActiveCfg = Release|Any CPU
+		{9481F749-C40E-4F27-A676-7D37D26453DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9481F749-C40E-4F27-A676-7D37D26453DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9481F749-C40E-4F27-A676-7D37D26453DD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9481F749-C40E-4F27-A676-7D37D26453DD}.Debug|x86.Build.0 = Debug|Any CPU
+		{9481F749-C40E-4F27-A676-7D37D26453DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9481F749-C40E-4F27-A676-7D37D26453DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9481F749-C40E-4F27-A676-7D37D26453DD}.Release|x86.ActiveCfg = Release|Any CPU
+		{9481F749-C40E-4F27-A676-7D37D26453DD}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0B54BDFA-48BA-40D7-899D-08EFBF30674A} = {12D73156-F881-49C8-B7DE-7DFA5F6C0868}
+		{D3B97F08-3F0C-4FC2-A024-854751DEDD36} = {12D73156-F881-49C8-B7DE-7DFA5F6C0868}
+		{E704C6DC-D725-4E62-829F-9393AAB7AEB2} = {12D73156-F881-49C8-B7DE-7DFA5F6C0868}
+		{7FBC061F-985F-4242-8497-AD44239A576B} = {E704C6DC-D725-4E62-829F-9393AAB7AEB2}
+		{7AF5CCF3-3146-47EA-BC7A-B6A1A39ED647} = {D3B97F08-3F0C-4FC2-A024-854751DEDD36}
+		{D9C97512-E009-464F-B308-C16B7017E8A3} = {79207464-1EA7-4E65-9E0A-AB074DD3C95A}
+		{79207464-1EA7-4E65-9E0A-AB074DD3C95A} = {D3B97F08-3F0C-4FC2-A024-854751DEDD36}
+		{9849D477-1E2A-4E7A-8BF3-F966F271FAE8} = {D3B97F08-3F0C-4FC2-A024-854751DEDD36}
+		{C8910EC3-8988-4261-A818-04B4ACB61B6B} = {12D73156-F881-49C8-B7DE-7DFA5F6C0868}
+		{2C748BF9-B453-4152-B8AB-B5A0A3D4B1EC} = {0B54BDFA-48BA-40D7-899D-08EFBF30674A}
+		{9481F749-C40E-4F27-A676-7D37D26453DD} = {E704C6DC-D725-4E62-829F-9393AAB7AEB2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://liuj.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WYYY.HDGM.Web\\WYYY.HDGM.Web.csproj
+		SccProjectTopLevelParentUniqueName1 = HospitalDirectorGeneralManagement.sln
+		SccProjectName1 = WYYY.HDGM.Web
+		SccLocalPath1 = WYYY.HDGM.Web
+		SccProjectUniqueName2 = WYYY.HDGM.DataContext\\WYYY.HDGM.DataContext.csproj
+		SccProjectTopLevelParentUniqueName2 = HospitalDirectorGeneralManagement.sln
+		SccProjectName2 = WYYY.HDGM.DataContext
+		SccLocalPath2 = WYYY.HDGM.DataContext
+		SccProjectUniqueName3 = WYYY.HDGM.DataContext.Test\\WYYY.HDGM.DataContext.Test.csproj
+		SccProjectTopLevelParentUniqueName3 = HospitalDirectorGeneralManagement.sln
+		SccProjectName3 = WYYY.HDGM.DataContext.Test
+		SccLocalPath3 = WYYY.HDGM.DataContext.Test
+		SccProjectUniqueName4 = WYYY.HDGM.DataService\\WYYY.HDGM.DataService.csproj
+		SccProjectTopLevelParentUniqueName4 = HospitalDirectorGeneralManagement.sln
+		SccProjectName4 = WYYY.HDGM.DataService
+		SccLocalPath4 = WYYY.HDGM.DataService
+		SccProjectUniqueName5 = WYYY.HDGM.Common\\WYYY.HDGM.Common.csproj
+		SccProjectTopLevelParentUniqueName5 = HospitalDirectorGeneralManagement.sln
+		SccProjectName5 = WYYY.HDGM.Common
+		SccLocalPath5 = WYYY.HDGM.Common
+		SccProjectUniqueName6 = WYYY.HDGM.API\\WYYY.HDGM.API.csproj
+		SccProjectTopLevelParentUniqueName6 = HospitalDirectorGeneralManagement.sln
+		SccProjectName6 = WYYY.HDGM.API
+		SccLocalPath6 = WYYY.HDGM.API
+	EndGlobalSection
+EndGlobal

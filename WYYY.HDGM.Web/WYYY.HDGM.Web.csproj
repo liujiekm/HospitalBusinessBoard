@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7FBC061F-985F-4242-8497-AD44239A576B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WYYY.HDGM.Web</RootNamespace>
+    <AssemblyName>WYYY.HDGM.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdmissionDischarge.aspx" />
+    <Content Include="content\bootstrapdatepicker\bootstrap-datetimepicker.css" />
+    <Content Include="content\bootstrapdatepicker\bootstrap-datetimepicker.js" />
+    <Content Include="content\bootstrapdatepicker\bootstrap-datetimepicker.min.css" />
+    <Content Include="content\bootstrapdatepicker\bootstrap-datetimepicker.min.js" />
+    <Content Include="content\bootstrapdatepicker\bootstrap-datetimepicker.zh-CN.js" />
+    <Content Include="content\bootstrap\bootstrap-theme.css" />
+    <Content Include="content\bootstrap\bootstrap-theme.css.map" />
+    <Content Include="content\bootstrap\bootstrap.css" />
+    <Content Include="content\bootstrap\bootstrap.css.map" />
+    <Content Include="content\css\content.css" />
+    <Content Include="content\css\site.css" />
+    <Content Include="content\css\home.css" />
+    <Content Include="content\css\homeOld.css" />
+    <Content Include="content\css\rome.css" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content.Master" />
+    <None Include="content\fonts\glyphicons-halflings-regular2.woff" />
+    <None Include="content\js\jquery\jquery-2.1.3.intellisense.js" />
+    <Content Include="content\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="content\bootstrap\bootstrap.min.css" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="content\img\delt.png" />
+    <Content Include="content\img\deltLeft.png" />
+    <Content Include="content\img\login\BlueBG.png" />
+    <Content Include="content\img\login\loginAfter.png" />
+    <Content Include="content\img\login\loginBefore.png" />
+    <Content Include="content\img\login\LoginNmae_icon.png" />
+    <Content Include="content\img\login\LoginPsw_icon.png" />
+    <Content Include="content\img\login\logo.png" />
+    <Content Include="content\img\newHome\30black.png" />
+    <Content Include="content\img\newHome\30green.png" />
+    <Content Include="content\img\newHome\BG.jpg" />
+    <Content Include="content\img\newHome\BG.png" />
+    <Content Include="content\img\newHome\delta.png" />
+    <Content Include="content\img\newHome\emergency.png" />
+    <Content Include="content\img\newHome\Hname.png" />
+    <Content Include="content\img\newHome\hospitalized.png" />
+    <Content Include="content\img\newHome\into.png" />
+    <Content Include="content\img\newHome\lenovo.png" />
+    <Content Include="content\img\newHome\logo.png" />
+    <Content Include="content\img\newHome\medicalService.png" />
+    <Content Include="content\img\newHome\operation.png" />
+    <Content Include="content\img\newHome\outpatientSignin.png" />
+    <Content Include="content\img\newHome\QUIT.png" />
+    <Content Include="content\img\newHome\VerticalLine.png" />
+    <Content Include="content\img\whiteDelt.png" />
+    <Content Include="content\js\chart\eventRiver.js" />
+    <Content Include="content\js\chart\funnel.js" />
+    <Content Include="content\js\chart\gauge.js" />
+    <Content Include="content\js\chart\treemap.js" />
+    <Content Include="content\js\chart\venn.js" />
+    <Content Include="content\js\html5shiv.min.js" />
+    <Content Include="content\js\jquery.animateNumber.min.js" />
+    <Content Include="content\js\jquery\jquery-2.1.3.js" />
+    <Content Include="content\js\jquery\jquery-2.1.3.min.js" />
+    <Content Include="content\js\jquery\jquery-2.1.3.min.map" />
+    <Content Include="content\js\jquery\jquery.min.js" />
+    <Content Include="content\js\jquery\rome.js" />
+    <Content Include="content\js\knockout-3.3.0.js" />
+    <Content Include="content\js\respond.min.js" />
+    <Content Include="CustomJsLibrary\home\navigation.js" />
+    <Content Include="CustomJsLibrary\home\option.js" />
+    <Content Include="CustomJsLibrary\home\request.js" />
+    <Content Include="CustomJsLibrary\home\timespanChoice.js" />
+    <Content Include="DemoPage.aspx" />
+    <Content Include="EmergencyTreatment.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Home.aspx" />
+    <Content Include="HomeOld.aspx" />
+    <Content Include="Hospitalization.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="MedicalServiceSituation.aspx" />
+    <Content Include="Medicine.aspx" />
+    <Content Include="Operation.aspx" />
+    <Content Include="OperationMain.aspx" />
+    <Content Include="Outpatient.aspx" />
+    <Content Include="OutPatientTreatmentDuration.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Handler\GenericHandler.ashx" />
+    <Content Include="Handler\HomeHandler.ashx" />
+    <Content Include="Handler\MedicalServiceSituation.ashx" />
+    <Content Include="Handler\ZHandler.ashx" />
+    <Content Include="Handler\DoctorRegisterHandler.ashx" />
+    <Content Include="Handler\Medicine.ashx" />
+    <Content Include="Handler\OutPatient.ashx" />
+    <Content Include="Handler\OperationHandler.ashx" />
+    <None Include="Properties\PublishProfiles\HDGM.Web.pubxml" />
+    <Content Include="PatientExperience.aspx" />
+    <Content Include="Site.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\js\chart\bar.js" />
+    <Content Include="content\js\chart\chord.js" />
+    <Content Include="content\js\chart\force.js" />
+    <Content Include="content\js\chart\k.js" />
+    <Content Include="content\js\chart\line.js" />
+    <Content Include="content\js\chart\map.js" />
+    <Content Include="content\js\chart\pie.js" />
+    <Content Include="content\js\chart\radar.js" />
+    <Content Include="content\js\chart\scatter.js" />
+    <Content Include="content\js\echarts-all.js" />
+    <Content Include="content\js\echarts.js" />
+    <Content Include="Demo.aspx" />
+    <Content Include="CustomJsLibrary\RegisterVisitors.js" />
+    <Content Include="content\bootstrap\bootstrap.js" />
+    <Content Include="content\bootstrap\bootstrap.min.js" />
+    <Content Include="content\bootstrap\npm.js" />
+    <Content Include="SignInStatics.aspx" />
+    <Content Include="SpecialInspection.aspx" />
+    <Content Include="SpecialInspectorExperience.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdmissionDischarge.aspx.cs">
+      <DependentUpon>AdmissionDischarge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdmissionDischarge.aspx.designer.cs">
+      <DependentUpon>AdmissionDischarge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="Content.Master.cs">
+      <DependentUpon>Content.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content.Master.designer.cs">
+      <DependentUpon>Content.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Demo.aspx.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demo.aspx.designer.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DemoPage.aspx.cs">
+      <DependentUpon>DemoPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DemoPage.aspx.designer.cs">
+      <DependentUpon>DemoPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmergencyTreatment.aspx.cs">
+      <DependentUpon>EmergencyTreatment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmergencyTreatment.aspx.designer.cs">
+      <DependentUpon>EmergencyTreatment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\DoctorRegisterHandler.ashx.cs">
+      <DependentUpon>DoctorRegisterHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\GenericHandler.ashx.cs">
+      <DependentUpon>GenericHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\HomeHandler.ashx.cs">
+      <DependentUpon>HomeHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\MedicalServiceSituation.ashx.cs">
+      <DependentUpon>MedicalServiceSituation.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Medicine.ashx.cs">
+      <DependentUpon>Medicine.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\OperationHandler.ashx.cs">
+      <DependentUpon>OperationHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\OutPatient.ashx.cs">
+      <DependentUpon>OutPatient.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\ZHandler.ashx.cs">
+      <DependentUpon>ZHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeOld.aspx.cs">
+      <DependentUpon>HomeOld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeOld.aspx.designer.cs">
+      <DependentUpon>HomeOld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hospitalization.aspx.cs">
+      <DependentUpon>Hospitalization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hospitalization.aspx.designer.cs">
+      <DependentUpon>Hospitalization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalServiceSituation.aspx.cs">
+      <DependentUpon>MedicalServiceSituation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalServiceSituation.aspx.designer.cs">
+      <DependentUpon>MedicalServiceSituation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Medicine.aspx.cs">
+      <DependentUpon>Medicine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Medicine.aspx.designer.cs">
+      <DependentUpon>Medicine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation.aspx.cs">
+      <DependentUpon>Operation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation.aspx.designer.cs">
+      <DependentUpon>Operation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OperationMain.aspx.cs">
+      <DependentUpon>OperationMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OperationMain.aspx.designer.cs">
+      <DependentUpon>OperationMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Outpatient.aspx.cs">
+      <DependentUpon>Outpatient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Outpatient.aspx.designer.cs">
+      <DependentUpon>Outpatient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OutPatientTreatmentDuration.aspx.cs">
+      <DependentUpon>OutPatientTreatmentDuration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutPatientTreatmentDuration.aspx.designer.cs">
+      <DependentUpon>OutPatientTreatmentDuration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientExperience.aspx.cs">
+      <DependentUpon>PatientExperience.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientExperience.aspx.designer.cs">
+      <DependentUpon>PatientExperience.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignInStatics.aspx.cs">
+      <DependentUpon>SignInStatics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignInStatics.aspx.designer.cs">
+      <DependentUpon>SignInStatics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialInspection.aspx.cs">
+      <DependentUpon>SpecialInspection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SpecialInspection.aspx.designer.cs">
+      <DependentUpon>SpecialInspection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialInspectorExperience.aspx.cs">
+      <DependentUpon>SpecialInspectorExperience.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SpecialInspectorExperience.aspx.designer.cs">
+      <DependentUpon>SpecialInspectorExperience.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="content\img\hospitalization\" />
+    <Folder Include="content\img\medicine\" />
+    <Folder Include="content\img\outpatient\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WYYY.HDGM.Common\WYYY.HDGM.Common.csproj">
+      <Project>{2c748bf9-b453-4152-b8ab-b5a0a3d4b1ec}</Project>
+      <Name>WYYY.HDGM.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WYYY.HDGM.DataService\WYYY.HDGM.DataService.csproj">
+      <Project>{9849d477-1e2a-4e7a-8bf3-f966f271fae8}</Project>
+      <Name>WYYY.HDGM.DataService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8227</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8227/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。启用“NuGet 程序包还原”可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
