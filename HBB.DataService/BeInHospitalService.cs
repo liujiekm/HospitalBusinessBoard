@@ -20,9 +20,9 @@ using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
 using Microsoft.Practices.Unity.InterceptionExtension;
 using HBB.DataContext;
 using Oracle.DataAccess.Client;
-using HBB.DataService.Model;
+
 using System.Text;
-using HBB.DataService.ServiceInterface;
+using HBB.ServiceInterface;
 
 namespace HBB.DataService {
     public class BeInHospitalService : IBeInHospitalService {

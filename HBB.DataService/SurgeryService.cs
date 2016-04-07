@@ -19,7 +19,8 @@ using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
 using Microsoft.Practices.Unity.InterceptionExtension;
 using HBB.DataContext;
 using Oracle.DataAccess.Client;
-using HBB.DataService.Model;
+using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 using System.Text;
 
 namespace HBB.DataService {

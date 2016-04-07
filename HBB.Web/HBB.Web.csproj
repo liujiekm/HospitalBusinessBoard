@@ -439,6 +439,10 @@
       <Project>{9849d477-1e2a-4e7a-8bf3-f966f271fae8}</Project>
       <Name>HBB.DataService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HBB.ServiceInterface\HBB.ServiceInterface.csproj">
+      <Project>{0b379cfe-8f21-4e34-a3f2-ef6eefea8bb0}</Project>
+      <Name>HBB.ServiceInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

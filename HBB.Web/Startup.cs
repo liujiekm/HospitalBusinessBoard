@@ -6,8 +6,7 @@ using Microsoft.Practices.Unity.Configuration;
 using Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.AspNet.Identity;
-using HBB.DataService;
-using HBB.DataService.ServiceInterface;
+
 
 
 [assembly: OwinStartup(typeof(HBB.Web.Startup))]

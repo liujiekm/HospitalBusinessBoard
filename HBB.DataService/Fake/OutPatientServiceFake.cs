@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HBB.DataService.ServiceInterface;
+using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 
 namespace HBB.DataService.Fake
 {
     public class OutPatientServiceFake :IOutpatientService
     {
-        public List<Model.RegisterVisitors> GetRegisterVisitors(DateTime startDateTime, DateTime endDateTime, params string[] hospitalDistrict)
+        public List<RegisterVisitors> GetRegisterVisitors(DateTime startDateTime, DateTime endDateTime, params string[] hospitalDistrict)
         {
             throw new NotImplementedException();
         }
@@ -19,12 +20,12 @@ namespace HBB.DataService.Fake
             throw new NotImplementedException();
         }
 
-        public List<Model.RegisterVisitors> GetFormattedVisitors(List<Model.RegisterVisitors> source)
+        public List<RegisterVisitors> GetFormattedVisitors(List<RegisterVisitors> source)
         {
             throw new NotImplementedException();
         }
 
-        public List<Model.RegisterVisitors> GetRegisterVisitors(DateTime startDateTime, DateTime endDateTime, string type, params string[] hospitalDistrict)
+        public List<RegisterVisitors> GetRegisterVisitors(DateTime startDateTime, DateTime endDateTime, string type, params string[] hospitalDistrict)
         {
             throw new NotImplementedException();
         }

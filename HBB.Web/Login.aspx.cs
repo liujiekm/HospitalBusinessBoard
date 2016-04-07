@@ -11,7 +11,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Host.SystemWeb;
 using HBB.Common;
-using HBB.DataService.Model;
+
 
 
 namespace HBB.Web
@@ -41,41 +41,41 @@ namespace HBB.Web
 
         protected void SignIn_Click(object sender, EventArgs e)
         {
-            var userStore = new UserStore<IdentityUser>();
-            var userManager = new ApplicationUserManager(userStore);
-            //var user = userManager.Find("name","pwd");
-            //根据账号获得用户
-            var userTask = userManager.FindByNameAsync(this.account.Value);
-            if (userTask.IsCompleted)
-            {
-                var user = userTask.Result;
-                if (user != null)
-                {
-                    //验证密码
-                    Encoding encode = Encoding.UTF8;
-                    String pwdhash = MD5Hashing.CreateMD5(encode, this.pwd.Value.ToUpper());
-                    if (user.PasswordHash.ToUpper().Equals(pwdhash.ToUpper()))
-                    {
-                        var authManager = HttpContext.Current.GetOwinContext().Authentication;
-                        var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+            //var userStore = new UserStore<IdentityUser>();
+            //var userManager = new ApplicationUserManager(userStore);
+            ////var user = userManager.Find("name","pwd");
+            ////根据账号获得用户
+            //var userTask = userManager.FindByNameAsync(this.account.Value);
+            //if (userTask.IsCompleted)
+            //{
+            //    var user = userTask.Result;
+            //    if (user != null)
+            //    {
+            //        //验证密码
+            //        Encoding encode = Encoding.UTF8;
+            //        String pwdhash = MD5Hashing.CreateMD5(encode, this.pwd.Value.ToUpper());
+            //        if (user.PasswordHash.ToUpper().Equals(pwdhash.ToUpper()))
+            //        {
+            //            var authManager = HttpContext.Current.GetOwinContext().Authentication;
+            //            var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
-                        authManager.SignIn(new AuthenticationProperties() { IsPersistent = true }, userIdentity);
-                        Response.Redirect("~/Home.aspx");
-                    }
-                    else //密码不对
-                    {
+            //            authManager.SignIn(new AuthenticationProperties() { IsPersistent = true }, userIdentity);
+            //            Response.Redirect("~/Home.aspx");
+            //        }
+            //        else //密码不对
+            //        {
                         
-                    }
+            //        }
 
 
 
-                }
-                else //账号不存在
-                {
+            //    }
+            //    else //账号不存在
+            //    {
 
-                }
+            //    }
 
-            }
+            //}
             
 
         }

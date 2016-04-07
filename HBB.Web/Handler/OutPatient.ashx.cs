@@ -7,8 +7,8 @@ using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
 using HBB.Common;
 using HBB.DataService;
-using HBB.DataService.ServiceInterface;
-using HBB.DataService.Model;
+using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 namespace HBB.Web.Handler
 {
     /// <summary>

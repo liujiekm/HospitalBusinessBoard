@@ -4,8 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HBB.DataService.Model;
-using HBB.DataService.ServiceInterface;
+using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 
 namespace HBB.DataService.Fake
 {

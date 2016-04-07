@@ -11,8 +11,8 @@ using Microsoft.Practices.EnterpriseLibrary.Common.Utility;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
 using HBB.DataContext;
-using HBB.DataService.Model;
-using HBB.DataService.ServiceInterface;
+using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 using System.Configuration;
 using HBB.DataContext.Configuration;
 

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HBB.DataService.Model;
-using HBB.DataService.ServiceInterface;
+using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 
 namespace HBB.DataService.Fake
 {
@@ -47,7 +47,7 @@ namespace HBB.DataService.Fake
 		//医生签到率
         public List<DoctorRegistration> GetDoctorRegistration()
         {
-            List<DoctorRegistration> list_Registration = new List<Model.DoctorRegistration>();
+            List<DoctorRegistration> list_Registration = new List<DoctorRegistration>();
             Random random = new Random();
             for (int i = 1; i < 8; i++)
             {
@@ -84,7 +84,7 @@ namespace HBB.DataService.Fake
         //手术信息
         public SurgeryInformation GetSurgeryInformation()
         {
-            SurgeryInformation SurgeryInfor = new Model.SurgeryInformation();
+            SurgeryInformation SurgeryInfor = new SurgeryInformation();
             SurgeryInfor.CompletedQuanty = 52;
             SurgeryInfor.DoingQuanty = 23;
             SurgeryInfor.WaitingQuanty = 35;

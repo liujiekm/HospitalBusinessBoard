@@ -4,8 +4,9 @@ using System.Data;
 using System.Data.Common;
 using HBB.DataContext;
 using HBB.DataContext.Configuration;
-using HBB.DataService.Model;
-using HBB.DataService.ServiceInterface;
+
+using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 
 namespace HBB.DataService
 {

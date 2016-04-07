@@ -8,8 +8,8 @@ using Microsoft.Practices.EnterpriseLibrary.Data;
 using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
 using HBB.DataContext;
 using Oracle.DataAccess.Client;
-using HBB.DataService.Model;
-using HBB.DataService.ServiceInterface;
+using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 using System.Data.Common;
 
 namespace HBB.DataService.Fake

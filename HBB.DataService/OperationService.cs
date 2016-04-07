@@ -15,11 +15,12 @@ using System.Threading.Tasks;
 using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using System.Data;
-using HBB.DataService.Model;
+
 using HBB.DataContext;
 using HBB.DataContext.Configuration;
 using System.Data.Common;
-using HBB.DataService.ServiceInterface;
+using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 
 namespace HBB.DataService
 {

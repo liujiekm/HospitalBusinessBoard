@@ -11,8 +11,8 @@ using System.Data;
 using System.Data.Common;
 using System.Linq;
 using HBB.DataContext;
-using HBB.DataService.Model;
-using HBB.DataService.ServiceInterface;
+using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 using HBB.DataContext.Configuration;
 
 
@@ -268,7 +268,7 @@ namespace HBB.DataService
             #endregion
 
             #region 测试
-            List<DoctorRegistration> list_Registration = new List<Model.DoctorRegistration>();
+            List<DoctorRegistration> list_Registration = new List<DoctorRegistration>();
             Random random = new Random();
             for (int i = 7; i > 0; i--)
             {

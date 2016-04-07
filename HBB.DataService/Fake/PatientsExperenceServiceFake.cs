@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HBB.DataService.Model;
-using HBB.DataService.ServiceInterface;
+using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 
 namespace HBB.DataService.Fake
 {
@@ -30,7 +30,7 @@ namespace HBB.DataService.Fake
             throw new NotImplementedException();
         }
 
-        public List<Model.DeptAverageTreatmentTime> GetTreatmentAverageTime(DateTime sTime, DateTime eTime, params string[] districtType)
+        public List<DeptAverageTreatmentTime> GetTreatmentAverageTime(DateTime sTime, DateTime eTime, params string[] districtType)
         {
             var  datts = new List<DeptAverageTreatmentTime>
             {

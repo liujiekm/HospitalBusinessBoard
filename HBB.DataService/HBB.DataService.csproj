@@ -111,45 +111,13 @@
     <Compile Include="HomeInformationService.cs" />
     <Compile Include="MedicalServiceSituationService.cs" />
     <Compile Include="MedicineService.cs" />
-    <Compile Include="Model\DoctorRegistration.cs" />
-    <Compile Include="Model\HomeInformation.cs" />
-    <Compile Include="Model\HomeStatics.cs" />
-    <Compile Include="Model\IncomeByTime.cs" />
-    <Compile Include="Model\IOpation.cs" />
-    <Compile Include="Model\MedicalService.cs" />
-    <Compile Include="Model\OperationSearchRate.cs" />
-    <Compile Include="Model\RateEmptyBed.cs" />
-    <Compile Include="Model\DoctorRegisterRelated.cs" />
-    <Compile Include="Model\SurgeryDetailedInformation.cs" />
-    <Compile Include="Model\SpecialInspection.cs" />
-    <Compile Include="Model\SurgeryInformation.cs" />
-    <Compile Include="Model\WaitingPatientQuanty.cs" />
     <Compile Include="OperationService.cs" />
     <Compile Include="PatientsExperenceService.cs" />
-    <Compile Include="ServiceInterface\IBeInHospitalService.cs" />
-    <Compile Include="ServiceInterface\IDoctorRegisterService.cs" />
-    <Compile Include="ServiceInterface\IGenericService.cs" />
-    <Compile Include="Model\DeptAverageTreatmentTime.cs" />
-    <Compile Include="ServiceInterface\IHomeInformation.cs" />
-    <Compile Include="ServiceInterface\IMedicalServiceSituation.cs" />
-    <Compile Include="ServiceInterface\IMedicineService.cs" />
-    <Compile Include="ServiceInterface\IOperationService.cs" />
-    <Compile Include="ServiceInterface\IOutpatientReportService.cs" />
-    <Compile Include="ServiceInterface\IOutpatientService.cs" />
-    <Compile Include="Model\AverageTreatmentTime.cs" />
-    <Compile Include="Model\HospitalIncome.cs" />
-    <Compile Include="Model\IdentityUser.cs" />
-    <Compile Include="Model\IncomeStatistics.cs" />
-    <Compile Include="Model\IOhospital.cs" />
-    <Compile Include="Model\RegisterVisitors.cs" />
-    <Compile Include="Model\UserStore.cs" />
     <Compile Include="OutpatientReportService.cs" />
     <Compile Include="BeInHospitalService.cs" />
     <Compile Include="OutpatientService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceInterface\IPatientExperenceService.cs" />
     <Compile Include="SurgeryService.cs" />
-    <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HBB.Common\HBB.Common.csproj">
@@ -159,6 +127,10 @@
     <ProjectReference Include="..\HBB.DataContext\HBB.DataContext.csproj">
       <Project>{7af5ccf3-3146-47ea-bc7a-b6a1a39ed647}</Project>
       <Name>HBB.DataContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HBB.ServiceInterface\HBB.ServiceInterface.csproj">
+      <Project>{0b379cfe-8f21-4e34-a3f2-ef6eefea8bb0}</Project>
+      <Name>HBB.ServiceInterface</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

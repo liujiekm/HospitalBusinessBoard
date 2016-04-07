@@ -13,7 +13,8 @@ using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-using HBB.DataService.ServiceInterface;
+
+using HBB.ServiceInterface;
 
 namespace HBB.DataService.Fake {
     class BeInHospitalServiceFake : IBeInHospitalService {
