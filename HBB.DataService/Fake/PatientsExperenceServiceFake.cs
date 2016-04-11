@@ -875,5 +875,10 @@ namespace HBB.DataService.Fake
 
             return result;
         }
+
+        public double[] GetSpecialInspectorIndicatorLastMonth()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

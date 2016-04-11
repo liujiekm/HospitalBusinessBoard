@@ -39,8 +39,8 @@ namespace HBB.API.Controllers
         /// <param name="time"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("RegisterMainInfo/{time}")]
-        public List<DoctorRegisterMainInformaton> GetDoctorRegisterMainInformaton(string time)
+        [Route("RMI/{time?}")]
+        public List<DoctorRegisterMainInformaton> GetDoctorRegisterMainInformaton(string time="")
         {
             return doctorRegisterService.GetDoctorRegisterMainInformaton(time);
         }
@@ -52,7 +52,7 @@ namespace HBB.API.Controllers
         /// <param name="timePoint">时间点</param>
         /// <returns></returns>
         [HttpGet]
-        [Route("RegisterDetailInfo/{timePoint}")]
+        [Route("RDI/{timePoint}")]
         public List<DoctorRegisterDetailInformaton> GetDoctorRegisterDetailInformaton(string timePoint)
         {
             return doctorRegisterService.GetDoctorRegisterDetailInformaton(timePoint);
@@ -65,7 +65,7 @@ namespace HBB.API.Controllers
         /// <param name="timePoint">时间点</param>
         /// <returns></returns>
         [HttpGet]
-        [Route("UnRegisterDetailInfo/{timePoint}")]
+        [Route("URDI/{timePoint}")]
         public List<DoctorRegisterDetailInformaton> GetDoctorUnRegisterDetailInformaton(string timePoint)
         {
             return doctorRegisterService.GetDoctorUnRegisterDetailInformaton(timePoint);
@@ -78,7 +78,7 @@ namespace HBB.API.Controllers
         /// <param name="userID"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("RegisterDetailInfoPast/{timeType}/{userID}")]
+        [Route("RDIP/{timeType}/{userID}")]
         public List<DoctorRegisterDetailInformatonForPast> GetDoctorRegisterDetailInformatonForPast(string timeType, string userID)
         {
             return doctorRegisterService.GetDoctorRegisterDetailInformatonForPast(timeType, userID);

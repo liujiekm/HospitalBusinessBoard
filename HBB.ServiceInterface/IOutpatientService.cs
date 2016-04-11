@@ -20,17 +20,24 @@ namespace HBB.ServiceInterface
 {
     public interface IOutpatientService
     {
+        /// <summary>
+        /// 获取门诊挂号人次数据信息
+        /// </summary>
+        /// <param name="startDateTime">开始时间</param>
+        /// <param name="endDateTime">结束时间</param>
+        /// <param name="hospitalDistrict">院区代码</param>
+        /// <returns></returns>
         List<RegisterVisitors> GetRegisterVisitors(DateTime startDateTime, DateTime endDateTime, params String[] hospitalDistrict);
         String GetVisitorsYesterday();
         List<RegisterVisitors> GetFormattedVisitors(List<RegisterVisitors> source);
 
         /// <summary>
-        /// 获得按天、月分组后的挂号人数数据
+        /// 获得按天、月分组后的挂号人次数据
         /// </summary>
-        /// <param name="startDateTime"></param>
-        /// <param name="endDateTime"></param>
-        /// <param name="type"></param>
-        /// <param name="hospitalDistrict"></param>
+        /// <param name="startDateTime">开始时间</param>
+        /// <param name="endDateTime">结束时间</param>
+        /// <param name="type">小时：h,天：d ,月： m ,年：y </param>
+        /// <param name="hospitalDistrict">院区代码</param>
         /// <returns></returns>
         List<RegisterVisitors> GetRegisterVisitors(DateTime startDateTime, DateTime endDateTime,string type, params String[] hospitalDistrict);
 

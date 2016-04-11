@@ -11,6 +11,7 @@
 // 创建时间：2016/4/6 16:19:01
 // 版本号：  V1.0.0.0
 //===================================================================================
+using HBB.ServiceInterface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,101 @@ using System.Web.Http;
 
 namespace HBB.API.Controllers
 {
-    public class MedicineController : ApiController
+    [RoutePrefix("MED")]
+    public class MedicineController : ApiController//Medicine.ashx
     {
+        private IMedicineService medicineService;
+
+        public MedicineController(IMedicineService medicineService)
+        {
+            this.medicineService = medicineService;
+        }
+
+
+
+
+        /// <summary>
+        /// 获取药库采购总额
+        /// </summary>
+        /// <param name="startTime">统计开始时间</param>
+        /// <param name="endTime">统计结束时间</param>
+        /// <param name="type">统计药品类型，0：全部药品 11：西药 2：中药 22：中成药 23：草药</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("DSTP/{startTime:datetime}/{endTime:datetime}/{type:int}")]
+        public int GetDrugStorehouseTotalPurchases(DateTime startTime, DateTime endTime, int type)
+        {
+            return medicineService.GetDrugStorehouseTotalPurchases(startTime, endTime, type);
+        }
+
+
+
+
+
+        /// <summary>
+        /// 获取上月药库采购总额（全部药品）
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("LMTP")]
+        public int GetLastMonthTotalPurchases()
+        {
+            return medicineService.GetLastMonthTotalPurchases();
+        }
+
+        /// <summary>
+        /// 获取药库月报(上月结余、入库合计、出库合计)
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("MS")]
+        public Dictionary<string, int> GetMonthlyStoreroom()
+        {
+            return medicineService.GetMonthlyStoreroom();
+        }
+
+        /// <summary>
+        /// 获取药房月报（门诊西药房、病区西药房、中药房入库合计）
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("MMR")]
+        public Dictionary<string, int> GetMonthlyMedicineRoom()
+        {
+            return medicineService.GetMonthlyMedicineRoom();
+        }
+
+        /// <summary>
+        /// 获取药品使用量月报（中药、西药）
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("MU")]
+        public Dictionary<string, int> GetMonthlyUsed()
+        {
+            return medicineService.GetMonthlyUsed();
+        }
+
+        /// <summary>
+        /// 获取处方配方(门诊、药房)
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("MD")]
+        public Dictionary<string, int> GetMonthlyDirection()
+        {
+            return medicineService.GetMonthlyDirection();
+        }
+
+        /// <summary>
+        /// 获取药品使用情况（中药西药）统计列表
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("MUL")]
+        public List<Dictionary<string, int>> GetMonthlyUsedList()
+        {
+            return medicineService.GetMonthlyUsedList();
+        }
     }
 }

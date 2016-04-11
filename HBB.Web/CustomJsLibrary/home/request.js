@@ -83,7 +83,8 @@ $(function(){
     function getHomeInfo()
     {
         //主页数字类数据动态显示
-        $.getJSON('Handler/HomeHandler.ashx?type=hi', function (data) {
+        //'Handler/HomeHandler.ashx?type=hi'
+        $.getJSON(baseUrl+'HI/GHI', function (data) {
             //$('#lines').animateNumber({ number: data.OutPatientRegisterYesterday });
 
             $('#morningSignInRate').text(parseInt(data.RegistrationRateAm * 100));
@@ -109,7 +110,9 @@ $(function(){
 
 
     function getPatientExperienceInfo() {
-        $.getJSON('Handler/GenericHandler.ashx?type=pti', function (data) {
+        //'Handler/GenericHandler.ashx?type=pti',
+        $.getJSON(baseUrl + 'UE/OPILM',
+            function (data) {
             //$('#lines').animateNumber({ number: data.OutPatientRegisterYesterday });
 
             $('#appointmentLastMonth').text((data[0] / 60 / 24).toFixed(2));//以天为单位
@@ -151,7 +154,9 @@ $(function(){
             }
         });
         //特检标识性数据
-        $.getJSON('Handler/GenericHandler.ashx?type=psti', function (data) {
+        //'Handler/GenericHandler.ashx?type=psti',
+        $.getJSON(baseUrl + 'UE/SIILM',
+            function (data) {
             //$('#lines').animateNumber({ number: data.OutPatientRegisterYesterday });
 
             $('#xray').text((data[0] / 60 / 24).toFixed(2));//以天时为单位
@@ -228,7 +233,8 @@ $(function(){
                     fontSize: 20
                 }
             });
-            $.getJSON('Handler/HomeHandler.ashx?type=dr', function (items) {
+            //'Handler/HomeHandler.ashx?type=dr
+            $.getJSON(baseUrl + 'OPA/RDR', function (items) {
                 $.each(items, function (index, item) {
 
                     homeLineOption.xAxis[0].data.push(item.RegistrationDate + item.RegistrationTime);
@@ -248,7 +254,8 @@ $(function(){
                     fontSize: 20
                 }
             });
-            $.getJSON('Handler/HomeHandler.ashx?type=wq', function (items) {
+            //'Handler/HomeHandler.ashx?type=wq'
+            $.getJSON(baseUrl + 'OPA/RWQ', function (items) {
                 $.each(items, function (index, item) {
                     homeBarOption.xAxis[0].data.push(item.Specialist);//修改成科室名称
                     homeBarOption.series[0].data.push(item.WaitingQuanty);
@@ -265,7 +272,8 @@ $(function(){
                 }
             });
             //手术
-            $.getJSON('Handler/HomeHandler.ashx?type=si', function (item) {
+            //'Handler/HomeHandler.ashx?type=si'
+            $.getJSON(baseUrl+'OP/RSI', function (item) {
                 //手术
 
                 hoemPieOption.series[0].data = [item.CompletedQuanty];
@@ -284,7 +292,8 @@ $(function(){
                     fontSize: 20
                 }
             });
-            $.getJSON('Handler/HomeHandler.ashx?type=reb', function (items) {
+            //'Handler/HomeHandler.ashx?type=reb'
+            $.getJSON(baseUrl+'HI/REB', function (items) {
                 $.each(items, function (index, item) {
                     homeEmptyBedOption.xAxis[0].data.push(item.Specialist);
 

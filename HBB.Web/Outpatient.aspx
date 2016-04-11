@@ -60,7 +60,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/OutPatient.ashx?type=gh&sd='+sd+'&ed='+ed,
+                        //url: '../handler/OutPatient.ashx?type=gh&sd=' + sd + '&ed=' + ed,
+                        url: baseUrl+'OPA/RV/' + sd + '/' + ed,
                         success: function (data) {
                             var json = eval(data);
                             self.VisitList.removeAll();
@@ -104,7 +105,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/OutPatient.ashx?type=smgh&sd=' + sd + '&ed=' + ed,
+                        //url: '../handler/OutPatient.ashx?type=smgh&sd=' + sd + '&ed=' + ed,
+                        url: baseUrl+'OPA/RNV/' + sd + '/' + ed,
                         success: function (data) {
                             var json = eval(data);
                             self.RealNameList.removeAll();
@@ -156,7 +158,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/OutPatient.ashx?type=ycgh&sd=' + sd + '&ed=' + ed,
+                        //url: '../handler/OutPatient.ashx?type=ycgh&sd=' + sd + '&ed=' + ed,
+                        url: baseUrl+'OPA/IV/' + sd + '/' + ed,
                         success: function (data) {
                             var json = eval(data);
                             self.BeforeMoneyList.removeAll();
@@ -207,7 +210,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/OutPatient.ashx?type=yc&sd=' + sd + '&ed=' + ed,
+                        //url: '../handler/OutPatient.ashx?type=yc&sd=' + sd + '&ed=' + ed,
+                        url: baseUrl+'OPA/IF/' + sd + '/' + ed,
                         success: function (data) {
                             var json = eval(data);
                             self.BeforeMoneyAllList.removeAll();
@@ -244,7 +248,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/OutPatient.ashx?type=mz&sd=' + sd + '&ed=' + ed,
+                        //url: '../handler/OutPatient.ashx?type=mz&sd=' + sd + '&ed=' + ed,
+                        url: baseUrl+'OPA/IA/' + sd + '/' + ed,
                         success: function (data) {
                             var json = eval(data);
                             self.IncomeList.removeAll();
@@ -287,7 +292,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/OutPatient.ashx?type=yy&sd=' + sd + '&ed=' + ed,
+                        //url: '../handler/OutPatient.ashx?type=yy&sd=' + sd + '&ed=' + ed,
+                        url:baseUrl+ 'OPA/FV/' + sd + '/' + ed,
                         success: function (data) {
                             var json = eval(data);
                             self.AppointmentList.removeAll();

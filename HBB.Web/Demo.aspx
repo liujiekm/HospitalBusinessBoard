@@ -302,7 +302,8 @@
                     var hd = $('#slt_hd').val();
 
                     //$.ajaxSettings.async = false;
-                    $.getJSON('Handler/GenericHandler.ashx?type=rv&sd=' + sd + '&ed=' + ed + '&hd=' + hd,
+                    //'Handler/GenericHandler.ashx?type=rv&sd=' + sd + '&ed=' + ed + '&hd=' + hd,
+                    $.getJSON(baseUrl + 'OPA/RVM/' + sd + "/" + ed + "?hospitalDistrict="+hd,
                         function (visitors) {
                             xs.length = 0;
                             content.length = 0;

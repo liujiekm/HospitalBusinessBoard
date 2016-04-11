@@ -138,7 +138,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/MedicalServiceSituation.ashx?type=zk',
+                        //url: '../handler/MedicalServiceSituation.ashx?type=zk',
+                        url: baseUrl+'OPA/SM',
                         success: function (data) {
                             var json = eval(data);
                             self.Specialist.removeAll();
@@ -185,7 +186,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/MedicalServiceSituation.ashx?type=qy',
+                        //url: '../handler/MedicalServiceSituation.ashx?type=qy',
+                        url: baseUrl+'OPA/DM',
                         success: function (data) {
                             var json = eval(data);
                             self.DoctorList.removeAll();
@@ -225,7 +227,8 @@
                     $.ajax({
                         type: "get",
                         contentType: "text/json",
-                        url: '../handler/MedicalServiceSituation.ashx?type=ys&zkid=' + zkid,
+                        //url: '../handler/MedicalServiceSituation.ashx?type=ys&zkid=' + zkid,
+                        url: baseUrl + 'OPA/DSM/' + zkid,
                         dataType:"json",
                         success: function (data) {
                             var json = eval(data);

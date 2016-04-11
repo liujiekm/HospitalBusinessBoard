@@ -182,7 +182,8 @@
                     contentType: "text/json",
                     dataType: "json",
                     async: false,
-                    url: '../handler/DoctorRegisterHandler.ashx?type=drmi',
+                    //url: '../handler/DoctorRegisterHandler.ashx?type=drmi',
+                    url: baseUrl+'DCI/RMI',
                     success: function (data) {
                         var json = eval(data);
                         signInChangeOption.xAxis[0].data.length = 0;
@@ -360,7 +361,8 @@
                     contentType: "text/json",
                     dataType: "json",
                     async: true,
-                    url: '../Handler/DoctorRegisterHandler.ashx?type=drdifp&timetype=week&userid=' + userID,
+                    //url: '../Handler/DoctorRegisterHandler.ashx?type=drdifp&timetype=week&userid=' + userID,
+                    url: baseUrl + 'DCI/RDIP/week/' + userID,
                     success: function (data) {
                         var json = eval(data);
                         //self.SignInHistory.removeAll();
@@ -406,7 +408,8 @@
                     contentType: "text/json",
                     dataType: "json",
                     async: true,
-                    url: '../handler/DoctorRegisterHandler.ashx?type=drdi&timePoint=' + timePoint,
+                    //url: '../handler/DoctorRegisterHandler.ashx?type=drdi&timePoint=' + timePoint,
+                    url: baseUrl+'DCI/RDI/' + timePoint,
                     success: function (data) {
                         var json = eval(data);
                         //var tr = $('#tr_signIned').val();
@@ -433,7 +436,8 @@
                     contentType: "text/json",
                     dataType: "json",
                     async: true,
-                    url: '../handler/DoctorRegisterHandler.ashx?type=durdi&timePoint=' + timePoint,
+                    //url: '../handler/DoctorRegisterHandler.ashx?type=durdi&timePoint=' + timePoint,
+                    url: baseUrl + 'DCI/URDI/' + timePoint,
                     success: function (data) {
                         var json = eval(data);
                         var tableStr = "";

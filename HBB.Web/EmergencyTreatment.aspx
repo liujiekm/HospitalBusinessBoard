@@ -85,7 +85,8 @@
             $('#moduleName').text("急诊");
 
             $.ajax({
-                url: "../handler/zhandler.ashx?type=eme",
+                //url: "../handler/zhandler.ashx?type=eme",
+                url: baseUrl+"IH/ET",
                 success: function (data) {
 
                     var list = eval("(" + data + ")");

@@ -47,18 +47,20 @@ namespace HBB.Web.Handler
             {
                 case RequestType.HomeStatistics:
                     break;
+
+
                 case RequestType.OutPatientVisitors:
                     GetVisitors(context, outPatientService);
                     break;
                 case RequestType.OutPatientGroupVisitors:
                     GetVisitorsByType(context, outPatientService);
                     break;
+
+
                 case RequestType.OutPatientAvgAppointment:
                     GetAvgAppointmentTime(context,patientExperenceService);
                     break;
-              
                 case RequestType.OutPatientTreatmentTime:
-
                     GetOutPatientTreatmentDuration(context, patientExperenceService);
                     break;
                 case RequestType.OutPatientTreatmentTimeDept:
@@ -70,20 +72,24 @@ namespace HBB.Web.Handler
                 case RequestType.OutPatientTreatmentIndicator:
                     GetOutPatientIndicatorLastMonth(context, patientExperenceService);
                     break;
+
+
+
                 case RequestType.SpecialTrementTime:
                     GetSpecialInspections(context, patientExperenceService);
                     break;
                case RequestType.SpecialTrementTimeIndicator:
                     GetSpecilaInspectorIndicatorLastMonth(context, patientExperenceService);
                     break;
-
                case RequestType.SpecialTrementTimeType:
                     GetSpecialInspectionsGroupByGroupByType(context, patientExperenceService);
                     break;
-               
                case RequestType.SpecialTrementTimeYearOnYear:
                     GetSpecialInspectionYearToYear(context, patientExperenceService);
                     break;
+
+
+
                 case RequestType.OperationCount:
                     GetOperationCounts(context, patientExperenceService);
                     break;
@@ -202,7 +208,7 @@ namespace HBB.Web.Handler
         public void GetSpecilaInspectorIndicatorLastMonth(HttpContext context, IPatientsExperenceService service)
         {
             var serializer = new JavaScriptSerializer();
-            context.Response.Write(serializer.Serialize(service.GetSpecilaInspectorIndicatorLastMonth()));
+            context.Response.Write(serializer.Serialize(service.GetSpecialInspectorIndicatorLastMonth()));
         }
         public void GetSpecialAverageTimes(HttpContext context, IPatientsExperenceService service)
         {
@@ -226,7 +232,7 @@ namespace HBB.Web.Handler
             context.Response.Write(serializer.Serialize(service.GetSpecialInspections(startDateTime, endDateTime, hositalDistricts)));
         }
 
-        //指定特检检查类型三年内的同比数据
+        //指定检查类型三年内的同比数据
         public void GetSpecialInspectionYearToYear(HttpContext context, IPatientsExperenceService service)
         {
             var startDateTime = DateTime.Parse(context.Request["sd"].ToString());

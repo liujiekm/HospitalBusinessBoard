@@ -236,7 +236,8 @@
 
                 var sd = '2014-06-11 00:00:00';
                 var ed = '2014-06-18 23:59:59';
-                $.getJSON('Handler/GenericHandler.ashx?type=pet&sd=' + sd + '&ed=' + ed + '&group=d&hd=01,02',
+                //'Handler/GenericHandler.ashx?type=pet&sd=' + sd + '&ed=' + ed + '&group=d&hd=01,02',
+                $.getJSON(baseUrl + 'UE/TAT/' + sd + '/' + ed + '?hospitalDistrict=01,02',
                     function (visitors) {
                         //xs1.length = 0;
                         //content1.length = 0;

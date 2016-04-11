@@ -38,7 +38,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/Medicine.ashx?type=ypsy',
+                        //url: '../handler/Medicine.ashx?type=ypsy',
+                        url: baseUrl + 'MED/MU',
                         success: function (data) {
                             var json = eval(data);
                             self.YsMedicineUsed(json);                         
@@ -62,7 +63,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/Medicine.ashx?type=ypsyb',
+                        //url: '../handler/Medicine.ashx?type=ypsyb',
+                        url: baseUrl+'MED/MUL',
                         success: function (data) {
                             var json = eval(data);
 
@@ -98,7 +100,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/Medicine.ashx?type=ykyb',
+                        //url: '../handler/Medicine.ashx?type=ykyb',
+                        url: baseUrl + 'MED/MS',
                         success: function (data) {
                             var json = eval(data);
                             self.StoreRoomList(json);
@@ -115,7 +118,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/Medicine.ashx?type=ykcg',
+                        //url: '../handler/Medicine.ashx?type=ykcg',
+                        url: baseUrl+'MED/LMTP',
                         success: function (data) {
                             var json = eval(data);
                             self.LastMonthPurchases(json);
@@ -131,7 +135,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/Medicine.ashx?type=yfyb',
+                        //url: '../handler/Medicine.ashx?type=yfyb',
+                        url: baseUrl+'MED/MMR',
                         success: function (data) {
                             var json = eval(data);
                             self.MedicineRoomList(json);
@@ -147,7 +152,8 @@
                         type: "get",
                         contentType: "text/json",
                         dataType: "json",
-                        url: '../handler/Medicine.ashx?type=cfpf',
+                        //url: '../handler/Medicine.ashx?type=cfpf',
+                        url: baseUrl+'MED/MD',
                         success: function (data) {
                             var json = eval(data);
                             self.MonthlyDirection(json);

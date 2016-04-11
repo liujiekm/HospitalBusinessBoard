@@ -172,8 +172,9 @@
                             contentType: "text/json",
                             dataType: "json",
                             async: false,
-                            //url: '../Handler/HomeHandler.ashx?type=ordi',
-                            url: "../Handler/OperationHandler.ashx?type=ordi&oprationState=" + oprationState + "&searchType=" + searchType + "&area=" + hospitalValue + "&operationType=" + operationType + "&sDate=" + sDate + "&eDate=" + eDate + "&content=" + searchContent,
+                            //url: "../Handler/OperationHandler.ashx?type=ordi&oprationState=" + oprationState + "&searchType=" + searchType + "&area=" + hospitalValue + "&operationType=" + operationType + "&sDate=" + sDate + "&eDate=" + eDate + "&content=" + searchContent,
+                            url: baseUrl+"OP/SDI?oprationState=" + oprationState + "&searchType=" + searchType + "&area=" + hospitalValue + "&operationType=" + operationType + "&sDate=" + sDate + "&eDate=" + eDate + "&content=" + searchContent,
+
                             success: function (data) {
                                 var json = eval(data);
                                 var tableStr = "";

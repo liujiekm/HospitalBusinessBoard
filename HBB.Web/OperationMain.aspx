@@ -246,8 +246,9 @@
                         contentType: "text/json",
                         dataType: "json",
                         async: false,
-                        //url: '../Handler/HomeHandler.ashx?type=ordi',
-                        url: "../Handler/OperationHandler.ashx?type=oq",
+                        
+                        //url: "../Handler/OperationHandler.ashx?type=oq",
+                        url: baseUrl+"OP/OQ",
                         success: function(data) {
                             var json = eval(data);
                            // alert("sdf");
@@ -439,7 +440,9 @@
                                 });
                                 if (searchRateType == "") { return;}
                                 var searchContent = $("#searchContent").val();
-                                var url = "../handler/OperationHandler.ashx?type=osr&searchContent=" + searchContent + "&searchRateType=" + searchRateType;
+                                //var url = "../handler/OperationHandler.ashx?type=osr&searchContent=" + searchContent + "&searchRateType=" + searchRateType;
+                                var url = baseUrl+"OP/OSR/" + searchContent + "/" + searchRateType;
+
                                 $.ajax({
                                     //url: options.ajax_url,
                                     url:url,

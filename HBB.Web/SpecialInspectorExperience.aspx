@@ -521,7 +521,9 @@
                             fontSize: 20
                         }
                     });
-                    $.getJSON('Handler/GenericHandler.ashx?type=psty&sd=' + $('#sDate').val() + '&ed=' + $('#eDate').val() + '&hd=' + $('#hospitalDistrict').val() + '&si=' + item.InspectionType, function (data) {
+                    //'Handler/GenericHandler.ashx?type=psty&sd=' + $('#sDate').val() + '&ed=' + $('#eDate').val() + '&hd=' + $('#hospitalDistrict').val() + '&si=' + item.InspectionType,
+                    $.getJSON(baseUrl + 'UE/SIYTY/' + $('#sDate').val() + '/' + $('#eDate').val() +'/' + item.InspectionType+'?hospitalDistrict=' + $('#hospitalDistrict').val() ,
+                        function (data) {
                         optionData = data;
                         $.each(data, function (index, items) {
                             option.xAxis[0].data.length = 0;
@@ -547,8 +549,9 @@
                             }
                         });
                         deptOption.title.text = $('#sDeptDate').val() + '~' + $('#eDeptDate').val() + ' 特检' + $('#ulTimeType>li.active>a').first().text() + '对比统计';
-
-                        $.getJSON('Handler/GenericHandler.ashx?type=pstt&sd=' + $('#sDeptDate').val() + '&ed=' + $('#eDeptDate').val() + '&hd=' + $('#hospitalDistrict').val() + '&si=' + $('#specialistIds').val(), function (data) {
+                        //'Handler/GenericHandler.ashx?type=pstt&sd=' + $('#sDeptDate').val() + '&ed=' + $('#eDeptDate').val() + '&hd=' + $('#hospitalDistrict').val() + '&si=' + $('#specialistIds').val(),
+                        $.getJSON(baseUrl + 'UE/SIGBT/' + $('#sDeptDate').val() + '/' + $('#eDeptDate').val() + '?hospitalDistrict=' + $('#hospitalDistrict').val() + '&inspactTypes=' + $('#specialistIds').val(),
+                            function (data) {
                             optionData = data;
                             $.each(optionData, function (index, items) {
                                 deptOption.xAxis[0].data.length = 0;
@@ -567,7 +570,10 @@
                                 fontSize: 20
                             }
                         });
-                        $.getJSON('Handler/GenericHandler.ashx?type=psty&sd=' + $('#sDeptDate').val() + '&ed=' + $('#eDeptDate').val() + '&hd=' + $('#hospitalDistrict').val() + '&si=' + $('#specialistName').val(), function (data) {
+                        //'Handler/GenericHandler.ashx?type=psty&sd=' + $('#sDeptDate').val() + '&ed=' + $('#eDeptDate').val() + '&hd=' + $('#hospitalDistrict').val() + '&si=' + $('#specialistName').val(),
+                        $.getJSON(baseUrl + 'UE/SIYTY/' + $('#sDeptDate').val() + '/' + $('#eDeptDate').val() + '/' + $('#specialistName').val() + '?hospitalDistrict=' + $('#hospitalDistrict').val(),
+
+                            function (data) {
                             optionData = data;
                             $.each(optionData, function (index, items) {
                                 option.xAxis[0].data.length = 0;
@@ -650,7 +656,9 @@
                     }
                 });
                 //获得指定特检类型指定时间区间内的对比数据
-                $.getJSON('Handler/GenericHandler.ashx?type=pstt&sd=' + $('#sDate').val() + '&ed=' + $('#eDate').val() + '&hd=' + $('#hospitalDistrict').val() + '&si=' + sids, function (data) {
+                //'Handler/GenericHandler.ashx?type=pstt&sd=' + $('#sDate').val() + '&ed=' + $('#eDate').val() + '&hd=' + $('#hospitalDistrict').val() + '&si=' + sids,
+                $.getJSON(baseUrl + 'UE/SIGBT/' + $('#sDate').val() + '/' + $('#eDate').val() + '?hospitalDistrict=' + $('#hospitalDistrict').val() + '&inspactTypes=' + sids,
+                    function (data) {
                     optionData = data;
                     //取得科室名称
                     $.each(data, function (index, items) {
@@ -695,7 +703,8 @@
             //查询当前部门选择时间内的三年内的同比（选择时间区间查询）
             $('#btnSearch').click(function () {
                 var specialTreatmentTime;
-                $.getJSON('Handler/GenericHandler.ashx?type=pst&sd=' + $('#sDate').val() + '&ed=' + $('#eDate').val() + '&hd=' + $('#hospitalDistrict').val(),
+                //'Handler/GenericHandler.ashx?type=pst&sd=' + $('#sDate').val() + '&ed=' + $('#eDate').val() + '&hd=' + $('#hospitalDistrict').val(),
+                $.getJSON(baseUrl + 'UE/SI/' + $('#sDate').val() + '/' + $('#eDate').val() + '?hospitalDistrict=' + $('#hospitalDistrict').val(),
                           function (data) {
                               viewModelInstance.specialTreatmentTime(data);
                           });

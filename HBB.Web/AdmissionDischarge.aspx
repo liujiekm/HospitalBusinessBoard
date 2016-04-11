@@ -239,7 +239,8 @@
         $(function () {
 
                 $.ajax({
-                    url: "../handler/zhandler.ashx?type=Adm",
+                    //url: "../handler/zhandler.ashx?type=Adm",
+                    url:baseUrl+"IH/ADI",
                     dataType: "json",
                     success: function (data) {
 

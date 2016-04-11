@@ -48,7 +48,8 @@ namespace HBB.API.Controllers
 
         /// <summary>
         /// 获取今日入院人数、今日出院人数、昨日在院人数
-        /// 各科室出入院人数情况、额定空床位
+        /// 各科室出入院人数情况、额定空床位、加床空床位
+        /// 虚拟空床位、各专科空床情况
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -60,7 +61,8 @@ namespace HBB.API.Controllers
 
 
         /// <summary>
-        /// 
+        /// 获取今日出院人数、昨日入院人数、上一周入院人数统计数、上一周出院人数统计数
+        /// 昨日收入、今日目前收入、近一周收入
         /// </summary>
         /// <returns></returns>
         [HttpGet]

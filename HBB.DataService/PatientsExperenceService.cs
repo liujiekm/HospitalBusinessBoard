@@ -540,7 +540,7 @@ namespace HBB.DataService
         /// 获得上月特检部门平均预约时长（X光，CT，MRI，B超，内窥镜）
         /// </summary>
         /// <returns></returns>
-        public double[] GetSpecilaInspectorIndicatorLastMonth()
+        public double[] GetSpecialInspectorIndicatorLastMonth()
         {
             var start = DateTime.Now.AddMonths(-1).AddDays(1 - DateTime.Now.Day);
             var end = DateTime.Now.AddDays(-DateTime.Now.Day);

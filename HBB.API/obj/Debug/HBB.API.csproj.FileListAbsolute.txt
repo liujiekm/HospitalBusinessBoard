@@ -244,3 +244,4 @@ C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.API\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.API\bin\HBB.ServiceInterface.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.API\bin\HBB.ServiceInterface.pdb
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.API\bin\Elmah.dll

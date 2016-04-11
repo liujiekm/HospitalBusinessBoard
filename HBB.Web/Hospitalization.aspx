@@ -310,7 +310,8 @@
         $(function () {
             $('#hospitalization').addClass('active');
             $.ajax({
-                url: "../handler/zhandler.ashx?type=hos",
+                //url: "../handler/zhandler.ashx?type=hos",
+                url: baseUrl+"IH/HI",
                 dataType: "json",
                 success: function (data) {
 

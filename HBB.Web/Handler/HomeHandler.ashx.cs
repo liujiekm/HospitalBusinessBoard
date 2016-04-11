@@ -48,15 +48,21 @@ namespace HBB.Web.Handler
                 case HomeRequestType.HomeInformation://首页信息
                     input = serializer.Serialize(homeInformation.GetHomeInformation());
                     break;
+
+
                 case HomeRequestType.DoctorRegistration://医生签到率
                     input = serializer.Serialize(homeInformation.GetDoctorRegistration());
                     break;
                 case HomeRequestType.WaitingQuanty://获取候诊人数
                     input = serializer.Serialize(homeInformation.GetWaitingQuanty());
                     break;
+
+
                 case HomeRequestType.SurgeryInformation://手术信息
                     input = serializer.Serialize(homeInformation.GetSurgeryInformation());
                     break;
+
+
                 case HomeRequestType.RateEmptyBed://获取额定空床数量
                     input = serializer.Serialize(homeInformation.GetRateEmptyBed());
                     break;

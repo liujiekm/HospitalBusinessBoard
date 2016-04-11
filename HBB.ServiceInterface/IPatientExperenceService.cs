@@ -50,10 +50,16 @@ namespace HBB.ServiceInterface
         /// <param name="type"></param>
         /// <returns></returns>
         List<KeyValuePair<String, Int32>> GetOperationCount(DateTime startTime, DateTime endTime, String type);
+
+
+        /// <summary>
+        /// 获得上月门诊平均预约时间
+        /// </summary>
+        /// <returns></returns>
         String GetAvgAppointmentTime();
 
         /// <summary>
-        /// 按时间获得门诊就医时长的表格(按科室分组)
+        /// 获得指定时间区间的门诊就医时长(按科室分组)
         /// </summary>
         /// <param name="sTime"></param>
         /// <param name="eTime"></param>
@@ -63,7 +69,7 @@ namespace HBB.ServiceInterface
             params string[] districtType);
 
         /// <summary>
-        /// 按时间，选中的科室获得门诊就医时长的表格(按科室分组)
+        /// 指定时间区间，选中的科室获得门诊就医时长的(按科室分组)
         /// </summary>
         /// <param name="sTime"></param>
         /// <param name="eTime"></param>
@@ -73,42 +79,91 @@ namespace HBB.ServiceInterface
         List<DeptAverageTreatmentTime> GetDeptTreatmentAverageTime(DateTime sTime, DateTime eTime, Int32[] depts,
             params string[] hospitalDistrict);
 
-        //指定专科三年的同比数据
+        
+        /// <summary>
+        /// 指定专科三年的同比数据(当前时间往前推三年)
+        /// </summary>
+        /// <param name="startDateTime">开始时间</param>
+        /// <param name="endDateTime">结束时间</param>
+        /// <param name="deptId">专科id</param>
+        /// <param name="hospitalDistrict">院区代码</param>
+        /// <returns></returns>
         List<List<DeptAverageTreatmentTime>> GetDeptTreatmentAverageTimeYearToYear(DateTime startDateTime, DateTime endDateTime,
             Int32 deptId,
             params String[] hospitalDistrict);
-        // 表格呈现以检查类型分组的特检信息表
+
+
+
+        
+        /// <summary>
+        /// 指定时间段，指定院区内检查各阶段的平均时长
+        /// </summary>
+        /// <param name="startDateTime">开始时间</param>
+        /// <param name="endDateTime">结束时间</param>
+        /// <param name="hospitalDistrict">院区代码</param>
+        /// <returns></returns>
         List<SpecialInspection> GetSpecialInspections(DateTime startDateTime, DateTime endDateTime,
             params String[] hospitalDistrict);
 
-        // 选中最多5中检查类型，查看对应的信息对比
-        List<SpecialInspection> GetSpecialInspectionsGroupByTime(DateTime startDateTime, DateTime endDateTime,
-            String[] inspactTypes, params String[] hospitalDistrict);
+
 
         // 取得指定检查类型特检就诊时长三年的同比数据
         List<List<SpecialInspection>> GetSpecialInspectionYearToYear(DateTime startDateTime, DateTime endDateTime,
             string inspetType,
             params String[] hospitalDistrict);
 
-        //取得选定专科，指定时间的门诊就诊时长数据
+
+
+        /// <summary>
+        /// 取得选定专科，指定时间的门诊就诊时长数据
+        /// </summary>
+        /// <param name="sTime"></param>
+        /// <param name="eTime"></param>
+        /// <param name="depts">多科室代码</param>
+        /// <param name="hospitalDistrict">院区代码</param>
+        /// <returns></returns>
         List<DeptAverageTreatmentTime> GetDeptTreatmentAverageTimeGroupByTime(DateTime sTime, DateTime eTime, Int32[] depts,
     params string[] hospitalDistrict);
 
-        //取得选定专科，指定时间的门诊就诊时长数据 进行按科室分组
+
+        /// <summary>
+        /// 取得选定专科，指定时间的门诊就诊时长数据 进行按科室分组
+        /// </summary>
+        /// <param name="data">GetDeptTreatmentAverageTimeGroupByTime方法的返回值</param>
+        /// <returns></returns>
         List<List<DeptAverageTreatmentTime>> GetDeptTreatmentAverageTimeGroupByDept(List<DeptAverageTreatmentTime> data);
 
-                /// <summary>
-        /// 获得上月门诊平均时长（预约，候诊，就诊，缴费，取药）
+        /// <summary>
+        /// 获得上月门诊平均时长（预约，候诊，就诊，缴费，取药）按顺序
         /// </summary>
         /// <returns></returns>
         Double[] GetOutPatientIndicatorLastMonth();
 
-                /// <summary>
-        /// 获得上月特检部门平均预约时长（X光，CT，MRI，B超，内窥镜）
+        /// <summary>
+        /// 获得上月特检部门平均预约时长（X光，CT，MRI，B超，内窥镜）按顺序
         /// </summary>
         /// <returns></returns>
-        Double[] GetSpecilaInspectorIndicatorLastMonth();
+        Double[] GetSpecialInspectorIndicatorLastMonth();
 
+
+        
+        /// <summary>
+        /// 选中最多5中检查类型，查看对应各阶段平均时长信息对比
+        /// </summary>
+        /// <param name="startDateTime">开始时间</param>
+        /// <param name="endDateTime">结束时间</param>
+        /// <param name="inspactTypes">检查类型</param>
+        /// <param name="hospitalDistrict">院区代码</param>
+        /// <returns></returns>
+        List<SpecialInspection> GetSpecialInspectionsGroupByTime(DateTime startDateTime, DateTime endDateTime,
+            String[] inspactTypes, params String[] hospitalDistrict);
+
+
+        /// <summary>
+        /// 指定检查类型、指定时间区间、对各阶段平均时长数据进行按检查类型分组
+        /// </summary>
+        /// <param name="data">GetSpecialInspectionsGroupByTime方法的返回值</param>
+        /// <returns></returns>
         List<List<SpecialInspection>> GetSpecialInspectionsGroupByGroupByType(List<SpecialInspection> data);
 
     }

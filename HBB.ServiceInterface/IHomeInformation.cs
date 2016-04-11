@@ -26,11 +26,12 @@ namespace HBB.ServiceInterface
     {
         //首页单条数据
         HomeInformation GetHomeInformation();
-        //医生签到率
+
+        //获取今天实时医生签到率
         List<DoctorRegistration> GetDoctorRegistration();
-        //获取候诊人数
+        //获取实时候诊人数
         List<WaitingPatientQuanty> GetWaitingQuanty();
-        //手术信息
+        //获取实时手术信息
         SurgeryInformation GetSurgeryInformation();
         //获取额定空床数量
         List<RateEmptyBed> GetRateEmptyBed();
