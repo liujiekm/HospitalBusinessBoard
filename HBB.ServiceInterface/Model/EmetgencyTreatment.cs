@@ -20,22 +20,24 @@ using System.Threading.Tasks;
 namespace HBB.ServiceInterface.Model {
     class EmetgencyTreatment {
         public struct qxx {
-            public string XM;
-            public string XB;
-            public string NL;
-            public string LGTS;
-            public string LCZD;
-            public double YCYE;
+            public string XM;   // 姓名
+            public string XB;   // 性别
+            public string NL;   // 年龄
+            public string LGTS; // 临床诊断
+            public string LCZD; // 留观天数
+            public double YCYE; // 预存余额
         }
 
         private List<qxx> _qjqxx = new List<qxx>();
         private List<qxx> _lgqxx = new List<qxx>();
 
+        // 抢救
         public List<qxx> qjqxx {
             get { return this._qjqxx; }
             set { this._qjqxx = value; }
         }
 
+        // 急诊留观
         public List<qxx> lgqxx {
             get { return this._lgqxx; }
             set { this._lgqxx = value; }

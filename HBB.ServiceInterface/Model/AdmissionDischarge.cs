@@ -19,68 +19,48 @@ using System.Threading.Tasks;
 
 namespace HBB.ServiceInterface.Model {
     class AdmissionDischarge {
-        struct _cry {
-            public int zrzy;
-            public int jrcy;
-            public int jrry;
-        }
-        struct _gzkcryqkitem {
-            public string ZKMC;
-            public int RS;
-            public int INNUM;
-            public int OUTNUM;
-        }
 
-        private List<_gzkcryqkitem> _gzkcryqk = new List<_gzkcryqkitem>();
-        private int _edkce;
-        private int _jckcw;
-        private int _xnkcw;
-        private List<_gzkcryqkitem> _gzkkcqk = new List<_gzkcryqkitem>();
+        private string _edkcw;  // 额定空床位
+        private string _jckcw;  // 加床空床位
+        private string _xnkcw;  // 虚拟空床位
 
         // 出入院
+        public struct _cry {
+            public string zrzy;
+            public string jrcy;
+            public string jrry;
+        }
+
+        // 各科室出入院人数情况
+        public struct _gzkcryqk {
+            public string ZKMC;
+            public string RS;
+            public string INNUM;
+            public string OUTNUM;
+        }
+
+        // 各专科空床情况
+        public struct _gzkkcqk {
+            public string ZKMC;
+            public string EDKCW;
+            public string JCKCW;
+            public string XNKCW;
+        }
+
         public _cry cry;
-        public List<_gzkcryqkitem> gzkcryqk {
-            get { return this._gzkcryqk; }
-            set { this._gzkcryqk = value; }
+        public List<_gzkcryqk> gzkcryqk = new List<_gzkcryqk>();
+        public string edkcw {
+            get { return this._edkcw; }
+            set { this._edkcw = value; }
         }
-        // 床位
-        public int edkce {
-            get { return this._edkce; }
-            set { this._edkce = value; }
-        }
-        public int jckce {
+        public string jckcw {
             get { return this._jckcw; }
             set { this._jckcw = value; }
         }
-        public int xnkce {
+        public string xnkcw {
             get { return this._xnkcw; }
             set { this._xnkcw = value; }
         }
-        public List<_gzkcryqkitem> gzkkcqk {
-            get { return this._gzkkcqk; }
-            set { this._gzkkcqk = value; }
-        }
-
-        public void addGzkcryqk(string zkmc, int rs, int innum, int outnum) {
-
-            _gzkcryqkitem item;
-            item.ZKMC = zkmc;
-            item.RS = rs;
-            item.INNUM = innum;
-            item.OUTNUM = outnum;
-
-            this._gzkcryqk.Add(item);
-        }
-
-        public void addGzkkcqk(string zkmc, int rs, int innum, int outnum) {
-
-            _gzkcryqkitem item;
-            item.ZKMC = zkmc;
-            item.RS = rs;
-            item.INNUM = innum;
-            item.OUTNUM = outnum;
-
-            this._gzkkcqk.Add(item);
-        }
+        public List<_gzkkcqk> gzkkcqk = new List<_gzkkcqk>();
     }
 }

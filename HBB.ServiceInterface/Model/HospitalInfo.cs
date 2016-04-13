@@ -21,30 +21,30 @@ using System.Threading.Tasks;
 namespace HBB.ServiceInterface.Model {
     class HospitalInfo {
 
-        private double[] _zysrje;
-        private double[] _bcsyl;
-        private int[] _rjjetj;
+        private double[] _zysrje;   // 近一周收入
+        private double[] _bcsyl;    // 一周病床使用率
+        private int[] _rjjetj;      // 一周人均住院
 
         public struct _cry {
-            public int jrcyrs;
-            public int zrryrs;
+            public int jrcyrs;  // 今日出院人数
+            public int zrryrs;  // 昨日入院人数
         }
         public struct _crytj {
-            public int[] ryrs;
-            public int[] cyrs;
+            public int[] ryrs;  // 上一周入院人数统计数
+            public int[] cyrs;  // 上一周出院人数统计数
         }
         public struct _zysr {
-            public double zrzysr;
-            public double jrzysr;
+            public double zrzysr;   // 获取昨日收入
+            public double jrzysr;   // 获取今日目前收入
         }
         public struct _bc {
-            public int zcws;
-            public int dqzy;
+            public int zcws;    // 总床位数
+            public int dqzy;    // 当前在院
         }
         public struct _zyrj {
-            public int zrrjfy;
-            public int syrjfy;
-            public int qnrjfy;
+            public int zrrjfy;  // 昨日人均费用
+            public int syrjfy;  // 上月人均费用
+            public int qnrjfy;  // 去年人均费用
         }
 
         // 出入院
