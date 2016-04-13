@@ -23,6 +23,7 @@ using Oracle.DataAccess.Client;
 
 using System.Text;
 using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 
 namespace HBB.DataService {
     public class BeInHospitalService : IBeInHospitalService {
@@ -40,7 +41,7 @@ namespace HBB.DataService {
         public Hashtable GetEmergencyTreatmentInfo()
         {
 
-            Hashtable hs = new Hashtable();
+            //Hashtable hs = new Hashtable();
             
             // 获得急诊抢救区信息
             string GetRescueAreaInfoCommand = GetRescueAreaInfoSQL();
@@ -49,16 +50,27 @@ namespace HBB.DataService {
             string GetObserveAreaInfoCommand = GetObserveAreaInfoSQL();
             ArrayList observeAreaInfo = GenerateDate(new[] { "XM", "XB", "NL", "LGTS", "LCZD", "YCYE" }, db, GetObserveAreaInfoCommand);
 
-            hs.Add("qjqxx",rescueAreaInfo);
-            hs.Add("lgqxx",observeAreaInfo);
-            
+            //hs.Add("qjqxx",rescueAreaInfo);
+            //hs.Add("lgqxx",observeAreaInfo);
+
+            EmetgencyTreatment em = new EmetgencyTreatment();
+
+            foreach (object o1 in rescueAreaInfo) {
+
+                em.addQjqxx(o1.XM.toString(), o1.XB.toString(), o1.NL.toString(), o1.LGTS.toString(), o1.YCYE.toString());
+            }
+
+            foreach (object o2 in observeAreaInfo) {
+                em.addLgqxx(o2.XM.toString(), o2.XB.toString(), o2.NL.toString(), o2.LGTS.toString(), o2.YCYE.toString());
+            }
+
             return hs;
         }
 
         public Hashtable GetAdmissionDischargeInfo()
         {
 
-            Hashtable hs = new Hashtable();
+            //Hashtable hs = new Hashtable();
 
             // 获取今日入院人数
             string getTodayInHospitalNumCommand = GetIOHospitalNumSQL(DateTime.Now, DateTime.Now,"IN");
@@ -87,18 +99,36 @@ namespace HBB.DataService {
             string getEachSubjectEmptyBedsCommand = GetEachSubjectEmptyBedsSQL();
             ArrayList EachSubjectEmptyBeds = GenerateDate(new[] { "ZKMC","EDKCW","JCKCW","XNKCW"}, db, getEachSubjectEmptyBedsCommand);
 
-            //出入院
-            hs.Add("cry", new Hashtable() { 
-                {"zrzy",yestdayLiveHospitalNum},
-                {"jrcy",todayOutHospitalNum},
-                {"jrry",todayInHospitalNum}
-            });
-            hs.Add("gzkcryqk",todayIONumOfDepartment);
-            //床位
-            hs.Add("edkcw", ratedVacantBedsNum);
-            hs.Add("jckcw", extraEmptyBedsNum);
-            hs.Add("xnkcw", virtualEmptyBedsNum);
-            hs.Add("gzkkcqk", EachSubjectEmptyBeds);
+            ////出入院
+            //hs.Add("cry", new Hashtable() { 
+            //    {"zrzy",yestdayLiveHospitalNum},
+            //    {"jrcy",todayOutHospitalNum},
+            //    {"jrry",todayInHospitalNum}
+            //});
+            //hs.Add("gzkcryqk",todayIONumOfDepartment);
+            ////床位
+            //hs.Add("edkcw", ratedVacantBedsNum);
+            //hs.Add("jckcw", extraEmptyBedsNum);
+            //hs.Add("xnkcw", virtualEmptyBedsNum);
+            //hs.Add("gzkkcqk", EachSubjectEmptyBeds);
+
+            AdmissionDischarge ad = new AdmissionDischarge();
+            // 出入院
+            ad.cry.zrzy = yestdayLiveHospitalNum;
+            ad.cry.jrcy = todayOutHospitalNum;
+            ad.cry.jrry = todayInHospitalNum;
+            foreach (object o1 in todayIONumOfDepartment) {
+
+                add.addGzkcryqk(o1.ZKMC.toString(), o1.RS.toString(), o1.INNUM.toString(), o1.OUTNUM.toString());
+            }
+            // 床位
+            ad.edkcw = ratedVacantBedsNum;
+            ad.jckcw = extraEmptyBedsNum;
+            ad.xnkcw = virtualEmptyBedsNum;
+            foreach (object o2 in EachSubjectEmptyBeds) {
+
+                add.addGzkkcqk(o1.ZKMC.toString(), o1.EDKCW.toString(), o1.JCKCW.toString(), o1.XNKCW.toString());
+            }
 
             return hs;
         }
@@ -106,7 +136,7 @@ namespace HBB.DataService {
         public Hashtable GetHospitalizationInfo()
         {
 
-            Hashtable hs = new Hashtable();
+            //Hashtable hs = new Hashtable();
             string[] weekArr = new string[]{
             
                 DateTime.Now.AddDays(-7).ToString("yyyy-MM-dd"),
@@ -120,7 +150,7 @@ namespace HBB.DataService {
 
             // 获取今日出院人数
             string getTodayOutHospitalNumCommand = GetIOHospitalNumSQL(DateTime.Now, DateTime.Now, "OUT");
-            object todayOutHospitalNum = GenerateDate( "RS" , db, getTodayOutHospitalNumCommand);
+            object todayOutHospitalNum = GenerateDate("RS", db, getTodayOutHospitalNumCommand);
             // 获取昨日入院人数
             string getLastdayInHospitalNumCommand = GetIOHospitalNumSQL(DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "IN");
             object lastdayInHospitalNum = GenerateDate("RS", db, getLastdayInHospitalNumCommand);
@@ -129,10 +159,10 @@ namespace HBB.DataService {
             object[] lastweekInHospitalNum = GenerateDate("RQ", "RS", weekArr, db, getLastweekInHospitalNumCommand);
             // 获取上一周出院人数统计数
             string getLastweekOutHospitalNumCommand = GetLastweekIOHospitalNumSQL("OUT");
-            object[] lastweekOutHospitalNum = GenerateDate("RQ","RS",weekArr,db, getLastweekOutHospitalNumCommand);
+            object[] lastweekOutHospitalNum = GenerateDate("RQ", "RS", weekArr, db, getLastweekOutHospitalNumCommand);
 
             // 获取昨日收入
-            string getYestodayInncomeCommand = GetBeInHospitalInncomeSQL(DateTime.Now.AddDays(-1),DateTime.Now.AddDays(-1));
+            string getYestodayInncomeCommand = GetBeInHospitalInncomeSQL(DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1));
             object yestodayInncomeNum = GenerateDate("ZSR", db, getYestodayInncomeCommand);
             // 获取今日目前收入
             string getTodayInncomeCommand = GetBeInHospitalInncomeSQL(DateTime.Now, DateTime.Now);
@@ -142,29 +172,51 @@ namespace HBB.DataService {
             object getLastweekInncome = GenerateDate("RQ", "ZSR", weekArr, db, getLastweekInncomeCommand);
 
             
-            // 出入院
-            hs.Add("cry", new Hashtable() { 
-                {"jrcyrs",todayOutHospitalNum},
-                {"zrryrs",lastdayInHospitalNum}
-            });
-            hs.Add("crytj", new Hashtable() { 
-                {"ryrs",lastweekInHospitalNum},
-                {"cyrs",lastweekOutHospitalNum}
-            });
-            // 住院收入
-            hs.Add("zysr", new Hashtable() { 
-                {"zrzysr",yestodayInncomeNum},
-                {"jrzysr",getTodayInncome}
-            });
-            hs.Add("zysrje", getLastweekInncome);
-            // 病床使用率
-            hs.Add("bc", new Hashtable() { { "zcws", 3200 }, { "dqzy", 2842 } });    //床位
-            hs.Add("bcsyl", new double[] { 87.12, 84.56, 86.34, 90.04, 92.17, 85.22, 88.89 } );
-            // 住院人均
-            hs.Add("zyrj", new Hashtable() { { "zrrjfy", 1024 }, { "syrjfy", 652 }, { "qnrjfy", 864 } });    //住院人均
-            hs.Add("rjjetj", new int[] { 545, 1944, 810, 697, 1604, 976, 1024 });
+            //// 出入院
+            //hs.Add("cry", new Hashtable() { 
+            //    {"jrcyrs",todayOutHospitalNum},
+            //    {"zrryrs",lastdayInHospitalNum}
+            //});
+            //hs.Add("crytj", new Hashtable() { 
+            //    {"ryrs",lastweekInHospitalNum},
+            //    {"cyrs",lastweekOutHospitalNum}
+            //});
+            //// 住院收入
+            //hs.Add("zysr", new Hashtable() { 
+            //    {"zysr",yestodayInncomeNum},
+            //    {"jrzysr",getTodayInncome}
+            //});
+            //hs.Add("zysrje", getLastweekInncome);
+            //// 病床使用率
+            //hs.Add("bc", new Hashtable() { { "zcws", 3200 }, { "dqzy", 2842 } });    //床位
+            //hs.Add("bcsyl", new double[] { 87.12, 84.56, 86.34, 90.04, 92.17, 85.22, 88.89 } );
+            //// 住院人均
+            //hs.Add("zyrj", new Hashtable() { { "zrrjfy", 1024 }, { "syrjfy", 652 }, { "qnrjfy", 864 } });    //住院人均
+            //hs.Add("rjjetj", new int[] { 545, 1944, 810, 697, 1604, 976, 1024 });
 
-            return hs;
+            //return hs;
+
+            HospitalInfo hos = new HospitalInfo();
+            // 出入院
+            hos.cry.jrcyrs = todayOutHospitalNum;
+            hos.cry.zrryrs = lastdayInHospitalNum;
+            hos.crytj.ryrs = lastweekInHospitalNum;
+            hos.crytj.cyrs = lastweekOutHospitalNum;
+            // 住院收入
+            hos.zysr.zrzysr = yestodayInncomeNum;
+            hos.zysr.jrzysr = getTodayInncome;
+            hos.zysrje = getLastweekInncome;
+            // 病床使用率
+            hos.bs.zcws = 3200;
+            hos.bs.dqzy = 2842;
+            hos.bcsyl = new double[] { 87.12, 84.56, 86.34, 90.04, 92.17, 85.22, 88.89 };
+            // 住院人均
+            hos.zyrj.zrrjfy = 1024;
+            hos.zyrj.syrjfy = 652;
+            hos.zyrj.qnrjfy = 864;
+            hos.rjjetj = new int[] { 545, 1944, 810, 697, 1604, 976, 1024 };
+
+            return hos;
         }
         
         #endregion

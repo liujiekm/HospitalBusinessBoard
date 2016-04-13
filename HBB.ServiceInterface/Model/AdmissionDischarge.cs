@@ -62,5 +62,25 @@ namespace HBB.ServiceInterface.Model {
             set { this._xnkcw = value; }
         }
         public List<_gzkkcqk> gzkkcqk = new List<_gzkkcqk>();
+
+        public void addGzkcryqk(string zkmc,string rs,string innum,string outnum) {
+            _gzkcryqk item;
+            item.ZKMC = zkmc;
+            item.RS = rs;
+            item.INNUM = innum;
+            item.OUTNUM = outnum;
+
+            this.gzkcryqk.add(item);
+        }
+
+        public void addGzkkcqk(string zkmc,string edkcw,string jckcw,string xnkcw) {
+            _gzkkcqk item;
+            item.ZKMC = zkmc;
+            item.EDKCW = edkcw;
+            item.JCKCW = jckcw;
+            item.XNKCW = xnkcw;
+
+            this.gzkkcqk.add(item);
+        }
     }
 }
