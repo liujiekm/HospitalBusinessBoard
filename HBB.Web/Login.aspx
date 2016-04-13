@@ -124,7 +124,7 @@
 
                         <img src="content/img/login/logo.png" class='logoImg' />
 
-                        <p class="lead text-center" style="margin-top: 10px;">院长综合查询系统</p>
+                        <p class="lead text-center" style="margin-top: 10px;">医院业务看板</p>
                     </div>
                     <div class="formGroup">
                         <img class="loginIcon" src="content/img/login/LoginNmae_icon.png"/>

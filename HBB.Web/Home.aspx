@@ -35,7 +35,7 @@
     <!--Bootstrap js-->
     <script src="content/js/jquery/jquery.min.js"></script>
     <script src="content/bootstrap/bootstrap.js"></script>
-
+        <script src="CustomJsLibrary/Gloable.js"></script>
     <style type="text/css">
         .rowContent {
             background: url('content/img/newHome/30black.png') repeat;
@@ -809,7 +809,7 @@
 
 
                         <div style="padding-top: 20px;" class="col-md-2">
-                            <%-- <img src="content/img/newHome/lenovo.png" height="17" width="214" style="padding-left: 20px" />--%>
+                            
                         </div>
 
                         <div class="col-md-8"></div>

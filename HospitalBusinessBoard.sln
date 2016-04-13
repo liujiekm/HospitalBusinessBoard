@@ -42,6 +42,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBB.Web", "HBB.Web\HBB.Web.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBB.ServiceInterface", "HBB.ServiceInterface\HBB.ServiceInterface.csproj", "{0B379CFE-8F21-4E34-A3F2-EF6EEFEA8BB0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.5 Distributed Service", "1.5 Distributed Service", "{94BE056D-4AA4-4B61-AED1-813791489C8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBB.PurePresentation", "HBB.PurePresentation\HBB.PurePresentation.csproj", "{529A03BE-4FEB-4D4F-8BFD-6B1C477038ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -106,6 +110,14 @@ Global
 		{0B379CFE-8F21-4E34-A3F2-EF6EEFEA8BB0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0B379CFE-8F21-4E34-A3F2-EF6EEFEA8BB0}.Release|x86.ActiveCfg = Release|Any CPU
 		{0B379CFE-8F21-4E34-A3F2-EF6EEFEA8BB0}.Release|x86.Build.0 = Release|Any CPU
+		{529A03BE-4FEB-4D4F-8BFD-6B1C477038ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{529A03BE-4FEB-4D4F-8BFD-6B1C477038ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{529A03BE-4FEB-4D4F-8BFD-6B1C477038ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{529A03BE-4FEB-4D4F-8BFD-6B1C477038ED}.Debug|x86.Build.0 = Debug|Any CPU
+		{529A03BE-4FEB-4D4F-8BFD-6B1C477038ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{529A03BE-4FEB-4D4F-8BFD-6B1C477038ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{529A03BE-4FEB-4D4F-8BFD-6B1C477038ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{529A03BE-4FEB-4D4F-8BFD-6B1C477038ED}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,12 +132,14 @@ Global
 		{D9C97512-E009-464F-B308-C16B7017E8A3} = {79207464-1EA7-4E65-9E0A-AB074DD3C95A}
 		{7AF5CCF3-3146-47EA-BC7A-B6A1A39ED647} = {D3B97F08-3F0C-4FC2-A024-854751DEDD36}
 		{9849D477-1E2A-4E7A-8BF3-F966F271FAE8} = {D3B97F08-3F0C-4FC2-A024-854751DEDD36}
-		{9481F749-C40E-4F27-A676-7D37D26453DD} = {E704C6DC-D725-4E62-829F-9393AAB7AEB2}
+		{9481F749-C40E-4F27-A676-7D37D26453DD} = {94BE056D-4AA4-4B61-AED1-813791489C8A}
 		{7FBC061F-985F-4242-8497-AD44239A576B} = {E704C6DC-D725-4E62-829F-9393AAB7AEB2}
 		{0B379CFE-8F21-4E34-A3F2-EF6EEFEA8BB0} = {C8910EC3-8988-4261-A818-04B4ACB61B6B}
+		{94BE056D-4AA4-4B61-AED1-813791489C8A} = {12D73156-F881-49C8-B7DE-7DFA5F6C0868}
+		{529A03BE-4FEB-4D4F-8BFD-6B1C477038ED} = {E704C6DC-D725-4E62-829F-9393AAB7AEB2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35
 	EndGlobalSection
 EndGlobal

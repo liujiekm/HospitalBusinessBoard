@@ -24,10 +24,27 @@ namespace HBB.ServiceInterface
 {
     public interface IOperationService
     {
+        /// <summary>
+        /// 查询手术详细信息
+        /// </summary>
+        /// <param name="oprationState">手术状态</param>
+        /// <param name="searchType">查询类型</param>
+        /// <param name="area">区域</param>
+        /// <param name="operationType">手术类别  （一类 二类 等等）</param>
+        /// <param name="sDate">开始时间</param>
+        /// <param name="eDate">结束时间</param>
+        /// <param name="content">查询内容</param>
+        /// <returns></returns>
         List<SurgeryDetailedInformation> GetSurgeryDetailedInformation(string oprationState, string searchType,
           string area, string operationType, string sDate, string eDate, string content);
 
+
+
         DataSet GetOperationQuanty();
+
+
+
+
         List<OperationSearchRate> GetOperationSearchRate(String SearchContent, String type);
     }
 }

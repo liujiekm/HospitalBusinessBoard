@@ -27,7 +27,7 @@ namespace HBB.DataService.Fake
 
         public string GetAvgAppointmentTime()
         {
-            throw new NotImplementedException();
+            return "5.1";
         }
 
         public List<DeptAverageTreatmentTime> GetTreatmentAverageTime(DateTime sTime, DateTime eTime, params string[] districtType)
@@ -858,7 +858,7 @@ namespace HBB.DataService.Fake
             return new double[] {1620,7.5,5.1,2.9,9.3 };
         }
 
-        public double[] GetSpecilaInspectorIndicatorLastMonth()
+        public double[] GetSpecialInspectorIndicatorLastMonth()
         {
             return new double[] { 1620, 1620, 5100, 5000, 3500 };
         }
@@ -876,9 +876,6 @@ namespace HBB.DataService.Fake
             return result;
         }
 
-        public double[] GetSpecialInspectorIndicatorLastMonth()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

@@ -38,6 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>App_Log\HBB.API.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -351,6 +352,10 @@
     <ProjectReference Include="..\HBB.Common\HBB.Common.csproj">
       <Project>{2c748bf9-b453-4152-b8ab-b5a0a3d4b1ec}</Project>
       <Name>HBB.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HBB.DataService\HBB.DataService.csproj">
+      <Project>{9849d477-1e2a-4e7a-8bf3-f966f271fae8}</Project>
+      <Name>HBB.DataService</Name>
     </ProjectReference>
     <ProjectReference Include="..\HBB.ServiceInterface\HBB.ServiceInterface.csproj">
       <Project>{0b379cfe-8f21-4e34-a3f2-ef6eefea8bb0}</Project>

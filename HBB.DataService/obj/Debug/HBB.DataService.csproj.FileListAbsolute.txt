@@ -26,6 +26,11 @@ C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\WYY
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\WYYY.HDGM.DataService\obj\Debug\HBB.DataService.csprojResolveAssemblyReference.cache
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\WYYY.HDGM.DataService\obj\Debug\WYYY.HDGM.DataService.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\WYYY.HDGM.DataService\obj\Debug\WYYY.HDGM.DataService.pdb
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.DataService.dll
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.DataService.pdb
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.Common.dll
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.DataContext.dll
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.ServiceInterface.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
@@ -35,6 +40,9 @@ C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\Microsoft.Practices.Unity.Interception.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\Oracle.DataAccess.dll
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.Common.pdb
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.DataContext.pdb
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.ServiceInterface.pdb
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
@@ -46,13 +54,5 @@ C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.xml
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\obj\Debug\HBB.DataService.csprojResolveAssemblyReference.cache
-C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.DataService.dll
-C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.DataService.pdb
-C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.Common.dll
-C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.DataContext.dll
-C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.Common.pdb
-C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.DataContext.pdb
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\obj\Debug\HBB.DataService.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\obj\Debug\HBB.DataService.pdb
-C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.ServiceInterface.dll
-C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.ServiceInterface.pdb

@@ -17,7 +17,7 @@ namespace HBB.DataService.Fake
 
         public string GetVisitorsYesterday()
         {
-            throw new NotImplementedException();
+            return "3540";
         }
 
         public List<RegisterVisitors> GetFormattedVisitors(List<RegisterVisitors> source)

@@ -38,7 +38,7 @@ namespace HBB.API
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
             //压缩payload
-            config.Filters.Add(new DeflateCompressionAttribute());
+            //config.Filters.Add(new DeflateCompressionAttribute());
 
             //增加错误日志记录
             config.Filters.Add(new ElmahErrorAttribute());

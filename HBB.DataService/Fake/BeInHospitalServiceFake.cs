@@ -156,7 +156,6 @@ namespace HBB.DataService.Fake {
         {
             Hashtable hs = new Hashtable();
 
-
             // 出入院
             hs.Add("cry", new Hashtable() { { "jrcyrs", 37 }, { "zrryrs", 482 } });    //出入院
             hs.Add("crytj", new Hashtable() {   // 出入院统计

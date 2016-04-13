@@ -31,13 +31,25 @@ namespace HBB.ServiceInterface
 {
     public interface IMedicalServiceSituation
     {
-        //按专科获取就诊/候诊人次列表
+        
+        /// <summary>
+        /// 按专科获取就诊/候诊人次列表
+        /// </summary>
+        /// <returns></returns>
         List<MedicalService> GetSpecialistMedicalService();
 
-        //获取专科下医生就诊/候诊人次列表
+        
+        /// <summary>
+        /// 获取专科下医生就诊/候诊人次列表
+        /// </summary>
+        /// <param name="zkid"></param>
+        /// <returns></returns>
         List<MedicalService> GetDoctorSpecialistMedicalService(string zkid);
 
-        //获取全院医生就诊/候诊人次列表
+        /// <summary>
+        ///获取全院医生就诊/候诊人次列表
+        /// </summary>
+        /// <returns></returns>
         List<MedicalService> GetDoctorMedicalService();
 
     }

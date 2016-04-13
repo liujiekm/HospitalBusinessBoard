@@ -22,11 +22,26 @@ using System.Threading.Tasks;
 namespace HBB.ServiceInterface {
     public interface IBeInHospitalService
     {
-        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         Hashtable GetEmergencyTreatmentInfo();
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         Hashtable GetAdmissionDischargeInfo();
 
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         Hashtable GetHospitalizationInfo();
     }
 }
