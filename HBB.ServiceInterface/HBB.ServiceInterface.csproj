@@ -51,13 +51,16 @@
     <Compile Include="IOutpatientReportService.cs" />
     <Compile Include="IOutpatientService.cs" />
     <Compile Include="IPatientExperenceService.cs" />
+    <Compile Include="Model\AdmissionDischarge.cs" />
     <Compile Include="Model\AverageTreatmentTime.cs" />
     <Compile Include="Model\DeptAverageTreatmentTime.cs" />
     <Compile Include="Model\DoctorRegisterRelated.cs" />
     <Compile Include="Model\DoctorRegistration.cs" />
+    <Compile Include="Model\EmetgencyTreatment.cs" />
     <Compile Include="Model\HomeInformation.cs" />
     <Compile Include="Model\HomeStatics.cs" />
     <Compile Include="Model\HospitalIncome.cs" />
+    <Compile Include="Model\HospitalInfo.cs" />
     <Compile Include="Model\IncomeByTime.cs" />
     <Compile Include="Model\IncomeStatistics.cs" />
     <Compile Include="Model\IOhospital.cs" />

@@ -22,7 +22,7 @@
     <!--Bootstrap js-->
     <script src="content/js/jquery/jquery.min.js"></script>
     <script src="content/bootstrap/bootstrap.js"></script>
-
+       <script src="CustomJsLibrary/Gloable.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
