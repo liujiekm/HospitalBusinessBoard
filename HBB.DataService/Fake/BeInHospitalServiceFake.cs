@@ -124,9 +124,12 @@ namespace HBB.DataService.Fake {
                 new Hashtable(){{"ZKMC","综合留观"},{"EDKCW",2},{"JCKCW",1},{"XNKCW",1}},
                 new Hashtable(){{"ZKMC","急诊医学科"},{"EDKCW",0},{"JCKCW",1},{"XNKCW",3}},
                 new Hashtable(){{"ZKMC","精神卫生科"},{"EDKCW",0},{"JCKCW",0},{"XNKCW",4}},
-                new Hashtable(){{"ZKMC","康复科"},{"EDKCW",10},{"JCKCW",0},{"XNKCW",5}},
-                new Hashtable(){{"ZKMC","神经内科(一)"},{"EDKCW",1*-/
+                new Hashtable(){{"ZKMC","康复科"},{"EDKCW",10},{"JCKCW",0},{"XNKCW",5}}
+            });
 
+            return hs;
+
+        }
         public Hashtable GetHospitalizationInfo()
         {
             Hashtable hs = new Hashtable();
