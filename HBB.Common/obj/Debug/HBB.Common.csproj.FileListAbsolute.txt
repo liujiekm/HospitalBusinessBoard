@@ -7,3 +7,7 @@ C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.pdb
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Source\Repos\HospitalBusinessBoard\HBB.Common\bin\Debug\HBB.Common.dll
+C:\Users\lenovo\Source\Repos\HospitalBusinessBoard\HBB.Common\bin\Debug\HBB.Common.pdb
+C:\Users\lenovo\Source\Repos\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.dll
+C:\Users\lenovo\Source\Repos\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.pdb

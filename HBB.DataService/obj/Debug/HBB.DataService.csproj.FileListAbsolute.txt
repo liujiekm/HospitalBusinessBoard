@@ -56,3 +56,6 @@ C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\obj\Debug\HBB.DataService.pdb
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.ServiceInterface.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataService\bin\Debug\HBB.ServiceInterface.pdb
+C:\Users\lenovo\Source\Repos\HospitalBusinessBoard\HBB.DataService\obj\Debug\HBB.DataService.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Source\Repos\HospitalBusinessBoard\HBB.DataService\obj\Debug\HBB.DataService.dll
+C:\Users\lenovo\Source\Repos\HospitalBusinessBoard\HBB.DataService\obj\Debug\HBB.DataService.pdb

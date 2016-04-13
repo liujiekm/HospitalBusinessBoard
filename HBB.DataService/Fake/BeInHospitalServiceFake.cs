@@ -66,7 +66,7 @@ namespace HBB.DataService.Fake {
             return hs;
         }
 
-        public Hashtable GetAdmissionDischargeInfo()
+        public Hashtable GetAdmissionDischargeInfo()  
         {
             Hashtable hs = new Hashtable();
 
@@ -125,37 +125,11 @@ namespace HBB.DataService.Fake {
                 new Hashtable(){{"ZKMC","急诊医学科"},{"EDKCW",0},{"JCKCW",1},{"XNKCW",3}},
                 new Hashtable(){{"ZKMC","精神卫生科"},{"EDKCW",0},{"JCKCW",0},{"XNKCW",4}},
                 new Hashtable(){{"ZKMC","康复科"},{"EDKCW",10},{"JCKCW",0},{"XNKCW",5}},
-                new Hashtable(){{"ZKMC","神经内科(一)"},{"EDKCW",12},{"JCKCW",265},{"XNKCW",54}},
-                new Hashtable(){{"ZKMC","睡眠中心"},{"EDKCW",12},{"JCKCW",265},{"XNKCW",5}},
-                new Hashtable(){{"ZKMC","眼科"},{"EDKCW",10},{"JCKCW",0},{"XNKCW",5}},
-                new Hashtable(){{"ZKMC","肿瘤科"},{"EDKCW",10},{"JCKCW",0},{"XNKCW",0}},
-                new Hashtable(){{"ZKMC","产科"},{"EDKCW",12},{"JCKCW",265},{"XNKCW",54}},
-                new Hashtable(){{"ZKMC","儿科"},{"EDKCW",12},{"JCKCW",19},{"XNKCW",0}},
-                new Hashtable(){{"ZKMC","发热呼吸道门诊"},{"EDKCW",0},{"JCKCW",5},{"XNKCW",0}},
-                new Hashtable(){{"ZKMC","老年病"},{"EDKCW",0},{"JCKCW",0},{"XNKCW",1}},
-                new Hashtable(){{"ZKMC","皮肤科"},{"EDKCW",0},{"JCKCW",0},{"XNKCW",252}},
-                new Hashtable(){{"ZKMC","生殖中心"},{"EDKCW",0},{"JCKCW",0},{"XNKCW",9}},
-                new Hashtable(){{"ZKMC","胃肠外科"},{"EDKCW",1},{"JCKCW",0},{"XNKCW",15}},
-                new Hashtable(){{"ZKMC","胸外科"},{"EDKCW",0},{"JCKCW",0},{"XNKCW",94}},
-                new Hashtable(){{"ZKMC","血透"},{"EDKCW",3},{"JCKCW",0},{"XNKCW",1}},
-                new Hashtable(){{"ZKMC","针推理疗科"},{"EDKCW",7},{"JCKCW",0},{"XNKCW",3}},
-                new Hashtable(){{"ZKMC","EICU"},{"EDKCW",3},{"JCKCW",0},{"XNKCW",9}},
-                new Hashtable(){{"ZKMC","肛肠外科"},{"EDKCW",0},{"JCKCW",0},{"XNKCW",2}},
-                new Hashtable(){{"ZKMC","呼吸内科"},{"EDKCW",2},{"JCKCW",0},{"XNKCW",24}},
-                new Hashtable(){{"ZKMC","介入治疗"},{"EDKCW",0},{"JCKCW",0},{"XNKCW",5}},
-                new Hashtable(){{"ZKMC","泌尿外科"},{"EDKCW",1},{"JCKCW",0},{"XNKCW",3}},
-                new Hashtable(){{"ZKMC","创伤外科"},{"EDKCW",3},{"JCKCW",0},{"XNKCW",16}},
-                new Hashtable(){{"ZKMC","烧伤·伤口中心"},{"EDKCW",5},{"JCKCW",0},{"XNKCW",1}},
-            });
-
-            return hs;
-        }
-
+                new Hashtable(){{"ZKMC","神经内科(一)"},{"EDKCW",1*-/
 
         public Hashtable GetHospitalizationInfo()
         {
             Hashtable hs = new Hashtable();
-
 
             // 出入院
             hs.Add("cry", new Hashtable() { { "jrcyrs", 37 }, { "zrryrs", 482 } });    //出入院
