@@ -15,26 +15,26 @@ var Clock = React.createClass({
 
             newDate.setDate(newDate.getDate());
             $(this.refs.Date).html(newDate.getFullYear() + '年' + monthNames[newDate.getMonth()] + newDate.getDate() + '日 ' + dayNames[newDate.getDay()]);
-            setInterval(function () {
-
-            var seconds = new Date().getSeconds();
-
-            $(this.refs.sec).html((seconds < 10 ? "0" : "") + seconds);
-        }, 1000);
-
-            setInterval(function () {
-
-            var minutes = new Date().getMinutes();
-
-            $(this.refs.min).html((minutes < 10 ? "0" : "") + minutes);
-        }, 1000);
-
-            setInterval(function () {
-
-            var hours = new Date().getHours();
-
-            $(this.refs.hours).html((hours < 10 ? "0" : "") + hours);
-        }, 1000);
+        //     setInterval(function () {
+        //
+        //     var seconds = new Date().getSeconds();
+        //
+        //     $(this.refs.sec).html((seconds < 10 ? "0" : "") + seconds);
+        // }, 1000);
+        //
+        //     setInterval(function () {
+        //
+        //     var minutes = new Date().getMinutes();
+        //
+        //     $(this.refs.min).html((minutes < 10 ? "0" : "") + minutes);
+        // }, 1000);
+        //
+        //     setInterval(function () {
+        //
+        //     var hours = new Date().getHours();
+        //
+        //     $(this.refs.hours).html((hours < 10 ? "0" : "") + hours);
+        // }, 1000);
     }
     ,
     render:function () {
@@ -43,7 +43,7 @@ var Clock = React.createClass({
             <div className="left">
                 <div className="clock-position">
                     <div id="Date" ref="Date" className="left clock-date">2016年4月13日 星期三</div>
-                    <ul class="clock" className="left clock-time">
+                    <ul className="clock left clock-time">
                         <li id="hours" ref="hours">15</li>
                         <li>:</li>
                         <li id="min" ref="min">07</li>

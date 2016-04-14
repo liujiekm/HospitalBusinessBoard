@@ -2,8 +2,7 @@
  * Created by liu on 2016/4/13.
  */
 
-import "/lib/bootstrap/css/bootstrap.min.css"
-import "/css/layout.css"
+
 
 import React from 'react'
 import { render, findDOMNode } from 'react-dom'
@@ -24,19 +23,19 @@ var LeftNav = React.createClass({
                   <p>医院业务看板</p>
                   <li>&nbsp;</li>
                   <li role="presentation" className="active" onClick={this.activeClick}>
-                      <Link to="/Home">首页</Link>
+                      <Link to="Home">首页</Link>
                   </li>
                   <li role="presentation">
-                      <Link to="/Outpatient">门诊</Link>
+                      <Link to="Outpatient">门诊</Link>
                   </li>
                   <li role="presentation">
-                      <Link to="/Hospitalization">住院</Link>
+                      <Link to="Inhospital">住院</Link>
                   </li>
                   <li role="presentation">
-                      <Link to="/Medicine">药品</Link>
+                      <Link to="Medicine">药品</Link>
                   </li>
                   <li role="presentation">
-                      <Link to="/Operation">手术</Link>
+                      <Link to="Operation">手术</Link>
                   </li>
     
     

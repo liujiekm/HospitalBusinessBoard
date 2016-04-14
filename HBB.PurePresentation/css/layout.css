@@ -1,10 +1,10 @@
 body {
     font-family: 微软雅黑;
 
-    background: url('/content/img/newHome/BG.png')  no-repeat;
+    background: url('../img/Home/BG.png')  no-repeat;
     /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/content/img/newHome/BG.jpg', sizingMethod='scale');
     -moz-background-size:100% 100%;*/
-    background-size:100% 100%;
+    /*background-size:100% 100%;*/
 
     background-color:#52B8D7;
 
@@ -146,7 +146,7 @@ p {
 
 }
 .leftNavigation {
-    background: url('/img/login/BlueBG.png') repeat;
+    background: url('../img/login/BlueBG.png') repeat;
 
     color: white;
     width: 15%;
@@ -182,7 +182,7 @@ p {
 .div_nav>div {
     color: white;
     border-color: #154A6A;
-    background: url('/img/Home/30black.png') repeat;
+    background: url('../img/Home/30black.png') repeat;
     margin-bottom: 10px;
 }
 
@@ -266,6 +266,8 @@ p {
     width:150px;
 }
 
+
+/*用户操作组件*/
 .userzone
 {
     padding-right: 0px;
@@ -279,4 +281,87 @@ p {
 .usercontrol-symbol
 {
     padding-top: 20px;
+}
+
+.navsymbol-position
+{
+    padding-top: 30px;
+}
+
+/*登录组件样式*/
+.loginContainer {
+    position: fixed;
+    left: 38%;
+    height: 100%;
+    width: 25%;
+    background: url('../img/login/BlueBG.png');
+}
+
+.logoImg {
+    position: relative;
+    left: 32%;
+}
+
+.login-footer {
+    margin-top: 45px;
+}
+
+.info-links {
+    font-size: 11px;
+    margin-top: 5px;
+    color: rgba(151, 152, 152, 0.7);
+}
+
+.formControl {
+    height: 53px;
+    border: 1px solid white;
+    width: 72%;
+}
+
+.loginIcon {
+    /*margin-top: -1px;*/
+}
+.login-form {
+    position: relative;
+    color: white;
+    top: 15%;
+}
+.form-group {
+    background: white;
+    color: black;
+    font-size: 25px;
+}
+
+input:focus {
+    /*border: 1px solid white; 13818866603 */
+}
+
+.loginBtn {
+    width: 90%;
+    text-align: center;
+    position: relative;
+    left: 5%;
+    height: 50px;
+    background:   url('../img/login/BlueBG.png');
+    border: 1px solid white;
+    border-radius: 0px;
+    color: white;
+}
+.loginBtn:focus,
+.loginBtn:hover {
+    background:   white;
+    color: #49aecf;
+}
+
+
+.formGroup {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+.formGroupBtn {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 15px;
 }
