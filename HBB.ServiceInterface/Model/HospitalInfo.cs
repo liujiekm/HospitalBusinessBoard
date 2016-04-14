@@ -19,19 +19,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HBB.ServiceInterface.Model {
-    class HospitalInfo {
+    public class HospitalInfo {
 
-        private double[] _zysrje;   // 近一周收入
-        private double[] _bcsyl;    // 一周病床使用率
-        private int[] _rjjetj;      // 一周人均住院
+        private object _zysrje;   // 近一周收入
+        private object[] _bcsyl;    // 一周病床使用率
+        private object[] _rjjetj;      // 一周人均住院
 
         public struct _cry {
             public int jrcyrs;  // 今日出院人数
             public int zrryrs;  // 昨日入院人数
         }
         public struct _crytj {
-            public int[] ryrs;  // 上一周入院人数统计数
-            public int[] cyrs;  // 上一周出院人数统计数
+            public object[] ryrs;  // 上一周入院人数统计数
+            public object[] cyrs;  // 上一周出院人数统计数
         }
         public struct _zysr {
             public double zrzysr;   // 获取昨日收入
@@ -52,19 +52,19 @@ namespace HBB.ServiceInterface.Model {
         public _crytj crytj;
         // 住院收入
         public _zysr zysr;
-        public double[] zysrje {
+        public object zysrje {
             get { return this._zysrje; }
             set { this._zysrje = value; }
         }
         // 病床使用率
         public _bc bc;
-        public double[] bcsyl {
+        public object[] bcsyl {
             get { return this._bcsyl; }
             set { this._bcsyl = value; }
         }
         // 住院人均
         public _zyrj zyrj;
-        public int[] rjjetj {
+        public object[] rjjetj {
             get { return this._rjjetj; }
             set { this._rjjetj = value; }
         }

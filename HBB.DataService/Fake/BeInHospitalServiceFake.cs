@@ -15,11 +15,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 
 namespace HBB.DataService.Fake {
     class BeInHospitalServiceFake : IBeInHospitalService {
 
-        public Hashtable GetEmergencyTreatmentInfo()
+        public EmetgencyTreatment GetEmergencyTreatmentInfo()
         {
 
             Hashtable hs = new Hashtable();
@@ -63,10 +64,10 @@ namespace HBB.DataService.Fake {
                 new Hashtable(){ {"XM","吴爱萍"},{"XB","女"},{"NL","46"},{"LGTS","加害性损伤后接受检查和观察；"},{"LCZD","238"},{"YCYE",1372.64} }
             });
 
-            return hs;
+            return null;
         }
 
-        public Hashtable GetAdmissionDischargeInfo()  
+        public AdmissionDischarge GetAdmissionDischargeInfo()  
         {
             Hashtable hs = new Hashtable();
 
@@ -127,10 +128,11 @@ namespace HBB.DataService.Fake {
                 new Hashtable(){{"ZKMC","康复科"},{"EDKCW",10},{"JCKCW",0},{"XNKCW",5}}
             });
 
-            return hs;
+            return null;
 
         }
-        public Hashtable GetHospitalizationInfo()
+
+        public HospitalInfo GetHospitalizationInfo()
         {
             Hashtable hs = new Hashtable();
 
@@ -156,7 +158,7 @@ namespace HBB.DataService.Fake {
             hs.Add("rjjetj", new int[] { 545, 1944, 810, 697, 1604, 976, 1024 });
 
 
-            return hs;
+            return null;
         }
     }
 }

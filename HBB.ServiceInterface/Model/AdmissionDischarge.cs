@@ -18,7 +18,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HBB.ServiceInterface.Model {
-    class AdmissionDischarge {
+    public class AdmissionDischarge {
 
         private string _edkcw;  // 额定空床位
         private string _jckcw;  // 加床空床位
@@ -70,7 +70,7 @@ namespace HBB.ServiceInterface.Model {
             item.INNUM = innum;
             item.OUTNUM = outnum;
 
-            this.gzkcryqk.add(item);
+            this.gzkcryqk.Add(item) ;
         }
 
         public void addGzkkcqk(string zkmc,string edkcw,string jckcw,string xnkcw) {
@@ -80,7 +80,7 @@ namespace HBB.ServiceInterface.Model {
             item.JCKCW = jckcw;
             item.XNKCW = xnkcw;
 
-            this.gzkkcqk.add(item);
+            this.gzkkcqk.Add(item);
         }
     }
 }

@@ -37,8 +37,8 @@ namespace HBB.DataService {
         }
 
         #region 功能
-        
-        public Hashtable GetEmergencyTreatmentInfo()
+
+        public EmetgencyTreatment GetEmergencyTreatmentInfo()
         {
 
             //Hashtable hs = new Hashtable();
@@ -55,19 +55,19 @@ namespace HBB.DataService {
 
             EmetgencyTreatment em = new EmetgencyTreatment();
 
-            foreach (object o1 in rescueAreaInfo) {
+            foreach (Hashtable o1 in rescueAreaInfo) {
 
-                em.addQjqxx(o1.XM.toString(), o1.XB.toString(), o1.NL.toString(), o1.LGTS.toString(), o1.YCYE.toString());
+                em.addQjqxx((string)o1["XM"], (string)o1["XB"], (string)o1["NL"], (string)o1["LGTS"], (string)o1["LCZD"], (double)o1["YCYE"]);
             }
 
-            foreach (object o2 in observeAreaInfo) {
-                em.addLgqxx(o2.XM.toString(), o2.XB.toString(), o2.NL.toString(), o2.LGTS.toString(), o2.YCYE.toString());
+            foreach (Hashtable o2 in observeAreaInfo) {
+                em.addLgqxx((string)o2["XM"], (string)o2["XB"], (string)o2["NL"], (string)o2["LGTS"],(string)o2["LCZD"],(double)o2["YCYE"]);
             }
 
-            return hs;
+            return em;
         }
 
-        public Hashtable GetAdmissionDischargeInfo()
+        public AdmissionDischarge GetAdmissionDischargeInfo()
         {
 
             //Hashtable hs = new Hashtable();
@@ -114,26 +114,26 @@ namespace HBB.DataService {
 
             AdmissionDischarge ad = new AdmissionDischarge();
             // 出入院
-            ad.cry.zrzy = yestdayLiveHospitalNum;
-            ad.cry.jrcy = todayOutHospitalNum;
-            ad.cry.jrry = todayInHospitalNum;
-            foreach (object o1 in todayIONumOfDepartment) {
+            ad.cry.zrzy = yestdayLiveHospitalNum.ToString();
+            ad.cry.jrcy = todayOutHospitalNum.ToString();
+            ad.cry.jrry = todayInHospitalNum.ToString();
+            foreach (Hashtable o1 in todayIONumOfDepartment) {
 
-                add.addGzkcryqk(o1.ZKMC.toString(), o1.RS.toString(), o1.INNUM.toString(), o1.OUTNUM.toString());
+                ad.addGzkcryqk((string)o1["ZKMC"], (string)o1["RS"], (string)o1["INNUM"], (string)o1["OUTNUM"]);
             }
             // 床位
-            ad.edkcw = ratedVacantBedsNum;
-            ad.jckcw = extraEmptyBedsNum;
-            ad.xnkcw = virtualEmptyBedsNum;
-            foreach (object o2 in EachSubjectEmptyBeds) {
+            ad.edkcw = ratedVacantBedsNum.ToString();
+            ad.jckcw = extraEmptyBedsNum.ToString();
+            ad.xnkcw = virtualEmptyBedsNum.ToString();
+            foreach (Hashtable o2 in EachSubjectEmptyBeds) {
 
-                add.addGzkkcqk(o1.ZKMC.toString(), o1.EDKCW.toString(), o1.JCKCW.toString(), o1.XNKCW.toString());
+                ad.addGzkkcqk((string)o2["ZKMC"], (string)o2["EDKCW"], (string)o2["JCKCW"], (string)o2["XNKCW"]);
             }
 
-            return hs;
+            return ad;
         }
 
-        public Hashtable GetHospitalizationInfo()
+        public HospitalInfo GetHospitalizationInfo()
         {
 
             //Hashtable hs = new Hashtable();
@@ -198,23 +198,23 @@ namespace HBB.DataService {
 
             HospitalInfo hos = new HospitalInfo();
             // 出入院
-            hos.cry.jrcyrs = todayOutHospitalNum;
-            hos.cry.zrryrs = lastdayInHospitalNum;
+            hos.cry.jrcyrs = int.Parse(todayOutHospitalNum.ToString());
+            hos.cry.zrryrs = int.Parse(lastdayInHospitalNum.ToString());
             hos.crytj.ryrs = lastweekInHospitalNum;
             hos.crytj.cyrs = lastweekOutHospitalNum;
             // 住院收入
-            hos.zysr.zrzysr = yestodayInncomeNum;
-            hos.zysr.jrzysr = getTodayInncome;
+            hos.zysr.zrzysr = double.Parse(yestodayInncomeNum.ToString());
+            hos.zysr.jrzysr = double.Parse(getTodayInncome.ToString());
             hos.zysrje = getLastweekInncome;
             // 病床使用率
-            hos.bs.zcws = 3200;
-            hos.bs.dqzy = 2842;
-            hos.bcsyl = new double[] { 87.12, 84.56, 86.34, 90.04, 92.17, 85.22, 88.89 };
+            hos.bc.zcws = 3200;
+            hos.bc.dqzy = 2842;
+            hos.bcsyl = new object[] { 87.12, 84.56, 86.34, 90.04, 92.17, 85.22, 88.89 };
             // 住院人均
             hos.zyrj.zrrjfy = 1024;
             hos.zyrj.syrjfy = 652;
             hos.zyrj.qnrjfy = 864;
-            hos.rjjetj = new int[] { 545, 1944, 810, 697, 1604, 976, 1024 };
+            hos.rjjetj = new object[] { 545, 1944, 810, 697, 1604, 976, 1024 };
 
             return hos;
         }

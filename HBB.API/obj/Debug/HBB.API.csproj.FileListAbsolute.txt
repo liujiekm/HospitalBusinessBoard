@@ -245,3 +245,6 @@ C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.API\bin\HBB.ServiceInterface.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.API\bin\HBB.ServiceInterface.pdb
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.API\bin\Elmah.dll
+C:\Users\lenovo\Source\Repos\HospitalBusinessBoard\HBB.API\obj\Debug\HBB.API.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Source\Repos\HospitalBusinessBoard\HBB.API\obj\Debug\HBB.API.dll
+C:\Users\lenovo\Source\Repos\HospitalBusinessBoard\HBB.API\obj\Debug\HBB.API.pdb
