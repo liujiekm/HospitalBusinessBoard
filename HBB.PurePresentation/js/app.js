@@ -17,6 +17,13 @@ import LeftNav from "../js/common/component/LeftNav"
 import Clock from "../js/common/component/Clock"
 import UserControl from "../js/common/component/UserControl"
 var App = React.createClass({
+
+    handleQuit:function () {
+        localStorage.setItem('login', 'false')
+        this.props.history.replaceState(null, '/Login');
+    },
+
+
     render:function () {
         return (
             <div className="container-fluid">
@@ -45,7 +52,7 @@ var App = React.createClass({
 
                             <div className="col-md-4 col-sm-4 col-xs-4 userzone" >
 
-                                <UserControl />
+                                <UserControl handleQuit={this.handleQuit} />
 
                             </div>
 
@@ -54,8 +61,10 @@ var App = React.createClass({
 
 
                         <div className="row reportRow">
+                            <div className="col-md-10 col-sm-10 col-xs-10 rightcontainer">
+                                {this.props.children}
+                            </div>
 
-                            {this.props.children}
 
                         </div>
 

@@ -32,7 +32,8 @@ namespace HBB.API.Controllers
             this.authentication = authentication;
         }
 
-
+        [HttpPost]
+        [Route("VC")]
         public bool VerifyCredential(String account,String certificate)
         {
             return authentication.Validate(account, certificate);

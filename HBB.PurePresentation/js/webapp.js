@@ -34,14 +34,24 @@ var Webapp = React.createClass({
 
 });
 
+function hasLogin() {
+    return localStorage.getItem('login') === 'true';
+}
+
+function requireAuth(nextState, replace) {
+    if (!hasLogin()) {
+        replace({ nextPathname: nextState.location.pathname }, '/Login')
+    }
+}
+
 render((
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
         <Route path="/" component={Webapp}>
 
             <IndexRoute component={Login} />
             <Route path="Login" component={Login} >
             </Route>
-            <Route path="/" component={App}>
+            <Route onEnter={requireAuth} path="/" component={App}>
                 <IndexRoute component={Home} />
                 <Route path="Home" component={Home} />
                 <Route path="Inhospital" component={Inhospital} />

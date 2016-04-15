@@ -248,6 +248,13 @@ p {
     background: #4aa0e9;
 }
 
+.rightcontainer
+{
+    padding-left:0px;
+    padding-right: 0px;
+}
+
+
 
 
 /*Clock 组件样式*/

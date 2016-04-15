@@ -244,6 +244,7 @@
                                     <img class="img-responsive" src="content/img/newHome/delta.png" />
 
                                 </div>
+
                                 <div class="col-md-6 col-sm-6 col-xs-6 div_nav div_chart">
                                     <div>
                                         <div id="doctorSignInRate" class="chart"></div>

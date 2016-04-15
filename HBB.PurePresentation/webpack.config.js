@@ -49,9 +49,9 @@ module.exports = {
         //     // filename: './build/index.html'
         // }),
         // Open Browser Webpack Plugin
-        new OpenBrowserPlugin({
-            url: 'http://localhost:5831'
-        }),
+        // new OpenBrowserPlugin({
+        //     url: 'http://localhost:5831'
+        // }),
         new ExtracTextPlugin('styles.css'),
         // Vendor chunk - available as variable in every module,
         new webpack.ProvidePlugin({

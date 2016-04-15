@@ -7,18 +7,25 @@
 import React from 'react'
 import { render, findDOMNode } from 'react-dom'
 
+import { History } from 'react-router'
+
 
 
 import { Link } from 'react-router'
 
 
 var LeftNav = React.createClass({
-    
+    mixins: [ History ],
+
     activeClick:function () {
         $(this.getDOMNode()).addClass('active').siblings().removeClass('active');
     },
     render:function () {
-          return (
+
+        let isActive = this.history.isActive(this.props.to, this.props.query)
+        let className = isActive ? 'active' : ''
+
+        return (
               <ul className="nav nav-pills nav-stacked text-center navleft">
                   <p>医院业务看板</p>
                   <li>&nbsp;</li>

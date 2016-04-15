@@ -2,3 +2,8 @@ C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\WYY
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\WYYY.HDGM.Common\bin\Debug\WYYY.HDGM.Common.pdb
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\WYYY.HDGM.Common\obj\Debug\WYYY.HDGM.Common.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\WYYY.HDGM.Common\obj\Debug\WYYY.HDGM.Common.pdb
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.Common\bin\Debug\HBB.Common.dll
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.Common\bin\Debug\HBB.Common.pdb
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.csprojResolveAssemblyReference.cache
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.dll
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.pdb
