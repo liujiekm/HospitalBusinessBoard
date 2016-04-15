@@ -1,4 +1,5 @@
-﻿//===================================================================================
+﻿using HBB.ServiceInterface.Model;
+//===================================================================================
 // 北京联想智慧医疗信息技术有限公司 & Net 开发组
 //=================================================================================== 
 // 住院相关的报表数据获取
@@ -22,26 +23,11 @@ using System.Threading.Tasks;
 namespace HBB.ServiceInterface {
     public interface IBeInHospitalService
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        Hashtable GetEmergencyTreatmentInfo();
 
+        EmetgencyTreatment GetEmergencyTreatmentInfo();
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        Hashtable GetAdmissionDischargeInfo();
+        AdmissionDischarge GetAdmissionDischargeInfo();
 
-
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        Hashtable GetHospitalizationInfo();
+        HospitalInfo GetHospitalizationInfo();
     }
 }
