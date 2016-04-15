@@ -24,6 +24,9 @@ using System.Web.Http.ModelBinding;
 
 namespace HBB.API.Controllers
 {
+    /// <summary>
+    /// 关注于用户体验数据服务（等待时长等）
+    /// </summary>
     [RoutePrefix("UE")]
     public class UserExperienceController : ApiController
     {

@@ -24,6 +24,9 @@ using System.Web.Http.ModelBinding;
 
 namespace HBB.API.Controllers
 {
+    /// <summary>
+    /// 门诊相关信息服务
+    /// </summary>
     [RoutePrefix("OPA")]
     public class OutpatientController : ApiController //OutPatient.ashx
     {
@@ -42,15 +45,15 @@ namespace HBB.API.Controllers
             this.homeService = homeService;
         }
 
-        public List<IncomeStatistics> GetOutpatientIncome(DateTime startDateTime, DateTime endDateTime, String district)
-        {
-            return outpatientReportService.GetOutpatientIncome(startDateTime, endDateTime, district);
-        }
+        //public List<IncomeStatistics> GetOutpatientIncome(DateTime startDateTime, DateTime endDateTime, String district)
+        //{
+        //    return outpatientReportService.GetOutpatientIncome(startDateTime, endDateTime, district);
+        //}
 
-        public List<SurgeryDetailedInformation> GetSurgeryDetailedInformation(string district)
-        {
-            return outpatientReportService.GetSurgeryDetailedInformation(district);
-        }
+        //public List<SurgeryDetailedInformation> GetSurgeryDetailedInformation(string district)
+        //{
+        //    return outpatientReportService.GetSurgeryDetailedInformation(district);
+        //}
 
         /// <summary>
         /// 门诊收入汇总

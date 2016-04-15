@@ -69,7 +69,6 @@
 
                             <div style="float: left; padding-right: 20px">
                                 <div class="text-nowrap" style="margin-top: 25px; float: left; font-size: 30px; color: white">
-<%--                                    <p><%=DateTime.Now.ToString("yyyy年MM月dd日")+" "+DateTime.Now.ToString("dddd",new System.Globalization.CultureInfo("zh-cn")) +" "+DateTime.Now.ToString("tt hh:mm") %></p>--%>
                                     <div id="Date" style="float: left; width: 320px;"></div>
                                     <ul class="clock" style="float: left; width: 150px;">
                                         <li id="hours"></li>

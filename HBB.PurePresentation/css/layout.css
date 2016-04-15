@@ -1,0 +1,374 @@
+body {
+    font-family: 微软雅黑;
+
+    background: url('../img/Home/BG.png')  no-repeat;
+    /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/content/img/newHome/BG.jpg', sizingMethod='scale');
+    -moz-background-size:100% 100%;*/
+    /*background-size:100% 100%;*/
+
+    background-color:#52B8D7;
+
+}
+.imgText {
+    padding-top: 10px;
+    padding-top: 5px\0;
+    margin-left: -10px;
+
+}
+.lenovo {
+    position: fixed;
+    bottom: 20px;
+
+}
+
+.clock {
+    margin: 0 auto;
+    padding: 0px;
+    list-style: none;
+}
+
+.clock > li {
+    display: inline;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1024px)  {
+    .imgText {
+        font-size: 12px;
+    }
+    .verticalLine {
+        position: absolute;
+        left: 65px;
+        top: 0px;
+    }
+    .lenovo {
+        left: 17px;
+    }
+    .hospitalLogo {
+        padding-right: 30px;
+    }
+}
+@media only screen and (min-width: 1280px)  {
+    .imgText {
+        font-size: 14px;
+    }
+    .verticalLine {
+        position: absolute;
+        left: 85px;
+        left: 90px\0;
+        top: 0px;
+    }
+    .lenovo {
+        left: 40px;
+        left: 50px\0;
+    }
+    .hospitalLogo {
+        padding-right: 20px;
+    }
+}
+@media only screen and (min-width: 1440px)  {
+    .imgText {
+        font-size: 14px;
+    }
+
+    .verticalLine {
+        position: absolute;
+        left: 85px;
+        left: 90px\0;
+        top: 0px;
+    }
+    .lenovo {
+        left: 40px;
+        left: 50px\0;
+    }
+
+    .hospitalLogo {
+        padding-right: 20px;
+    }
+}
+
+.lead {
+    margin-bottom: 10px;
+}
+
+
+#div_header {
+    height: 70px;
+    /*padding-left: 40px;*/
+}
+
+.mobilePadding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.reportRow {
+    height: 660px;
+    padding-top: 10px;
+    padding-left: 20px;
+
+    padding-left: 50px\0;/*IE8*/
+}
+
+/*.verticalLine {
+    position: absolute;
+    left: 80px;
+    left: 90px\0;
+    top: 0px;
+}*/
+
+/*IE8 !important*/
+.leftGo {
+    padding: 0px;
+    width: auto !important;
+
+    float: right !important;
+    cursor: pointer;
+}
+/*IE8 !important*/
+.rightGo {
+    padding: 0px;
+    width: auto !important;
+
+    float: right !important;
+    cursor: pointer;
+}
+
+p {
+    margin: 0 0 0 0;
+}
+.nav > li > a {
+    color: white;
+}
+.navleft {
+    font-size: 30px;
+    padding-top: 20px;
+
+}
+.leftNavigation {
+    background: url('../img/login/BlueBG.png') repeat;
+
+    color: white;
+    width: 15%;
+    padding-left: 0px;
+
+    padding-right: 0px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#div_footer {
+    position: fixed;
+    left: 15.5%;
+    bottom: 0;
+    width: 80%;
+
+}
+.nav-pills>li>a {
+    border-radius: 0px;
+}
+.col-sm-12 > p {
+    font-family: 黑体;
+    font-size: 20px;
+}
+.div_chart {
+    padding-left: 12px;
+    padding-left: 13px\0;/*IE8 IE9*/
+    padding-right:0px;
+}
+.div_nav>div {
+    color: white;
+    border-color: #154A6A;
+    background: url('../img/Home/30black.png') repeat;
+    margin-bottom: 10px;
+}
+
+/*.div_nav :hover {
+    color: white;
+    background: #4AA0E9;
+}*/
+
+.div_navContent {
+    float: right;
+}
+
+.p_navContent {
+    font-family: 黑体;
+    font-size: 16px;
+}
+
+
+.reportMain {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 99%;
+    height: 700px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.chart {
+    height: 110px;
+
+
+
+}
+
+.nav-choice {
+    margin-left: -20px;
+    margin-top: 30px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background: #4aa0e9;
+}
+
+.nav > li.active {
+    background: #4aa0e9;
+}
+
+.chartMore {
+    border: 1px solid #4AA0E9;
+    margin-left: -20px;
+    margin-top: 30px;
+}
+
+.chartMore > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.chartMore > a:hover,
+.chartMore > a:focus {
+    background: #4aa0e9;
+}
+
+.rightcontainer
+{
+    padding-left:0px;
+    padding-right: 0px;
+}
+
+
+
+
+/*Clock 组件样式*/
+
+.clock-position
+{
+    margin-top: 25px; float: left; font-size: 28px; color: white; margin-left: 20px\0;
+}
+.clock-date
+{
+    width:300px;
+}
+
+.clock-time
+{
+    width:150px;
+}
+
+
+/*用户操作组件*/
+.userzone
+{
+    padding-right: 0px;
+}
+
+
+.usercontrol-name{
+    margin-top: 25px; float: left; font-size: 28px; color: white; margin-right: 15px;
+}
+
+.usercontrol-symbol
+{
+    padding-top: 20px;
+}
+
+.navsymbol-position
+{
+    padding-top: 30px;
+}
+
+/*登录组件样式*/
+.loginContainer {
+    position: fixed;
+    left: 38%;
+    height: 100%;
+    width: 25%;
+    background: url('../img/login/BlueBG.png');
+}
+
+.logoImg {
+    position: relative;
+    left: 32%;
+}
+
+.login-footer {
+    margin-top: 45px;
+}
+
+.info-links {
+    font-size: 11px;
+    margin-top: 5px;
+    color: rgba(151, 152, 152, 0.7);
+}
+
+.formControl {
+    height: 53px;
+    border: 1px solid white;
+    width: 72%;
+}
+
+.loginIcon {
+    /*margin-top: -1px;*/
+}
+.login-form {
+    position: relative;
+    color: white;
+    top: 15%;
+}
+.form-group {
+    background: white;
+    color: black;
+    font-size: 25px;
+}
+
+input:focus {
+    /*border: 1px solid white; 13818866603 */
+}
+
+.loginBtn {
+    width: 90%;
+    text-align: center;
+    position: relative;
+    left: 5%;
+    height: 50px;
+    background:   url('../img/login/BlueBG.png');
+    border: 1px solid white;
+    border-radius: 0px;
+    color: white;
+}
+.loginBtn:focus,
+.loginBtn:hover {
+    background:   white;
+    color: #49aecf;
+}
+
+
+.formGroup {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+.formGroupBtn {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 15px;
+}

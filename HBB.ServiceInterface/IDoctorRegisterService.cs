@@ -23,10 +23,35 @@ namespace HBB.ServiceInterface
 {
     public interface IDoctorRegisterService
     {
+        /// <summary>
+        /// 医生签到概要信息
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
         List<DoctorRegisterMainInformaton> GetDoctorRegisterMainInformaton(string time);
 
+
+        /// <summary>
+        /// 医生签到详细信息
+        /// </summary>
+        /// <param name="timePoint"></param>
+        /// <returns></returns>
         List<DoctorRegisterDetailInformaton> GetDoctorRegisterDetailInformaton(string timePoint);
+
+        /// <summary>
+        /// 未签到医生的详细信息
+        /// </summary>
+        /// <param name="timePoint"></param>
+        /// <returns></returns>
         List<DoctorRegisterDetailInformaton> GetDoctorUnRegisterDetailInformaton(string timePoint);
+
+
+        /// <summary>
+        /// 指定医生的过去签到详细信息
+        /// </summary>
+        /// <param name="timeType"></param>
+        /// <param name="userID"></param>
+        /// <returns></returns>
         List<DoctorRegisterDetailInformatonForPast> GetDoctorRegisterDetailInformatonForPast(string timeType, string userID);
     }
 }

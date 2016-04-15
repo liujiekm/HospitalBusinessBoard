@@ -250,7 +250,7 @@ namespace HBB.DataService.Fake {
             //hs.Add("rjjetj", new int[] { 545, 1944, 810, 697, 1604, 976, 1024 });
 
             HospitalInfo hos = new HospitalInfo();
-            
+
             // 出入院
             hos.cry.jrcyrs = 37;
             hos.cry.zrryrs = 482;
@@ -272,7 +272,7 @@ namespace HBB.DataService.Fake {
             hos.zyrj.syrjfy = 652;
             hos.zyrj.qnrjfy = 864;
             hos.rjjetj = new object[] { 545, 1944, 810, 697, 1604, 976, 1024 };
-            
+
             return hos;
         }
     }
