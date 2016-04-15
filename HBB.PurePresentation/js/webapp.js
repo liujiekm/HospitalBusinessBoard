@@ -35,7 +35,7 @@ var Webapp = React.createClass({
 });
 
 render((
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
         <Route path="/" component={Webapp}>
 
             <IndexRoute component={Login} />

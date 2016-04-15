@@ -18,7 +18,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HBB.ServiceInterface.Model {
-    class EmetgencyTreatment {
+    public class EmetgencyTreatment {
         public struct qxx {
             public string XM;   // 姓名
             public string XB;   // 性别
