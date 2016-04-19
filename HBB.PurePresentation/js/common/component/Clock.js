@@ -23,35 +23,17 @@ var Clock = React.createClass({
             newDate.setDate(newDate.getDate());
             var currentDate=
             newDate.getFullYear() + '年' + monthNames[newDate.getMonth()] + newDate.getDate() + '日 ' + dayNames[newDate.getDay()];
-        //     setInterval(function () {
-        //
-        //     var seconds = new Date().getSeconds();
-        //
-        //     $(this.refs.sec).html((seconds < 10 ? "0" : "") + seconds);
-        // }, 1000);
-        //
-        //     setInterval(function () {
-        //
-        //     var minutes = new Date().getMinutes();
-        //
-        //     $(this.refs.min).html((minutes < 10 ? "0" : "") + minutes);
-        // }, 1000);
-        //
-        //     setInterval(function () {
-        //
-        //     var hours = new Date().getHours();
-        //
-        //     $(this.refs.hours).html((hours < 10 ? "0" : "") + hours);
-        // }, 1000);
-var that = this;
+
+        var that = this;
         setInterval(function(){
+
             var seconds = new Date().getSeconds();
             var minutes = new Date().getMinutes();
             var hours = new Date().getHours();
             that.setState({date:currentDate,
-                hour:hours,
-                min:minutes,
-                sec:seconds});
+                hour:(hours < 10 ? "0" : "") + hours,
+                min:(minutes < 10 ? "0" : "") + minutes,
+                sec:(seconds < 10 ? "0" : "") + seconds});
 
         },1000);
 

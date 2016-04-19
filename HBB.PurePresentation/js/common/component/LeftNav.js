@@ -22,8 +22,8 @@ var LeftNav = React.createClass({
     },
     render:function () {
 
-        let isActive = this.history.isActive(this.props.to, this.props.query)
-        let className = isActive ? 'active' : ''
+        // let isActive = this.history.isActive(this.props.to, this.props.query)
+        // let className = isActive ? 'active' : ''
 
         return (
               <ul className="nav nav-pills nav-stacked text-center navleft">
