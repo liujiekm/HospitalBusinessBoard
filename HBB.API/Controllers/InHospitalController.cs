@@ -12,6 +12,7 @@
 // 版本号：  V1.0.0.0
 //===================================================================================
 using HBB.ServiceInterface;
+using HBB.ServiceInterface.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -40,7 +41,7 @@ namespace HBB.API.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("ET")]
-        public Hashtable GetEmergencyTreatmentInfo()
+        public EmergencyTreatment GetEmergencyTreatmentInfo()
         {
             return inHospitalService.GetEmergencyTreatmentInfo();
         }
@@ -54,7 +55,7 @@ namespace HBB.API.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("ADI")]
-        Hashtable GetAdmissionDischargeInfo()
+        public AdmissionDischarge GetAdmissionDischargeInfo()
         {
             return inHospitalService.GetAdmissionDischargeInfo();
         }
@@ -67,7 +68,7 @@ namespace HBB.API.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("HI")]
-        Hashtable GetHospitalizationInfo()
+        public HospitalInfo GetHospitalizationInfo()
         {
             return inHospitalService.GetHospitalizationInfo();
         }

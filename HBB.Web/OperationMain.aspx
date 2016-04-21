@@ -10,7 +10,7 @@
         }
 
         .pannelContent {
-            background: url('/content/img/newHome/30green.png') repeat;
+            background: url('content/img/newHome/30green.png') repeat;
             margin-right: 10px;
             width: 14.5%;
             margin-top: 10px;
@@ -32,7 +32,7 @@
         }
 
         .reportMain {
-            background: url('/content/img/newHome/30black.png') repeat;
+            background: url('content/img/newHome/30black.png') repeat;
             margin-top: 20px;
             width: 100%;
             overflow: hidden;

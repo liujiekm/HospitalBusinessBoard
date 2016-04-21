@@ -64,8 +64,8 @@ var App = React.createClass({
                             <div className="col-md-10 col-sm-10 col-xs-10 rightcontainer">
                                 {this.props.children}
                             </div>
-
-
+                            <div className="col-md-2 col-sm-2 col-xs-2">
+                            </div>
                         </div>
 
                         

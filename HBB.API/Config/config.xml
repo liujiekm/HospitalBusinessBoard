@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CheckinRate>1</CheckinRate>
+  <WaitingNum>1</WaitingNum>
+  <OutpatientAppTime>1</OutpatientAppTime>
+  <OutpatientWaitingTime>1</OutpatientWaitingTime>
+  <OutpatientInTime>1</OutpatientInTime>
+  <OutpatientPayTime>1</OutpatientPayTime>
+  <OutpatientMedTime>1</OutpatientMedTime>
+  <CheckXTime>1</CheckXTime>
+  <CheckCTTime>1</CheckCTTime>
+  <CheckMRITime>1</CheckMRITime>
+  <CheckBTime>1</CheckBTime>
+  <CheckoutEndoscopeTime>1</CheckoutEndoscopeTime>
+</Config>

@@ -670,7 +670,7 @@
                 });
                 //获得指定专科指定时间区间内的对比数据
                 //'Handler/GenericHandler.ashx?type=ptd&sd=' + $('#sDate').val() + '&ed=' + $('#eDate').val() + '&hd=' + $('#hospitalDistrict').val() + '&sid=' + sids,
-                $.getJSON(baseUrl + 'UE/DTATGBD' + $('#sDate').val() + '/' + $('#eDate').val() + '?hospitalDistrict=' + $('#hospitalDistrict').val() + '&depts=' + sids,
+                $.getJSON(baseUrl + 'UE/DTATGBD/' + $('#sDate').val() + '/' + $('#eDate').val() + '?hospitalDistrict=' + $('#hospitalDistrict').val() + '&depts=' + sids,
                     function (data) {
                     optionData = data;
                     //取得科室名称

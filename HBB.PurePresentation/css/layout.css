@@ -12,7 +12,7 @@ body {
 .imgText {
     padding-top: 10px;
     padding-top: 5px\0;
-    margin-left: -10px;
+    /*margin-left: -10px;*/
 
 }
 .lenovo {
@@ -366,9 +366,53 @@ input:focus {
     margin-right: -15px;
     margin-bottom: 15px;
     background-color: white;
+    color: #4BA1D0;
 }
 .formGroupBtn {
     margin-left: -15px;
     margin-right: -15px;
     margin-bottom: 15px;
+}
+
+
+
+/*Checkin Widget*/
+
+.checkinwgt-symbol
+{
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 20px;
+}
+
+.checkinwgt-content
+{
+    background: url('../img/Home/30green.png') repeat;
+    margin: 5px;
+    padding-left: 40px;
+    padding-right: 10px;
+    height: 100px;
+    left: 10px;
+}
+
+/*数据警示*/
+.indicate-alarm
+{
+    color:red;
+}
+
+/*文字长度*/
+.wgt-size
+{
+    width:475px;
+    height: 120px;
+}
+
+
+/*Extension 样式*/
+.extension-position
+{
+    margin-top: 45px;
+    position: absolute;
+    right: 48.7%
 }

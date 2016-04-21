@@ -1,7 +1,7 @@
 ﻿body {
     font-family: 微软雅黑;
     
-    background: url('/content/img/newHome/BG.png')  no-repeat;
+    background: url('../../content/img/newHome/BG.png')  no-repeat;
     /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/content/img/newHome/BG.jpg', sizingMethod='scale');
     -moz-background-size:100% 100%;*/  
     background-size:100% 100%;  
@@ -146,7 +146,7 @@ p {
     
 }
 .leftNavigation {
-    background: url('/content/img/login/BlueBG.png') repeat;
+    background: url('../../content/img/login/BlueBG.png') repeat;
 
     color: white;
     width: 15%;
@@ -182,7 +182,7 @@ p {
         .div_nav>div {
             color: white;
             border-color: #154A6A;
-           background: url('/content/img/newHome/30black.png') repeat;
+           background: url('../../content/img/newHome/30black.png') repeat;
             margin-bottom: 10px;
         }
 

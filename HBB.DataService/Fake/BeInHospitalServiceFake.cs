@@ -20,7 +20,7 @@ using HBB.ServiceInterface.Model;
 namespace HBB.DataService.Fake {
     class BeInHospitalServiceFake : IBeInHospitalService {
 
-        public EmetgencyTreatment GetEmergencyTreatmentInfo()
+        public EmergencyTreatment GetEmergencyTreatmentInfo()
         {
 
             //Hashtable hs = new Hashtable();
@@ -64,7 +64,7 @@ namespace HBB.DataService.Fake {
             //    new Hashtable(){ {"XM","吴爱萍"},{"XB","女"},{"NL","46"},{"LGTS","加害性损伤后接受检查和观察；"},{"LCZD","238"},{"YCYE",1372.64} }
             //});
 
-            EmetgencyTreatment em = new EmetgencyTreatment();
+            EmergencyTreatment em = new EmergencyTreatment();
 
             // 获得急诊抢救区信息
             em.addQjqxx("梁美坤","男","79","扩张性心肌病，心功能不全；","235",812.91);

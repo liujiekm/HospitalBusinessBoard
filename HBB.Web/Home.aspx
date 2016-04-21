@@ -44,13 +44,13 @@
         }
 
         .pannelContent {
-            background: url('/content/img/newHome/30green.png') repeat;
+            background: url('content/img/newHome/30green.png') repeat;
             margin-right: 10px;
             width: 16.5%;
         }
 
        .pannelContentWarning {
-            background: url('/content/img/newHome/30blue.png') repeat;
+            background: url('content/img/newHome/30blue.png') repeat;
             margin-right: 10px;
             width: 16.5%;
         }
@@ -196,7 +196,7 @@
 
                                         </div>
 
-                                        <div class="col-md-4 col-sm-4 col-xs-4" style="background: url('/content/img/newHome/30green.png') repeat; margin: 5px; padding-left: 10px; padding-right: 10px; height: 100px; left: 10px;">
+                                        <div class="col-md-4 col-sm-4 col-xs-4" style="background: url('content/img/newHome/30green.png') repeat; margin: 5px; padding-left: 10px; padding-right: 10px; height: 100px; left: 10px;">
                                             <div class="row">
                                                 <div class="col-md-12 mobilePadding">
                                                     <p class="lead">上午 <strong id="morningSignInRate">95.2</strong>%</p>
@@ -213,7 +213,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-4 col-sm-4 col-xs-4" style="background: url('/content/img/newHome/30green.png') repeat; margin: 5px; padding-left: 10px; padding-right: 10px; height: 100px; left: 10px;">
+                                        <div class="col-md-4 col-sm-4 col-xs-4" style="background: url('content/img/newHome/30green.png') repeat; margin: 5px; padding-left: 10px; padding-right: 10px; height: 100px; left: 10px;">
                                             <div class="row">
                                                 <div class="col-md-12 mobilePadding">
 
@@ -420,7 +420,7 @@
 
                                         </div>
 
-                                        <div class="col-md-4" style="background: url('/content/img/newHome/30green.png') repeat; margin: 5px; padding-left: 10px; padding-right: 10px; height: 100px; left: 10px;">
+                                        <div class="col-md-4" style="background: url('content/img/newHome/30green.png') repeat; margin: 5px; padding-left: 10px; padding-right: 10px; height: 100px; left: 10px;">
                                             <div class="row">
                                                 <div class="col-md-12 mobilePadding">
                                                     <p class="lead" style="margin-bottom: 0px">在院人数</p>
@@ -439,7 +439,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-4" style="background: url('/content/img/newHome/30green.png') repeat; margin: 5px; padding-left: 10px; padding-right: 10px; left: 10px;">
+                                        <div class="col-md-4" style="background: url('content/img/newHome/30green.png') repeat; margin: 5px; padding-left: 10px; padding-right: 10px; left: 10px;">
                                             <div class="row">
                                                 <div class="col-md-12 mobilePadding">
                                                     <p class="lead">空床</p>

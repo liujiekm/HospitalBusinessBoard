@@ -1,0 +1,14 @@
+{
+  "checkinRate":"",
+  "waitingNum":"",
+  "outpatientAppTime":"",
+  "outpatientWaitingTime":"",
+  "outpatientInTime":"",
+  "outpatientPayTime":"",
+  "outpatientMedTime":"",
+  "checkXTime":"",
+  "checkCTTime":"",
+  "checkMRITime":"",
+  "checkBTime":"",
+  "checkoutEndoscopeTime":""
+}

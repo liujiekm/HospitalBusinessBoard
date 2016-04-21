@@ -24,7 +24,7 @@ namespace HBB.ServiceInterface {
     public interface IBeInHospitalService
     {
 
-        EmetgencyTreatment GetEmergencyTreatmentInfo();
+        EmergencyTreatment GetEmergencyTreatmentInfo();
 
         AdmissionDischarge GetAdmissionDischargeInfo();
 

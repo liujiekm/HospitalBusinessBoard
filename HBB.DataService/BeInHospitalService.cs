@@ -38,7 +38,7 @@ namespace HBB.DataService {
 
         #region 功能
 
-        public EmetgencyTreatment GetEmergencyTreatmentInfo()
+        public EmergencyTreatment GetEmergencyTreatmentInfo()
         {
 
             //Hashtable hs = new Hashtable();
@@ -53,7 +53,7 @@ namespace HBB.DataService {
             //hs.Add("qjqxx",rescueAreaInfo);
             //hs.Add("lgqxx",observeAreaInfo);
 
-            EmetgencyTreatment em = new EmetgencyTreatment();
+            EmergencyTreatment em = new EmergencyTreatment();
 
             foreach (Hashtable o1 in rescueAreaInfo) {
 
