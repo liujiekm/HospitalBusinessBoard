@@ -179,7 +179,7 @@ p {
     padding-left: 13px\0;/*IE8 IE9*/
     padding-right:0px;
 }
-.div_nav>div {
+.div_nav {
     color: white;
     border-color: #154A6A;
     background: url('../img/Home/30black.png') repeat;
@@ -378,14 +378,14 @@ input:focus {
 
 /*Checkin Widget*/
 
-.checkinwgt-symbol
+.wgt-symbol
 {
     padding-left: 10px;
     padding-right: 5px;
     padding-top: 20px;
 }
 
-.checkinwgt-content
+.checkin-wgt-content
 {
     background: url('../img/Home/30green.png') repeat;
     margin: 5px;
@@ -393,6 +393,46 @@ input:focus {
     padding-right: 10px;
     height: 100px;
     left: 10px;
+}
+
+/*坐诊情况 widget*/
+.outpatient-ms-left
+{
+    vertical-align: middle;
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    height: 100px;
+}
+
+.outpatient-ms-right
+{
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.outpatient-ms-p
+{
+    padding-bottom: 5px;
+}
+
+
+/*手术widget 样式*/
+
+.surgerywgt-symbol
+{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.surgerywgt-symbol-content{
+
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 20px;
+
 }
 
 /*数据警示*/
@@ -404,7 +444,7 @@ input:focus {
 /*文字长度*/
 .wgt-size
 {
-    width:475px;
+    width:455px;
     height: 120px;
 }
 
@@ -412,7 +452,23 @@ input:focus {
 /*Extension 样式*/
 .extension-position
 {
-    margin-top: 45px;
+    top: 50%;
     position: absolute;
-    right: 48.7%
+    right: 49.4%
+}
+
+.wgt-margin-right
+{
+    margin-right: 10px;
+}
+
+.wgt-group
+{
+    height:120px;
+    position: relative;
+}
+
+.wgt-content-position
+{
+    margin-top:10px;
 }

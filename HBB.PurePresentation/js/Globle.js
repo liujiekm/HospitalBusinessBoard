@@ -1,6 +1,8 @@
-﻿var baseUrl = "http://localhost:5831/";
+﻿var Globle={};
+
+Globle.baseUrl = "http://localhost:5831/";
 
 
 
 
-module.exports=baseUrl;
+module.exports=Globle;

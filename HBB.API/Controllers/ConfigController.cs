@@ -17,6 +17,7 @@ using HBB.API.Models;
 using HBB.Common;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -46,5 +47,90 @@ namespace HBB.API.Controllers
             var path = HttpContext.Current.Server.MapPath("~/Config/config.xml");
             XMLOperation<Config>.WriteToXML(config, path);
         }
+
+
+
+        [HttpPost]
+        [Route("UL")]
+        public HttpResponseMessage UploadLogo()
+        {
+            HttpResponseMessage result = null;
+            var httpRequest = HttpContext.Current.Request;
+            if (httpRequest.Files.Count > 0)
+            {
+                var docfiles = new List<string>();
+                foreach (string file in httpRequest.Files)
+                {
+                    var postedFile = httpRequest.Files[file];
+                    var filePath = HttpContext.Current.Server.MapPath("~/Content/img/Hname.png");
+                    postedFile.SaveAs(filePath);
+
+                    docfiles.Add(filePath);
+                }
+                result = Request.CreateResponse(HttpStatusCode.Created, docfiles);
+            }
+            else
+            {
+                result = Request.CreateResponse(HttpStatusCode.BadRequest);
+            }
+            return result;
+        }
+
+
+
+        [HttpPost]
+        [Route("UI")]
+        public HttpResponseMessage UploadImage()
+        {
+            HttpResponseMessage result = null;
+            if(HttpContext.Current.Request.Files.AllKeys.Any())
+            {
+                var postImg = HttpContext.Current.Request.Files["ImageData"];
+
+                if(postImg!=null)
+                {
+                    var imageSavePath = Path.Combine(HttpContext.Current.Server.MapPath("~/Content/img"), "Hname.png");
+
+                    postImg.SaveAs(imageSavePath);
+                }
+                result = Request.CreateResponse(HttpStatusCode.Created);
+            
+            }
+            else
+            {
+                result = Request.CreateResponse(HttpStatusCode.BadRequest);
+            }
+            return result;
+        }
+
+
+
+        [HttpGet]
+        [Route("GL")]
+        public HttpResponseMessage GetLogo()
+        {
+            HttpResponseMessage result = null;
+            var logoUrl = HttpContext.Current.Server.MapPath("~/Content/img/Hname.png");
+
+            try
+            {
+                var logoBytes = File.ReadAllBytes(logoUrl);
+                MemoryStream ms = new MemoryStream(logoBytes);
+
+                result = new HttpResponseMessage(HttpStatusCode.OK);
+                result.Content = new StreamContent(ms);
+                result.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
+                
+            }
+            catch (Exception ex)
+            {
+                result = Request.CreateResponse(HttpStatusCode.InternalServerError);
+            }
+            
+            return result;
+        }
+
+
+
     }
 }

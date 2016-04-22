@@ -33,9 +33,9 @@ var CheckinWgt=React.createClass({
         render:function () {
 
             return(
-                <div className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size">
+                <div className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size wgt-margin-right">
                     <div className="row">
-                        <div className="col-md-2 col-sm-2 col-xs-2 checkinwgt-symbol" >
+                        <div className="col-md-2 col-sm-2 col-xs-2 wgt-symbol" >
                             <div className="row">
                                 <div className="col-md-12">
                                     <img className="img-responsive" src="./img/Home/outpatientSignin.png" />
@@ -46,7 +46,7 @@ var CheckinWgt=React.createClass({
 
                         </div>
 
-                        <div className="col-md-4 col-sm-4 col-xs-4 checkinwgt-content" >
+                        <div className="col-md-4 col-sm-4 col-xs-4 checkin-wgt-content wgt-content-position" >
                             <div className="row">
                                 <div className="col-md-12 mobilePadding">
                                     <p className={this.getClass(this.props.morningSignInRateLow)}>上午 <strong id="morningSignInRate">{this.props.morningSignInRate}</strong>%</p>
@@ -63,7 +63,7 @@ var CheckinWgt=React.createClass({
                             </div>
                         </div>
 
-                        <div className="col-md-4 col-sm-4 col-xs-4 checkinwgt-content" >
+                        <div className="col-md-4 col-sm-4 col-xs-4 checkin-wgt-content wgt-content-position" >
                             <div className="row">
                                 <div className="col-md-12 mobilePadding">
 

@@ -171,6 +171,10 @@ var Config = React.createClass({
 
                     </div>
 
+
+                    
+
+
                     <div className="form-group">
 
                         <button className="btn-primary" onClick={this.handleClick}>提交</button>

@@ -9,14 +9,16 @@ import classnames from "classnames"
 import ReactEcharts from "react-echarts-component"
 
 
-import Extension from "../../component/Extension"
+import Globle from "../../../Globle"
+
+
 
 import options from "../../../option"
 
 var CheckinHistory = React.createClass({
 
     componentDidMount:function () {
-        $.getJSON(baseUrl + 'OPA/RDR', function (items) {
+        $.getJSON(Globle.baseUrl + 'OPA/RDR', function (items) {
             $.each(items, function (index, item) {
 
                 options.homeLineOption.xAxis[0].data.push(item.RegistrationDate + item.RegistrationTime);
@@ -33,9 +35,8 @@ var CheckinHistory = React.createClass({
 
         return (
 
-            <div>
-                
-                <Extension />
+            <div  className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size div_chart">
+
 
                 <ReactEcharts height={110}  option={options.homeLineOption}  />
 

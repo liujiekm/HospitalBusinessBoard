@@ -14,7 +14,7 @@ var BUILD_PATH = path.resolve(ROOT_PATH,'build');
 module.exports = {
     entry: {
         bootstrap: "./lib/bootstrap/js/bootstrap.js",
-        config:"./js/Globle.js",
+        
         webapp: './js/webapp.js',
         jquery: ['jquery'],
     },

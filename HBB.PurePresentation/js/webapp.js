@@ -22,6 +22,8 @@ import Login from "./common/Modular/Login/Login"
 
 import Config from "./common/Modular/Config/Config"
 
+import FileUploadComponenet from "./common/Modular/Config/FileUploadComponent"
+
 import App from "./app"
 
 var Webapp = React.createClass({
@@ -61,6 +63,7 @@ render((
                 <Route path="Operation" component={Operation} />
                 <Route path="Outpatient" component={Outpatient} />
                 <Route path="Config" component={Config} />
+                <Route path="FileUpload" component={FileUploadComponenet} />
             </Route>
 
         </Route>
