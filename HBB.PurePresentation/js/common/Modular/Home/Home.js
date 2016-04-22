@@ -20,6 +20,9 @@ import EmergencyWgt from "./EmergencyWgt"
 
 import SurgeryWgt  from "./SurgeryWgt"
 
+import HospitalizationWgt from "./HospitalizationWgt"
+import EmptyBedsDeptContrast from "./EmptyBedsDeptContrast"
+
 import ReactEcharts from "react-echarts-component"
 
 var Home = React.createClass({
@@ -50,7 +53,13 @@ var Home = React.createClass({
                 </div>
 
 
-                <div className="wgt-group"></div>
+                <div className="wgt-group">
+
+                    <HospitalizationWgt />
+                    <Extension />
+                    <EmptyBedsDeptContrast />
+
+                </div>
 
                 <div className="wgt-group"></div>
 

@@ -39,7 +39,7 @@ var CheckinWgt=React.createClass({
                             <div className="row">
                                 <div className="col-md-12">
                                     <img className="img-responsive" src="./img/Home/outpatientSignin.png" />
-                                        <img className="img-responsive verticalLine" src="/HBB.PurePresentation/img/Home/VerticalLine.png" />
+                                        <img className="img-responsive verticalLine" src="./img/Home/VerticalLine.png" />
                                             <p className="imgText text-center">医生签到</p>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@ var CheckinWgt=React.createClass({
 
                         <div className=" leftGo col-md-2 col-sm-2 col-xs-2 ">
                             <a href="SignInStatics.aspx">
-                                <img className="img-responsive" src="/HBB.PurePresentation/img/Home/into.png" >
+                                <img className="img-responsive" src="./img/Home/into.png" >
                                 </img>
                             </a>
                         </div>

@@ -435,6 +435,15 @@ input:focus {
 
 }
 
+/*住院wdg 样式*/
+.hospitalzation-p
+{
+    margin-bottom: 0px;
+}
+
+
+
+
 /*数据警示*/
 .indicate-alarm
 {
