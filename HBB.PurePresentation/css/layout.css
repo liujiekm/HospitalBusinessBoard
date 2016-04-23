@@ -374,7 +374,29 @@ input:focus {
     margin-bottom: 15px;
 }
 
+.rowContent {
+    background: url('../img/Home/30black.png') repeat;
+    color: white;
+    height: 120px;
 
+}
+
+.pannelContent {
+    background: url('../img/Home/30green.png') repeat;
+    margin-right: 10px;
+    width: 16.5%;
+}
+
+.pannelContentWarning {
+    background: url('../img/Home/30blue.png') repeat;
+    margin-right: 10px;
+    width: 16.5%;
+}
+
+.bottomContent {
+    float: right;
+    margin-right: 20px;
+}
 
 /*Checkin Widget*/
 
@@ -442,8 +464,32 @@ input:focus {
 }
 
 
+/*就医时常wgt样式*/
 
+.ue-symbol
+{
+    margin-top: 20px;
+    margin-left: -5px;
+}
+.ue-symbol-p
+{
+    margin-left: -30px;
+    margin-left: -40px\0;
+}
 
+.ue-content{
+    left:-3%;
+}
+.ue-content-p
+{
+    margin-left: -5px;
+}
+
+.ue-rightgo
+{
+    position: absolute;
+    right: 0%;
+}
 /*数据警示*/
 .indicate-alarm
 {
@@ -461,9 +507,9 @@ input:focus {
 /*Extension 样式*/
 .extension-position
 {
-    top: 50%;
+    top: 45%;
     position: absolute;
-    right: 49.4%
+    left: 48.4%
 }
 
 .wgt-margin-right
@@ -474,10 +520,21 @@ input:focus {
 .wgt-group
 {
     height:120px;
+    width:940px;
     position: relative;
+    margin-top: 10px;
 }
 
 .wgt-content-position
 {
     margin-top:10px;
+}
+
+.wgt-group-ue
+{
+
+    height:120px;
+    width:920px;
+    position: relative;
+    margin-top: 10px;
 }

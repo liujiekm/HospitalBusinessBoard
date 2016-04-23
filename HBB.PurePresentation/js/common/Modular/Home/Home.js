@@ -23,6 +23,10 @@ import SurgeryWgt  from "./SurgeryWgt"
 import HospitalizationWgt from "./HospitalizationWgt"
 import EmptyBedsDeptContrast from "./EmptyBedsDeptContrast"
 
+import OutpatientUEWgt from "./OutpatientUEWgt"
+
+import InspectionUEWgt from "./InspectionUEWgt"
+
 import ReactEcharts from "react-echarts-component"
 
 var Home = React.createClass({
@@ -61,7 +65,14 @@ var Home = React.createClass({
 
                 </div>
 
-                <div className="wgt-group"></div>
+                <div className="wgt-group-ue">
+                    <OutpatientUEWgt />
+                </div>
+
+                <div className="wgt-group-ue">
+
+                    <InspectionUEWgt />
+                </div>
 
 
             </div>

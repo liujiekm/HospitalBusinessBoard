@@ -13,7 +13,12 @@ var Outpatient = React.createClass({
     render:function () {
         return (
 
-            <div>Outpatient</div>
+            <div>
+                <div className="wgt-group">
+
+                    
+                </div>
+            </div>
 
         );
     }
