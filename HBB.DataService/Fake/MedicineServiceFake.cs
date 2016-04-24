@@ -22,22 +22,22 @@ namespace HBB.DataService.Fake
         }
         public int GetLastMonthTotalPurchases()
         {
-            return 121400000;
+            return 12140000;
         }
         public Dictionary<string, int> GetMonthlyStoreroom()
         {
             Dictionary<string, int> result = new Dictionary<string, int>();
-            result.Add("jieyu", 50740000);
-            result.Add("ruku", 146000000);
-            result.Add("chuku", 131990000);
+            result.Add("jieyu", 14010000);
+            result.Add("ruku", 46000000);
+            result.Add("chuku", 31990000);
             return result;
         }
         public Dictionary<string, int> GetMonthlyMedicineRoom()
         {
             Dictionary<string, int> result = new Dictionary<string, int>();
-            result.Add("menzhenxi", 21020000);
-            result.Add("zhongyao",7080000);
-            result.Add("bingquxi", 108140000);
+            result.Add("menzhenxi", 23120000);
+            result.Add("zhongyao",7760000);
+            result.Add("bingquxi", 9660000);
             return result;
         }
         public Dictionary<string, int> GetMonthlyUsed()
@@ -50,8 +50,8 @@ namespace HBB.DataService.Fake
         public Dictionary<string, int> GetMonthlyDirection()
         {
             Dictionary<string, int> result = new Dictionary<string, int>();
-            result.Add("menzhen", 2356);
-            result.Add("zhuyuan", 6421);
+            result.Add("menzhen", 7139);
+            result.Add("zhuyuan", 106);
             return result;
         }
         public List<Dictionary<string, int>> GetMonthlyUsedList()

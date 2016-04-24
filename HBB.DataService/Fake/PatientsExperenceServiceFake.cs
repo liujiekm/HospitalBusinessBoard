@@ -338,10 +338,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                         StaticsTime="2014-05-01"
                 },
@@ -349,10 +349,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                        Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2014-05-02"
                 },
@@ -360,10 +360,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                        Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2014-05-03"
                 },
@@ -371,10 +371,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                        Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2014-05-04"
                 },
@@ -382,10 +382,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                        Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2014-05-05"
                 },
@@ -393,10 +393,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                       Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2014-05-06"
                 }
@@ -412,10 +412,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                        Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                         StaticsTime="2013-05-01"
                 },
@@ -423,10 +423,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                       Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2013-05-02"
                 },
@@ -434,10 +434,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                       Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2013-05-03"
                 },
@@ -445,10 +445,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                        Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2013-05-04"
                 },
@@ -456,10 +456,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                       Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2013-05-05"
                 },
@@ -467,10 +467,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                       Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2013-05-06"
                 }
@@ -486,10 +486,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                      Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                         StaticsTime="2012-05-01"
                 },
@@ -497,10 +497,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                        Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2012-05-02"
                 },
@@ -508,10 +508,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                       Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2012-05-03"
                 },
@@ -519,10 +519,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                           Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2012-05-04"
                 },
@@ -530,10 +530,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2012-05-05"
                 },
@@ -541,10 +541,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2012-05-06"
                 }
@@ -565,10 +565,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                        Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                         StaticsTime="2014-05-01"
                 },
@@ -576,10 +576,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2014-05-02"
                 },
@@ -587,10 +587,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                        Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2014-05-03"
                 },
@@ -598,10 +598,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2014-05-04"
                 },
@@ -609,10 +609,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2014-05-05"
                 },
@@ -620,10 +620,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =14,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "肾内科",
                        StaticsTime="2014-05-06"
                 },
@@ -633,10 +633,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =15,
                        Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "血液科",
                         StaticsTime="2014-05-01"
                 },
@@ -644,10 +644,10 @@ namespace HBB.DataService.Fake
                 {
                       SpecialistId =15,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "血液科",
                        StaticsTime="2014-05-02"
                 },
@@ -655,10 +655,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =15,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "血液科",
                        StaticsTime="2014-05-03"
                 },
@@ -666,10 +666,10 @@ namespace HBB.DataService.Fake
                 {
                       SpecialistId =15,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "血液科",
                        StaticsTime="2014-05-04"
                 },
@@ -677,10 +677,10 @@ namespace HBB.DataService.Fake
                 {
                         SpecialistId =15,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "血液科",
                        StaticsTime="2014-05-05"
                 },
@@ -688,10 +688,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =15,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "血液科",
                        StaticsTime="2014-05-06"
                 },
@@ -701,10 +701,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =16,
                        Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "内分泌",
                         StaticsTime="2014-05-01"
                 },
@@ -712,10 +712,10 @@ namespace HBB.DataService.Fake
                 {
                      SpecialistId =16,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "内分泌",
                        StaticsTime="2014-05-02"
                 },
@@ -723,10 +723,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =16,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "内分泌",
                        StaticsTime="2014-05-03"
                 },
@@ -734,10 +734,10 @@ namespace HBB.DataService.Fake
                 {
                       SpecialistId =16,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "内分泌",
                        StaticsTime="2014-05-04"
                 },
@@ -745,10 +745,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =16,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "内分泌",
                        StaticsTime="2014-05-05"
                 },
@@ -756,10 +756,10 @@ namespace HBB.DataService.Fake
                 {
                       SpecialistId =16,
                        Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "内分泌",
                        StaticsTime="2014-05-06"
                 },
@@ -771,10 +771,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =17,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "感染科",
                         StaticsTime="2014-05-01"
                 },
@@ -782,10 +782,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =17,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "感染科",
                        StaticsTime="2014-05-02"
                 },
@@ -793,10 +793,10 @@ namespace HBB.DataService.Fake
                 {
                         SpecialistId =17,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "感染科",
                        StaticsTime="2014-05-03"
                 },
@@ -804,10 +804,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =17,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "感染科",
                        StaticsTime="2014-05-04"
                 },
@@ -815,10 +815,10 @@ namespace HBB.DataService.Fake
                 {
                          SpecialistId =17,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "感染科",
                        StaticsTime="2014-05-05"
                 },
@@ -826,10 +826,10 @@ namespace HBB.DataService.Fake
                 {
                        SpecialistId =17,
                         Appointment=random.Next(2000,2700),
-                       AwaitingDiagnosis = new Random().Next(25,35),
-                       Diagnosis = new Random().Next(25,35),
-                       MedicineReceiving = new Random().Next(0,10),
-                       PayFees = new Random().Next(5,10),
+                       AwaitingDiagnosis = random.Next(25,35),
+                       Diagnosis = random.Next(25,35),
+                       MedicineReceiving = random.Next(0,10),
+                       PayFees = random.Next(5,10),
                        SpecialistName = "感染科",
                        StaticsTime="2014-05-06"
                 }
@@ -860,7 +860,7 @@ namespace HBB.DataService.Fake
 
         public double[] GetSpecialInspectorIndicatorLastMonth()
         {
-            return new double[] { 1620, 1620, 5100, 5000, 3500 };
+            return new double[] { 2620, 1920, 5100, 5000, 3500 };
         }
 
 

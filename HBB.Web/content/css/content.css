@@ -23,8 +23,8 @@
             }
 
 .lenovo {
-    position: fixed;
-    bottom: 20px;
+    margin-top:30px;
+
     
 }
 
@@ -142,10 +142,7 @@ p {
 }
 @media only screen and (min-width: 1280px)  {
    
-    .lenovo {
-        left: 40px;
-        left: 50px\0;
-    }
+
   
      .reportMain {
         height: 750px;
@@ -158,10 +155,7 @@ p {
 }
 @media only screen and (min-width: 1440px)  {
    
-    .lenovo {
-        left: 40px;
-        left: 50px\0;
-    }
+
      .reportMain {
         height: 750px;
     }

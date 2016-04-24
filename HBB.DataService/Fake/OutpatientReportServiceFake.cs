@@ -144,10 +144,21 @@ namespace HBB.DataService.Fake
             for (var i = 0; i < 7; i++)
             {
                 IncomeByTime income = new IncomeByTime();
-                income.TotolMoney = 7635*(i+1);
+                //income.TotolMoney = 7635*(i+1);
                 income.TimeStemp = endDateTime.AddDays(-i).ToShortDateString().ToString();
                 list_income.Add(income);
             }
+
+
+            list_income[0].TotolMoney = 5460000;
+            list_income[1].TotolMoney = 6790000;
+            list_income[2].TotolMoney = 1320000;
+            list_income[3].TotolMoney = 1110000;
+            list_income[4].TotolMoney = 5280000;
+            list_income[5].TotolMoney = 6470000;
+            list_income[6].TotolMoney = 5980000;
+
+            list_income.Reverse();
             return list_income;
         }
         //2.挂号人次汇总
@@ -157,11 +168,23 @@ namespace HBB.DataService.Fake
             for (var i = 0; i < 7; i++)
             {
                 RegisterVisitors income = new RegisterVisitors();
-                income.Visitors = 2341 * (i + 1);
+                //income.Visitors = 2341 * (i + 1);
                 income.TimeStemp = endDateTime.AddDays(-i).ToShortDateString().ToString();
                 list_income.Add(income);
             }
+
+            list_income[0].Visitors = 14325;
+            list_income[1].Visitors = 13657;
+            list_income[2].Visitors = 3452;
+            list_income[3].Visitors = 2341;
+            list_income[4].Visitors = 11345;
+            list_income[5].Visitors = 14352;
+            list_income[6].Visitors = 13221;
+            list_income.Reverse();
             return list_income;
+
+
+
         }
         //3.实名制挂号人次汇总
         public List<RegisterVisitors> GetRealNameVisitors(DateTime startDateTime, DateTime endDateTime, String sfyq)
@@ -170,10 +193,19 @@ namespace HBB.DataService.Fake
             for (var i = 0; i < 7; i++)
             {
                 RegisterVisitors income = new RegisterVisitors();
-                income.Visitors = 1234 * (i);
+                //income.Visitors = 1234 * (i);
                 income.TimeStemp = endDateTime.AddDays(-i).ToShortDateString().ToString();
                 list_income.Add(income);
             }
+            double rate = 0.8;
+            list_income[0].Visitors = Convert.ToInt32(14325* rate);
+            list_income[1].Visitors = Convert.ToInt32(13657 * rate);
+            list_income[2].Visitors = Convert.ToInt32(3452 * rate);
+            list_income[3].Visitors = Convert.ToInt32(2341 * rate);
+            list_income[4].Visitors = Convert.ToInt32(11345 * rate);
+            list_income[5].Visitors = Convert.ToInt32(14352 * rate);
+            list_income[6].Visitors = Convert.ToInt32(13221 * rate);
+            list_income.Reverse();
             return list_income;
         }
         //4.预存挂号人次汇总
@@ -183,10 +215,21 @@ namespace HBB.DataService.Fake
             for (var i = 0; i < 7; i++)
             {
                 RegisterVisitors income = new RegisterVisitors();
-                income.Visitors = 1452 * (i);
+                //income.Visitors = 1452 * (i);
                 income.TimeStemp = endDateTime.AddDays(-i).ToShortDateString().ToString();
                 list_income.Add(income);
             }
+
+            double rate = 0.94;
+            list_income[0].Visitors = Convert.ToInt32(14325 * rate);
+            list_income[1].Visitors = Convert.ToInt32(13657 * rate);
+            list_income[2].Visitors = Convert.ToInt32(3452 * rate);
+            list_income[3].Visitors = Convert.ToInt32(2341 * rate);
+            list_income[4].Visitors = Convert.ToInt32(11345 * rate);
+            list_income[5].Visitors = Convert.ToInt32(14352 * rate);
+            list_income[6].Visitors = Convert.ToInt32(13221 * rate);
+
+            list_income.Reverse();
             return list_income;
         }
         //5.预存金额汇总
@@ -213,6 +256,16 @@ namespace HBB.DataService.Fake
                 income.TimeStemp = endDateTime.AddDays(-i).ToShortDateString().ToString();
                 list_income.Add(income);
             }
+
+            //double rate = 0.74;
+            list_income[0].Visitors = Convert.ToInt32(14325 * 0.84);
+            list_income[1].Visitors = Convert.ToInt32(13657 * 0.76);
+            list_income[2].Visitors = Convert.ToInt32(3452 * 0.92);
+            list_income[3].Visitors = Convert.ToInt32(2341 * 0.81);
+            list_income[4].Visitors = Convert.ToInt32(11345 * 0.79);
+            list_income[5].Visitors = Convert.ToInt32(14352 * 0.69);
+            list_income[6].Visitors = Convert.ToInt32(13221 * 0.91);
+            list_income.Reverse();
             return list_income;
         }
     }

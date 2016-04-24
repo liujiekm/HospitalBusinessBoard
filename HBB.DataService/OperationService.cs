@@ -140,73 +140,76 @@ namespace HBB.DataService
         #endregion
 
         #region 2 近一个月内各类手术的数量
-        public DataSet GetOperationQuanty()
+        public OperationCount GetOperationQuanty()
         {
-            #region sql
-            String command = @"select total,oneTypeOperation,twoTypeOperation,threeTypeOperation,fourTypeOperation,fiveTypeOperation from 
-                    (
-                    select count(*) as total
-                      from sss_sstzd a
-                      join sss_sstzd_ssss b
-                        on a.tzdid = b.tzdid
-                     where a.mzss = '0'
-                       and a.ztbz in ('4', '5')
-                       and a.sskssj >= to_date('{0}', 'yyyy-MM-dd')
-                       ) a,
-                       (
-                    select count(*) as oneTypeOperation
-                      from sss_sstzd a
-                      join sss_sstzd_ssss b
-                        on a.tzdid = b.tzdid
-                     where a.mzss = '0'
-                       and a.ztbz in ('4', '5')
-                       and b.sslb=1
-                       and a.sskssj >= to_date('{0}', 'yyyy-MM-dd')
-                       ) b,
-                       (
-                    select count(*) as twoTypeOperation
-                      from sss_sstzd a
-                      join sss_sstzd_ssss b
-                        on a.tzdid = b.tzdid
-                     where a.mzss = '0'
-                       and a.ztbz in ('4', '5')
-                       and b.sslb=2
-                       and a.sskssj >= to_date('{0}', 'yyyy-MM-dd')
-                       ) c,
-                     (  select count(*) threeTypeOperation
-                      from sss_sstzd a
-                      join sss_sstzd_ssss b
-                        on a.tzdid = b.tzdid
-                     where a.mzss = '0'
-                       and a.ztbz in ('4', '5')
-                       and b.sslb=3
-                       and a.sskssj >= to_date('{0}', 'yyyy-MM-dd')
-                       ) d,
-                      ( select count(*) fourTypeOperation
-                      from sss_sstzd a
-                      join sss_sstzd_ssss b
-                        on a.tzdid = b.tzdid
-                     where a.mzss = '0'
-                       and a.ztbz in ('4', '5')
-                       and b.sslb=4
-                       and a.sskssj >= to_date('{0}', 'yyyy-MM-dd')
-                       ) e,
-                       ( select count(*) fiveTypeOperation
-                      from sss_sstzd a
-                      join sss_sstzd_ssss b
-                        on a.tzdid = b.tzdid
-                     where a.mzss = '0'
-                       and a.ztbz in ('4', '5')
-                       and b.sslb=5
-                       and a.sskssj >= to_date('{0}', 'yyyy-MM-dd')
-                       ) f";
-            DateTime startTime = DateTime.Now.Date.AddMonths(-1);
-            command = string.Format(command, startTime.ToString("yyyy-MM-dd"));
-            #endregion
-            DbCommand queryCommand = db.GetSqlStringCommand(command);
+            var count = new OperationCount();
 
-            DataSet dateSet = db.ExecuteDataSet(queryCommand);
-            return dateSet;
+            return count;
+            //#region sql
+            //String command = @"select total,oneTypeOperation,twoTypeOperation,threeTypeOperation,fourTypeOperation,fiveTypeOperation from 
+            //        (
+            //        select count(*) as total
+            //          from sss_sstzd a
+            //          join sss_sstzd_ssss b
+            //            on a.tzdid = b.tzdid
+            //         where a.mzss = '0'
+            //           and a.ztbz in ('4', '5')
+            //           and a.sskssj >= to_date('{0}', 'yyyy-MM-dd')
+            //           ) a,
+            //           (
+            //        select count(*) as oneTypeOperation
+            //          from sss_sstzd a
+            //          join sss_sstzd_ssss b
+            //            on a.tzdid = b.tzdid
+            //         where a.mzss = '0'
+            //           and a.ztbz in ('4', '5')
+            //           and b.sslb=1
+            //           and a.sskssj >= to_date('{0}', 'yyyy-MM-dd')
+            //           ) b,
+            //           (
+            //        select count(*) as twoTypeOperation
+            //          from sss_sstzd a
+            //          join sss_sstzd_ssss b
+            //            on a.tzdid = b.tzdid
+            //         where a.mzss = '0'
+            //           and a.ztbz in ('4', '5')
+            //           and b.sslb=2
+            //           and a.sskssj >= to_date('{0}', 'yyyy-MM-dd')
+            //           ) c,
+            //         (  select count(*) threeTypeOperation
+            //          from sss_sstzd a
+            //          join sss_sstzd_ssss b
+            //            on a.tzdid = b.tzdid
+            //         where a.mzss = '0'
+            //           and a.ztbz in ('4', '5')
+            //           and b.sslb=3
+            //           and a.sskssj >= to_date('{0}', 'yyyy-MM-dd')
+            //           ) d,
+            //          ( select count(*) fourTypeOperation
+            //          from sss_sstzd a
+            //          join sss_sstzd_ssss b
+            //            on a.tzdid = b.tzdid
+            //         where a.mzss = '0'
+            //           and a.ztbz in ('4', '5')
+            //           and b.sslb=4
+            //           and a.sskssj >= to_date('{0}', 'yyyy-MM-dd')
+            //           ) e,
+            //           ( select count(*) fiveTypeOperation
+            //          from sss_sstzd a
+            //          join sss_sstzd_ssss b
+            //            on a.tzdid = b.tzdid
+            //         where a.mzss = '0'
+            //           and a.ztbz in ('4', '5')
+            //           and b.sslb=5
+            //           and a.sskssj >= to_date('{0}', 'yyyy-MM-dd')
+            //           ) f";
+            //DateTime startTime = DateTime.Now.Date.AddMonths(-1);
+            //command = string.Format(command, startTime.ToString("yyyy-MM-dd"));
+            //#endregion
+            //DbCommand queryCommand = db.GetSqlStringCommand(command);
+
+            //DataSet dateSet = db.ExecuteDataSet(queryCommand);
+            //return dateSet;
         } 
         #endregion
         //

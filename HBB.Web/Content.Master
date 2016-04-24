@@ -61,7 +61,7 @@
 
 
                 <!--右侧内容区-->
-                <div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-2">
+                <div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-2" style="width:1200px;">
 
                     <!--顶部功能区-->
                     <div id="div_header" class="row">
@@ -174,7 +174,7 @@
 
 
                 <!--底部logo-->
-                <div id="div_footer" class="row" style="height: 60px;">
+                <div id="div_footer" class="row" style="height: 60px;width:1200px;">
                     <div style="padding-top: 20px;" class="col-md-2">
                     </div>
                     <div class="col-md-8"></div>
