@@ -66,6 +66,7 @@
     <Compile Include="Model\IOhospital.cs" />
     <Compile Include="Model\IOpation.cs" />
     <Compile Include="Model\MedicalService.cs" />
+    <Compile Include="Model\OperationCount.cs" />
     <Compile Include="Model\OperationSearchRate.cs" />
     <Compile Include="Model\RateEmptyBed.cs" />
     <Compile Include="Model\RegisterVisitors.cs" />

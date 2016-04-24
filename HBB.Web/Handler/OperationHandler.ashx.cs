@@ -68,7 +68,7 @@ namespace HBB.Web.Handler
                     input = serializer.Serialize(operationSercice.GetSurgeryDetailedInformation(oprationState, searchType, area, operationType, sDate, eDate, content));
                     break;
                 case HomeRequestType.OperationQuanty://获取手术数量
-                    DataSet dateSet = operationSercice.GetOperationQuanty();
+                    OperationCount dateSet = operationSercice.GetOperationQuanty();
                     input = JsonConvert.SerializeObject(dateSet);
                     break;
                 case HomeRequestType.OperationSearchRate://获取手术查询信息

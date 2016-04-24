@@ -68,7 +68,7 @@ namespace HBB.API.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("OQ")]
-        public DataSet GetOperationQuanty()
+        public OperationCount GetOperationQuanty()
         {
             return operationService.GetOperationQuanty();
         }

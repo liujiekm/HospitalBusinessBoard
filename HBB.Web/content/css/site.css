@@ -20,8 +20,8 @@
     
 }
 .lenovo {
-    position: fixed;
-    bottom: 20px;
+    margin-top:30px;
+
     
 }
 
@@ -45,9 +45,7 @@
             left: 90px;
             top: 0px;
     }
-    .lenovo {
-        left: 17px;
-    }
+
     .hospitalLogo {
     padding-right: 30px;
 }
@@ -64,10 +62,7 @@
             left: 90px\0;
             top: 0px;
     }
-    .lenovo {
-        left: 40px;
-        left: 50px\0;
-    }
+
     .hospitalLogo {
     padding-right: 20px;
 }
@@ -85,10 +80,7 @@
             left: 90px\0;
             top: 0px;
     }
-    .lenovo {
-        left: 40px;
-        left: 50px\0;
-    }
+
 
         .hospitalLogo {
     padding-right: 20px;
@@ -112,10 +104,12 @@
 
 .reportRow {
     height: 660px; 
+    width:1200px;
     padding-top: 10px; 
     padding-left: 20px;
 
     padding-left: 50px\0;/*IE8*/
+
 }
 
 /*.verticalLine {

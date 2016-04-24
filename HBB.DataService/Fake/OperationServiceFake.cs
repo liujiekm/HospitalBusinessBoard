@@ -40,21 +40,18 @@ namespace HBB.DataService.Fake
             return list_model;
         }
 
-        public DataSet GetOperationQuanty()
+        public OperationCount GetOperationQuanty()
         {
-            DataSet ds = new DataSet();
+            OperationCount count = new OperationCount();
 
-            DataTable table = ds.Tables.Add("Table");
-            table.Columns.Add("TOTAL", typeof(string));
-            table.Columns.Add("ONETYPEOPERATION", typeof(int));
-            table.Columns.Add("TWOTYPEOPERATION", typeof(int));
-            table.Columns.Add("THREETYPEOPERATION", typeof(int));
-            table.Columns.Add("FOURTYPEOPERATION", typeof(int));
-            table.Columns.Add("FIVETYPEOPERATION", typeof(int));
-            object[] aValues = { 7259, 562, 1493, 2700, 2251, 253 };
+            count.FirstClassCount = 562;
+            count.SecondClassCount = 493;
+            count.ThirdClassCount = 713;
+            count.ForthClassCount = 251;
+            count.FifthClassCount = 253;
 
-            ds.Tables["Table"].LoadDataRow(aValues, false);
-            return ds;
+            return count;
+
         }
 
         public List<OperationSearchRate> GetOperationSearchRate(String SearchContent, String type)

@@ -259,12 +259,12 @@
                             $("#payFees").empty();
                             $("#medicineReceiving").empty();
 
-                            $("#operationNumLastMonth").append(json.Table[0].TOTAL);
-                            $("#appointmentLastMonth").append(json.Table[0].FIVETYPEOPERATION);
-                            $("#awaitingDiagnosis").append(json.Table[0].FOURTYPEOPERATION);
-                            $("#diagnosis").append(json.Table[0].THREETYPEOPERATION);
-                            $("#payFees").append(json.Table[0].TWOTYPEOPERATION);
-                            $("#medicineReceiving").append(json.Table[0].ONETYPEOPERATION);
+                            $("#operationNumLastMonth").append(json.Total);
+                            $("#appointmentLastMonth").append(json.FirstClassCount);
+                            $("#awaitingDiagnosis").append(json.SecondClassCount);
+                            $("#diagnosis").append(json.ThirdClassCount);
+                            $("#payFees").append(json.ForthClassCount);
+                            $("#medicineReceiving").append(json.FifthClassCount);
                         },
                         error: function() {
                             //alert("获取失败！");
@@ -550,8 +550,8 @@
                             <img class="img-responsive verticalLine" src="content/img/newHome/VerticalLine.png" />
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12" style="margin-left: -20px; margin-left: -30px\0;">
+                    <div class="row" style="width:90px">
+                        <div class="col-md-12" style="margin-left: 20px; ">
                             <p class="imgText text-center">手术统计</p>
                         </div>
                     </div>

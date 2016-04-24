@@ -40,7 +40,7 @@ namespace HBB.ServiceInterface
 
 
 
-        DataSet GetOperationQuanty();
+        OperationCount GetOperationQuanty();
 
 
 

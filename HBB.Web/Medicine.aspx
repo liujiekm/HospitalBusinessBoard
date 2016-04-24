@@ -77,7 +77,7 @@
                                     self.MedicineUsedList.push(json[i]);
                                     if (i < 7) {
                                         var tomonth = new Date().getMonth() + 1;
-                                        var today = new Date().getDate() - i;
+                                        var today = new Date().getDate() - 7+i;
                                         MedicineUsedOption.xAxis[0].data.push(tomonth + '-' + today);
                                         MedicineUsedOption.series[0].data.push(json[i].zhongyao);
                                         MedicineUsedOption.series[1].data.push(json[i].xiyao);

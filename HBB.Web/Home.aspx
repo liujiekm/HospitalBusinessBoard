@@ -96,7 +96,7 @@
 
 
                 <!--右侧内容区-->
-                <div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-2">
+                <div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-2" style="width:1200px;">
 
                     <!--顶部功能区-->
                     <div id="div_header" class="row">
@@ -491,8 +491,8 @@
                                                     <img class="img-responsive verticalLine" src="content/img/newHome/VerticalLine.png" />
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-12" style="margin-left: -30px; margin-left: -40px\0;">
+                                            <div class="row" style="width:90px">
+                                                <div class="col-md-12" style="margin-left: -30px; margin-left: -40px\0; margin-top: -5px;">
                                                     <p class="imgText text-center">门诊就医</p>
                                                 </div>
                                             </div>
@@ -646,8 +646,8 @@
                                                     <img class="img-responsive verticalLine" src="content/img/newHome/VerticalLine.png" />
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-12" style="margin-left: -30px; margin-left: -40px\0;">
+                                            <div class="row" style="width:90px">
+                                                <div class="col-md-12" style="margin-left: -30px; margin-left: -40px\0; margin-top: -5px;">
                                                     <p class="imgText text-center">特检时长</p>
                                                 </div>
                                             </div>
@@ -806,7 +806,7 @@
 
 
                     <!--底部logo-->
-                    <div id="div_footer" class="row" style="height: 60px;">
+                    <div id="div_footer" class="row" style="height: 60px;width:1200px;">
 
 
                         <div style="padding-top: 20px;" class="col-md-2">
