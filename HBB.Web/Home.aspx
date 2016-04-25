@@ -492,7 +492,7 @@
                                                 </div>
                                             </div>
                                             <div class="row" style="width:90px">
-                                                <div class="col-md-12" style="margin-left: -30px; margin-left: -40px\0; margin-top: -5px;">
+                                                <div class="col-md-12" style="margin-top: -5px;">
                                                     <p class="imgText text-center">门诊就医</p>
                                                 </div>
                                             </div>
@@ -647,7 +647,7 @@
                                                 </div>
                                             </div>
                                             <div class="row" style="width:90px">
-                                                <div class="col-md-12" style="margin-left: -30px; margin-left: -40px\0; margin-top: -5px;">
+                                                <div class="col-md-12" style=" margin-top: -5px;">
                                                     <p class="imgText text-center">特检时长</p>
                                                 </div>
                                             </div>

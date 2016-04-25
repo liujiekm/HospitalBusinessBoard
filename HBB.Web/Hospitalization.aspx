@@ -83,7 +83,7 @@
                         <div class="row">
                             <div class="col-md-4"></div>
                             <div class="col-md-4">
-                                <p class="lead text-nowrap" style="padding-bottom: 5px;"><strong id="">88.81%</strong></p>
+                                <p class="lead text-nowrap" style="padding-bottom: 5px;"><strong id="">92.42%</strong></p>
                             </div>
                             <div class="col-md-4"></div>
                         </div>

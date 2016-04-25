@@ -51,7 +51,7 @@ var RealNameRegWgt = React.createClass({
                         </div>
     
                         <div className="row">
-                            <div className="col-md-12" style={{"padding-right":"45px"}}>
+                            <div className="col-md-12 wgt-symbol-p" >
                             <p className="imgText text-center">实名制挂号</p>
                             </div>
     

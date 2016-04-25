@@ -7,29 +7,29 @@ import { render, findDOMNode } from 'react-dom'
 import classnames from "classnames"
 import  Link  from 'react-router'
 
-var OutpatientIncomeWgt = React.createClass({
+var AdmissionDischargeWgt = React.createClass({
+
     getDefaultProps:function () {
         return {
-
-            outpatientIncomingYesterday:647,
-            outpatientIncomingCurrent:598
+            dischargeToday:37,
+            admittedNumYesterday:34
         };
     },
-    render :function () {
-        return (
 
+    render:function () {
+        return (
             <div className="col-md-6 div_nav wgt-size wgt-margin-right">
                 <div className="row">
                     <div className="col-md-3 wgt-symbol">
                         <div className="row">
                             <div className="col-md-12">
-                                <img className="img-responsive" src="./img/Home/medicalService.png" />
+                                <img className="img-responsive" src="./img/出入院.png" />
                                 <img className="img-responsive verticalLine" src="./img/Home/VerticalLine.png" />
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-12 wgt-symbol-p" >
-                                <p className="imgText text-center">门诊收入</p>
+                                <p className="imgText text-center">出入院</p>
                             </div>
                         </div>
 
@@ -37,17 +37,17 @@ var OutpatientIncomeWgt = React.createClass({
 
 
 
-                    <div className="col-md-7 reg-content" >
+                    <div className="col-md-7 inhospital-wgt-content" >
                         <div className="row">
                             <div className="col-md-12">
-                                <p className="lead reg-content-p">昨日 <span>{this.props.outpatientIncomingYesterday} </span>万元</p>
+                                <p className="lead text-center reg-content-p">今日出院 <strong>{this.props.dischargeToday} </strong>人</p>
                             </div>
                         </div>
                         <div className="row">
                         </div>
                         <div className="row">
                             <div className="col-md-12">
-                                <p className="lead reg-content-p" >今日目前 <span >{this.props.outpatientIncomingCurrent}</span> 万元</p>
+                                <p className="lead text-center reg-content-p" >昨日入院 <strong >{this.props.admittedNumYesterday}</strong> 人</p>
                             </div>
 
                         </div>
@@ -58,10 +58,10 @@ var OutpatientIncomeWgt = React.createClass({
                 </div>
             </div>
             
+            
         );
     }
     
-    
 });
 
-module.exports=OutpatientIncomeWgt;
+module.exports=AdmissionDischargeWgt;

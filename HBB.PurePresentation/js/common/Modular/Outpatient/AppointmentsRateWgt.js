@@ -33,7 +33,7 @@ var AppointmentsRateWgt = React.createClass({
                         </div>
 
                         <div className="row">
-                            <div className="col-md-12">
+                            <div className="col-md-12 wgt-symbol-p">
 
                                 <p className="imgText text-center">预约率</p>
                             </div>

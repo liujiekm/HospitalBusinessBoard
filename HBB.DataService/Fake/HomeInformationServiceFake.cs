@@ -61,9 +61,9 @@ namespace HBB.DataService.Fake
             homeInformation.CompletedTreatQuanty = 6606;
             homeInformation.SevereObservingQuanty = 46;
             homeInformation.FirstAidQuanty = 24;
-            homeInformation.HospitalizedQuanty = 4028;
-            homeInformation.YesterdayLeaveHospitalQuanty = 809;
-            homeInformation.YesterdayAdminttedHospitalQuanty = 752;
+            homeInformation.HospitalizedQuanty = 3892;
+            homeInformation.YesterdayLeaveHospitalQuanty = 811;
+            homeInformation.YesterdayAdminttedHospitalQuanty = 765;
             homeInformation.RatedEmptyBedQuanty = 482;
             homeInformation.ExtraBedQuanty = 498;
             homeInformation.VirtualBedQuanty = 681;

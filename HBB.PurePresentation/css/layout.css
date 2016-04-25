@@ -510,8 +510,19 @@ input:focus {
 }
 
 
+/*住院组件样式*/
+.inhospital-wgt-content
+{
+    margin-top: 5px; margin-bottom: 5px; padding-top: 10px;
+}
 
 
+/*跳转组件*/
+.redirect-wgt-size
+{
+    width: 455px;
+    height: 74px;
+}
 
 /*数据警示*/
 .indicate-alarm
@@ -560,4 +571,10 @@ input:focus {
     width:920px;
     position: relative;
     margin-top: 10px;
+}
+
+.wgt-symbol-p
+{
+    padding-right:45px;
+    white-space: nowrap;
 }

@@ -1,6 +1,6 @@
 ﻿var Globle={};
 
-Globle.baseUrl = "http://localhost:5831/";
+Globle.baseUrl = "http://localhost/HBBAPI/";
 
 
 

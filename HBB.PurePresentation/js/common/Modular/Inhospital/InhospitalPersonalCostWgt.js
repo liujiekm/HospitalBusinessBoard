@@ -7,15 +7,17 @@ import { render, findDOMNode } from 'react-dom'
 import classnames from "classnames"
 import  Link  from 'react-router'
 
-var OutpatientIncomeWgt = React.createClass({
-    getDefaultProps:function () {
-        return {
 
-            outpatientIncomingYesterday:647,
-            outpatientIncomingCurrent:598
-        };
+var InhospitalPersonalCostWgt = React.createClass({
+    getDefaultProps:function () {
+      return {
+          avgPersonalCostYesterday:1024,
+          avgPersonalCostLastMonth:652,
+          avgPersonalCostLastYear:864
+      };
     },
-    render :function () {
+
+    render:function () {
         return (
 
             <div className="col-md-6 div_nav wgt-size wgt-margin-right">
@@ -23,13 +25,13 @@ var OutpatientIncomeWgt = React.createClass({
                     <div className="col-md-3 wgt-symbol">
                         <div className="row">
                             <div className="col-md-12">
-                                <img className="img-responsive" src="./img/Home/medicalService.png" />
+                                <img className="img-responsive" src="./img/住院人均.png" />
                                 <img className="img-responsive verticalLine" src="./img/Home/VerticalLine.png" />
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-12 wgt-symbol-p" >
-                                <p className="imgText text-center">门诊收入</p>
+                                <p className="imgText text-center">住院人均</p>
                             </div>
                         </div>
 
@@ -37,17 +39,20 @@ var OutpatientIncomeWgt = React.createClass({
 
 
 
-                    <div className="col-md-7 reg-content" >
+                    <div className="col-md-7 inhospital-wgt-content" >
                         <div className="row">
                             <div className="col-md-12">
-                                <p className="lead reg-content-p">昨日 <span>{this.props.outpatientIncomingYesterday} </span>万元</p>
+                                <p className="lead text-nowrap text-center" style={{"margin-bottom": "3px"}}>昨日人均费用 <strong>{this.props.avgPersonalCostYesterday}</strong>元</p>
                             </div>
                         </div>
                         <div className="row">
+                            <div className="col-md-12">
+                                <p className="lead text-nowrap text-center" style={{"margin-bottom": "3px"}}>上月人均费用 <strong>{this.props.avgPersonalCostLastMonth}</strong>元</p>
+                            </div>
                         </div>
                         <div className="row">
                             <div className="col-md-12">
-                                <p className="lead reg-content-p" >今日目前 <span >{this.props.outpatientIncomingCurrent}</span> 万元</p>
+                                <p className="lead text-nowrap text-center" style={{"margin-bottom": "3px"}}>去年人均费用 <strong>{this.props.avgPersonalCostLastYear}</strong> 元</p>
                             </div>
 
                         </div>
@@ -57,11 +62,11 @@ var OutpatientIncomeWgt = React.createClass({
                     </div>
                 </div>
             </div>
-            
+
+
         );
     }
-    
-    
+
 });
 
-module.exports=OutpatientIncomeWgt;
+module.exports=InhospitalPersonalCostWgt;

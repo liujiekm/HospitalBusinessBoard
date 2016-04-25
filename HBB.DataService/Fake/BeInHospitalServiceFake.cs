@@ -252,8 +252,8 @@ namespace HBB.DataService.Fake {
             HospitalInfo hos = new HospitalInfo();
 
             // 出入院
-            hos.cry.jrcyrs = 37;
-            hos.cry.zrryrs = 482;
+            hos.cry.jrcyrs = 754;
+            hos.cry.zrryrs = 765;
             hos.crytj.ryrs = new object[]{460,455,463,152,90,678,482};
             hos.crytj.cyrs = new object[]{216,145,108,27,6,33,6};
 
@@ -263,8 +263,8 @@ namespace HBB.DataService.Fake {
             hos.zysrje = new object[] { 301.12, 465.87, 642.76, 812.12, 762.12, 542.02, 699.12 };
             
             // 病床使用率
-            hos.bc.zcws = 3200;
-            hos.bc.dqzy = 2842;
+            hos.bc.zcws = 4211;
+            hos.bc.dqzy = 3892;
             hos.bcsyl = new object[] { 87.12, 84.56, 86.34, 90.04, 92.17, 85.22, 88.89 };
             
             // 住院人均

@@ -34,7 +34,7 @@ var RegWgt = React.createClass({
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-md-12" style={{"padding-right":"45px"}}>
+                            <div className="col-md-12 wgt-symbol-p" >
                                 <p className="imgText text-center">挂号</p>
                             </div>
                         </div>
