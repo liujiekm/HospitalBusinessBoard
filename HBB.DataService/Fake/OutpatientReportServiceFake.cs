@@ -145,7 +145,7 @@ namespace HBB.DataService.Fake
             {
                 IncomeByTime income = new IncomeByTime();
                 //income.TotolMoney = 7635*(i+1);
-                income.TimeStemp = endDateTime.AddDays(-i).ToShortDateString().ToString();
+                income.TimeStemp = endDateTime.AddDays(-i).ToString("yyyy-MM-dd");
                 list_income.Add(income);
             }
 
@@ -169,7 +169,7 @@ namespace HBB.DataService.Fake
             {
                 RegisterVisitors income = new RegisterVisitors();
                 //income.Visitors = 2341 * (i + 1);
-                income.TimeStemp = endDateTime.AddDays(-i).ToShortDateString().ToString();
+                income.TimeStemp = endDateTime.AddDays(-i).ToString("yyyy-MM-dd");
                 list_income.Add(income);
             }
 
@@ -194,7 +194,7 @@ namespace HBB.DataService.Fake
             {
                 RegisterVisitors income = new RegisterVisitors();
                 //income.Visitors = 1234 * (i);
-                income.TimeStemp = endDateTime.AddDays(-i).ToShortDateString().ToString();
+                income.TimeStemp = endDateTime.AddDays(-i).ToString("yyyy-MM-dd");
                 list_income.Add(income);
             }
             double rate = 0.8;
@@ -216,7 +216,7 @@ namespace HBB.DataService.Fake
             {
                 RegisterVisitors income = new RegisterVisitors();
                 //income.Visitors = 1452 * (i);
-                income.TimeStemp = endDateTime.AddDays(-i).ToShortDateString().ToString();
+                income.TimeStemp = endDateTime.AddDays(-i).ToString("yyyy-MM-dd");
                 list_income.Add(income);
             }
 
@@ -240,7 +240,7 @@ namespace HBB.DataService.Fake
             {
                 IncomeByTime income = new IncomeByTime();
                 income.TotolMoney = 97546 * (i + 1);
-                income.TimeStemp = endDateTime.AddDays(-i).ToShortDateString().ToString();
+                income.TimeStemp = endDateTime.AddDays(-i).ToString("yyyy-MM-dd");
                 list_income.Add(income);
             }
             return list_income;
@@ -253,7 +253,7 @@ namespace HBB.DataService.Fake
             {
                 RegisterVisitors income = new RegisterVisitors();
                 income.Visitors = 1456 * (i + 1);
-                income.TimeStemp = endDateTime.AddDays(-i).ToShortDateString().ToString();
+                income.TimeStemp = endDateTime.AddDays(-i).ToString("yyyy-MM-dd");
                 list_income.Add(income);
             }
 

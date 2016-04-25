@@ -50,11 +50,6 @@ var FileUploadComponenet = React.createClass({
                     上传医院Logo
                 </button>
             </FileProcessor>
-
-
-
-
-
         );
     }
 

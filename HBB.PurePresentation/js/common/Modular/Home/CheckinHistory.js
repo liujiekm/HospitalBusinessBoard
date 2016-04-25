@@ -7,12 +7,7 @@ import { render, findDOMNode } from 'react-dom'
 import classnames from "classnames"
 
 import ReactEcharts from "react-echarts-component"
-
-
 import Globle from "../../../Globle"
-
-
-
 import options from "../../../option"
 
 var CheckinHistory = React.createClass({

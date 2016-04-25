@@ -70,3 +70,4 @@ C:\Project\HospitalBusinessBoard\HBB.DataContext.Test\bin\Debug\zh-Hans\Microsof
 C:\Project\HospitalBusinessBoard\HBB.DataContext.Test\obj\Debug\HBB.DataContext.Test.dll
 C:\Project\HospitalBusinessBoard\HBB.DataContext.Test\obj\Debug\HBB.DataContext.Test.pdb
 C:\Project\HospitalBusinessBoard\HBB.DataContext.Test\obj\Debug\HBB.DataContext.Test.csprojResolveAssemblyReference.cache
+C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataContext.Test\obj\Debug\HBB.DataContext.Test.csprojResolveAssemblyReference.cache

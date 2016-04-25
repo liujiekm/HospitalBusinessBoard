@@ -503,6 +503,15 @@ input:focus {
     padding-bottom: 10px;
 }
 
+.appointrete-strong
+{
+    font-size:28px;
+    font-weight:100;
+}
+
+
+
+
 
 /*数据警示*/
 .indicate-alarm
