@@ -46,7 +46,6 @@ C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataContext\obj\Debug\HBB.DataContext.csproj.GenerateResource.Cache
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataContext\obj\Debug\HBB.DataContext.dll
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataContext\obj\Debug\HBB.DataContext.pdb
-C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.DataContext\obj\Debug\HBB.DataContext.csprojResolveAssemblyReference.cache
 C:\Project\HospitalBusinessBoard\HBB.DataContext\bin\Debug\HBB.DataContext.dll.config
 C:\Project\HospitalBusinessBoard\HBB.DataContext\bin\Debug\HBB.DataContext.dll
 C:\Project\HospitalBusinessBoard\HBB.DataContext\bin\Debug\HBB.DataContext.pdb

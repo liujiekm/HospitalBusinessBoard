@@ -24,6 +24,9 @@ using System.Web.Http;
 namespace HBB.API.Controllers
 {
 
+    /// <summary>
+    /// 住院服务
+    /// </summary>
     [RoutePrefix("IH")]
     public class InHospitalController : ApiController //ZHandler.ashx
     {
@@ -35,10 +38,12 @@ namespace HBB.API.Controllers
         }
 
         /// <summary>
-        /// 获得急诊抢救区信息
-        /// 获得急诊留观区信息
+        /// 获得急诊抢救区、留观区病人详细信息
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// 1.抢救区病人详细信息（姓名、性别、年龄、临床诊断、 留观天数、预存余额）
+        /// 2.留观区病人详细信息（姓名、性别、年龄、临床诊断、 留观天数、预存余额）
+        /// </returns>
         [HttpGet]
         [Route("ET")]
         public EmergencyTreatment GetEmergencyTreatmentInfo()

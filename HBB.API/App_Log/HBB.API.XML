@@ -481,23 +481,55 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:HBB.API.Controllers.AuthenticationController.VerifyCredential(System.String,System.String)">
+            <summary>
+            验证账号
+            </summary>
+            <param name="account">账号</param>
+            <param name="certificate">凭证（密码）</param>
+            <returns></returns>
+        </member>
+        <member name="M:HBB.API.Controllers.ConfigController.GetConfig">
+            <summary>
+            获取应用程序统一配置信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HBB.API.Controllers.ConfigController.ModifyConfig(HBB.API.Models.Config)">
+            <summary>
+            修改应用程序统一配置信息
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:HBB.API.Controllers.ConfigController.UploadLogo">
+            <summary>
+            上传医院Logo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HBB.API.Controllers.ConfigController.GetLogo">
+            <summary>
+            获取医院Logo
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:HBB.API.Controllers.DoctorCheckInController.GetDoctorRegisterMainInformaton(System.String)">
             <summary>
-            医生签到的主增量图
+            获取今天各时间段签到的医生数量
             </summary>
             <param name="time"></param>
             <returns></returns>
         </member>
         <member name="M:HBB.API.Controllers.DoctorCheckInController.GetDoctorRegisterDetailInformaton(System.String)">
             <summary>
-            根据时间点获得签到详细信息
+            根据时间点获得医生签到详细信息（医生姓名、签到时间、所在专科）
             </summary>
             <param name="timePoint">时间点</param>
             <returns></returns>
         </member>
         <member name="M:HBB.API.Controllers.DoctorCheckInController.GetDoctorUnRegisterDetailInformaton(System.String)">
             <summary>
-            根据时间点获取未签到详细信息
+            根据时间点获得未签到医生的详细信息（医生姓名、签到时间、所在专科）
             </summary>
             <param name="timePoint">时间点</param>
             <returns></returns>
@@ -506,28 +538,49 @@
             <summary>
             获取医生过往的签到情况
             </summary>
-            <param name="timeType"></param>
-            <param name="userID"></param>
+            <param name="timeType">统计医生的签到时间范围（year：年，month：月，week：周）</param>
+            <param name="userID">用户标识</param>
             <returns></returns>
         </member>
         <member name="M:HBB.API.Controllers.HospitalInfoController.GetRateEmptyBed">
             <summary>
             获取额定空床数量
             </summary>
-            <returns></returns>
+            <returns>
+            [{额定空床数，专科名称},{...}]
+            </returns>
         </member>
         <member name="M:HBB.API.Controllers.HospitalInfoController.GetGenericHomeInformation">
             <summary>
-            首页综合查询的 数字性数据（暂时放在这里）
+            首页综合查询的统计性数据（包含实时，过往数据）
             </summary>
-            <returns></returns>
+            <returns>
+            上午有排班医生总数，
+            上午已签到医生数，
+            上午医生签到率，
+            下午有排班医生总数，
+            下午已签到医生数，
+            下午医生签到率，
+            候诊人数，
+            已完成就诊人数，
+            重症留观人数，
+            急救中人数，
+            在院人数，
+            昨日出院人数，
+            昨日入院人数，
+            全院额定的空床数，
+            全院加床的空床数，
+            全院虚拟的空床数
+            </returns>
         </member>
         <member name="M:HBB.API.Controllers.InHospitalController.GetEmergencyTreatmentInfo">
             <summary>
-            获得急诊抢救区信息
-            获得急诊留观区信息
+            获得急诊抢救区、留观区病人详细信息
             </summary>
-            <returns></returns>
+            <returns>
+            1.抢救区病人详细信息（姓名、性别、年龄、临床诊断、 留观天数、预存余额）
+            2.留观区病人详细信息（姓名、性别、年龄、临床诊断、 留观天数、预存余额）
+            </returns>
         </member>
         <member name="M:HBB.API.Controllers.InHospitalController.GetAdmissionDischargeInfo">
             <summary>
@@ -573,19 +626,19 @@
         </member>
         <member name="M:HBB.API.Controllers.MedicineController.GetMonthlyUsed">
             <summary>
-            获取药品使用量月报（中药、西药）
+            获取当月（中药、西药）药占比
             </summary>
             <returns></returns>
         </member>
         <member name="M:HBB.API.Controllers.MedicineController.GetMonthlyDirection">
             <summary>
-            获取处方配方(门诊、药房)
+            获取今天到处方配方(门诊、药房)数量
             </summary>
             <returns></returns>
         </member>
         <member name="M:HBB.API.Controllers.MedicineController.GetMonthlyUsedList">
             <summary>
-            获取药品使用情况（中药西药）统计列表
+            获取最近一周的中药西药的药占比情况
             </summary>
             <returns></returns>
         </member>
@@ -604,17 +657,12 @@
         </member>
         <member name="M:HBB.API.Controllers.OperationController.GetOperationQuanty">
             <summary>
-            获取手术数量
+            近一个月内各类手术的数量
             </summary>
-            <returns></returns>
-        </member>
-        <member name="M:HBB.API.Controllers.OperationController.GetOperationSearchRate(System.String,System.String)">
-            <summary>
-            待明确
-            </summary>
-            <param name="searchContent"></param>
-            <param name="type"></param>
-            <returns></returns>
+            <returns>
+            一类手术数量、二类手术数量、三类手术数量、
+            四类手术数量、五类手术数量
+            </returns>
         </member>
         <member name="M:HBB.API.Controllers.OperationController.GetRealtimeSurgeryInformation">
             <summary>

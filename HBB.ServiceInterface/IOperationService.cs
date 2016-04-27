@@ -39,7 +39,10 @@ namespace HBB.ServiceInterface
           string area, string operationType, string sDate, string eDate, string content);
 
 
-
+        /// <summary>
+        /// 获取各类手术统计数量信息（近一个月内）
+        /// </summary>
+        /// <returns></returns>
         OperationCount GetOperationQuanty();
 
 

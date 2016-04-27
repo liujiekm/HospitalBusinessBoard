@@ -516,12 +516,30 @@ input:focus {
     margin-top: 5px; margin-bottom: 5px; padding-top: 10px;
 }
 
+/*药品*/
+.med-symbol-p
+{
+    width:60px;
+}
+
+
 
 /*跳转组件*/
 .redirect-wgt-size
 {
     width: 455px;
     height: 74px;
+}
+
+
+/*处方配方*/
+.recipe-wgt-content
+{
+    margin: 5px; padding-left:10px; padding-right: 10px;font-size:15px;padding-top:10px;
+}
+.recipe-wgt-content-title
+{
+    border-bottom: 1px solid white;padding-bottom:5px;
 }
 
 /*数据警示*/

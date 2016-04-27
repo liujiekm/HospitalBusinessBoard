@@ -84,18 +84,13 @@
             $('#home').addClass('active');
             $('#moduleName').text("急诊");
 
-            $.ajax({
-                //url: "../handler/zhandler.ashx?type=eme",
-                url: baseUrl+"IH/ET",
-                success: function (data) {
 
-                    var list = eval("(" + data + ")");
-                    console.log(list.qjqxx);
-                    ko.applyBindings({
-                        qjqxx: list.qjqxx,
-                        lgqxx: list.lgqxx
-                    });
-                }
+            $.getJSON(baseUrl + "IH/ET", function (data) {
+
+                ko.applyBindings({
+                    qjqxx: data.qjqxx,
+                    lgqxx: data.lgqxx
+                });
             });
 
         });

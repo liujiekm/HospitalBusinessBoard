@@ -22,15 +22,26 @@ namespace HBB.ServiceInterface.Model
 {
     public class RateEmptyBed
     {
-        //额定空床数量
+
         private int _rateEmptyBedQuanty;
-        //专科名称
+
         private string _specialist;
+
+
+        /// <summary>
+        /// 额定空床数量
+        /// </summary>
         public int RateEmptyBedQuanty
         {
             get { return _rateEmptyBedQuanty; }
             set { _rateEmptyBedQuanty = value; }
         }
+
+
+
+        /// <summary>
+        /// 专科名称
+        /// </summary>
         public string Specialist
         {
             get { return _specialist; }

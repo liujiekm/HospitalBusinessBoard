@@ -27,6 +27,9 @@ using HBB.API.Filter;
 
 namespace HBB.API.Controllers
 {
+    /// <summary>
+    /// 手术信息服务
+    /// </summary>
     [RoutePrefix("OP")]
     public class OperationController : ApiController //OperationHandler.ashx
     {
@@ -63,9 +66,12 @@ namespace HBB.API.Controllers
 
 
         /// <summary>
-        /// 获取手术数量
+        /// 近一个月内各类手术的数量
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// 一类手术数量、二类手术数量、三类手术数量、
+        /// 四类手术数量、五类手术数量
+        /// </returns>
         [HttpGet]
         [Route("OQ")]
         public OperationCount GetOperationQuanty()
@@ -80,12 +86,12 @@ namespace HBB.API.Controllers
         /// <param name="searchContent"></param>
         /// <param name="type"></param>
         /// <returns></returns>
-        [HttpGet]
-        [Route("OSR/{searchContent}/{type}")]
-        public List<OperationSearchRate> GetOperationSearchRate(String searchContent, String type)
-        {
-            return operationService.GetOperationSearchRate(searchContent,type);
-        }
+        //[HttpGet]
+        //[Route("OSR/{searchContent}/{type}")]
+        //public List<OperationSearchRate> GetOperationSearchRate(String searchContent, String type)
+        //{
+        //    return operationService.GetOperationSearchRate(searchContent,type);
+        //}
 
 
 

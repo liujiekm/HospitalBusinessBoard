@@ -26,11 +26,17 @@ using System.Web.Http;
 
 namespace HBB.API.Controllers
 {
+    /// <summary>
+    /// 管理配置服务
+    /// </summary>
     [RoutePrefix("CFG")]
     public class ConfigController : ApiController
     {
 
-
+        /// <summary>
+        /// 获取应用程序统一配置信息
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("GC")]
         public Config GetConfig()
@@ -40,6 +46,11 @@ namespace HBB.API.Controllers
             return XMLOperation<Config>.ReadFromXML(path);
         }
 
+
+        /// <summary>
+        /// 修改应用程序统一配置信息
+        /// </summary>
+        /// <param name="config"></param>
         [HttpPost]
         [Route("MC")]
         public void ModifyConfig(Config config)
@@ -49,7 +60,10 @@ namespace HBB.API.Controllers
         }
 
 
-
+        /// <summary>
+        /// 上传医院Logo
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [Route("UL")]
         public HttpResponseMessage UploadLogo()
@@ -78,33 +92,38 @@ namespace HBB.API.Controllers
 
 
 
-        [HttpPost]
-        [Route("UI")]
-        public HttpResponseMessage UploadImage()
-        {
-            HttpResponseMessage result = null;
-            if(HttpContext.Current.Request.Files.AllKeys.Any())
-            {
-                var postImg = HttpContext.Current.Request.Files["ImageData"];
+        //[HttpPost]
+        //[Route("UI")]
+        //public HttpResponseMessage UploadImage()
+        //{
+        //    HttpResponseMessage result = null;
+        //    if(HttpContext.Current.Request.Files.AllKeys.Any())
+        //    {
+        //        var postImg = HttpContext.Current.Request.Files["ImageData"];
 
-                if(postImg!=null)
-                {
-                    var imageSavePath = Path.Combine(HttpContext.Current.Server.MapPath("~/Content/img"), "Hname.png");
+        //        if(postImg!=null)
+        //        {
+        //            var imageSavePath = Path.Combine(HttpContext.Current.Server.MapPath("~/Content/img"), "Hname.png");
 
-                    postImg.SaveAs(imageSavePath);
-                }
-                result = Request.CreateResponse(HttpStatusCode.Created);
+        //            postImg.SaveAs(imageSavePath);
+        //        }
+        //        result = Request.CreateResponse(HttpStatusCode.Created);
             
-            }
-            else
-            {
-                result = Request.CreateResponse(HttpStatusCode.BadRequest);
-            }
-            return result;
-        }
+        //    }
+        //    else
+        //    {
+        //        result = Request.CreateResponse(HttpStatusCode.BadRequest);
+        //    }
+        //    return result;
+        //}
 
 
 
+
+        /// <summary>
+        /// 获取医院Logo
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("GL")]
         public HttpResponseMessage GetLogo()

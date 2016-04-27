@@ -22,6 +22,9 @@ using System.Web.Http;
 
 namespace HBB.API.Controllers
 { 
+    /// <summary>
+    /// 授权验证服务
+    /// </summary>
     [RoutePrefix("AUTH")]
     public class AuthenticationController : ApiController
     {
@@ -32,6 +35,14 @@ namespace HBB.API.Controllers
             this.authentication = authentication;
         }
 
+
+
+        /// <summary>
+        /// 验证账号
+        /// </summary>
+        /// <param name="account">账号</param>
+        /// <param name="certificate">凭证（密码）</param>
+        /// <returns></returns>
         [HttpPost]
         [Route("VC")]
         public bool VerifyCredential(String account,String certificate)

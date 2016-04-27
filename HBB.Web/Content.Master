@@ -179,7 +179,7 @@
                     </div>
                     <div class="col-md-8"></div>
                     <div style="padding-top: 15px;" class="col-md-2">
-                        <img src="content/img/newHome/Hname.png" height="24" width="204" class="hospitalLogo" />
+                        <%--<img src="content/img/newHome/Hname.png" height="24" width="204" class="hospitalLogo" />--%>
                     </div>
 
                 </div>

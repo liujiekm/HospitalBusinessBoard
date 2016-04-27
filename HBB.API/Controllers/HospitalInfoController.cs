@@ -25,6 +25,10 @@ using HBB.ServiceInterface;
 namespace HBB.API.Controllers
 {
 
+
+    /// <summary>
+    /// 医院总览信息服务
+    /// </summary>
     [RoutePrefix("HI")]
     public class HospitalInfoController : ApiController
     {
@@ -41,7 +45,9 @@ namespace HBB.API.Controllers
         /// <summary>
         /// 获取额定空床数量
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// [{额定空床数，专科名称},{...}]
+        /// </returns>
         [HttpGet]
         [Route("REB")]
         public List<RateEmptyBed> GetRateEmptyBed()
@@ -51,9 +57,26 @@ namespace HBB.API.Controllers
 
 
         /// <summary>
-        /// 首页综合查询的 数字性数据（暂时放在这里）
+        /// 首页综合查询的统计性数据（包含实时，过往数据）
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// 上午有排班医生总数，
+        /// 上午已签到医生数，
+        /// 上午医生签到率，
+        /// 下午有排班医生总数，
+        /// 下午已签到医生数，
+        /// 下午医生签到率，
+        /// 候诊人数，
+        /// 已完成就诊人数，
+        /// 重症留观人数，
+        /// 急救中人数，
+        /// 在院人数，
+        /// 昨日出院人数，
+        /// 昨日入院人数，
+        /// 全院额定的空床数，
+        /// 全院加床的空床数，
+        /// 全院虚拟的空床数
+        /// </returns>
         [HttpGet]
         [Route("GHI")]
         public HomeInformation GetGenericHomeInformation()

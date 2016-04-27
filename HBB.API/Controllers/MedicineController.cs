@@ -21,6 +21,10 @@ using System.Web.Http;
 
 namespace HBB.API.Controllers
 {
+
+    /// <summary>
+    /// 药品服务
+    /// </summary>
     [RoutePrefix("MED")]
     public class MedicineController : ApiController//Medicine.ashx
     {
@@ -86,7 +90,7 @@ namespace HBB.API.Controllers
         }
 
         /// <summary>
-        /// 获取药品使用量月报（中药、西药）
+        /// 获取当月（中药、西药）药占比
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -97,7 +101,7 @@ namespace HBB.API.Controllers
         }
 
         /// <summary>
-        /// 获取处方配方(门诊、药房)
+        /// 获取今天到处方配方(门诊、药房)数量
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -108,7 +112,7 @@ namespace HBB.API.Controllers
         }
 
         /// <summary>
-        /// 获取药品使用情况（中药西药）统计列表
+        /// 获取最近一周的中药西药的药占比情况
         /// </summary>
         /// <returns></returns>
         [HttpGet]

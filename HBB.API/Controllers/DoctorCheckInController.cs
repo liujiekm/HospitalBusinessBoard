@@ -23,6 +23,10 @@ using System.Web.Http;
 
 namespace HBB.API.Controllers
 {
+
+    /// <summary>
+    /// 医生签到服务
+    /// </summary>
     [RoutePrefix("DCI")]
     public class DoctorCheckInController : ApiController
     {
@@ -34,7 +38,7 @@ namespace HBB.API.Controllers
 
 
         /// <summary>
-        /// 医生签到的主增量图
+        /// 获取今天各时间段签到的医生数量
         /// </summary>
         /// <param name="time"></param>
         /// <returns></returns>
@@ -47,7 +51,7 @@ namespace HBB.API.Controllers
 
 
         /// <summary>
-        /// 根据时间点获得签到详细信息
+        /// 根据时间点获得医生签到详细信息（医生姓名、签到时间、所在专科）
         /// </summary>
         /// <param name="timePoint">时间点</param>
         /// <returns></returns>
@@ -60,7 +64,7 @@ namespace HBB.API.Controllers
 
 
         /// <summary>
-        /// 根据时间点获取未签到详细信息
+        /// 根据时间点获得未签到医生的详细信息（医生姓名、签到时间、所在专科）
         /// </summary>
         /// <param name="timePoint">时间点</param>
         /// <returns></returns>
@@ -74,8 +78,8 @@ namespace HBB.API.Controllers
         /// <summary>
         /// 获取医生过往的签到情况
         /// </summary>
-        /// <param name="timeType"></param>
-        /// <param name="userID"></param>
+        /// <param name="timeType">统计医生的签到时间范围（year：年，month：月，week：周）</param>
+        /// <param name="userID">用户标识</param>
         /// <returns></returns>
         [HttpGet]
         [Route("RDIP/{timeType}/{userID}")]
