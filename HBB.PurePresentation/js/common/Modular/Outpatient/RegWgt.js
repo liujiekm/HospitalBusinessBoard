@@ -19,6 +19,13 @@ var RegWgt = React.createClass({
 
     },
 
+    componentDidMount:function () {
+
+    },
+
+    componentWillUnmount:function () {
+
+    },
 
     render:function(){
 

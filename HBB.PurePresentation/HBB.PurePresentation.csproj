@@ -94,6 +94,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="build\43e74487deae8781a6d494ea4f863a40.png" />
+    <Content Include="build\89889688147bd7575d6327160d64e760.svg" />
+    <Content Include="build\app.js" />
+    <Content Include="build\bootstrap.js" />
+    <Content Include="build\config.js" />
+    <Content Include="build\f721466883998665b87923b92dea655b.svg" />
+    <Content Include="build\index.html" />
+    <Content Include="build\jquery.js" />
+    <Content Include="build\styles.css" />
+    <Content Include="build\webapp.js" />
     <Content Include="css\layout.css" />
     <Content Include="img\BG.png" />
     <Content Include="img\Calendar.png" />
@@ -185,6 +195,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\config.json" />
+    <Content Include="build\448c34a56d699c29117adc64c43affeb.woff2" />
+    <Content Include="build\e18bbf611f2a2e43afc071aa2f4e1512.ttf" />
+    <Content Include="build\f4769f9bdb7466be65088239c12046d1.eot" />
+    <Content Include="build\fa2772327f55d8198301fdb8bcfc8158.woff" />
+    <None Include="Properties\PublishProfiles\HBB.PurePresentation.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

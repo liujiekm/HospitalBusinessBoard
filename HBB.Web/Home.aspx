@@ -35,6 +35,7 @@
     <!--Bootstrap js-->
     <script src="content/js/jquery/jquery.min.js"></script>
     <script src="content/bootstrap/bootstrap.js"></script>
+    <script src="content/js/jquery.ddslick.js"></script>
         <script src="CustomJsLibrary/Gloable.js"></script>
     <style type="text/css">
         .rowContent {
@@ -60,6 +61,26 @@
             margin-right: 20px;
         }
 
+
+        .dd-select
+        {
+            border:solid 0px;
+        }
+        .dd-selected-text
+        {color:white;}
+        .dd-desc
+        {
+            color:white;
+        }
+        
+        .dd-option{
+            background-color:#669DA7;
+            border:solid 0px;
+        }
+
+                .dd-option:hover{
+            background-color:#337AB7;
+        }
 
     </style>
     <script type="text/javascript">
@@ -163,12 +184,31 @@
                         <div class="col-md-4 col-sm-4 col-xs-4" style="padding-right: 0px;">
 
                             <div style="float: right;">
-                                <div style="margin-top: 25px; float: left; font-size: 28px; color: white; margin-right: 15px;">
+
+
+                               <div id="myDropdown"></div>
+                                <script src="content/js/imageDDL.js"></script>
+                                <script type="text/javascript" >
+                                    
+                                    $('#myDropdown').ddslick({
+                                        data: ddData,
+                                        width: 300,
+                                        background:"#4BB3D5",
+                                        selectText: "选择医院",
+                                        imagePosition: "right",
+                                        onSelected: function (selectedData) {
+                                            
+                                        }
+                                    });
+
+                                </script>
+
+                                <%--<div style="margin-top: 25px; float: left; font-size: 28px; color: white; margin-right: 15px;">
                                     <p>您好! <span id="currentUser">陈</span>院长 </p>
                                 </div>
                                 <div style="float: left; padding-top: 20px;">
                                     <img src="content/img/newHome/QUIT.png" class="img-responsive" style="height: 48px; width: 48px;">
-                                </div>
+                                </div>--%>
 
                             </div>
 

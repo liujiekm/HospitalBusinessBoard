@@ -40,14 +40,14 @@ var OutpatientIncomeWgt = React.createClass({
                     <div className="col-md-7 reg-content" >
                         <div className="row">
                             <div className="col-md-12">
-                                <p className="lead reg-content-p">昨日 <span>{this.props.outpatientIncomingYesterday} </span>万元</p>
+                                <p className="lead reg-content-p text-center">昨日 <span>{this.props.outpatientIncomingYesterday} </span>万元</p>
                             </div>
                         </div>
                         <div className="row">
                         </div>
                         <div className="row">
                             <div className="col-md-12">
-                                <p className="lead reg-content-p" >今日目前 <span >{this.props.outpatientIncomingCurrent}</span> 万元</p>
+                                <p className="lead reg-content-p text-center" >今日目前 <span >{this.props.outpatientIncomingCurrent}</span> 万元</p>
                             </div>
 
                         </div>

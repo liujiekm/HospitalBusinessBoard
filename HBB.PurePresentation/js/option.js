@@ -351,7 +351,7 @@ options.homeBarOption = {
 
 
 
-options.hoemPieOption = {
+options.homePieOption = {
     tooltip: {
         trigger: 'item',
         axisPointer: {            // 坐标轴指示器，坐标轴触发有效
@@ -855,27 +855,31 @@ options.personSignInOption = {
     },
     tooltip : {
         trigger: 'axis',
-        formatter: function (data) {
-          
-            //排版
-            var timeSpanArrange = data[1][2];
-            var hoursArrange = Math.floor(timeSpanArrange / 60) < 10 ? "0" + Math.floor(timeSpanArrange / 60) : Math.floor(timeSpanArrange / 60);
-            var minutesArrange = timeSpanArrange % 60 < 10 ? "0" + timeSpanArrange % 60 : timeSpanArrange % 60;
-            var timeArrange = hoursArrange + ":" + minutesArrange;
-            //签到
-            var timeSpanSignIn = data[0][2];
-            var hoursSignIn = Math.floor(timeSpanSignIn / 60) < 10 ? "0" + Math.floor(timeSpanSignIn / 60) : Math.floor(timeSpanSignIn / 60);
-            var minutesSignIn = timeSpanSignIn % 60 < 10 ? "0" + timeSpanSignIn % 60 : timeSpanSignIn % 60;
-            var timeSignIn = hoursSignIn + ":" + minutesSignIn;
-            //x轴时间
-            var dateTime = data[0][1];
-            //排版时间提示语
-            var arrangeLabel = data[1][0];
-            //签到时间提示语
-            var signInLabel = data [0][0];
-    
-            return dateTime + "<br>" + signInLabel + ":" + timeSignIn + "<br>" + arrangeLabel + ":" + timeArrange;
-        }
+
+        formatter:'{a0} {b0}: {c0}<br />{a1} {b1}: {c1}',
+
+        // formatter: function (data) {
+        //
+        //     //排班
+        //     // var timeSpanArrange = data[1][2];
+        //     // var hoursArrange = Math.floor(timeSpanArrange / 60) < 10 ? "0" + Math.floor(timeSpanArrange / 60) : Math.floor(timeSpanArrange / 60);
+        //     // var minutesArrange = timeSpanArrange % 60 < 10 ? "0" + timeSpanArrange % 60 : timeSpanArrange % 60;
+        //     // var timeArrange = hoursArrange + ":" + minutesArrange;
+        //     // //签到
+        //     // var timeSpanSignIn = data[0][2];
+        //     // var hoursSignIn = Math.floor(timeSpanSignIn / 60) < 10 ? "0" + Math.floor(timeSpanSignIn / 60) : Math.floor(timeSpanSignIn / 60);
+        //     // var minutesSignIn = timeSpanSignIn % 60 < 10 ? "0" + timeSpanSignIn % 60 : timeSpanSignIn % 60;
+        //     // var timeSignIn = hoursSignIn + ":" + minutesSignIn;
+        //     // //x轴时间
+        //     // var dateTime = data[0][1];
+        //     // //排班时间提示语
+        //     // var arrangeLabel = data[1][0];
+        //     // //签到时间提示语
+        //     // var signInLabel = data [0][0];
+        //
+        //     //return dateTime + "<br />" + signInLabel + ":" + timeSignIn + "<br />" + arrangeLabel + ":" + timeArrange;
+        //     return "{a}" + "<br />" + "{b}" + ":" + "{c}" + "<br />" + data.seriesName + ":" + data.value;
+        // }
     },
     grid:
 {
@@ -1042,7 +1046,7 @@ options.emptyBedOption = {
 
 
 
-options.medicalServiceOption1 = {
+options.deptMSSOption = {
     title: {
         text: '专科候诊/未就诊人次统计'
     },
@@ -1142,7 +1146,7 @@ options.medicalServiceOption1 = {
         }
     ]
 };
-options.medicalServiceOption2 = {
+options.doctorMSSOption = {
     title: {
         text: '个人候诊/未就诊人次统计'
     },

@@ -1,77 +1,107 @@
 ﻿
+function getConfigData()
+{
+    //$.ajaxSettings.async = false;
+    //$.getJSON(baseUrl + 'CFG/GC', function (data) {
+    //    return data;
+    //});
+    //$.ajaxSettings.async = true;
+
+
+    var data = {};
+    $.ajax({
+
+        type: 'GET',
+        async: false,
+        url: baseUrl + 'CFG/GC',
+
+
+        dataType: 'json',
+        success: function (data) {
+            data = data;
+
+            return data;
+        }
+
+        
+
+    });
+}
+
 $(function(){
 
     getHomeInfo();
     getPatientExperienceInfo();
     getHomeChart();
+    
+    $.getJSON(baseUrl + 'CFG/GC', function (config) {
 
 
 
-    //门诊 以及特检对应值 超过多少 颜色加深显示
-    if (parseFloat($('#appointmentLastMonth').text()) > 3)
-    {
-        $('#appointmentLastMonth').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-    }
-    else
-    {
-        $('#appointmentLastMonth').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-    }
-    if (parseFloat($('#awaitingDiagnosis').text()) > 30) {
-        $('#awaitingDiagnosis').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-    }
-    else {
-        $('#awaitingDiagnosis').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-    }
-    if (parseFloat($('#diagnosis').text()) > 10) {
-        $('#diagnosis').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-    }
-    else {
-        $('#diagnosis').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-    }
-    if (parseFloat($('#payFees').text()) > 5) {
-        $('#payFees').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-    }
-    else {
-        $('#payFees').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-    }
-    if (parseFloat($('#medicineReceiving').text()) > 10) {
-        $('#medicineReceiving').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-    }
-    else {
-        $('#medicineReceiving').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-    }
-    //特检
+        //门诊 以及特检对应值 超过多少 颜色加深显示
+        if (parseFloat($('#appointmentLastMonth').text()) > config.outpatientAppTime) {
+            $('#appointmentLastMonth').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+        }
+        else {
+            $('#appointmentLastMonth').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+        }
+        if (parseFloat($('#awaitingDiagnosis').text()) > config.outpatientWaitingTime) {
+            $('#awaitingDiagnosis').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+        }
+        else {
+            $('#awaitingDiagnosis').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+        }
+        if (parseFloat($('#diagnosis').text()) > config.outpatientInTime) {
+            $('#diagnosis').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+        }
+        else {
+            $('#diagnosis').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+        }
+        if (parseFloat($('#payFees').text()) > config.outpatientPayTime) {
+            $('#payFees').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+        }
+        else {
+            $('#payFees').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+        }
+        if (parseFloat($('#medicineReceiving').text()) > config.outpatientMedTime) {
+            $('#medicineReceiving').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+        }
+        else {
+            $('#medicineReceiving').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+        }
+        //特检
 
-    if (parseFloat($('#xray').text()) > 3) {
-        $('#xray').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-    }
-    else {
-        $('#xray').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-    }
-    if (parseFloat($('#ct').text()) > 3) {
-        $('#ct').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-    }
-    else {
-        $('#ct').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-    }
-    if (parseFloat($('#mri').text()) > 3) {
-        $('#mri').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-    }
-    else {
-        $('#mri').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-    }
-    if (parseFloat($('#bc').text()) > 3) {
-        $('#bc').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-    }
-    else {
-        $('#bc').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-    }
-    if (parseFloat($('#cu').text()) > 3) {
-        $('#cu').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-    }
-    else {
-        $('#cu').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-    }
+        if (parseFloat($('#xray').text()) > config.checkXTime) {
+            $('#xray').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+        }
+        else {
+            $('#xray').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+        }
+        if (parseFloat($('#ct').text()) > config.checkCTTime) {
+            $('#ct').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+        }
+        else {
+            $('#ct').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+        }
+        if (parseFloat($('#mri').text()) > config.checkMRITime) {
+            $('#mri').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+        }
+        else {
+            $('#mri').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+        }
+        if (parseFloat($('#bc').text()) > config.checkBTime) {
+            $('#bc').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+        }
+        else {
+            $('#bc').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+        }
+        if (parseFloat($('#cu').text()) > config.checkoutEndoscopeTime) {
+            $('#cu').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+        }
+        else {
+            $('#cu').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+        }
+    });
 
 });
 
@@ -121,37 +151,45 @@ $(function(){
             $('#payFees').text(data[3].toFixed(1));
             $('#medicineReceiving').text(data[4].toFixed(1));
 
-            //门诊 以及特检对应值 超过多少 颜色加深显示
-            if (parseFloat($('#appointmentLastMonth').text()) > 3) {
-                $('#appointmentLastMonth').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-            }
-            else {
-                $('#appointmentLastMonth').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-            }
-            if (parseFloat($('#awaitingDiagnosis').text()) > 30) {
-                $('#awaitingDiagnosis').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-            }
-            else {
-                $('#awaitingDiagnosis').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-            }
-            if (parseFloat($('#diagnosis').text()) > 10) {
-                $('#diagnosis').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-            }
-            else {
-                $('#diagnosis').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-            }
-            if (parseFloat($('#payFees').text()) > 5) {
-                $('#payFees').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-            }
-            else {
-                $('#payFees').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-            }
-            if (parseFloat($('#medicineReceiving').text()) > 10) {
-                $('#medicineReceiving').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-            }
-            else {
-                $('#medicineReceiving').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-            }
+            
+            
+
+            $.getJSON(baseUrl + 'CFG/GC', function (config) {
+                //门诊 以及特检对应值 超过多少 颜色加深显示
+                if (parseFloat($('#appointmentLastMonth').text()) > config.outpatientAppTime) {
+                    $('#appointmentLastMonth').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+                }
+                else {
+                    $('#appointmentLastMonth').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+                }
+                if (parseFloat($('#awaitingDiagnosis').text()) > config.outpatientWaitingTime) {
+                    $('#awaitingDiagnosis').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+                }
+                else {
+                    $('#awaitingDiagnosis').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+                }
+                if (parseFloat($('#diagnosis').text()) > config.outpatientInTime) {
+                    $('#diagnosis').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+                }
+                else {
+                    $('#diagnosis').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+                }
+                if (parseFloat($('#payFees').text()) > config.outpatientPayTime) {
+                    $('#payFees').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+                }
+                else {
+                    $('#payFees').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+                }
+                if (parseFloat($('#medicineReceiving').text()) > config.outpatientMedTime) {
+                    $('#medicineReceiving').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+                }
+                else {
+                    $('#medicineReceiving').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+                }
+
+            });
+            
+            
         });
         //特检标识性数据
         //'Handler/GenericHandler.ashx?type=psti',
@@ -165,38 +203,40 @@ $(function(){
             $('#bc').text((data[3] / 60 / 24).toFixed(1));
             $('#cu').text((data[4] / 60 / 24).toFixed(1));
 
+           
+            $.getJSON(baseUrl + 'CFG/GC', function (config) {
 
-
-            if (parseFloat($('#xray').text()) > 3) {
-                $('#xray').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-            }
-            else {
-                $('#xray').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-            }
-            if (parseFloat($('#ct').text()) > 3) {
-                $('#ct').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-            }
-            else {
-                $('#ct').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-            }
-            if (parseFloat($('#mri').text()) > 3) {
-                $('#mri').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-            }
-            else {
-                $('#mri').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-            }
-            if (parseFloat($('#bc').text()) > 3) {
-                $('#bc').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-            }
-            else {
-                $('#bc').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-            }
-            if (parseFloat($('#cu').text()) > 3) {
-                $('#cu').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
-            }
-            else {
-                $('#cu').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
-            }
+                if (parseFloat($('#xray').text()) > config.checkXTime) {
+                    $('#xray').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+                }
+                else {
+                    $('#xray').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+                }
+                if (parseFloat($('#ct').text()) > config.checkCTTime) {
+                    $('#ct').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+                }
+                else {
+                    $('#ct').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+                }
+                if (parseFloat($('#mri').text()) > config.checkMRITime) {
+                    $('#mri').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+                }
+                else {
+                    $('#mri').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+                }
+                if (parseFloat($('#bc').text()) > config.checkBTime) {
+                    $('#bc').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+                }
+                else {
+                    $('#bc').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+                }
+                if (parseFloat($('#cu').text()) > config.checkoutEndoscopeTime) {
+                    $('#cu').parent().parent().parent().parent().removeClass('pannelContent').addClass('pannelContentWarning');
+                }
+                else {
+                    $('#cu').parent().parent().parent().parent().removeClass('pannelContentWarning').addClass('pannelContent');
+                }
+            });
         });
     }
     //门诊标识性数据

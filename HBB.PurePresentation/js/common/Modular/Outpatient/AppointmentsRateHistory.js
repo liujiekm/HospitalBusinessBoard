@@ -3,8 +3,8 @@
  */
 import React from 'react';
 import { render, findDOMNode } from 'react-dom'
+import echarts from 'echarts'
 
-import classnames from "classnames"
 
 import ReactEcharts from "react-echarts-component"
 import Globle from "../../../Globle"
@@ -13,29 +13,55 @@ import options from "../../../option"
 
 var AppointmentsRateHistory = React.createClass({
     componentDidMount:function () {
+        const chartDom = this.refs.chart;
+        const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
+        chart.setOption(options.OutpatientAppointment);
+        this.getChartData(chart);
+    },
+
+    getChartData:function (chart) {
+
+        chart.showLoading({
+            text: '数据读取中...', effect: 'spin', textStyle: {
+                fontSize: 20
+            }
+        });
+
         var temp = new Date();
         var ed = '' + temp.getFullYear() + '-' + (temp.getMonth() + 1) + '-' + temp.getDate() + ' ' + '23:59:59';
         temp.setDate(temp.getDate() - 7);
         var sd =''+ temp.getFullYear()+'-'+(temp.getMonth()+1)+'-'+temp.getDate()+' '+'00:00:00';
-        
-        $.getJSON(Globle.baseUrl+ 'OPA/FV/' + sd + '/' + ed,function (data) {
-            OutpatientAppointment.series[0].data.length = 0;
-            OutpatientAppointment.xAxis[0].data.length = 0;
 
-            for (var i = 0, l = data.length; i < l; i++) {
-                if (i < 7) {
-                    OutpatientAppointment.xAxis[0].data.push(data[i].TimeStemp.substring(5));
-                    OutpatientAppointment.series[0].data.push(parseInt(data[i].Visitors / data[i].AllVisitors * 100));
-                }
-            }
+        $.getJSON(Globle.baseUrl + 'OPA/FV/' + sd + '/' + ed, function (data) {
+
+            var xaxis = [];
+            var actualData=[];
+            $.each(data, function (index, item) {
+
+                xaxis.push(item.TimeStemp.substring(5));
+                actualData.push(parseInt(item.Visitors / item.AllVisitors * 100));
+
+            });
+            chart.setOption({
+                xAxis:[{
+                    data: xaxis
+                }],
+                series:[{
+
+                    data: actualData
+                }]
+            });
+            chart.hideLoading();
 
         });
     },
-
+    componentWillUnmount:function () {
+        echarts.dispose(this.refs.chart)  
+    },
     render:function () {
         return (
             <div  className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size div_chart">
-                <ReactEcharts height={110}  option={options.OutpatientAppointment}  />
+                <div ref="chart" className="chart-size" />
             </div>
 
         );

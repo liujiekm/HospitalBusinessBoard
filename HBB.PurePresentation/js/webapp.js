@@ -18,6 +18,9 @@ import Medicine from "./common/Modular/Medicine/Medicine"
 import Operation from "./common/Modular/Operation/Operation"
 
 
+import DoctorCheckin from "./common/Modular/DoctorCheckin/DoctorCheckin"
+
+
 import Login from "./common/Modular/Login/Login"
 
 import Config from "./common/Modular/Config/Config"
@@ -64,6 +67,9 @@ render((
                 <Route path="Outpatient" component={Outpatient} />
                 <Route path="Config" component={Config} />
                 <Route path="FileUpload" component={FileUploadComponenet} />
+                <Route path="Operation" component={Operation} />
+
+                <Route path="DoctorCheckin" component={DoctorCheckin} />
             </Route>
 
         </Route>

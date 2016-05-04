@@ -66,7 +66,7 @@ var InhospitalIncomeHistory = React.createClass({
                             }
                         }
                     },
-                    data: items.zysrje
+                    data: item.zysrje
                 }
             ];
 

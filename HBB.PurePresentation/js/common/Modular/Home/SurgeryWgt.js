@@ -3,29 +3,62 @@
  */
 import React from 'react';
 import { render, findDOMNode } from 'react-dom'
-
+import { Link } from 'react-router'
 import classnames from "classnames"
 import ReactEcharts from "react-echarts-component"
 import Globle from "../../../Globle"
 import options from "../../../option"
+import echarts from 'echarts'
 
-
-
+var intervalRef;
 var SurgeryWgt=React.createClass({
 
     componentDidMount:function () {
 
-        $.getJSON(Globle.baseUrl+'OP/RSI', function (item) {
-            //手术
+        const chartDom = this.refs.chart;
+        const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
+        chart.setOption(options.homePieOption);
+        this.getChartData(chart);
 
-            options.hoemPieOption.series[0].data = [item.CompletedQuanty];
-            options.hoemPieOption.series[1].data = [item.DoingQuanty];
-            options.hoemPieOption.series[2].data = [item.WaitingQuanty];
+        intervalRef=setInterval(function () {
+            this.getChartData(chart)
+        }.bind(this), 10000);
+    },
+
+    getChartData:function (chart) {
+
+        chart.showLoading({
+            text: '数据读取中...', effect: 'spin', textStyle: {
+                fontSize: 20
+            }
+        });
+        $.getJSON(Globle.baseUrl + 'OP/RSI', function (item) {
+            var series1 = [item.CompletedQuanty];
+            var series2 = [item.DoingQuanty];
+            var series3 = [item.WaitingQuanty];
+
+
+            chart.setOption({
+
+                series:[{
+
+                    data: series1
+                },{
+                    data: series2
+                },{
+                    data: series3
+                }]
+            });
+            chart.hideLoading();
 
         });
     },
 
 
+    componentWillUnmount:function () {
+        clearInterval(intervalRef);
+        echarts.dispose(this.refs.chart)
+    },
     render:function () {
         return (
 
@@ -44,22 +77,15 @@ var SurgeryWgt=React.createClass({
                 </div>
 
                 <div className="col-md-8 " style={{"width":"72%"}}>
-                    <ReactEcharts height={110}  option={options.hoemPieOption}  />
+                    <div ref="chart" className="chart-size" />
                 </div>
 
                 <div className="col-md-2 rightGo">
-                    <a href="OperationMain.aspx">
+                    <Link to="Operation">
                         <img className="img-responsive" src="./img/Home/into.png" />
-                    </a>
+                    </Link>
                 </div>
             </div>
-
-
-
-
-
-
-
 
             </div>
 

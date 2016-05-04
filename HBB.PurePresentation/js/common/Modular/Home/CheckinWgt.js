@@ -5,7 +5,7 @@ import React from 'react';
 import { render, findDOMNode } from 'react-dom'
 
 import classnames from "classnames"
-import  Link  from 'react-router'
+import { Link } from 'react-router'
 
 //医生签到部件
 var CheckinWgt=React.createClass({
@@ -82,10 +82,10 @@ var CheckinWgt=React.createClass({
                         </div>
 
                         <div className=" leftGo col-md-2 col-sm-2 col-xs-2 ">
-                            <a href="SignInStatics.aspx">
-                                <img className="img-responsive" src="./img/Home/into.png" >
-                                </img>
-                            </a>
+                            <Link to="DoctorCheckin">
+                                <img className="img-responsive" src="./img/Home/into.png" />
+
+                            </Link>
                         </div>
                     </div>
                 </div>

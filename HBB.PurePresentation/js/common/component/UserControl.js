@@ -22,7 +22,7 @@ var UserControl = React.createClass({
                     <p>您好! <span id="currentUser">陈</span>院长 </p>
                 </div>
                 <div className="left usercontrol-symbol">
-                    <img src="/HBB.PurePresentation/img/Home/QUIT.png" className="img-responsive" height="48px" width="48px"
+                    <img src="./img/Home/QUIT.png" className="img-responsive" height="48px" width="48px"
                     onClick={this.handleQuit}/>
                 </div>
 

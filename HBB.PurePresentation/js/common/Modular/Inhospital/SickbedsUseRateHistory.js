@@ -65,7 +65,7 @@ var SickbedsUseRateHospital = React.createClass({
                             }
                         }
                     },
-                    data: data.bcsyl
+                    data: item.bcsyl
                 }
             ];
 

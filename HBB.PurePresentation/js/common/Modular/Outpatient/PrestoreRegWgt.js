@@ -5,7 +5,7 @@ import React from 'react';
 import { render, findDOMNode } from 'react-dom'
 
 import classnames from "classnames"
-
+import echarts from 'echarts'
 import ReactEcharts from "react-echarts-component"
 import Globle from "../../../Globle"
 import options from "../../../option"
@@ -13,20 +13,49 @@ import options from "../../../option"
 var PrestoreRegWgt = React.createClass({
 
     componentDidMount:function () {
+        const chartDom = this.refs.chart;
+        const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
+        chart.setOption(options.BeforeMoneyPie);
+        this.getChartData(chart);
+    },
+    getChartData:function (chart) {
+
+        chart.showLoading({
+            text: '数据读取中...', effect: 'spin', textStyle: {
+                fontSize: 20
+            }
+        });
+
         var temp = new Date();
         var ed = '' + temp.getFullYear() + '-' + (temp.getMonth() + 1) + '-' + temp.getDate() + ' ' + '23:59:59';
         temp.setDate(temp.getDate() - 7);
-        var sd = '' + temp.getFullYear() + '-' + (temp.getMonth() + 1) + '-' + temp.getDate() + ' ' + '00:00:00';
+        var sd =''+ temp.getFullYear()+'-'+(temp.getMonth()+1)+'-'+temp.getDate()+' '+'00:00:00';
 
+        $.getJSON(Globle.baseUrl + 'OPA/IV/' + sd + '/' + ed, function (data) {
 
-        $.getJSON(Globle.baseUrl+'OPA/IV/' + sd + '/' + ed,function (data) {
-            options.BeforeMoneyPie.series[0].data.length = 0;
-            options.BeforeMoneyPie.series[1].data.length = 0;
-            options.BeforeMoneyPie.series[0].data.push(data[1].Visitors);
-            options.BeforeMoneyPie.series[1].data.push(this.props.YesterdayVisitors - data[1].Visitors);
-        });
+            var series1 = [];
+            var series2= [];
+            series1.push(data[1].Visitors);
+            series2.push(this.props.YesterdayVisitors - data[1].Visitors);
+            chart.setOption({
+
+                series:[{
+
+                    data: series1
+                },
+                    {
+
+                        data: series2
+                    }]
+            });
+            chart.hideLoading();
+
+        }.bind(this));
     },
-
+    componentWillUnmount:function () {
+        echarts.dispose(this.refs.chart)
+    },
+    
     render:function () {
         return (
             <div className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size div_chart">
@@ -50,7 +79,7 @@ var PrestoreRegWgt = React.createClass({
                     </div>
 
                     <div className="col-md-7">
-                        <ReactEcharts height={110}  option={options.BeforeMoneyPie}  />
+                        <div ref="chart" className="chart-size"  />
                     </div>
 
                     <div className="col-md-2 rightGo">

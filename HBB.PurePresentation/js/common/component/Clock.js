@@ -3,7 +3,7 @@
  */
 import React from 'react'
 
-
+var intervalRef;
 var Clock = React.createClass({
     getInitialState:function () {
         return {date:'',
@@ -12,20 +12,16 @@ var Clock = React.createClass({
                 sec:''
         }
     },
-
     componentDidMount:function () {
             var monthNames = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"];
             var dayNames = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
-
-
             var newDate = new Date();
-
             newDate.setDate(newDate.getDate());
             var currentDate=
             newDate.getFullYear() + '年' + monthNames[newDate.getMonth()] + newDate.getDate() + '日 ' + dayNames[newDate.getDay()];
 
         var that = this;
-        setInterval(function(){
+        intervalRef=setInterval(function(){
 
             var seconds = new Date().getSeconds();
             var minutes = new Date().getMinutes();
@@ -37,8 +33,10 @@ var Clock = React.createClass({
 
         },1000);
 
-    }
-    ,
+    },
+    componentWillUnmount:function () {
+        clearInterval(intervalRef);
+    },
     render:function () {
         return (
 

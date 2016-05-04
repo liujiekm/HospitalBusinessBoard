@@ -12,7 +12,7 @@ import Extension from "../../component/Extension"
 
 import RegWgt from "./RegWgt"
 import RegHistory from "./RegHistory"
-import RealNameRegWeg from "./RealNameRegWgt"
+import RealNameRegWgt from "./RealNameRegWgt"
 import PrestoreRegWgt from "./PrestoreRegWgt"
 
 import AppointmentsRateWgt from "./AppointmentsRateWgt"
@@ -36,9 +36,9 @@ var Outpatient = React.createClass({
 
 
                 <div className="wgt-group">
-                    <RealNameRegWeg YesterdayVisitors="120000" />
+                    <RealNameRegWgt YesterdayVisitors="15003" />
 
-                    <PrestoreRegWgt YesterdayVisitors="120000"/>
+                    <PrestoreRegWgt YesterdayVisitors="15003"/>
                 </div>
 
                 <div className="wgt-group">

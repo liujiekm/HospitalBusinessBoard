@@ -24,16 +24,9 @@ var Config = React.createClass({
             "checkoutEndoscopeTime":parseFloat(findDOMNode(this.refs.checkout_endoscope_time).value)
         };
 
-        $.post(baseUrl+'CFG/MC',config,function(status){
+        $.post(baseUrl+'CFG/MC',JSON.stringify(config),function(){
 
-            if(status=="200")
-            {
-                alert("设置成功！");
-            }
-            else {
-                alert("设置失败！");
-            }
-
+            
         }.bind(this));
    },
 

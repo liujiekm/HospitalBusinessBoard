@@ -18,6 +18,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace HBB.Common
@@ -31,10 +32,22 @@ namespace HBB.Common
         /// <param name="fileUrl">文件地址</param>
         public static void WriteToXML(T obj,String fileUrl)
         {
-            XmlSerializer writer = new XmlSerializer(obj.GetType());
-            using (FileStream file = File.OpenWrite(fileUrl))
+            XmlSerializer xmlSerializer = new XmlSerializer(obj.GetType());
+            //using (FileStream file = File.OpenWrite(fileUrl))
+            //{
+            //    writer.Serialize(file, obj);
+            //}
+
+
+            using (StringWriter sww = new StringWriter())
+            using (XmlWriter writer = XmlWriter.Create(sww))
             {
-                writer.Serialize(file, obj);
+                xmlSerializer.Serialize(writer, obj);
+                var xml = sww.ToString();
+
+                XmlDocument xdoc = new XmlDocument();
+                xdoc.LoadXml(xml);
+                xdoc.Save(fileUrl);
             }
         }
 

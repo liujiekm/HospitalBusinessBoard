@@ -129,6 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdmissionDischarge.aspx" />
+    <Content Include="Config.aspx" />
     <Content Include="content\bootstrapdatepicker\bootstrap-datetimepicker.css" />
     <Content Include="content\bootstrapdatepicker\bootstrap-datetimepicker.js" />
     <Content Include="content\bootstrapdatepicker\bootstrap-datetimepicker.min.css" />
@@ -192,6 +193,17 @@
     <Content Include="content\img\newHome\outpatientSignin.png" />
     <Content Include="content\img\newHome\QUIT.png" />
     <Content Include="content\img\newHome\VerticalLine.png" />
+    <Content Include="content\img\putuo\i_pt_fybjy.png" />
+    <Content Include="content\img\putuo\i_pt_lqyy.jpg" />
+    <Content Include="content\img\putuo\i_pt_rmyy.png" />
+    <Content Include="content\img\putuo\i_pt_shcsyy.png" />
+    <Content Include="content\img\putuo\i_pt_shdxtzyy.png" />
+    <Content Include="content\img\putuo\i_pt_shfkyy.png" />
+    <Content Include="content\img\putuo\i_pt_shhkyy.png" />
+    <Content Include="content\img\putuo\i_pt_shjcyy.png" />
+    <Content Include="content\img\putuo\i_pt_shptqzxyy.png" />
+    <Content Include="content\img\putuo\i_pt_shtyyy.png" />
+    <Content Include="content\img\putuo\i_pt_zxyy.jpg" />
     <Content Include="content\img\QUIT.png" />
     <Content Include="content\img\Sys-NameBG.png" />
     <Content Include="content\img\User.png" />
@@ -226,7 +238,10 @@
     <Content Include="content\js\chart\venn.js" />
     <Content Include="content\js\DateTimePicker.js" />
     <Content Include="content\js\html5shiv.min.js" />
+    <Content Include="content\js\imageDDL.js" />
     <Content Include="content\js\jquery.animateNumber.min.js" />
+    <Content Include="content\js\jquery.ddslick.js" />
+    <Content Include="content\js\jquery.inputmask.bundle.js" />
     <Content Include="content\js\jquery\jquery-2.1.3.js" />
     <Content Include="content\js\jquery\jquery-2.1.3.min.js" />
     <Content Include="content\js\jquery\jquery-2.1.3.min.map" />
@@ -308,6 +323,13 @@
       <DependentUpon>AdmissionDischarge.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="Config.aspx.cs">
+      <DependentUpon>Config.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config.aspx.designer.cs">
+      <DependentUpon>Config.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Content.Master.cs">
       <DependentUpon>Content.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

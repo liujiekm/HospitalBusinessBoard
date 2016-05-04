@@ -34,9 +34,9 @@ var Medicine = React.createClass({
                 </div>
 
                 <div className="wgt-group">
-                    <DrugStoragePurchaseWgt/>
-                    <Extension />
                     <DrugStorageMonthlyWgt />
+                    <Extension />
+                    <DrugStoragePurchaseWgt/>
                 </div>
 
                 <div className="wgt-group">

@@ -6,6 +6,9 @@
 import React from 'react';
 import { render, findDOMNode } from 'react-dom'
 
+import OperationClassCountWgt from "./OperationClassCountWgt"
+
+import OperationDetail from "./OperationDetail"
 import ReactEcharts from "react-echarts-component"
 
 var Operation = React.createClass({
@@ -13,7 +16,16 @@ var Operation = React.createClass({
     render:function () {
         return (
 
-            <div>Operation</div>
+            <div>
+
+                <div className="wgt-group">
+                    <OperationClassCountWgt />
+                    <OperationDetail />
+                </div>
+
+
+
+            </div>
 
         );
     }

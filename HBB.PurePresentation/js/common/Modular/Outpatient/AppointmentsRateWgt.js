@@ -14,7 +14,7 @@ var AppointmentsRateWgt = React.createClass({
       return {
 
           prestoreRateYesterday:87,
-          visitsYesterday:1000000
+          visitsYesterday:15001
       }
     },
 

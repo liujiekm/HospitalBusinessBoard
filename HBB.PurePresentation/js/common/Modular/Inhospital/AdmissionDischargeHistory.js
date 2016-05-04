@@ -65,7 +65,7 @@ var AdmissionDischargeHistory = React.createClass({
             }
         ];
 
-        $.getJSON(Globle.baseUrl+"IH/HI",function (item) {
+        $.getJSON(Globle.baseUrl+"IH/HI",function (data) {
 
             option.series = [
                 {

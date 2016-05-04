@@ -74,7 +74,7 @@ var InhospitalPersonalCostHistory = React.createClass({
                             }
                         }
                     },
-                    data: items.rjjetj
+                    data: item.rjjetj
                 }
             ];
 

@@ -42,17 +42,17 @@ var InhospitalPersonalCostWgt = React.createClass({
                     <div className="col-md-7 inhospital-wgt-content" >
                         <div className="row">
                             <div className="col-md-12">
-                                <p className="lead text-nowrap text-center" style={{"margin-bottom": "3px"}}>昨日人均费用 <strong>{this.props.avgPersonalCostYesterday}</strong>元</p>
+                                <p className="lead text-nowrap text-center" style={{"marginBottom": "3px"}}>昨日人均费用 <strong>{this.props.avgPersonalCostYesterday}</strong>元</p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-12">
-                                <p className="lead text-nowrap text-center" style={{"margin-bottom": "3px"}}>上月人均费用 <strong>{this.props.avgPersonalCostLastMonth}</strong>元</p>
+                                <p className="lead text-nowrap text-center" style={{"marginBottom": "3px"}}>上月人均费用 <strong>{this.props.avgPersonalCostLastMonth}</strong>元</p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-12">
-                                <p className="lead text-nowrap text-center" style={{"margin-bottom": "3px"}}>去年人均费用 <strong>{this.props.avgPersonalCostLastYear}</strong> 元</p>
+                                <p className="lead text-nowrap text-center" style={{"marginBottom": "3px"}}>去年人均费用 <strong>{this.props.avgPersonalCostLastYear}</strong> 元</p>
                             </div>
 
                         </div>

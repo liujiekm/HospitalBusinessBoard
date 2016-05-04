@@ -44,8 +44,8 @@ var App = React.createClass({
 
                     <div className="col-md-10 col-sm-10 col-xs-10 col-md-offset-2">
 
-                        <div id="div_header" className="row">
-                            <div className="col-md-6 col-sm-6 col-xs-6">
+                        <div className="row right-header">
+                            <div className="col-md-8 col-sm-8 col-xs-8">
                                 <Clock />
                             </div>
 
@@ -56,16 +56,15 @@ var App = React.createClass({
 
                             </div>
 
-                            <div className="col-md-2"></div>
+
                         </div>
 
 
                         <div className="row reportRow">
-                            <div className="col-md-10 col-sm-10 col-xs-10 rightcontainer">
+                            <div className="col-md-12 col-sm-12 col-xs-12">
                                 {this.props.children}
                             </div>
-                            <div className="col-md-2 col-sm-2 col-xs-2">
-                            </div>
+
                         </div>
 
                         

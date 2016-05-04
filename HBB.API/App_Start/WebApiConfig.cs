@@ -18,6 +18,26 @@ namespace HBB.API
     {
         public static void Register(HttpConfiguration config)
         {
+
+            // Web API 配置和服务
+            // 将 Web API 配置为仅使用不记名令牌身份验证。
+            config.SuppressDefaultHostAuthentication();
+            config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+
+
+            //替换默认的JSON序列化器JSON.NET为Jil
+            config.Formatters.Clear();
+            config.Formatters.Insert(0, new JilFormatter());
+
+            //压缩payload
+            //config.Filters.Add(new DeflateCompressionAttribute());
+
+            //增加错误日志记录
+            config.Filters.Add(new ElmahErrorAttribute());
+
+
+
+
             // Web API 路由
             config.MapHttpAttributeRoutes();
 
@@ -32,21 +52,7 @@ namespace HBB.API
             container.LoadConfiguration();
             config.DependencyResolver = new UnityResolver(container);
 
-            // Web API 配置和服务
-            // 将 Web API 配置为仅使用不记名令牌身份验证。
-            config.SuppressDefaultHostAuthentication();
-            config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
-            //压缩payload
-            //config.Filters.Add(new DeflateCompressionAttribute());
-
-            //增加错误日志记录
-            config.Filters.Add(new ElmahErrorAttribute());
-
-
-            //替换默认的JSON序列化器JSON.NET为Jil
-            config.Formatters.Clear();
-            config.Formatters.Insert(0, new JilFormatter());
 
          
         }

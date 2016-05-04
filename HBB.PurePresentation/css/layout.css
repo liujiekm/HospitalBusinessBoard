@@ -15,6 +15,9 @@ body {
     /*margin-left: -10px;*/
 
 }
+.text-big {
+    font-size: 22px;
+}
 .lenovo {
     position: fixed;
     bottom: 20px;
@@ -91,8 +94,17 @@ body {
     margin-bottom: 10px;
 }
 
+.left{
+    float:left;
+}
 
-#div_header {
+.right
+{
+    float: right;
+}
+
+.right-header {
+    padding-left:20px;
     height: 70px;
     /*padding-left: 40px;*/
 }
@@ -210,12 +222,44 @@ p {
     overflow-x: hidden;
 }
 
-.chart {
-    height: 110px;
-
-
-
+.detail-chart {
+    height: 300px;
+    width:650px;
 }
+
+.detail-content
+{
+    background: url('../img/Home/30black.png') repeat;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.returnPage {
+    color: white;
+    font-size: 40px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.moduleIndicate {
+    color: white;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+
+.detail-item
+{
+    cursor: pointer;
+}
+.detail-item:hover
+.detail-item-active{
+    background:cornflowerblue;
+    color:white;
+}
+
 
 .nav-choice {
     margin-left: -20px;
@@ -344,10 +388,10 @@ input:focus {
 }
 
 .loginBtn {
-    width: 90%;
+    width: 100%;
     text-align: center;
     position: relative;
-    left: 5%;
+
     height: 50px;
     background:   url('../img/login/BlueBG.png');
     border: 1px solid white;
@@ -541,6 +585,195 @@ input:focus {
 {
     border-bottom: 1px solid white;padding-bottom:5px;
 }
+
+
+/*手术*/
+
+.operation-box {
+    background: url('../img/Home/30green.png') repeat;
+    margin-right: 10px;
+    width: 120px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.operation-box-clean {
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 120px;
+    height: 100px;
+}
+.operation-box-p {
+    float: right;
+    margin-right: 5px;
+}
+.operation-box-indicate
+{
+    margin-top: 10px;
+}
+
+
+.datepicker
+{
+    width:150px;
+    float:left;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.operation-detail-content
+{
+    background: url('../img/Home/30black.png') repeat;
+    margin-top: 20px;
+    width: 100%;
+    height:365px;
+    overflow: hidden;
+}
+
+.operation-detail-return
+{
+    color: white;
+    font-size: 40px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.operation-detail-indicate {
+    color: white;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.operation-detail-content-row {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #F7F7F7;
+}
+
+
+
+/*医生签到详情页面样式*/
+
+
+.chartNav {
+    float: right;
+}
+
+.chartNav > li > a {
+    color: #108CCD;
+    padding: 5px;
+}
+
+.chartNav > li > a:hover, .nav > li > a:focus {
+    background: #4aa0e9;
+    color: white;
+}
+
+.nextInfo {
+    position: relative;
+    top: 55%;
+}
+.nextInfoContainer {
+    height: 320px;
+}
+.personPanel {
+    padding-top: 40px;
+}
+
+.personPanel > ul > li > a {
+    margin-right: 0px;
+    border-radius: 0px;
+}
+
+.personPanel > ul > li > a:hover,
+.personPanel > ul > li > a:focus {
+    background: #F7F7F7;
+}
+
+.personPanel > ul > li > a {
+    color: black;
+}
+
+.personPanel > ul {
+    border-bottom: 0px;
+}
+
+.personContent {
+    background: white;
+
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+
+}
+
+.tabContent {
+    height: 85%;
+    overflow-y: auto;
+}
+
+.table {
+    margin-bottom: 5px;
+}
+
+.table > thead > tr > td,
+.table > tbody>tr > td {
+    width: 50%;
+}
+
+.contentRow {
+    height: 685px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #F7F7F7;
+}
+
+
+/*所有chart样式*/
+.chart-size
+{
+    height:110px;
+}
+
+.btn {
+    border-radius: 0px;
+    /*width: 70px;*/
+}
+.btn-lg
+{
+    width:100px;
+    background-color:#0988CE;
+    color:white;
+}
+
+.input-lg
+{
+    width:400px;
+    border-radius:0px;
+}
+.operation-btn-click {
+    color: white;
+    background-color: #0988CE;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    color: white;
+    background-color: #0988CE;
+}
+.dataControl{
+    height:34px;
+}
+
+.checkbox, .radio {
+
+    margin-top: 0px;
+
+}
+
+
 
 /*数据警示*/
 .indicate-alarm

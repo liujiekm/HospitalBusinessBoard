@@ -481,6 +481,11 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:HBB.API.Controllers.AuthenticationController">
+            <summary>
+            授权验证服务
+            </summary>
+        </member>
         <member name="M:HBB.API.Controllers.AuthenticationController.VerifyCredential(System.String,System.String)">
             <summary>
             验证账号
@@ -488,6 +493,11 @@
             <param name="account">账号</param>
             <param name="certificate">凭证（密码）</param>
             <returns></returns>
+        </member>
+        <member name="T:HBB.API.Controllers.ConfigController">
+            <summary>
+            管理配置服务
+            </summary>
         </member>
         <member name="M:HBB.API.Controllers.ConfigController.GetConfig">
             <summary>
@@ -512,6 +522,11 @@
             获取医院Logo
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:HBB.API.Controllers.DoctorCheckInController">
+            <summary>
+            医生签到服务
+            </summary>
         </member>
         <member name="M:HBB.API.Controllers.DoctorCheckInController.GetDoctorRegisterMainInformaton(System.String)">
             <summary>
@@ -541,6 +556,11 @@
             <param name="timeType">统计医生的签到时间范围（year：年，month：月，week：周）</param>
             <param name="userID">用户标识</param>
             <returns></returns>
+        </member>
+        <member name="T:HBB.API.Controllers.HospitalInfoController">
+            <summary>
+            医院总览信息服务
+            </summary>
         </member>
         <member name="M:HBB.API.Controllers.HospitalInfoController.GetRateEmptyBed">
             <summary>
@@ -573,6 +593,11 @@
             全院虚拟的空床数
             </returns>
         </member>
+        <member name="T:HBB.API.Controllers.InHospitalController">
+            <summary>
+            住院服务
+            </summary>
+        </member>
         <member name="M:HBB.API.Controllers.InHospitalController.GetEmergencyTreatmentInfo">
             <summary>
             获得急诊抢救区、留观区病人详细信息
@@ -596,6 +621,11 @@
             昨日收入、今日目前收入、近一周收入
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:HBB.API.Controllers.MedicineController">
+            <summary>
+            药品服务
+            </summary>
         </member>
         <member name="M:HBB.API.Controllers.MedicineController.GetDrugStorehouseTotalPurchases(System.DateTime,System.DateTime,System.Int32)">
             <summary>
@@ -641,6 +671,11 @@
             获取最近一周的中药西药的药占比情况
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:HBB.API.Controllers.OperationController">
+            <summary>
+            手术信息服务
+            </summary>
         </member>
         <member name="M:HBB.API.Controllers.OperationController.GetSurgeryDetailedInformation(HBB.API.Models.SurgeySearch)">
             <summary>
