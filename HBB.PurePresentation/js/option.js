@@ -423,90 +423,6 @@ options.homePieOption = {
     ]
 };
 
-
-
-
-//var hoemPieOption = {
-//    tooltip: {
-//        trigger: 'item',
-//        formatter: "{a} <br/>{b} : {c} ({d}%)",
-//        textStyle: {
-//            fontFamily: '微软雅黑',
-//            fontSize:4
-//        }
-//    },
-//    legend: {
-//        show: true,
-//        textStyle: { color: '#E4EEEF' },
-//        orient: 'vertical',
-//        x: 150,
-//        y:20,
-//        data: ['已完成','进行中','等待中']
-//    },
-//    toolbox: {
-//        show: false,
-//        feature: {
-//            mark: { show: true },
-//            dataView: { show: true, readOnly: false },
-//            magicType: {
-//                show: true,
-//                type: ['pie', 'funnel'],
-//                option: {
-//                    funnel: {
-//                        x: '25%',
-//                        width: '50%',
-//                        funnelAlign: 'center',
-//                        max: 1548
-//                    }
-//                }
-//            },
-//            restore: { show: true },
-//            saveAsImage: { show: true }
-//        }
-//    },
-//    calculable: true,
-
-//    color: ['#FEFFFD', '#3F84C6', '#4EB6D2'],
-//    series: [
-//        {
-//            name: '手术',
-//            type: 'pie',
-//            radius: ['50%', '70%'],
-//            center:['30%','50%'],
-//            itemStyle: {
-//                normal: {
-                    
-//                    label: {
-//                        show: false
-//                    },
-//                    labelLine: {
-//                        show: false
-//                    }
-//                },
-//                emphasis: {
-//                    label: {
-//                        show: true,
-//                        position: 'center',
-//                        textStyle: {
-//                            fontSize: '20',
-//                            fontWeight: 'bold'
-//                        }
-//                    }
-//                }
-//            },
-//            data: [
-//                { value: 335, name: '直接访问' },
-//                { value: 310, name: '邮件营销' },
-//                { value: 234, name: '联盟广告' },
-//                { value: 135, name: '视频广告' },
-//                { value: 1548, name: '搜索引擎' }
-//            ]
-//        }
-//    ]
-//};
-
-
-
 //空床科室
 
 options.homeEmptyBedOption = {
@@ -732,8 +648,7 @@ options.optdOption = {
 
 
 /*签到echart option 模板*/
-options.signInChangeOption =
-    {
+options.signInChangeOption ={
     title: {
         text: '签到人数统计图',
         subtext: '',
@@ -840,11 +755,14 @@ options.signInChangeOption =
 };
 
 
+
+
+
 options.personSignInOption = {
     title: {
         text: '签到时间点统计图',
         subtext: '',
-        sublink: '',
+        //sublink: '',
         textStyle:
         {
             fontSize: 15,
@@ -856,39 +774,17 @@ options.personSignInOption = {
     tooltip : {
         trigger: 'axis',
 
-        formatter:'{a0} {b0}: {c0}<br />{a1} {b1}: {c1}',
+        formatter:'{a0} {b0}: {c0}<br />{a1} {b1}: {c1}'
 
-        // formatter: function (data) {
-        //
-        //     //排班
-        //     // var timeSpanArrange = data[1][2];
-        //     // var hoursArrange = Math.floor(timeSpanArrange / 60) < 10 ? "0" + Math.floor(timeSpanArrange / 60) : Math.floor(timeSpanArrange / 60);
-        //     // var minutesArrange = timeSpanArrange % 60 < 10 ? "0" + timeSpanArrange % 60 : timeSpanArrange % 60;
-        //     // var timeArrange = hoursArrange + ":" + minutesArrange;
-        //     // //签到
-        //     // var timeSpanSignIn = data[0][2];
-        //     // var hoursSignIn = Math.floor(timeSpanSignIn / 60) < 10 ? "0" + Math.floor(timeSpanSignIn / 60) : Math.floor(timeSpanSignIn / 60);
-        //     // var minutesSignIn = timeSpanSignIn % 60 < 10 ? "0" + timeSpanSignIn % 60 : timeSpanSignIn % 60;
-        //     // var timeSignIn = hoursSignIn + ":" + minutesSignIn;
-        //     // //x轴时间
-        //     // var dateTime = data[0][1];
-        //     // //排班时间提示语
-        //     // var arrangeLabel = data[1][0];
-        //     // //签到时间提示语
-        //     // var signInLabel = data [0][0];
-        //
-        //     //return dateTime + "<br />" + signInLabel + ":" + timeSignIn + "<br />" + arrangeLabel + ":" + timeArrange;
-        //     return "{a}" + "<br />" + "{b}" + ":" + "{c}" + "<br />" + data.seriesName + ":" + data.value;
-        // }
     },
     grid:
-{
-    x: '40',
-    y: '30',
-    x2: '30',
-    y2: '30',
+    {
+        x: '40',
+        y: '30',
+        x2: '30',
+        y2: '30'
 
-},
+    },
     legend: {
         data: ['排班时间点','签到时间点']
     },
@@ -897,7 +793,7 @@ options.personSignInOption = {
         feature : {
             mark : {show: false},
             dataView : {show: true, readOnly: false},
-            //magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+
             magicType: { show: true, type: ['line', 'bar', 'stack', 'tiled'] },
             restore : {show: true},
             saveAsImage : {show: true}
@@ -939,7 +835,7 @@ options.personSignInOption = {
             markLine : {
                 data : [
                    [{ name: '上午签到点', value: '08.00',x: 40, y: 150 }, { name: '08：00',value: '08.00', x: 560, y: 150 }]
-                 // [{ name: '上午签到点', value: '08.00', xAxis: 0, yAxis: 480 }, { name: '08.00', value: '08', xAxis: 6, yAxis: 480 }]
+
                 ]     
 
             }
@@ -947,12 +843,11 @@ options.personSignInOption = {
         {
             name:'签到时间点',
             type:'line',
-            //stack: '总量',
             data: [8.10, 7.40, 13.00, 13.10, 7.30, 8.00, 7.40],
             markLine: {
                 data: [
                    [{ name: '下午签到点',value: '13.30', x: 40, y: 67 }, { name: '13：30',value: '13.30', x: 560, y: 67 }]
-                  // [{ name: '上午签到点', value: '08.00', xAxis: 0, yAxis: 480 }, { name: '08.00', value: '08', xAxis: 6, yAxis: 480 }]
+
                 ]
 
             }
@@ -962,290 +857,13 @@ options.personSignInOption = {
 
 
 
-options.emptyBedOption = {
-    tooltip: {
-        trigger: 'axis',
-        axisPointer: {
-// 坐标轴指示器，坐标轴触发有效
-            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-        }
-    },
-    legend: {
-        
-        data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
-    },
-    toolbox: {
-        show: false,
-        feature: {
-            mark: { show: true },
-            dataView: { show: true, readOnly: false },
-            magicType: { show: true, type: ['line', 'bar', 'stack', 'tiled'] },
-            restore: { show: true },
-            saveAsImage: { show: true }
-        }
-    },
-    calculable: true,
-    xAxis: [
-        {
-            type: 'value'
-        }
-    ],
-    yAxis: [
-        {
-            type: 'category',
-            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
-        }
-    ],
-    grid: {
-        x: '40',
-        y: '30',
-        x2: '5',
-        y2: '40',
 
 
 
-    },
-    series: [
-        {
-            name: '直接访问',
-            type: 'bar',
-            stack: '总量',
-            itemStyle: { normal: { label: { show: true, position: 'insideRight' } } },
-            data: [320, 302, 301, 334, 390, 330, 320]
-        },
-        {
-            name: '邮件营销',
-            type: 'bar',
-            stack: '总量',
-            itemStyle: { normal: { label: { show: true, position: 'insideRight' } } },
-            data: [120, 132, 101, 134, 90, 230, 210]
-        },
-        {
-            name: '联盟广告',
-            type: 'bar',
-            stack: '总量',
-            itemStyle: { normal: { label: { show: true, position: 'insideRight' } } },
-            data: [220, 182, 191, 234, 290, 330, 310]
-        },
-        {
-            name: '视频广告',
-            type: 'bar',
-            stack: '总量',
-            itemStyle: { normal: { label: { show: true, position: 'insideRight' } } },
-            data: [150, 212, 201, 154, 190, 330, 410]
-        },
-        {
-            name: '搜索引擎',
-            type: 'bar',
-            stack: '总量',
-            itemStyle: { normal: { label: { show: true, position: 'insideRight' } } },
-            data: [820, 832, 901, 934, 1290, 1330, 1320]
-        }
-    ]
-};
 
 
 
-options.deptMSSOption = {
-    title: {
-        text: '专科候诊/未就诊人次统计'
-    },
-    tooltip: {
-        trigger: 'axis',
-        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-        },
-        formatter: function (params) {
-            return params[0].name + '<br/>'
-                   + params[0].seriesName + ' : ' + params[0].value + '<br/>'
-                   + params[1].seriesName + ' : ' + (params[1].value + params[0].value);
-        }
-    },
-    legend: {
-        selectedMode: false,
-        x:250,
-        data: ['候诊人次', '未就诊人次']
-    },
-    toolbox: {
-        show: true,
-        feature: {
-            mark: { show: false },
-            dataView: { show: false, readOnly: false },
-            restore: { show: true },
-            saveAsImage: { show: true }
-        }
-    },
-    grid: {
-        x: '40',
-        y: '30',
-        x2: '5',
-        y2: '40',
 
-
-
-    },
-    calculable: true,
-    xAxis: [
-        {
-            type: 'category',
-            data: ['Cosco', 'CMA', 'APL', 'OOCL', 'Wanhai', 'Zim']//科室列表
-        }
-    ],
-    yAxis: [
-        {
-            type: 'value',
-            boundaryGap: [0, 0.1]
-        }
-    ],
-    series: [
-        {
-            name: '候诊人次',
-            type: 'bar',
-            stack: 'sum',
-            barCategoryGap: '50%',
-            itemStyle: {
-                normal: {
-                    color: 'tomato',
-                    barBorderColor: 'tomato',
-                    barBorderWidth: 6,
-                    barBorderRadius: 0,
-                    label: {
-                        show: false, position: 'insideTop'
-                    }
-                }
-            },
-            data: [260, 200, 220, 120, 100, 80]//候诊人次列表
-        },
-        {
-            name: '未就诊人次',
-            type: 'bar',
-            stack: 'sum',
-            itemStyle: {
-                normal: {
-                    color: '#fff',
-                    barBorderColor: 'tomato',
-                    barBorderWidth: 6,
-                    barBorderRadius: 0,
-                    label: {
-                        show: true,
-                        position: 'top',
-                        formatter: function (params) {
-                            for (var i = 0, l = option.xAxis[0].data.length; i < l; i++) {
-                                if (option.xAxis[0].data[i] == params.name) {
-                                    return option.series[0].data[i] + params.value;
-                                }
-                            }
-                        },
-                        textStyle: {
-                            color: 'tomato'
-                        }
-                    }
-                }
-            },
-            data: [40, 80, 50, 80, 80, 70]//就诊人次列表
-        }
-    ]
-};
-options.doctorMSSOption = {
-    title: {
-        text: '个人候诊/未就诊人次统计'
-    },
-    tooltip: {
-        trigger: 'axis',
-        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-        },
-        formatter: function (params) {
-            return params[0].name + '<br/>'
-                   + params[0].seriesName + ' : ' + params[0].value + '<br/>'
-                   + params[1].seriesName + ' : ' + (params[1].value + params[0].value);
-        }
-    },
-    legend: {
-        selectedMode: false,
-        x: 250,
-        data: ['候诊人次', '未就诊人次']
-    },
-    toolbox: {
-        show: true,
-        feature: {
-            mark: { show: false },
-            dataView: { show: false, readOnly: false },
-            restore: { show: true },
-            saveAsImage: { show: true }
-        }
-    },
-    grid: {
-        x: '40',
-        y: '30',
-        x2: '5',
-        y2: '40',
-
-
-
-    },
-    calculable: true,
-    xAxis: [
-        {
-            type: 'category',
-            data: ['Cosco', 'CMA', 'APL', 'OOCL', 'Wanhai', 'Zim']//科室列表
-        }
-    ],
-    yAxis: [
-        {
-            type: 'value',
-            boundaryGap: [0, 0.1]
-        }
-    ],
-    series: [
-        {
-            name: '候诊人次',
-            type: 'bar',
-            stack: 'sum',
-            barCategoryGap: '50%',
-            itemStyle: {
-                normal: {
-                    color: 'tomato',
-                    barBorderColor: 'tomato',
-                    barBorderWidth: 6,
-                    barBorderRadius: 0,
-                    label: {
-                        show: false, position: 'insideTop'
-                    }
-                }
-            },
-            data: [260, 200, 220, 120, 100, 80]//候诊人次列表
-        },
-        {
-            name: '未就诊人次',
-            type: 'bar',
-            stack: 'sum',
-            itemStyle: {
-                normal: {
-                    color: '#fff',
-                    barBorderColor: 'tomato',
-                    barBorderWidth: 6,
-                    barBorderRadius: 0,
-                    label: {
-                        show: true,
-                        position: 'top',
-                        formatter: function (params) {
-                            for (var i = 0, l = option.xAxis[0].data.length; i < l; i++) {
-                                if (option.xAxis[0].data[i] == params.name) {
-                                    return option.series[0].data[i] + params.value;
-                                }
-                            }
-                        },
-                        textStyle: {
-                            color: 'tomato'
-                        }
-                    }
-                }
-            },
-            data: [40, 80, 50, 80, 80, 70]//就诊人次列表
-        }
-    ]
-};
 
 options.OutpatientVisited = {
     title: {
@@ -1271,7 +889,7 @@ options.OutpatientVisited = {
         y: '25',
         x2: '30',
         y2: '20',
-        borderWidth: 0,
+        borderWidth: 0
 
 
     },
@@ -1408,7 +1026,7 @@ options.OutpatientAppointment = {
         y: '25',
         x2: '30',
         y2: '20',
-        borderWidth: 0,
+        borderWidth: 0
 
 
     },
@@ -1545,7 +1163,7 @@ options.OutpatientIncome = {
         y: '25',
         x2: '30',
         y2: '20',
-        borderWidth: 0,
+        borderWidth: 0
 
 
     },
@@ -1672,7 +1290,7 @@ options.RealNamePie = {
     y: '35',
     x2: '5',
     y2: '20',
-    borderWidth: 0,
+    borderWidth: 0
 
 
 },
@@ -1737,7 +1355,7 @@ options.BeforeMoneyPie = {
     y: '35',
     x2: '5',
     y2: '20',
-    borderWidth: 0,
+    borderWidth: 0
 
 
 },
@@ -1816,7 +1434,7 @@ options.MedicineUsedOption = {
         y: '25',
         x2: '30',
         y2: '20',
-        borderWidth: 0,
+        borderWidth: 0
 
 
     },

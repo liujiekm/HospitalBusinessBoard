@@ -32,3 +32,6 @@ const DeptMSSItem = React.createClass({
 
 
 });
+
+
+module.exports=DeptMSSItem;

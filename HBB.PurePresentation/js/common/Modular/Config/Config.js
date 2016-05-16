@@ -6,7 +6,19 @@ import { render, findDOMNode } from 'react-dom'
 import InputElement from "react-input-mask"
 
 var Config = React.createClass({
+    contextTypes: {
+        router: React.PropTypes.object
+    },
 
+    componentDidMount:function () {
+      this.context.router.setRouteLeaveHook(this.props.route,this.routeWillLeave);
+    },
+
+    //用户离开当前页面的处理逻辑
+    //检查修改
+    routeWillLeave:function (nextLocation) {
+        console.log(nextLocation);
+    },
     handleClick:function () {
 
         var config = {

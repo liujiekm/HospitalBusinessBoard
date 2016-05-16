@@ -18,11 +18,6 @@ import Clock from "../js/common/component/Clock"
 import UserControl from "../js/common/component/UserControl"
 var App = React.createClass({
 
-    handleQuit:function () {
-        localStorage.setItem('login', 'false')
-        this.props.history.replaceState(null, '/Login');
-    },
-
 
     render:function () {
         return (
@@ -52,7 +47,7 @@ var App = React.createClass({
 
                             <div className="col-md-4 col-sm-4 col-xs-4 userzone" >
 
-                                <UserControl handleQuit={this.handleQuit} />
+                                <UserControl/>
 
                             </div>
 

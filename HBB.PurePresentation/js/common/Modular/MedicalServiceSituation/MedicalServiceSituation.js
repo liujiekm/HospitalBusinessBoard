@@ -9,10 +9,8 @@ import { render, findDOMNode } from 'react-dom'
 
 import RightTitle from "../../component/RightTitle"
 import DeptMSS from "./DeptMSS"
-
+import DoctorMSS from "./DoctorMSS"
 import DeptMSSList from "./DeptMSSList"
-
-import PersonalMSS from "./DoctorMSS"
 
 
 import Globle from "../../../Globle"
@@ -32,7 +30,7 @@ var MedicalServiceSituation = React.createClass({
 
     componentDidMount:function () {
 
-        const that = this;
+        var that = this;
         $.getJSON(Globle.baseUrl+'OPA/SM',function (items) {
             that.setState({depts:items});
         });
@@ -40,7 +38,7 @@ var MedicalServiceSituation = React.createClass({
 
     },
     handleDeptClick:function (specialistID) {
-        const that =this;
+        var that =this;
         $.getJSON(Globle.baseUrl+'OPA/DSM/'+specialistID,function (items) {
 
             that.setState({doctors:items});

@@ -15,10 +15,14 @@ import { Link } from 'react-router'
 
 
 var LeftNav = React.createClass({
-    mixins: [ History ],
 
-    activeClick:function () {
-        $(this.getDOMNode()).addClass('active').siblings().removeClass('active');
+
+    componentDidMount:function () {
+
+    },
+    activeClick:function (event) {
+        console.log(event.target);
+        $(event.target).parent().addClass('active').siblings().removeClass('active');
     },
     render:function () {
 
@@ -32,16 +36,16 @@ var LeftNav = React.createClass({
                   <li role="presentation" className="active" onClick={this.activeClick}>
                       <Link to="Home">首页</Link>
                   </li>
-                  <li role="presentation">
+                  <li role="presentation" onClick={this.activeClick}>
                       <Link to="Outpatient">门诊</Link>
                   </li>
-                  <li role="presentation">
+                  <li role="presentation" onClick={this.activeClick}>
                       <Link to="Inhospital">住院</Link>
                   </li>
-                  <li role="presentation">
+                  <li role="presentation" onClick={this.activeClick}>
                       <Link to="Medicine">药品</Link>
                   </li>
-                  <li role="presentation">
+                  <li role="presentation" onClick={this.activeClick}>
                       <Link to="Operation">手术</Link>
                   </li>
     

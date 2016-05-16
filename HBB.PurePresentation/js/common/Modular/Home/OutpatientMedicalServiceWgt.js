@@ -5,7 +5,7 @@ import React from 'react';
 import { render, findDOMNode } from 'react-dom'
 
 import classnames from "classnames"
-import  Link  from 'react-router'
+import  { Link }  from 'react-router'
 
 
 var OutpatientMedicalServiceWgt=React.createClass({
@@ -15,26 +15,18 @@ var OutpatientMedicalServiceWgt=React.createClass({
 
 
             waitingNum:498,
-            treatedNum:502,
+            treatedNum:502
 
         };
 
     },
-
-    componentDidMount:function () {
-
-
-    },
-
-
-
-
     render:function () {
         return (
             <div className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size wgt-margin-right">
 
 
                 <div className="row">
+
                     <div className="col-md-2 col-sm-2 col-xs-2 wgt-symbol" >
                         <div className="row">
                             <div className="col-md-12">
@@ -78,11 +70,16 @@ var OutpatientMedicalServiceWgt=React.createClass({
                         </div>
                     </div>
 
-                    <div className=" leftGo col-md-2 ">
-                        <a href="MedicalServiceSituation.aspx">
+                    <div className="leftGo col-md-2 ">
+
+                        <Link to="MSS" >
+
                             <img className="img-responsive" src="./img/Home/into.png" />
-                        </a>
+
+                        </Link>
                     </div>
+
+
                 </div>
 
             </div>

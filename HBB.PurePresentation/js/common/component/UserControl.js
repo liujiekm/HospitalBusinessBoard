@@ -5,12 +5,15 @@ import React from 'react'
 
 var UserControl = React.createClass({
 
+
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
+
     handleQuit:function () {
 
-        
-        
-        this.props.handleQuit();
-
+        localStorage.setItem('login', 'false');
+        this.context.router.replace('/Login');
     },
 
 

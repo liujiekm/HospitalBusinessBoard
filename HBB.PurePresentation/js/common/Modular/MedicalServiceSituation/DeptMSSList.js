@@ -5,6 +5,9 @@ import React from 'react';
 import { render, findDOMNode } from 'react-dom'
 import DeptMSSItem from "./DeptMSSItem"
 
+
+import uuid from "uuid"
+
 const DeptMSSList = React.createClass({
 
     
@@ -17,34 +20,34 @@ const DeptMSSList = React.createClass({
     render:function () {
         
         var depts = [];
-
+        var that = this;
         this.props.depts.forEach(function (item) {
-            var that = this;
-            depts.push(<DeptMSSItem specialistID={item.SpecialistID} deptName={item.SpecialistName} personCount={that.props.HZnums + '/' + that.props.JZnums} handleDeptClick={that.props.handleDeptClick} />);
+
+            depts.push(<DeptMSSItem key={uuid.v1()} specialistID={item.SpecialistID} deptName={item.SpecialistName} personCount={that.props.HZnums + '/' + that.props.JZnums} handleDeptClick={that.props.handleDeptClick} />);
         });
         
         
         return (
 
-            <div className="col-md-12 personContent">
-                <table className="table">
+            <div className="col-md-12 mss-dept-list ">
+                <table className="table ">
                     <thead>
                     <tr>
-                        <td colspan="2">全科室坐诊情况</td>
+                        <td colSpan="2">全科室坐诊情况</td>
                     </tr>
                     <tr>
                         <td style={{"width":"50%"}}>科室</td>
-                        <td>候诊/已就诊（人）</td>
+                        <td>候诊/已就诊</td>
                     </tr>
                     </thead>
                 </table>
                 <div style={{"height":"85%","overflowY":"auto"}}>
                     <table className="table table-hover">
+
                         <tbody>
-
-
-
+                            <depts />
                         </tbody>
+                       
 
                     </table>
                 </div>

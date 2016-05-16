@@ -8,25 +8,16 @@ import React from 'react';
 import { render, findDOMNode } from 'react-dom'
 
 import { browserHistory, Router, Route, IndexRoute, Link ,hashHistory} from 'react-router'
-
-
-
 import Home from "./common/Modular/Home/Home"
 import Outpatient from "./common/Modular/Outpatient/Outpatient"
 import Inhospital from "./common/Modular/Inhospital/Inhospital"
 import Medicine from "./common/Modular/Medicine/Medicine"
 import Operation from "./common/Modular/Operation/Operation"
-
-
 import DoctorCheckin from "./common/Modular/DoctorCheckin/DoctorCheckin"
-
-
+import MSS from "./common/Modular/MedicalServiceSituation/MedicalServiceSituation"
 import Login from "./common/Modular/Login/Login"
-
 import Config from "./common/Modular/Config/Config"
-
 import FileUploadComponenet from "./common/Modular/Config/FileUploadComponent"
-
 import App from "./app"
 
 var Webapp = React.createClass({
@@ -47,17 +38,15 @@ function hasLogin() {
 
 function requireAuth(nextState, replace) {
     if (!hasLogin()) {
-        replace({ nextPathname: nextState.location.pathname }, '/Login')
+        replace({ pathname: nextState.location.pathname }, '/Login')
     }
 }
 
 render((
     <Router history={hashHistory}>
         <Route path="/" component={Webapp}>
-
             <IndexRoute component={Login} />
-            <Route path="Login" component={Login} >
-            </Route>
+            <Route path="Login" component={Login} />
             <Route onEnter={requireAuth} path="/" component={App}>
                 <IndexRoute component={Home} />
                 <Route path="Home" component={Home} />
@@ -68,8 +57,8 @@ render((
                 <Route path="Config" component={Config} />
                 <Route path="FileUpload" component={FileUploadComponenet} />
                 <Route path="Operation" component={Operation} />
-
                 <Route path="DoctorCheckin" component={DoctorCheckin} />
+                <Route path="MSS" component={MSS} />
             </Route>
 
         </Route>

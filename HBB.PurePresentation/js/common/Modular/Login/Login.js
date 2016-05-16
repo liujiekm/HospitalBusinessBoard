@@ -9,6 +9,9 @@ import { render, findDOMNode } from 'react-dom'
 
 var Login = React.createClass({
 
+    contextTypes: {
+        router: React.PropTypes.object
+    },
     
     handleSubmit:function (e) {
         e.preventDefault();
@@ -24,9 +27,11 @@ var Login = React.createClass({
         var location = this.props.location;
 
         if (location.state && location.state.nextPathname) {
-            this.props.history.replaceState(null, location.state.nextPathname);
+            this.context.router.replace({state:null,pathname: location.state.nextPathname});
+            //this.props.history.replaceState(null, location.state.nextPathname);
         } else {
-            this.props.history.replaceState(null, '/Home');
+            this.context.router.replace({state:null, pathname:'/Home'});
+            //this.props.history.replaceState(null, '/Home');
         }
 
         // $.post(baseUrl+'AUTH/VC',{account:account,certificate:pwd},function(result){
