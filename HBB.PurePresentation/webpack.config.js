@@ -11,13 +11,16 @@ var ROOT_PATH = path.resolve(__dirname);
 var APP_PATH = path.resolve(ROOT_PATH,'js');
 var BUILD_PATH = path.resolve(ROOT_PATH,'build');
 
+
+
 module.exports = {
     entry: {
         bootstrap: "./lib/bootstrap/js/bootstrap.js",
-        
         webapp: './js/webapp.js',
         jquery: ['jquery'],
     },
+
+
     output: {
         path:'build',
         filename: '[name].js'
@@ -42,6 +45,8 @@ module.exports = {
                 test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,loader:"file-loader"
             }
         ]
+
+
     },
     plugins: [
         // new HtmlwebpackPlugin({

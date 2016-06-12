@@ -1,1 +1,1 @@
-﻿var baseUrl = "http://localhost/HBBAPI/";
+﻿var baseUrl = "http://103.234.126.2/HBBAPI/";

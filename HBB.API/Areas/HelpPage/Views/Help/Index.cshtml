@@ -1,4 +1,4 @@
-@using System.Web.Http
+锘緻using System.Web.Http
 @using System.Web.Http.Controllers
 @using System.Web.Http.Description
 @using System.Collections.ObjectModel
@@ -6,7 +6,7 @@
 @model Collection<ApiDescription>
 
 @{
-    ViewBag.Title = "医院业务看板API帮助说明";
+    ViewBag.Title = "鍖婚櫌涓氬姟鐪嬫澘API甯姪璇存槑";
 
     // Group APIs by controller
     ILookup<HttpControllerDescriptor, ApiDescription> apiGroups = Model.ToLookup(api => api.ActionDescriptor.ControllerDescriptor);

@@ -32,7 +32,7 @@ body {
 
 
 .active{
-    background: #337ab7;
+    /*background: #337ab7;*/
 }
 
 
@@ -754,8 +754,43 @@ input:focus {
 
 }
 
+/*住院详情页面*/
+
+.ad-table
+{
+
+    background: white;
+    height: 320px;
+    border: 1px solid #ddd;
+    margin-left: -20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
 
+}
+
+
+/*门诊就医时常组件样式*/
+
+.oe-row
+{
+    padding-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid #0988CE;
+}
+
+.oe-btn-click
+{
+    color: white;
+    background-color: #0988CE;
+}
+
+
+.oe-chart
+{
+    height: 500px;
+    
+}
 /*所有chart样式*/
 .chart-size
 {

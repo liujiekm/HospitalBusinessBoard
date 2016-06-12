@@ -1,6 +1,5 @@
 ﻿var options = {};
 
-
 options.defaultoption = {
             title: {
                 show: true,
@@ -1562,5 +1561,188 @@ options.MedicineUsedOption = {
         }
     ]
 };
+
+
+options.admissionDischargeOption = {
+    title: {
+        text: '出入院(单位:人)',
+        subtext: '',
+        sublink: '',
+        textStyle:
+        {
+            fontSize: 15,
+            fontWeight: 'bolder',
+            color: '#2E9ED4'
+        }
+    },
+    color: ['#B6A2DE', '#4DC7C9'],
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        },
+        formatter: "{b}:{c}人"
+    },
+    grid:
+    {
+        x: '40',
+        y: '30',
+        x2: '5',
+        y2: '30',
+    },
+    xAxis: [
+        {
+            type: 'category',
+            splitLine: { show: false },
+            data: ["昨日住院", "今日出院", "今日入院"]
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value'
+        }
+    ],
+    series: [
+        {
+            name: '',
+            type: 'bar',
+            stack: '总量',
+            itemStyle: {
+                normal: {
+                    barBorderColor: 'rgba(0,0,0,0)',
+                    color: 'rgba(0,0,0,0)'
+                },
+                emphasis: {
+                    barBorderColor: 'rgba(0,0,0,0)',
+                    color: 'rgba(0,0,0,0)'
+                }
+            },
+            data: []
+        },
+        {
+            name: '',
+            type: 'bar',
+            stack: '总量',
+            itemStyle: { normal: { label: { show: true, position: 'inside' } } },
+            data: []
+        }
+    ]
+};
+
+options.emptyBedOption = {
+    title: {
+        text: '空床位(单位:张)',
+        subtext: '',
+        sublink: '',
+        textStyle:
+        {
+            fontSize: 15,
+            fontWeight: 'bolder',
+            color: '#2E9ED4'
+        }
+    },
+    color: ['#B6A2DE', '#4DC7C9'],
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        },
+        formatter: "{b}:{c}张"
+    },
+    grid:
+    {
+        x: '40',
+        y: '30',
+        x2: '5',
+        y2: '30',
+    },
+    xAxis: [
+        {
+            type: 'category',
+            splitLine: { show: false },
+            data: ["额定空床位", "加床空床位", "虚拟空床位"]
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value'
+        }
+    ],
+    series: [
+        {
+            name: '',
+            type: 'bar',
+            stack: '总量',
+            itemStyle: { normal: { label: { show: true, position: 'inside' } } },
+            data: []
+        }
+    ]
+};
+
+
+options.outpatientExperience = {
+            title: {
+                text: '',
+                x: 'left',
+                textStyle:
+                {
+                    fontSize: 20,
+                    fontWeight: 'bolder',
+                    color: '#4AA6D9'
+                }        
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                
+                y:25,
+                data: ['视频广告', '直接访问', '搜索引擎']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: false, readOnly: false },
+                    magicType: { show: true, type: ['line', 'bar', 'stack', 'tiled'] },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            calculable: true,
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: true,
+                    data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+
+                {
+                    name: '视频广告',
+                    type: 'line',
+
+                    data: [150, 232, 201, 154, 190, 330, 410]
+                },
+                {
+                    name: '直接访问',
+                    type: 'line',
+
+                    data: [320, 332, 301, 334, 390, 330, 320]
+                },
+                {
+                    name: '搜索引擎',
+                    type: 'line',
+
+                    data: [820, 932, 901, 934, 1290, 1330, 1320]
+                }
+            ]
+        };
 
 module.exports=options;

@@ -161,9 +161,11 @@ var OutpatientUEWgt = React.createClass({
 
                            </div>
                        </div>
-                       <a href="PatientExperience.aspx" className="ue-rightgo">
+
+
+                       <Link to="OE" className="ue-rightgo">
                            <img className="img-responsive" src="./img/Home/into.png" />
-                       </a>
+                       </Link>
 
                    </div>
 

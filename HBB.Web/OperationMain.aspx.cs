@@ -11,7 +11,7 @@ namespace HBB.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Response.ContentEncoding = System.Text.Encoding.GetEncoding("UTF-8");
         }
     }
 }

@@ -3,7 +3,7 @@
 <%@ Import Namespace="System.Globalization" %>
 
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head runat="server">
     <!--Bootstrap 不支持 IE 古老的兼容模式。为了让 IE 浏览器运行最新的渲染模式下,加入如下内容-->

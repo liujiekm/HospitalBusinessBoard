@@ -54,8 +54,7 @@ var DoctorCheckinTimePoint = React.createClass({
 
 
     getInitialState:function () {
-        return {
-                userID:8}
+        return {userID:8}
     },
 
     componentDidMount:function () {
@@ -70,9 +69,6 @@ var DoctorCheckinTimePoint = React.createClass({
     },
 
     componentWillReceiveProps:function (nextProps) {
-
-
-
         const chartDom = this.refs.chart;
         const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
         this.getChartData(chart,nextProps.userID);

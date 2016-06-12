@@ -1,6 +1,7 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="OperationMain.aspx.cs" Inherits="HBB.Web.OperationMain" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
     <link href="content/css/DateTimePicker.css" rel="stylesheet" />
     <style type="text/css">
         .rowContent {
@@ -149,12 +150,12 @@
             $("#dtBox").DateTimePicker({
 
                 dateFormat: "yyyy-MM-dd",
-                fullDayNames: ["÷‹»’", "÷‹“ª", "÷‹∂˛", "÷‹»˝", "÷‹Àƒ", "÷‹ŒÂ", "÷‹¡˘"],
+                fullDayNames: ["Âë®Êó•", "Âë®‰∏Ä", "Âë®‰∫å", "Âë®‰∏â", "Âë®Âõõ", "Âë®‰∫î", "Âë®ÂÖ≠"],
                 shortMonthNames: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 fullMonthNames: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
-                titleContentDate: "…Ë÷√»’∆⁄",
-                setButtonContent: "…Ë∂®",
-                clearButtonContent: "«Â≥˝",
+                titleContentDate: "ËÆæÁΩÆÊó•Êúü",
+                setButtonContent: "ËÆæÂÆö",
+                clearButtonContent: "Ê∏ÖÈô§",
                 isPopup: true,
                 formatHumanDate: function (date) {
                     return date.yyyy + "-" + date.month + "-" + date.dd;
@@ -167,7 +168,7 @@
                 }
             });
 
-            //≥ı ºªØ»’∆⁄—°‘Ò ±º‰
+            //ÂàùÂßãÂåñÊó•ÊúüÈÄâÊã©Êó∂Èó¥
 
            
 
@@ -183,7 +184,7 @@
 
 
         function OperationSearch() {
-            //π´π≤±‰¡ø
+            //ÂÖ¨ÂÖ±ÂèòÈáè
             var searchContent = $("#searchContent").val();
             var searchContentName = $("#searchContent").attr("name");
             var sDate=$("#sDate").val();
@@ -201,25 +202,25 @@
             var obj = document.getElementsByName('searchBaseOn');
             for (var i = 0; i < obj.length; i++) {
                 if (obj[i].checked == true) {
-                    if (obj[i].value == 'category') {//∞¥¿‡±
+                    if (obj[i].value == 'category') {//ÊåâÁ±ªÂà´
                         if (operationType = GetOperationType())
                         { window.location.href = "Operation.aspx?searchType=category&area=" + hospitalValue + "&operationType=" + operationType + "&sDate=" + sDate + "&eDate=" + eDate + "&content=" + searchContent + "&searchContentName="+searchContentName; }
-                    } else if (obj[i].value == 'dept') {//∞¥ø∆ “
+                    } else if (obj[i].value == 'dept') {//ÊåâÁßëÂÆ§
                         window.location.href = "Operation.aspx?searchType=dept&area=" + hospitalValue + "&sDate=" + sDate + "&eDate=" + eDate + "&content="  + searchContent + "&searchContentName=" + searchContentName;
-                    } else if (obj[i].value == 'disease') {//∞¥º≤≤°
+                    } else if (obj[i].value == 'disease') {//ÊåâÁñæÁóÖ
                         
                         window.location.href = "Operation.aspx?searchType=disease&area=" + hospitalValue + "&sDate=" + sDate + "&eDate=" + eDate + "&content=" + searchContent + "&searchContentName=" + searchContentName;
-                    } else if (obj[i].value == 'doctor') {//∞¥“Ω…˙
+                    } else if (obj[i].value == 'doctor') {//ÊåâÂåªÁîü
                         window.location.href = "Operation.aspx?searchType=doctor&area=" + hospitalValue + "&sDate=" + sDate + "&eDate=" + eDate + "&content=" + searchContent + "&searchContentName=" + searchContentName;
                     }
                 }
             }
-            //ªÒ»° ÷ ı¿‡–Õ
+            //Ëé∑ÂèñÊâãÊúØÁ±ªÂûã
             function GetOperationType() {
                 var operationType = "";
                 var checkedBox = $("input[type='checkbox'][name='operationType']:checked");
                 if (checkedBox.length == 0) {
-                    alert(" ÷ ı¿‡±√ª”–—°‘Ò£°");
+                    alert("ÊâãÊúØÁ±ªÂà´Ê≤°ÊúâÈÄâÊã©ÔºÅ");
                     return false;
                 }
                 //alert(checkedBox.length);
@@ -267,25 +268,25 @@
                             $("#medicineReceiving").append(json.FifthClassCount);
                         },
                         error: function() {
-                            //alert("ªÒ»° ß∞‹£°");
+                            //alert("Ëé∑ÂèñÂ§±Ë¥•ÔºÅ");
                         }
                     });
-            //µ•—°øÚµ„ª˜ ¬º˛
+            //ÂçïÈÄâÊ°ÜÁÇπÂáª‰∫ã‰ª∂
             $('.searchBaseOn').bind('click', function() {
                 var obj = document.getElementsByName('searchBaseOn');
                 // var operationType = "operationType";
                 var operationType = "cb_operationType";
-                var checked = false; //Œ¥—°÷–
-                var disabled = true; //≤ªø…—°
+                var checked = false; //Êú™ÈÄâ‰∏≠
+                var disabled = true; //‰∏çÂèØÈÄâ
                 var type = "";
                 for (var i = 0; i < obj.length; i++) {
                     if (obj[i].checked == true) {
                         if (obj[i].value == 'category') {
-                            checked = true; //Œ¥—°÷–
-                            disabled = false; //≤ªø…—°
+                            checked = true; //Êú™ÈÄâ‰∏≠
+                            disabled = false; //‰∏çÂèØÈÄâ
                             type = "category";
                             OperationCheckBox(operationType, checked, disabled, type);
-                            //alert(' ∞¥¿‡±');
+                            //alert(' ÊåâÁ±ªÂà´');
                             //var checkbox = $("#" + operationType + "").find("input:checkbox");
                             //if (1) {
                             //    checkbox.prop("checked", true);
@@ -294,7 +295,7 @@
                             //}
                         } else if (obj[i].value == 'dept') {
                             OperationCheckBox(operationType, checked, disabled, type);
-                            // alert(' ∞¥ø∆ “');
+                            // alert(' ÊåâÁßëÂÆ§');
                         } else if (obj[i].value == 'disease') {
                             OperationCheckBox(operationType, checked, disabled, type);
                             //var checkbox = $("#" + operationType + "").find("input:checkbox");
@@ -305,7 +306,7 @@
                 }
             });
 
-            //∂‡—°øÚ≤Ÿ◊˜£® «∑Ò—°÷–°¢ «∑Òø…”√£©
+            //Â§öÈÄâÊ°ÜÊìç‰ΩúÔºàÊòØÂê¶ÈÄâ‰∏≠„ÄÅÊòØÂê¶ÂèØÁî®Ôºâ
             function OperationCheckBox(id, checked, disabled, type) {
                 var number = 0;
                 var checkbox = $("#" + id + "").find("input:checkbox");
@@ -353,7 +354,7 @@
                         }
                     },
                     error: function () {
-                        alert("ªÒ»° ß∞‹£°");
+                        alert("Ëé∑ÂèñÂ§±Ë¥•ÔºÅ");
                     }
                 });
             }
@@ -430,7 +431,7 @@
 
                                 var searchRateType = "";
                                 $("input[name='searchBaseOn']:checked").each(function (n, d) {
-                                    //‘⁄’‚¿Ô∂‘resultΩ¯––∏≥÷µ 
+                                    //Âú®ËøôÈáåÂØπresultËøõË°åËµãÂÄº 
                                     if (this.value == 'dept') { searchRateType = "specialist" ; return}
                                     else if (this.value == 'disease') { searchRateType = "disease"; return}
                                     else if (this.value == 'doctor') { searchRateType = "doctor"; return}
@@ -501,7 +502,7 @@
          var aa=function getCheckObject() {
              var result;
              $("input[name='searchBaseOn']:checked").each(function (n, d) {
-                 //‘⁄’‚¿Ô∂‘resultΩ¯––∏≥÷µ 
+                 //Âú®ËøôÈáåÂØπresultËøõË°åËµãÂÄº 
                  result = this.value;
                  alert(result);
              });
@@ -530,7 +531,7 @@
              
              //var url = "../handler/DoctorRegisterHandler.ashx?type=durdi&timePoint=10";
              //var url = "../handler/OperationHandler.ashx?type=osr&searchContent=" + searchContent + "&searchRateType="+searchRateType;
-             //ajax_url «’‚∏ˆinput∞Û∂®µƒajax ˝æ›µÿ÷∑
+             //ajax_urlÊòØËøô‰∏™inputÁªëÂÆöÁöÑajaxÊï∞ÊçÆÂú∞ÂùÄ
              //$(".Jiancha_xiangmu").select4({ "ajax_url": "../handler/DoctorRegisterHandler.ashx?type=durdi&timePoint=10" });
              $(".input-lg").select4({ "ajax_url": "df" });
          });
@@ -538,7 +539,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_reportContent" runat="server">
      <script src="content/js/DateTimePicker.js"></script>
-    <!--√≈’ÔæÕ“Ω-->
+    <!--Èó®ËØäÂ∞±Âåª-->
     <div class="row">
 
         <div class="col-md-12">
@@ -552,7 +553,7 @@
                     </div>
                     <div class="row" style="width:90px">
                         <div class="col-md-12" style="margin-left: 20px; ">
-                            <p class="imgText text-center"> ÷ ıÕ≥º∆</p>
+                            <p class="imgText text-center">ÊâãÊúØÁªüËÆ°</p>
                         </div>
                     </div>
                 </div>
@@ -562,7 +563,7 @@
                         <div class="col-md-2 pannelContentClean">
                             <div class="row">
                                 <div class="col-md-5" style="margin-left: -5px;">
-                                    <p class="text-left text-nowrap">Ω¸30ÃÏ</p>
+                                    <p class="text-left text-nowrap">Ëøë30Â§©</p>
                                 </div>
                                 <div class="col-md-7"></div>
                             </div>
@@ -574,14 +575,14 @@
                             <div class="row">
                                 <div class="col-md-9"></div>
                                 <div class="col-md-3 bottomContent">
-                                    <p class="text-right">Ã®</p>
+                                    <p class="text-right">Âè∞</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2 pannelContent">
                             <div class="row">
                                 <div class="col-md-5" style="margin-left: -5px;">
-                                    <p class="text-left text-nowrap">Ãÿ¿‡</p>
+                                    <p class="text-left text-nowrap">ÁâπÁ±ª</p>
                                 </div>
                                 <div class="col-md-7"></div>
                             </div>
@@ -593,7 +594,7 @@
                             <div class="row">
                                 <div class="col-md-9"></div>
                                 <div class="col-md-3 bottomContent">
-                                    <p class="text-right">Ã®</p>
+                                    <p class="text-right">Âè∞</p>
                                 </div>
                             </div>
                         </div>
@@ -601,7 +602,7 @@
                         <div class="col-md-2 pannelContent">
                             <div class="row">
                                 <div class="col-md-5" style="margin-left: -5px;">
-                                    <p class="text-left text-nowrap">Àƒ¿‡</p>
+                                    <p class="text-left text-nowrap">ÂõõÁ±ª</p>
                                 </div>
                                 <div class="col-md-7"></div>
                             </div>
@@ -613,14 +614,14 @@
                             <div class="row">
                                 <div class="col-md-9"></div>
                                 <div class="col-md-3 bottomContent">
-                                    <p class="text-right text-nowrap">Ã®</p>
+                                    <p class="text-right text-nowrap">Âè∞</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2 pannelContent">
                             <div class="row">
                                 <div class="col-md-5" style="margin-left: -5px;">
-                                    <p class="text-left text-nowrap">»˝¿‡</p>
+                                    <p class="text-left text-nowrap">‰∏âÁ±ª</p>
                                 </div>
                                 <div class="col-md-7"></div>
                             </div>
@@ -632,14 +633,14 @@
                             <div class="row">
                                 <div class="col-md-9"></div>
                                 <div class="col-md-3 bottomContent">
-                                    <p class="text-right text-nowrap">Ã®</p>
+                                    <p class="text-right text-nowrap">Âè∞</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2 pannelContent">
                             <div class="row">
                                 <div class="col-md-5" style="margin-left: -5px;">
-                                    <p class="text-left text-nowrap">∂˛¿‡</p>
+                                    <p class="text-left text-nowrap">‰∫åÁ±ª</p>
                                 </div>
                                 <div class="col-md-7"></div>
                             </div>
@@ -651,14 +652,14 @@
                             <div class="row">
                                 <div class="col-md-9"></div>
                                 <div class="col-md-3 bottomContent">
-                                    <p class="text-right text-nowrap">Ã®</p>
+                                    <p class="text-right text-nowrap">Âè∞</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2 pannelContent">
                             <div class="row">
                                 <div class="col-md-5" style="margin-left: -5px;">
-                                    <p class="text-left text-nowrap">“ª¿‡</p>
+                                    <p class="text-left text-nowrap">‰∏ÄÁ±ª</p>
                                 </div>
                                 <div class="col-md-7"></div>
                             </div>
@@ -670,7 +671,7 @@
                             <div class="row">
                                 <div class="col-md-9"></div>
                                 <div class="col-md-3 bottomContent">
-                                    <p class="text-right text-nowrap">Ã®</p>
+                                    <p class="text-right text-nowrap">Âè∞</p>
                                 </div>
                             </div>
                         </div>
@@ -701,15 +702,15 @@
     <div class="row">
 
         <div class="col-md-12 col-sm-12 col-xs-12 reportMain">
-            <!--÷–º‰“≥√Ê∂•≤ø±Í ∂-->
+            <!--‰∏≠Èó¥È°µÈù¢È°∂ÈÉ®Ê†áËØÜ-->
             <div class="row">
                 <div class="col-md-2">
                     <span class="glyphicon glyphicon-arrow-left returnPage" aria-hidden="true" id="returnLink"></span>
                 </div>
                 <div class="col-md-6"></div>
                 <div class="col-md-4 moduleIndicate">
-                    <!--µ±«∞“≥√Êƒ£øÈƒ⁄»›-->
-                    <span class="lead text-nowrap" id="moduleName" > ÷ ı≤È—Ø</span>
+                    <!--ÂΩìÂâçÈ°µÈù¢Ê®°ÂùóÂÜÖÂÆπ-->
+                    <span class="lead text-nowrap" id="moduleName" >ÊâãÊúØÊü•ËØ¢</span>
                 </div>
             </div>
 
@@ -727,7 +728,7 @@
 
                             </div>
                             <div class="col-md-2">
-                            <button class="btn btn-lg" id="search" type="button"  onclick="OperationSearch()">≤È—Ø</button>
+                            <button class="btn btn-lg" id="search" type="button"  onclick="OperationSearch()">Êü•ËØ¢</button>
                         </div>
                         <div class="col-md-2"></div>
                     </div>
@@ -741,9 +742,9 @@
                          </div>
                              <div class="col-md-5" style="padding-left:0px;">
                                <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-default btnClick" value="01,02" id="hospital">»´‘∫</button>
-                                <button type="button" class="btn btn-default" value="01" id="hospitalOld">¿œ‘∫«¯</button>
-                                <button type="button" class="btn btn-default" value="02" id="hospitalNew">–¬‘∫«¯</button>
+                                <button type="button" class="btn btn-default btnClick" value="01,02" id="hospital">ÂÖ®Èô¢</button>
+                                <button type="button" class="btn btn-default" value="01" id="hospitalOld">ËÄÅÈô¢Âå∫</button>
+                                <button type="button" class="btn btn-default" value="02" id="hospitalNew">Êñ∞Èô¢Âå∫</button>
                             </div>
                         </div>
 
@@ -758,7 +759,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="searchBaseOn" value="category" checked class="searchBaseOn">
-                                    ∞¥¿‡±£®Ãÿ¿‡÷¡Àƒ¿‡£©
+                                    ÊåâÁ±ªÂà´ÔºàÁâπÁ±ªËá≥ÂõõÁ±ªÔºâ
                                 </label>
                             </div>
 
@@ -767,23 +768,23 @@
                         <div class="col-md-5" id="cb_operationType">
                             <label class="checkbox-inline">
                                 <input type="checkbox" value="specialClass" name="operationType" checked="checked" >
-                                Ãÿ¿‡
+                                ÁâπÁ±ª
                             </label>
                             <label class="checkbox-inline">
                                 <input type="checkbox" value="fourthClass" name="operationType" checked="checked">
-                                Àƒ¿‡
+                                ÂõõÁ±ª
                             </label>
                             <label class="checkbox-inline">
                                 <input type="checkbox" value="thirdClass" name="operationType" checked="checked">
-                                »˝¿‡
+                                ‰∏âÁ±ª
                             </label>
                             <label class="checkbox-inline">
                                 <input type="checkbox" value="secondClass" name="operationType" checked="checked">
-                                ∂˛¿‡
+                                ‰∫åÁ±ª
                             </label>
                             <label class="checkbox-inline">
                                 <input type="checkbox" value="firstClass" name="operationType" checked="checked">
-                                “ª¿‡
+                                ‰∏ÄÁ±ª
                             </label>
 
 
@@ -800,7 +801,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="searchBaseOn" value="dept" class="searchBaseOn">
-                                    ∞¥ø∆ “
+                                    ÊåâÁßëÂÆ§
                                 </label>
                             </div>
 
@@ -809,7 +810,7 @@
                         <div class="col-md-5">
                             <label class="checkbox-inline">
                                 <input type="checkbox" value="" checked="checked" disabled="disabled">
-                                ∞¥◊®ø∆œ¬≤°«¯
+                                Êåâ‰∏ìÁßë‰∏ãÁóÖÂå∫
                             </label>
                         </div>
                         <div class="col-md-2"></div>
@@ -824,7 +825,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="searchBaseOn" value="disease" class="searchBaseOn">
-                                    ∞¥º≤≤°
+                                    ÊåâÁñæÁóÖ
                                 </label>
                             </div>
 
@@ -833,7 +834,7 @@
                         <div class="col-md-5">
                             <label class="checkbox-inline">
                                 <input type="checkbox" value="" checked="checked" disabled="disabled">
-                                ƒ£∫˝≤È—Ø£¨Ã·π© ÷ ı√˚≥∆—°»°
+                                Ê®°Á≥äÊü•ËØ¢ÔºåÊèê‰æõÊâãÊúØÂêçÁß∞ÈÄâÂèñ
                             </label>
                         </div>
                         <div class="col-md-2"></div>
@@ -848,7 +849,7 @@
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="searchBaseOn" value="doctor" class="searchBaseOn">
-                                    ∞¥“Ω…˙
+                                    ÊåâÂåªÁîü
                                 </label>
                             </div>
 
@@ -856,7 +857,7 @@
                         <div class="col-md-5">
                             <label class="checkbox-inline">
                                 <input type="checkbox" value="" checked="checked" disabled="disabled">
-                                “Ω…˙π§◊˜¡ø
+                                ÂåªÁîüÂ∑•‰ΩúÈáè
                             </label>
                         </div>
                         <div class="col-md-2"></div>

@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Operation.aspx.cs" Inherits="HBB.Web.Operation" %>
+ï»¿<%@ Page Title="" Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="Operation.aspx.cs" Inherits="HBB.Web.Operation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
@@ -79,17 +79,17 @@
     <script src="content/js/knockout-3.3.0.js"></script>
 
     <script type="text/javascript">
-        //Íê³ÉÇé¿ö
+        //å®Œæˆæƒ…å†µ
         var oprationState = "done";//underway waiting done
 
-        //²éÑ¯ÀàĞÍ£¬ÔºÇø£¬²éÑ¯ÄÚÈİ£¬¿ªÊ¼Ê±¼ä£¬½áÊøÊ±¼ä
+        //æŸ¥è¯¢ç±»å‹ï¼Œé™¢åŒºï¼ŒæŸ¥è¯¢å†…å®¹ï¼Œå¼€å§‹æ—¶é—´ï¼Œç»“æŸæ—¶é—´
         var searchType = "";
         var hospitalValue = "";
         var searchContent = "";
         var searchContentName = "";
         var sDate = "";
         var eDate = "";
-        //ÊÖÊõÀàĞÍ
+        //æ‰‹æœ¯ç±»å‹
         var operationType = "";
 
 
@@ -103,16 +103,16 @@
             };
 
             //window.location.href = "Operation.aspx?searchType=category&area=" + hospitalValue + "&operationType=" + operationType + "&sDate=" + sDate + "&eDate=" + eDate + "&content=" + searchContent;
-            //²éÑ¯ÀàĞÍ£¬ÔºÇø£¬²éÑ¯ÄÚÈİ£¬¿ªÊ¼Ê±¼ä£¬½áÊøÊ±¼ä
+            //æŸ¥è¯¢ç±»å‹ï¼Œé™¢åŒºï¼ŒæŸ¥è¯¢å†…å®¹ï¼Œå¼€å§‹æ—¶é—´ï¼Œç»“æŸæ—¶é—´
             searchType = GetQueryString("searchType");
             hospitalValue = GetQueryString("area");
             searchContent = GetQueryString("content");
             searchContentName = GetQueryString("searchContentName");
             sDate = GetQueryString("sDate");
             eDate = GetQueryString("eDate");
-            //ÊÖÊõÀàĞÍ
+            //æ‰‹æœ¯ç±»å‹
             operationType = GetQueryString("operationType");
-            //°´ÕÕ¿ÆÊÒºÍÒ½ÉúÀ´²éÑ¯Ê±Òª´«ËüÃÇµÄID
+            //æŒ‰ç…§ç§‘å®¤å’ŒåŒ»ç”Ÿæ¥æŸ¥è¯¢æ—¶è¦ä¼ å®ƒä»¬çš„ID
             if (searchType == "dept") { searchContent = searchContentName;}
             if (searchType == "doctor") { searchContent = searchContentName; }
 
@@ -126,12 +126,12 @@
                 window.open('OperationMain.aspx', '_self');
 
             });
-            $('#moduleName').text("ÊÖÊõ");
+            $('#moduleName').text("æ‰‹æœ¯");
             $('#home').addClass('active');
         });
 
-        function jsonDateFormat(jsonDate) {//jsonÈÕÆÚ¸ñÊ½×ª»»ÎªÕı³£¸ñÊ½
-            try {//³ö×Ôhttp://www.cnblogs.com/ahjesus ×ğÖØ×÷ÕßĞÁ¿àÀÍ¶¯³É¹û,×ªÔØÇë×¢Ã÷³ö´¦,Ğ»Ğ»!
+        function jsonDateFormat(jsonDate) {//jsonæ—¥æœŸæ ¼å¼è½¬æ¢ä¸ºæ­£å¸¸æ ¼å¼
+            try {//å‡ºè‡ªhttp://www.cnblogs.com/ahjesus å°Šé‡ä½œè€…è¾›è‹¦åŠ³åŠ¨æˆæœ,è½¬è½½è¯·æ³¨æ˜å‡ºå¤„,è°¢è°¢!
                 var date = new Date(parseInt(jsonDate.replace("/Date(", "").replace(")/", ""), 10));
                 var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
                 var day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
@@ -141,7 +141,7 @@
                 var milliseconds = date.getMilliseconds();
                 return date.getFullYear() + "-" + month + "-" + day + " " + hours + ":" + minutes + ":" + seconds;
                 //return date.getFullYear() + "-" + month + "-" + day;
-            } catch (ex) {//³ö×Ôhttp://www.cnblogs.com/ahjesus ×ğÖØ×÷ÕßĞÁ¿àÀÍ¶¯³É¹û,×ªÔØÇë×¢Ã÷³ö´¦,Ğ»Ğ»!
+            } catch (ex) {//å‡ºè‡ªhttp://www.cnblogs.com/ahjesus å°Šé‡ä½œè€…è¾›è‹¦åŠ³åŠ¨æˆæœ,è½¬è½½è¯·æ³¨æ˜å‡ºå¤„,è°¢è°¢!
                 return "";
             }
         }
@@ -152,16 +152,16 @@
      
             var OperationViewModel = function () {
                 var self = this;
-                //±äÁ¿Çø
-                //Ç©µ½ÈËÊı°´Ê±¼äµãÍ³¼ÆÁĞ±í
+                //å˜é‡åŒº
+                //ç­¾åˆ°äººæ•°æŒ‰æ—¶é—´ç‚¹ç»Ÿè®¡åˆ—è¡¨
                 self.Operation = ko.observableArray();
                 $(function () {
                     self.GetOperation();
                 });
-                //·½·¨Çø
-                //1¡¢»ñÈ¡ÊÖÊõĞÅÏ¢
+                //æ–¹æ³•åŒº
+                //1ã€è·å–æ‰‹æœ¯ä¿¡æ¯
                 self.GetOperation = function () {
-                    //ÊÖÊõÀàĞÍ
+                    //æ‰‹æœ¯ç±»å‹
                     //var operationType = "";
                     for (var j = 0; j < 3; j++) {
                         if (j == 0) { oprationState = "waiting"; } //underway waiting done}
@@ -184,7 +184,7 @@
                                         else if (j == 1) { $("#tb_signIned2").empty(); }
                                         else if (j == 2) { $("#tb_signIned3").empty(); }
                                         for (var i = 0, l = json.length; i < l; i++) {
-                                            tableStr += "<tr><td width='150px'>" + json[i].SurgeryCode + "</td><td width='150px'>µÚ" + parseInt(json[i].OperatingRoomCode) + "ÊÖÊõÊÒ</td><td width='150px'>" + json[i].PateintName + "</td><td width='250px'>" + jsonDateFormat(json[i].SurgeryStartTime) + "</td><td width='250px'>" + json[i].SurgeryName + "</td><td width='150px'>" + json[i].SurgeonDoctor + "</td></tr>";
+                                            tableStr += "<tr><td width='150px'>" + json[i].SurgeryCode + "</td><td width='150px'>ç¬¬" + parseInt(json[i].OperatingRoomCode) + "æ‰‹æœ¯å®¤</td><td width='150px'>" + json[i].PateintName + "</td><td width='250px'>" + jsonDateFormat(json[i].SurgeryStartTime) + "</td><td width='250px'>" + json[i].SurgeryName + "</td><td width='150px'>" + json[i].SurgeonDoctor + "</td></tr>";
                                         }
                                         if (j == 0) { $("#tb_signIned1").append(tableStr); } //underway waiting done}
                                         else if (j == 1) { $("#tb_signIned2").append(tableStr); }
@@ -193,7 +193,7 @@
                                 }
                             },
                             error: function () {
-                                //alert("»ñÈ¡Ê§°Ü£¡");
+                                //alert("è·å–å¤±è´¥ï¼");
                             }
                         });
                     }  
@@ -207,21 +207,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_reportContent" runat="server">
     <div class="col-md-12 personPanel">
         <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation"><a href="#waiting" aria-controls="waiting" role="tab" data-toggle="tab">µÈ´ıÖĞ</a></li>
-            <li role="presentation"><a href="#underway" aria-controls="underway" role="tab" data-toggle="tab">½øĞĞÖĞ</a></li>
-            <li role="presentation" class="active"><a href="#done" aria-controls="done" role="tab" data-toggle="tab">ÒÑÍê³É</a></li>
+            <li role="presentation"><a href="#waiting" aria-controls="waiting" role="tab" data-toggle="tab">ç­‰å¾…ä¸­</a></li>
+            <li role="presentation"><a href="#underway" aria-controls="underway" role="tab" data-toggle="tab">è¿›è¡Œä¸­</a></li>
+            <li role="presentation" class="active"><a href="#done" aria-controls="done" role="tab" data-toggle="tab">å·²å®Œæˆ</a></li>
         </ul>
         <div class="tab-content personContent">
             <div role="tabpanel" class="tab-pane" id="waiting" >
                 <table class="table text-center">
                     <thead>
                         <tr>
-                            <td width="150px">ÊÖÊõ´úÂë</td>
-                            <td width="150px">ÊÖÊõÊÒ</td>
-                            <td width="150px">»¼ÕßĞÕÃû</td>
-                            <td width="250px">ÊÖÊõÊ±¼ä</td>
-                            <td width="250px">ÊÖÊõÃû³Æ</td>
-                            <td width="150px">Ö÷µ¶Ò½Éú</td>
+                            <td width="150px">æ‰‹æœ¯ä»£ç </td>
+                            <td width="150px">æ‰‹æœ¯å®¤</td>
+                            <td width="150px">æ‚£è€…å§“å</td>
+                            <td width="250px">æ‰‹æœ¯æ—¶é—´</td>
+                            <td width="250px">æ‰‹æœ¯åç§°</td>
+                            <td width="150px">ä¸»åˆ€åŒ»ç”Ÿ</td>
                         </tr>
                         </tr>
                     </thead>
@@ -230,7 +230,7 @@
                     <table class="table table-hover text-center" >
                         <tbody id="tb_signIned2">
                             <tr>
-                                <td>ÔİÎŞÊı¾İ</td>
+                                <td>æš‚æ— æ•°æ®</td>
                             </tr>
                         </tbody>
                     </table>
@@ -240,12 +240,12 @@
                 <table class="table table-hover text-center" >
                     <thead>
                         <tr>
-                            <td width="150px">ÊÖÊõ´úÂë</td>
-                            <td width="150px">ÊÖÊõÊÒ</td>
-                            <td width="150px">»¼ÕßĞÕÃû</td>
-                            <td width="250px">ÊÖÊõÊ±¼ä</td>
-                            <td width="250px">ÊÖÊõÃû³Æ</td>
-                            <td width="150px">Ö÷µ¶Ò½Éú</td>
+                            <td width="150px">æ‰‹æœ¯ä»£ç </td>
+                            <td width="150px">æ‰‹æœ¯å®¤</td>
+                            <td width="150px">æ‚£è€…å§“å</td>
+                            <td width="250px">æ‰‹æœ¯æ—¶é—´</td>
+                            <td width="250px">æ‰‹æœ¯åç§°</td>
+                            <td width="150px">ä¸»åˆ€åŒ»ç”Ÿ</td>
                         </tr>
                         </tr>
                     </thead>
@@ -254,7 +254,7 @@
                     <table class="table table-hover text-center">
                         <tbody id="tb_signIned1">
                             <tr>
-                               <td>ÔİÎŞÊı¾İ</td>
+                               <td>æš‚æ— æ•°æ®</td>
                             </tr>
                         </tbody>
 
@@ -265,12 +265,12 @@
                 <table class="table table-hover text-center">
                     <thead>
                         <tr>
-                            <td width="150px">ÊÖÊõ´úÂë</td>
-                            <td width="150px">ÊÖÊõÊÒ</td>
-                            <td width="150px">»¼ÕßĞÕÃû</td>
-                            <td width="250px">ÊÖÊõÊ±¼ä</td>
-                            <td width="250px">ÊÖÊõÃû³Æ</td>
-                            <td width="150px">Ö÷µ¶Ò½Éú</td>
+                            <td width="150px">æ‰‹æœ¯ä»£ç </td>
+                            <td width="150px">æ‰‹æœ¯å®¤</td>
+                            <td width="150px">æ‚£è€…å§“å</td>
+                            <td width="250px">æ‰‹æœ¯æ—¶é—´</td>
+                            <td width="250px">æ‰‹æœ¯åç§°</td>
+                            <td width="150px">ä¸»åˆ€åŒ»ç”Ÿ</td>
                         </tr>
                     </thead>
                 </table>
@@ -278,7 +278,7 @@
                     <table class="table table-hover text-center">
                         <tbody id="tb_signIned3">
                             <tr>
-                                <td>ÔİÎŞÊı¾İ</td>
+                                <td>æš‚æ— æ•°æ®</td>
                             </tr>
                         </tbody>
 

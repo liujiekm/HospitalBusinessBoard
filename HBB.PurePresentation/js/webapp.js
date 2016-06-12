@@ -14,6 +14,11 @@ import Inhospital from "./common/Modular/Inhospital/Inhospital"
 import Medicine from "./common/Modular/Medicine/Medicine"
 import Operation from "./common/Modular/Operation/Operation"
 import DoctorCheckin from "./common/Modular/DoctorCheckin/DoctorCheckin"
+import AdmissionDischarge from './common/Modular/AdmissionDischarge/AdmissionDischarge'
+
+import OutpatientExperience from './common/Modular/OutpatientExperience/OutpatientExperience'
+
+
 import MSS from "./common/Modular/MedicalServiceSituation/MedicalServiceSituation"
 import Login from "./common/Modular/Login/Login"
 import Config from "./common/Modular/Config/Config"
@@ -59,6 +64,8 @@ render((
                 <Route path="Operation" component={Operation} />
                 <Route path="DoctorCheckin" component={DoctorCheckin} />
                 <Route path="MSS" component={MSS} />
+                <Route path="AD" component={AdmissionDischarge} />
+                <Route path="OE" component={OutpatientExperience} />
             </Route>
 
         </Route>

@@ -3,9 +3,8 @@
  */
 import React from 'react';
 import { render, findDOMNode } from 'react-dom'
+import { Link } from 'react-router'
 
-import classnames from "classnames"
-import  Link  from 'react-router'
 
 
 var HospitalzationWgt = React.createClass({
@@ -80,9 +79,9 @@ var HospitalzationWgt = React.createClass({
                     </div>
 
                     <div className=" leftGo col-md-2 ">
-                        <a href="AdmissionDischarge.aspx">
+                        <Link to="AD">
                             <img className="img-responsive" src="./img/Home/into.png" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -12,3 +12,7 @@ C:\Project\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.dll
 C:\Project\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.pdb
 C:\Project\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.csprojResolveAssemblyReference.cache
 C:\jay\Workstation\Team\Projects\HospitalBusinessBoard\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.csprojResolveAssemblyReference.cache
+C:\Jay\Workstation\Team\Projects\HospitalBusinessBoard\HBB.Common\bin\Debug\HBB.Common.dll
+C:\Jay\Workstation\Team\Projects\HospitalBusinessBoard\HBB.Common\bin\Debug\HBB.Common.pdb
+C:\Jay\Workstation\Team\Projects\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.dll
+C:\Jay\Workstation\Team\Projects\HospitalBusinessBoard\HBB.Common\obj\Debug\HBB.Common.pdb

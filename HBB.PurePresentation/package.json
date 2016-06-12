@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --progress --colors --hot --inline"
+    "start": "webpack --progress --colors --profile --display-modules --hot --inline"
+
   },
   "author": "liuj",
   "license": "ISC",
@@ -48,6 +49,7 @@
     "whatwg-fetch": "^0.11.0"
   },
   "dependencies": {
-    "echarts": "^3.1.6"
+    "echarts": "^3.1.6",
+    "react-bootstrap":"0.29.4"
   }
 }
