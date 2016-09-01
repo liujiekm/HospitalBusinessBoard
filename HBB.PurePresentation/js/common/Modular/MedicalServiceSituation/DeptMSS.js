@@ -18,13 +18,12 @@ var deptMSSOption = {
         },
         formatter: function (params) {
             return params[0].name + '<br/>'
-                + params[0].seriesName + ' : ' + params[0].value + '<br/>'
-                + params[1].seriesName + ' : ' + (params[1].value + params[0].value);
+                + params[0].seriesName + ' : ' + (params[0].value+params[1].value) + '<br/>'
+                + params[1].seriesName + ' : ' + (params[1].value);
         }
     },
     legend: {
         selectedMode: false,
-        x:250,
         data: ['候诊人次', '未就诊人次']
     },
     toolbox: {
@@ -41,9 +40,6 @@ var deptMSSOption = {
         y: '30',
         x2: '5',
         y2: '40'
-
-
-
     },
     calculable: true,
     xAxis: [
@@ -60,8 +56,8 @@ var deptMSSOption = {
     ],
     series: [
         {
-            name: '候诊人次',
-            type: 'bar',
+            name:'候诊人次',
+            type:'bar',
             stack: 'sum',
             barCategoryGap: '50%',
             itemStyle: {
@@ -69,31 +65,31 @@ var deptMSSOption = {
                     color: 'tomato',
                     barBorderColor: 'tomato',
                     barBorderWidth: 6,
-                    barBorderRadius: 0,
-                    label: {
-                        show: false, position: 'insideTop'
+                    barBorderRadius:0,
+                    label : {
+                        show: true, position: 'insideTop'
                     }
                 }
             },
-            data: [260, 200, 220, 120, 100, 80]//候诊人次列表
+            data:[260, 200, 220, 120, 100, 80]
         },
-        {
-            name: '未就诊人次',
-            type: 'bar',
+         {
+            name:'未就诊人次',
+            type:'bar',
             stack: 'sum',
             itemStyle: {
                 normal: {
                     color: '#fff',
                     barBorderColor: 'tomato',
                     barBorderWidth: 6,
-                    barBorderRadius: 0,
-                    label: {
-                        show: true,
+                    barBorderRadius:0,
+                    label : {
+                        show: true, 
                         position: 'top',
                         formatter: function (params) {
-                            for (var i = 0, l = options.defaultoption.xAxis[0].data.length; i < l; i++) {
-                                if (options.defaultoption.xAxis[0].data[i] == params.name) {
-                                    return options.defaultoption.series[0].data[i] + params.value;
+                            for (var i = 0, l = deptMSSOption.xAxis[0].data.length; i < l; i++) {
+                                if (deptMSSOption.xAxis[0].data[i] == params.name) {
+                                    return deptMSSOption.series[0].data[i] + params.value;
                                 }
                             }
                         },
@@ -103,7 +99,7 @@ var deptMSSOption = {
                     }
                 }
             },
-            data: [40, 80, 50, 80, 80, 70]//就诊人次列表
+            data:[40, 80, 50, 80,80, 70]
         }
     ]
 };
@@ -112,28 +108,25 @@ var deptMSSOption = {
 
 
 const DeptMSS = React.createClass({
-
     componentDidMount:function () {
-
         const chartDom = this.refs.chart;
         const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
-
         chart.on('click',function (params) {
-
             console.log(params);
             //this.props.handleClickTimePoint(params.seriesIndex);
         }.bind(this));
 
-        deptMSSOption.series[0].data.length = 0;
-        deptMSSOption.series[1].data.length = 0;
-        deptMSSOption.xAxis[0].data.length = 0;
-        
-        this.props.depts.forEach(function(dept){
-            deptMSSOption.xAxis[0].data.push(dept.SpecialistName);
-            deptMSSOption.series[0].data.push(dept.JZnums);
-            deptMSSOption.series[1].data.push(dept.HZnums - dept.JZnums);
+        console.log(this.props.depts);
 
-        });
+        // deptMSSOption.series[0].data.length = 0;
+        // deptMSSOption.series[1].data.length = 0;
+        // deptMSSOption.xAxis[0].data.length = 0;    
+        // this.props.depts.forEach(function(dept){
+        //     deptMSSOption.xAxis[0].data.push(dept.SpecialistName);
+        //     deptMSSOption.series[0].data.push(dept.JZnums);
+        //     deptMSSOption.series[1].data.push(dept.HZnums - dept.JZnums);
+
+        // });
         
         chart.setOption(deptMSSOption);
 
@@ -147,13 +140,9 @@ const DeptMSS = React.createClass({
     },
     render:function () {
         return (
-
-
             <div>
                 <div className="row">
                     <div className="col-md-12" style={{"height":"30px"}}>
-
-
                     </div>
                 </div>
                 <div className="row">

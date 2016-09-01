@@ -6,7 +6,7 @@ import { render, findDOMNode } from 'react-dom'
 
 import classnames from "classnames"
 
-import ReactEcharts from "react-echarts-component"
+import echarts from 'echarts'
 
 
 import Globle from "../../../Globle"
@@ -31,12 +31,18 @@ var DrugProportionHistory = React.createClass({
             }
 
         });
+        const chartDom = this.refs.chart;
+        const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
+        chart.setOption(options.MedicineUsedOption);
     },
-
+    componentWillUnmount:function () {
+        
+        echarts.dispose(this.refs.chart)
+    },
     render:function () {
         return (
             <div  className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size div_chart">
-                <ReactEcharts height={110}  option={options.MedicineUsedOption}  />
+                <div ref="chart" className="chart-size" />
             </div>
         );
     }

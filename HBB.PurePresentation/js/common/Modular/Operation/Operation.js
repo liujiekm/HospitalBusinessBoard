@@ -9,7 +9,7 @@ import { render, findDOMNode } from 'react-dom'
 import OperationClassCountWgt from "./OperationClassCountWgt"
 
 import OperationDetail from "./OperationDetail"
-import ReactEcharts from "react-echarts-component"
+
 
 var Operation = React.createClass({
 

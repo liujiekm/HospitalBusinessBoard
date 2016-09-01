@@ -27,11 +27,11 @@ var EmptyBedsDeptContrast = React.createClass({
     },
     getChartData:function (chart) {
 
-        chart.showLoading({
-            text: '数据读取中...', effect: 'spin', textStyle: {
-                fontSize: 20
-            }
-        });
+        // chart.showLoading({
+        //     text: '数据读取中...', effect: 'spin', textStyle: {
+        //         fontSize: 20
+        //     }
+        // });
         $.getJSON(Globle.baseUrl + 'HI/REB', function (items) {
 
             var xaxis = [];

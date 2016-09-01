@@ -22,8 +22,8 @@ const DeptMSSList = React.createClass({
         var depts = [];
         var that = this;
         this.props.depts.forEach(function (item) {
-
-            depts.push(<DeptMSSItem key={uuid.v1()} specialistID={item.SpecialistID} deptName={item.SpecialistName} personCount={that.props.HZnums + '/' + that.props.JZnums} handleDeptClick={that.props.handleDeptClick} />);
+            var personCount = item.HZnums + '/' + item.JZnums;
+            depts.push(<DeptMSSItem key={uuid.v1()} specialistID={item.SpecialistID} deptName={item.SpecialistName} personCount={personCount} handleDeptClick={that.props.handleDeptClick} />);
         });
         
         
@@ -45,7 +45,7 @@ const DeptMSSList = React.createClass({
                     <table className="table table-hover">
 
                         <tbody>
-                            <depts />
+                            {depts}
                         </tbody>
                        
 

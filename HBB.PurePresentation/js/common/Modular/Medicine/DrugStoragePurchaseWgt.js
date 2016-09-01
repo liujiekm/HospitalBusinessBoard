@@ -46,7 +46,7 @@ var DrugStoragePurchaseWgt = React.createClass({
                         </div>
                         <div className="row">
 
-                            <div className="col-md-12 text-center" style={{"padding-top": "10px"}}>
+                            <div className="col-md-12 text-center" style={{"paddingTop": "10px"}}>
 
                                 <p className="lead text-big"><span >{this.props.purchaseLastMonth}</span>万元</p>
                             </div>

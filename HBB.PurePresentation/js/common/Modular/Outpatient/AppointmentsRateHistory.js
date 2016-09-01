@@ -21,11 +21,11 @@ var AppointmentsRateHistory = React.createClass({
 
     getChartData:function (chart) {
 
-        chart.showLoading({
-            text: '数据读取中...', effect: 'spin', textStyle: {
-                fontSize: 20
-            }
-        });
+        // chart.showLoading({
+        //     text: '数据读取中...', effect: 'spin', textStyle: {
+        //         fontSize: 20
+        //     }
+        // });
 
         var temp = new Date();
         var ed = '' + temp.getFullYear() + '-' + (temp.getMonth() + 1) + '-' + temp.getDate() + ' ' + '23:59:59';

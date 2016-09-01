@@ -9,20 +9,11 @@ import ADListItem from './ADListItem'
 class ADList extends Component {
 
     render() {
-
         const { items, tableName, tableDesc,columnNames} = this.props
-
         var tableItem =[]
-
         items.forEach(function(item){
-
-
             tableItem.push(<ADListItem  deptName={item.deptName} counts={item.counts}/>);
-
         })
-
-
-
 
         return (
             <table className="ad-table table text-center">

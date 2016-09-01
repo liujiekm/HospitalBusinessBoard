@@ -56,13 +56,13 @@ var InspectionUEWgt = React.createClass({
                         </div>
                     </div>
                     <div className="col-md-10 ue-content">
-                        <div className="row" style={{"margin-left": "-50px"}}>
+                        <div className="row" style={{"marginLeft": "-50px"}}>
                             <div className="col-md-2">
                                 <p className="text-nowrap">特检时长</p>
                             </div>
                             <div className="col-md-10"></div>
                         </div>
-                        <div className="row" style={{"margin-left": "-40px"}}>
+                        <div className="row" style={{"marginLeft": "-40px"}}>
                             <div className="col-md-2 pannelContent">
                                 <div className="row">
                                     <div className="col-md-5 ue-content-p">

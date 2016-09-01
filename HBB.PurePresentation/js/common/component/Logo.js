@@ -21,7 +21,7 @@ var Logo= React.createClass({
 
     render:function () {
         return (
-            <div style={{"padding-top": "15px"}} class="col-md-2">
+            <div style={{"paddingTop": "15px"}} class="col-md-2">
                 <img src={this.props.Url} height="24" width="204" class="hospitalLogo" />
             </div>
         );

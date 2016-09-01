@@ -40,6 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Emergency\ITreatment.cs" />
+    <Compile Include="Experience\IOutpatientTreatmentDuration.cs" />
+    <Compile Include="Hospitalization\IAdmissionAndDischarge.cs" />
+    <Compile Include="Hospitalization\IHospitalBed.cs" />
+    <Compile Include="Hospitalization\IHospitalPersonalCost.cs" />
+    <Compile Include="Hospitalization\IHospitalRevenue.cs" />
     <Compile Include="IAuthentication.cs" />
     <Compile Include="IBeInHospitalService.cs" />
     <Compile Include="IDoctorRegisterService.cs" />
@@ -51,6 +57,11 @@
     <Compile Include="IOutpatientReportService.cs" />
     <Compile Include="IOutpatientService.cs" />
     <Compile Include="IPatientExperenceService.cs" />
+    <Compile Include="Medicine\IDrugProportion.cs" />
+    <Compile Include="Medicine\IDrugStorage.cs" />
+    <Compile Include="Medicine\IMedicine.cs" />
+    <Compile Include="Medicine\IPharmacy.cs" />
+    <Compile Include="Medicine\IPrescription.cs" />
     <Compile Include="Model\AdmissionDischarge.cs" />
     <Compile Include="Model\AverageTreatmentTime.cs" />
     <Compile Include="Model\DeptAverageTreatmentTime.cs" />
@@ -67,6 +78,7 @@
     <Compile Include="Model\IOpation.cs" />
     <Compile Include="Model\MedicalService.cs" />
     <Compile Include="Model\OperationCount.cs" />
+    <Compile Include="Operation\OperationSearch.cs" />
     <Compile Include="Model\OperationSearchRate.cs" />
     <Compile Include="Model\RateEmptyBed.cs" />
     <Compile Include="Model\RegisterVisitors.cs" />
@@ -74,8 +86,16 @@
     <Compile Include="Model\SurgeryDetailedInformation.cs" />
     <Compile Include="Model\SurgeryInformation.cs" />
     <Compile Include="Model\WaitingPatientQuanty.cs" />
+    <Compile Include="Operation\IOperation.cs" />
+    <Compile Include="Operation\SurgeryDetail.cs" />
+    <Compile Include="Outpatient\IAppointment.cs" />
+    <Compile Include="Outpatient\IDoctorCheckIn.cs" />
+    <Compile Include="Outpatient\IOutpatientIncome.cs" />
+    <Compile Include="Outpatient\IRegistration.cs" />
+    <Compile Include="Outpatient\IWaiting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -48,6 +48,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBB.PurePresentation", "HBB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBB.DataContract", "HBB.DataContract\HBB.DataContract.csproj", "{52F3ECFB-0034-4ED5-BDFA-A7C2D6925600}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQConsole", "RabbitMQConsole\RabbitMQConsole.csproj", "{CF32093B-C1F1-438F-AF74-D47B7792B061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBB.IC.UnitTest", "HBB.IC.UnitTest\HBB.IC.UnitTest.csproj", "{4C989629-93C0-45F8-9159-2AA31522AFDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -128,6 +132,22 @@ Global
 		{52F3ECFB-0034-4ED5-BDFA-A7C2D6925600}.Release|Any CPU.Build.0 = Release|Any CPU
 		{52F3ECFB-0034-4ED5-BDFA-A7C2D6925600}.Release|x86.ActiveCfg = Release|Any CPU
 		{52F3ECFB-0034-4ED5-BDFA-A7C2D6925600}.Release|x86.Build.0 = Release|Any CPU
+		{CF32093B-C1F1-438F-AF74-D47B7792B061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF32093B-C1F1-438F-AF74-D47B7792B061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF32093B-C1F1-438F-AF74-D47B7792B061}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CF32093B-C1F1-438F-AF74-D47B7792B061}.Debug|x86.Build.0 = Debug|Any CPU
+		{CF32093B-C1F1-438F-AF74-D47B7792B061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF32093B-C1F1-438F-AF74-D47B7792B061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF32093B-C1F1-438F-AF74-D47B7792B061}.Release|x86.ActiveCfg = Release|Any CPU
+		{CF32093B-C1F1-438F-AF74-D47B7792B061}.Release|x86.Build.0 = Release|Any CPU
+		{4C989629-93C0-45F8-9159-2AA31522AFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C989629-93C0-45F8-9159-2AA31522AFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C989629-93C0-45F8-9159-2AA31522AFDB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4C989629-93C0-45F8-9159-2AA31522AFDB}.Debug|x86.Build.0 = Debug|Any CPU
+		{4C989629-93C0-45F8-9159-2AA31522AFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C989629-93C0-45F8-9159-2AA31522AFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C989629-93C0-45F8-9159-2AA31522AFDB}.Release|x86.ActiveCfg = Release|Any CPU
+		{4C989629-93C0-45F8-9159-2AA31522AFDB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -148,6 +168,8 @@ Global
 		{94BE056D-4AA4-4B61-AED1-813791489C8A} = {12D73156-F881-49C8-B7DE-7DFA5F6C0868}
 		{529A03BE-4FEB-4D4F-8BFD-6B1C477038ED} = {E704C6DC-D725-4E62-829F-9393AAB7AEB2}
 		{52F3ECFB-0034-4ED5-BDFA-A7C2D6925600} = {D3B97F08-3F0C-4FC2-A024-854751DEDD36}
+		{CF32093B-C1F1-438F-AF74-D47B7792B061} = {E704C6DC-D725-4E62-829F-9393AAB7AEB2}
+		{4C989629-93C0-45F8-9159-2AA31522AFDB} = {C8910EC3-8988-4261-A818-04B4ACB61B6B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35

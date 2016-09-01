@@ -7,11 +7,56 @@ function HospitalizationChart(){};
 
 // 图表基本模板
 HospitalizationChart.baseOption = function baseOption() {
-    this.color = ['#516740'];
-    this.renderAsImage = false;
-    this.tooltip = { trigger: "axis" };
-    this.grid = { x: '40', y: '25', x2: '5', y2: '20', borderWidth: 0 };
-    this.calculable = true;
+    this.title ={
+        show: true,
+        text: '最近7天挂号人次',
+        subtext: '',
+        x: 'left',
+        textStyle: {
+            fontSize: 10,
+            fontWeight: 'bolder',
+            color: 'white'
+        }
+    };
+    this.color=['#516740'];
+    this.renderAsImage=false;
+    this.tooltip= {
+        trigger: 'axis'
+
+    };
+    this.grid=
+    {
+        x: '50',
+        y: '25',
+        x2: '30',
+        y2: '20',
+        borderWidth: 0
+
+
+    };
+    this.legend={
+        show: false,
+        data: ['挂号人次']
+    };
+    this.toolbox ={
+        show: false,
+        feature: {
+            mark: { show: false },
+            dataView: { show: false, readOnly: true },
+            magicType:
+            {
+                show: true,
+                type: ['line']
+            },
+            restore: { show: true },
+            saveAsImage: { show: true }
+        }
+    };
+    this.calculable= true;
+
+
+
+
     this.xAxis = [{
         type: 'category',
         axisLine: {

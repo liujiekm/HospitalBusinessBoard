@@ -31,7 +31,6 @@ var CheckinHistory = React.createClass({
         //     }
         // });
         $.getJSON(Globle.baseUrl + 'OPA/RDR', function (items) {
-            
             var xaxis = [];
             var actualData=[];
             $.each(items, function (index, item) {

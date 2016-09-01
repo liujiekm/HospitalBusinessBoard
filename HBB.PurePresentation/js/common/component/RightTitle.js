@@ -7,12 +7,15 @@
 import React from 'react'
 import { render, findDOMNode } from 'react-dom'
 
+import {Link} from 'react-router'
+
 
 var RightTitle =React.createClass({
 
     getDefaultProps:function () {
 
         return {
+            returnLink:"Home",
             titleName:"内容"
         };
     },
@@ -22,7 +25,9 @@ var RightTitle =React.createClass({
 
             <div className="row">
                 <div className="col-md-2">
-                    <span className="glyphicon glyphicon-arrow-left returnPage" aria-hidden="true" id="returnLink"></span>
+                    <Link to={this.props.returnLink}>
+                        <span className="glyphicon glyphicon-arrow-left returnPage" aria-hidden="true"></span>
+                    </Link>
                 </div>
                 <div className="col-md-6"></div>
                 <div className="col-md-4 moduleIndicate">

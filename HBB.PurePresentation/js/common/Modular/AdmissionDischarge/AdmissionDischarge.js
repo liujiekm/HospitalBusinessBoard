@@ -62,7 +62,7 @@ var AdmissionDischarge = React.createClass ({
             <div className="detail-content">
 
 
-                <RightTitle titleName="医生签到"/>
+                <RightTitle titleName="医生签到" returnLink="Home"/>
 
                 <div className="row contentRow" >
                     <div className="col-md-8">

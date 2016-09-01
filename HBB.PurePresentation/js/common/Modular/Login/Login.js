@@ -65,7 +65,7 @@ var Login = React.createClass({
 
                                 <img src="./img/login/logo.png" className='logoImg' />
 
-                                <p className="lead text-center loginSymbol-position">医院业务看板</p>
+                                <p className="lead text-center loginSymbol-position">综合业务系统</p>
                             </div>
                             <div className="formGroup">
                                 <img className="loginIcon" src="./img/login/LoginNmae_icon.png"/>

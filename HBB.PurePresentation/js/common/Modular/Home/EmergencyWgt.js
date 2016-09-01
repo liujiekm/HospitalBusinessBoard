@@ -5,7 +5,7 @@ import React from 'react';
 import { render, findDOMNode } from 'react-dom'
 
 import classnames from "classnames"
-import  Link  from 'react-router'
+import { Link } from 'react-router'
 
 var EmergencyWgt=React.createClass({
 
@@ -71,9 +71,10 @@ var EmergencyWgt=React.createClass({
                     </div>
 
                     <div className="col-md-2 leftGo">
-                        <a href="EmergencyTreatment.aspx">
+
+                        <Link to="Emergency">
                             <img className="img-responsive" src="./img/Home/into.png" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

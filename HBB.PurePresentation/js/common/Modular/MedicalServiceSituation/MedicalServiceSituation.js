@@ -46,32 +46,20 @@ var MedicalServiceSituation = React.createClass({
     },
 
     render:function(){
-
-
-
         return (
-
             <div className="detail-content">
-
-
-                <RightTitle titleName="坐诊情况"/>
-
+                <RightTitle titleName="坐诊情况" returnLink="Home"/>
                 <div className="row contentRow" >
                     <div className="col-md-8">
                         <DeptMSS depts={this.state.depts} />
                         <DoctorMSS  doctors={this.state.doctors}/>
-
                     </div>
-
-
                     <div className="col-md-1">
                         <div className="row nextInfoContainer">
                             <div className="col-md-12 nextInfo">
-
                                 <img className="img-responsive" src="./img/delt.png" />
                             </div>
                         </div>
-
                         <div className="row nextInfoContainer">
                             <div className="col-md-12 nextInfo">
                                 <img className="img-responsive" src="./img/deltLeft.png" />

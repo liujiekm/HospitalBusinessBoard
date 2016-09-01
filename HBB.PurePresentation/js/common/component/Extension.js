@@ -12,7 +12,7 @@ var Extension =React.createClass({
 
             <div className="extension-position">
 
-                <img class="img-responsive" src="./img/Home/delta.png" />
+                <img className="img-responsive" src="./img/Home/delta.png" />
 
             </div>
 

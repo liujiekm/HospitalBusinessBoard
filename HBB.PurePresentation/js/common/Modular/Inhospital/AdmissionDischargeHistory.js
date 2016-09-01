@@ -6,7 +6,7 @@ import { render, findDOMNode } from 'react-dom'
 
 import classnames from "classnames"
 
-import ReactEcharts from "react-echarts-component"
+import echarts from 'echarts'
 
 
 import Globle from "../../../Globle"
@@ -25,15 +25,7 @@ var AdmissionDischargeHistory = React.createClass({
 
     componentDidMount:function () {
         var option = new  HospitalizationChart.baseOption();
-        option.title={
-            text: '出入院(单位:人)',
-            textStyle:
-            {
-                fontSize: 1,
-                color: '#FEFFFD'
-            }
-        };
-
+        option.title.text='出入院(单位:人)';
         option.series = [
             {
                 name: '入院人数',
@@ -100,10 +92,16 @@ var AdmissionDischargeHistory = React.createClass({
 
 
         });
-        this.setState({option:option});
+        const chartDom = this.refs.chart;
+        const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
+        chart.setOption(option);
+        
     },
 
-
+    componentWillUnmount:function () {
+        
+        echarts.dispose(this.refs.chart)
+    },
     
     render:function () {
         return(
@@ -111,8 +109,7 @@ var AdmissionDischargeHistory = React.createClass({
 
             <div  className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size div_chart">
 
-
-                <ReactEcharts height={110}  option={this.state.option}  />
+                <div ref="chart" className="chart-size" />
 
             </div>
         );

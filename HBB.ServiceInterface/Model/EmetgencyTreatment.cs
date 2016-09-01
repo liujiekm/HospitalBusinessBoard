@@ -19,54 +19,56 @@ using System.Threading.Tasks;
 
 namespace HBB.ServiceInterface.Model {
     public class EmergencyTreatment {
-        public struct qxx {
-            public string XM;   // 姓名
-            public string XB;   // 性别
-            public string NL;   // 年龄
-            public string LGTS; // 临床诊断
-            public string LCZD; // 留观天数
-            public double YCYE; // 预存余额
+        public struct EmergencyDetail {
+            public string Name;   // 姓名
+            public string Sex;   // 性别
+            public string Age;   // 年龄
+            public string Diagnosis; // 临床诊断
+            public string ObservationDays; // 留观天数
+            public double Balance; // 预存余额
         }
 
-        private List<qxx> _qjqxx = new List<qxx>();
-        private List<qxx> _lgqxx = new List<qxx>();
+        private List<EmergencyDetail> _observation = new List<EmergencyDetail>();
+        private List<EmergencyDetail> _rescue = new List<EmergencyDetail>();
 
         // 抢救
-        public List<qxx> qjqxx {
-            get { return this._qjqxx; }
-            set { this._qjqxx = value; }
+        public List<EmergencyDetail> Rescue
+        {
+            get { return this._rescue; }
+            set { this._rescue = value; }
         }
 
         // 急诊留观
-        public List<qxx> lgqxx {
-            get { return this._lgqxx; }
-            set { this._lgqxx = value; }
+        public List<EmergencyDetail> Observation
+        {
+            get { return this._observation; }
+            set { this._observation = value; }
         }
 
-        public void addQjqxx(string xm, string xb, string nl, string lgts, string lczd, double ycye) {
+        public void addQjqxx(string name, string sex, string age, string observationDays, string diagnosis, double balance) {
 
-            qxx item;
-            item.XM = xm;
-            item.XB = xb;
-            item.NL = nl;
-            item.LGTS = lgts;
-            item.LCZD = lczd;
-            item.YCYE = ycye;
+            EmergencyDetail item;
+            item.Name = name;
+            item.Sex = sex;
+            item.Age = age;
+            item.ObservationDays = observationDays;
+            item.Diagnosis = diagnosis;
+            item.Balance = balance;
 
-            this._qjqxx.Add(item);
+            this._rescue.Add(item);
         }
 
-        public void addLgqxx(string xm, string xb, string nl, string lgts, string lczd, double ycye) {
+        public void addLgqxx(string name, string sex, string age, string observationDays, string diagnosis, double balance) {
 
-            qxx item;
-            item.XM = xm;
-            item.XB = xb;
-            item.NL = nl;
-            item.LGTS = lgts;
-            item.LCZD = lczd;
-            item.YCYE = ycye;
+            EmergencyDetail item;
+            item.Name = name;
+            item.Sex = sex;
+            item.Age = age;
+            item.ObservationDays = observationDays;
+            item.Diagnosis = diagnosis;
+            item.Balance = balance;
 
-            this._lgqxx.Add(item);
+            this._observation.Add(item);
         }
     }
 }

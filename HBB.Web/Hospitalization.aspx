@@ -344,7 +344,7 @@
                         text: '出入院(单位:人)',
                         textStyle:
                         {
-                            fontSize: 1,
+                            fontSize: 10,
                             color: '#FEFFFD'
                         }
                     };
@@ -385,7 +385,7 @@
                         text: '住院收入统计(单位:万元)',
                         textStyle:
                         {
-                            fontSize: 1,
+                            fontSize: 10,
                             color: '#FEFFFD'
                         }
                     };
@@ -412,7 +412,7 @@
                         text: '住院人均统计(单位:元)',
                         textStyle:
                         {
-                            fontSize: 1,
+                            fontSize: 10,
                             color: '#FEFFFD'
                         }
                     };
@@ -438,7 +438,7 @@
                         text: '床位使用率统计',
                         textStyle:
                         {
-                            fontSize: 1,
+                            fontSize: 10,
                             color: '#FEFFFD'
                         }
                     };

@@ -36,7 +36,7 @@ var Home = React.createClass({
 
     getInitialState:function () {
         return {
-            morningSignInRate:95.2,
+            morningSignInRate:95.3,
             morningSignInRateLow:false,
             morningHasSignIn:952,
             morningShouldSignIn:1000,
@@ -147,7 +147,7 @@ var Home = React.createClass({
             <div>
                 <div className="wgt-group">
                 <CheckinWgt  morningSignInRate={this.state.morningSignInRate}
-                    morningSignInRateLow={true}
+                    morningSignInRateLow={false}
                     morningHasSignIn={this.state.morningHasSignIn}
                     morningShouldSignIn={this.state.morningShouldSignIn}
                     afternoonSignInRate={this.state.afternoonSignInRate}

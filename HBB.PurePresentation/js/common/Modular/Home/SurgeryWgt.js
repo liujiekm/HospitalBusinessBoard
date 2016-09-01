@@ -27,11 +27,11 @@ var SurgeryWgt=React.createClass({
 
     getChartData:function (chart) {
 
-        chart.showLoading({
-            text: '数据读取中...', effect: 'spin', textStyle: {
-                fontSize: 20
-            }
-        });
+        // chart.showLoading({
+        //     text: '数据读取中...', effect: 'spin', textStyle: {
+        //         fontSize: 20
+        //     }
+        // });
         $.getJSON(Globle.baseUrl + 'OP/RSI', function (item) {
             var series1 = [item.CompletedQuanty];
             var series2 = [item.DoingQuanty];

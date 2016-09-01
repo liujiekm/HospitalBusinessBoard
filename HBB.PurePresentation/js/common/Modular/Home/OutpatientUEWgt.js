@@ -6,27 +6,18 @@
 import React from 'react';
 import { render, findDOMNode } from 'react-dom'
 
-import classnames from "classnames"
-import  Link  from 'react-router'
+//import classnames from "classnames"
+import  {Link}  from 'react-router'
 
 
 var OutpatientUEWgt = React.createClass({
     getDefaultProps: function () {
-
         return {
-
             appointmentLastMonth:1.62,
-
             awaitingDiagnosis:7.5,
-
             diagnosis:5.1,
-
             payFees:2.9,
-
             medicineReceiving:9.4
-
-
-
         };
     },
 
@@ -34,9 +25,6 @@ var OutpatientUEWgt = React.createClass({
    render: function () {
 
        return (
-
-
-
                <div className="col-md-12">
                    <div className="row rowContent">
                        <div className="col-md-2">
@@ -53,13 +41,13 @@ var OutpatientUEWgt = React.createClass({
                            </div>
                        </div>
                        <div className="col-md-10 ue-content">
-                           <div className="row" style={{"margin-left": "-50px"}}>
+                           <div className="row" style={{"marginLeft": "-50px"}}>
                                <div className="col-md-2">
                                    <p className="text-nowrap">门诊时长</p>
                                </div>
                                <div className="col-md-10"></div>
                            </div>
-                           <div className="row" style={{"margin-left": "-40px"}}>
+                           <div className="row" style={{"marginLeft": "-40px"}}>
                                <div className="col-md-2 pannelContent">
                                    <div className="row">
                                        <div className="col-md-5 ue-content-p">
@@ -69,7 +57,9 @@ var OutpatientUEWgt = React.createClass({
                                    </div>
                                    <div className="row">
                                        <div className="col-md-12">
-                                           <p className="lead text-center"><strong>{this.props.appointmentLastMonth}</strong></p>
+                                           <p className="lead text-center">
+                                                <strong>{this.props.appointmentLastMonth}</strong>
+                                           </p>
                                        </div>
                                    </div>
                                    <div className="row">
@@ -88,7 +78,9 @@ var OutpatientUEWgt = React.createClass({
                                    </div>
                                    <div className="row">
                                        <div className="col-md-12">
-                                           <p className="lead text-center"><strong>{this.props.awaitingDiagnosis}</strong></p>
+                                           <p className="lead text-center">
+                                                <strong>{this.props.awaitingDiagnosis}</strong>
+                                           </p>
                                        </div>
                                    </div>
                                    <div className="row">
@@ -107,7 +99,9 @@ var OutpatientUEWgt = React.createClass({
                                    </div>
                                    <div className="row">
                                        <div className="col-md-12">
-                                           <p className="lead text-center"><strong>{this.props.diagnosis}</strong></p>
+                                           <p className="lead text-center">
+                                                <strong>{this.props.diagnosis}</strong>
+                                           </p>
                                        </div>
                                    </div>
                                    <div className="row">
@@ -126,7 +120,9 @@ var OutpatientUEWgt = React.createClass({
                                    </div>
                                    <div className="row">
                                        <div className="col-md-12">
-                                           <p className="lead text-center"><strong>{this.props.payFees}</strong></p>
+                                           <p className="lead text-center">
+                                                <strong>{this.props.payFees}</strong>
+                                           </p>
                                        </div>
                                    </div>
                                    <div className="row">
@@ -145,7 +141,9 @@ var OutpatientUEWgt = React.createClass({
                                    </div>
                                    <div className="row">
                                        <div className="col-md-12">
-                                           <p className="lead text-center"><strong>{this.props.medicineReceiving}</strong></p>
+                                           <p className="lead text-center">
+                                                <strong>{this.props.medicineReceiving}</strong>
+                                           </p>
                                        </div>
                                    </div>
                                    <div className="row">
@@ -155,10 +153,6 @@ var OutpatientUEWgt = React.createClass({
                                        </div>
                                    </div>
                                </div>
-
-
-
-
                            </div>
                        </div>
 
@@ -168,13 +162,7 @@ var OutpatientUEWgt = React.createClass({
                        </Link>
 
                    </div>
-
-
-
                </div>
-
-
-
        );
    }
 

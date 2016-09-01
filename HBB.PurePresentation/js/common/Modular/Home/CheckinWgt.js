@@ -20,9 +20,9 @@ var CheckinWgt=React.createClass({
         },
         getDefaultProps:function () {
             return {
-                morningSignInRate:95.2,
+                morningSignInRate:95.3,
                 morningSignInRateLow:false,
-                morningHasSignIn:952,
+                morningHasSignIn:953,
                 morningShouldSignIn:1000,
                 afternoonSignInRate:94.8,
                 afternoonSignInRateLow:false,

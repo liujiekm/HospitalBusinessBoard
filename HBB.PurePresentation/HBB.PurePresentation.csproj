@@ -95,16 +95,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="build\43e74487deae8781a6d494ea4f863a40.png" />
-    <Content Include="build\89889688147bd7575d6327160d64e760.svg" />
-    <Content Include="build\app.js" />
+    <Content Include="build\448c34a56d699c29117adc64c43affeb.woff2" />
     <Content Include="build\bootstrap.js" />
-    <Content Include="build\config.js" />
+    <Content Include="build\e18bbf611f2a2e43afc071aa2f4e1512.ttf" />
+    <Content Include="build\f4769f9bdb7466be65088239c12046d1.eot" />
     <Content Include="build\f721466883998665b87923b92dea655b.svg" />
-    <Content Include="build\index.html" />
+    <Content Include="build\fa2772327f55d8198301fdb8bcfc8158.woff" />
     <Content Include="build\jquery.js" />
     <Content Include="build\styles.css" />
     <Content Include="build\webapp.js" />
     <Content Include="css\layout.css" />
+    <Content Include="data\config.json" />
     <Content Include="img\BG.png" />
     <Content Include="img\Calendar.png" />
     <Content Include="img\delt.png" />
@@ -165,11 +166,23 @@
     <Content Include="js\common\component\LeftNav.js" />
     <Content Include="js\common\component\Logo.js" />
     <Content Include="js\common\component\Nav.js" />
+    <Content Include="js\common\component\RedirectComponent.js" />
     <Content Include="js\common\component\RightContent.js" />
+    <Content Include="js\common\component\RightTitle.js" />
     <Content Include="js\common\component\UserControl.js" />
+    <Content Include="js\common\Modular\AdmissionDischarge\ADList.js" />
+    <Content Include="js\common\Modular\AdmissionDischarge\ADListItem.js" />
+    <Content Include="js\common\Modular\AdmissionDischarge\AdmissionDischarge.js" />
+    <Content Include="js\common\Modular\AdmissionDischarge\ADNum.js" />
+    <Content Include="js\common\Modular\AdmissionDischarge\EmptyBedNum.js" />
     <Content Include="js\common\Modular\Config\Config.js" />
     <Content Include="js\common\Modular\Config\ConfigOld.js" />
     <Content Include="js\common\Modular\Config\FileUploadComponent.js" />
+    <Content Include="js\common\Modular\DoctorCheckin\DoctorCheckin.js" />
+    <Content Include="js\common\Modular\DoctorCheckin\DoctorCheckinNum.js" />
+    <Content Include="js\common\Modular\DoctorCheckin\DoctorCheckinTimePoint.js" />
+    <Content Include="js\common\Modular\DoctorCheckin\DoctorList.js" />
+    <Content Include="js\common\Modular\DoctorCheckin\DoctorListItem.js" />
     <Content Include="js\common\Modular\Home\CheckinHistory.js" />
     <Content Include="js\common\Modular\Home\CheckinWgt.js" />
     <Content Include="js\common\Modular\Home\EmergencyWgt.js" />
@@ -181,24 +194,79 @@
     <Content Include="js\common\Modular\Home\OutpatientMedicalServiceWgt.js" />
     <Content Include="js\common\Modular\Home\OutpatientUEWgt.js" />
     <Content Include="js\common\Modular\Home\SurgeryWgt.js" />
+    <Content Include="js\common\Modular\Inhospital\AdmissionDischargeHistory.js" />
+    <Content Include="js\common\Modular\Inhospital\AdmissionDischargeWgt.js" />
     <Content Include="js\common\Modular\Inhospital\Inhospital.js" />
+    <Content Include="js\common\Modular\Inhospital\InhospitalIncomeHistory.js" />
+    <Content Include="js\common\Modular\Inhospital\InhospitalIncomeWgt.js" />
+    <Content Include="js\common\Modular\Inhospital\InhospitalPersonalCostHistory.js" />
+    <Content Include="js\common\Modular\Inhospital\InhospitalPersonalCostWgt.js" />
+    <Content Include="js\common\Modular\Inhospital\SickbedsUseRateHistory.js" />
+    <Content Include="js\common\Modular\Inhospital\SickbedsUseRatesWgt.js" />
     <Content Include="js\common\Modular\Login\Login.js" />
+    <Content Include="js\common\Modular\MedicalServiceSituation\DeptMSS.js" />
+    <Content Include="js\common\Modular\MedicalServiceSituation\DeptMSSItem.js" />
+    <Content Include="js\common\Modular\MedicalServiceSituation\DeptMSSList.js" />
+    <Content Include="js\common\Modular\MedicalServiceSituation\DoctorMSS.js" />
+    <Content Include="js\common\Modular\MedicalServiceSituation\MedicalServiceSituation.js" />
+    <Content Include="js\common\Modular\Medicine\DrugProportionHistory.js" />
+    <Content Include="js\common\Modular\Medicine\DrugProportionWgt.js" />
+    <Content Include="js\common\Modular\Medicine\DrugStorageMonthlyWgt.js" />
+    <Content Include="js\common\Modular\Medicine\DrugStoragePurchaseWgt.js" />
     <Content Include="js\common\Modular\Medicine\Medicine.js" />
+    <Content Include="js\common\Modular\Medicine\PharmacyMonthlyWgt.js" />
+    <Content Include="js\common\Modular\Medicine\RecipeWgt.js" />
     <Content Include="js\common\Modular\Operation\Operation.js" />
+    <Content Include="js\common\Modular\Operation\OperationClassCountWgt.js" />
+    <Content Include="js\common\Modular\Operation\OperationDetail.js" />
+    <Content Include="js\common\Modular\OutpatientExperience\OEChart.js" />
+    <Content Include="js\common\Modular\OutpatientExperience\OEList.js" />
+    <Content Include="js\common\Modular\OutpatientExperience\OEListItem.js" />
+    <Content Include="js\common\Modular\OutpatientExperience\OESearchPanel.js" />
+    <Content Include="js\common\Modular\OutpatientExperience\OutpatientExperience.js" />
+    <Content Include="js\common\Modular\Outpatient\AppointmentsRateHistory.js" />
+    <Content Include="js\common\Modular\Outpatient\AppointmentsRateWgt.js" />
     <Content Include="js\common\Modular\Outpatient\Outpatient.js" />
+    <Content Include="js\common\Modular\Outpatient\OutpatientIncomeHistory.js" />
+    <Content Include="js\common\Modular\Outpatient\OutpatientIncomeWgt.js" />
+    <Content Include="js\common\Modular\Outpatient\PrestoreRegWgt.js" />
+    <Content Include="js\common\Modular\Outpatient\RealNameRegWgt.js" />
+    <Content Include="js\common\Modular\Outpatient\RegHistory.js" />
+    <Content Include="js\common\Modular\Outpatient\RegWgt.js" />
     <Content Include="js\Globle.js" />
+    <Content Include="js\HospitalizationChart.js" />
     <Content Include="js\option.js" />
     <Content Include="js\webapp.js" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="lib\bootstrap\js\bootstrap.js" />
+    <Content Include="lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="lib\bootstrap\js\npm.js" />
+    <Content Include="lib\Font-Awesome\css\font-awesome-ie7.css" />
+    <Content Include="lib\Font-Awesome\css\font-awesome-ie7.min.css" />
+    <Content Include="lib\Font-Awesome\css\font-awesome.css" />
+    <Content Include="lib\Font-Awesome\css\font-awesome.min.css" />
+    <Content Include="lib\Font-Awesome\font\fontawesome-webfont.svg" />
     <Content Include="Login.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\config.json" />
-    <Content Include="build\448c34a56d699c29117adc64c43affeb.woff2" />
-    <Content Include="build\e18bbf611f2a2e43afc071aa2f4e1512.ttf" />
-    <Content Include="build\f4769f9bdb7466be65088239c12046d1.eot" />
-    <Content Include="build\fa2772327f55d8198301fdb8bcfc8158.woff" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lib\Font-Awesome\font\fontawesome-webfont.eot" />
+    <Content Include="lib\Font-Awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="lib\Font-Awesome\font\fontawesome-webfont.woff" />
+    <Content Include="lib\Font-Awesome\font\FontAwesome.otf" />
+    <Content Include="package.json" />
+    <Content Include="webpack.config.js" />
     <None Include="Properties\PublishProfiles\HBB.PurePresentation.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -208,12 +276,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="scripts\ai.0.15.0-build58334.js" />
-    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="server.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="js\common\Modular\ExaminationExperience\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

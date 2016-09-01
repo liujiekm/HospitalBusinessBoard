@@ -1,0 +1,34 @@
+[
+    [
+        {"SpecialistId":14,"MedicineReceiving":0,"PayFees":9,"Diagnosis":26,"AwaitingDiagnosis":30,"TotalTreatment":65,"Appointment":1.46,"StaticsTime":"2014-05-01","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":5,"PayFees":9,"Diagnosis":26,"AwaitingDiagnosis":34,"TotalTreatment":74,"Appointment":1.75,"StaticsTime":"2014-05-02","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":9,"PayFees":9,"Diagnosis":29,"AwaitingDiagnosis":29,"TotalTreatment":76,"Appointment":1.54,"StaticsTime":"2014-05-03","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":5,"PayFees":6,"Diagnosis":28,"AwaitingDiagnosis":28,"TotalTreatment":67,"Appointment":1.86,"StaticsTime":"2014-05-04","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":6,"PayFees":8,"Diagnosis":29,"AwaitingDiagnosis":32,"TotalTreatment":75,"Appointment":1.72,"StaticsTime":"2014-05-05","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":2,"PayFees":5,"Diagnosis":26,"AwaitingDiagnosis":34,"TotalTreatment":67,"Appointment":1.54,"StaticsTime":"2014-05-06","SpecialistName":"肾内科"}
+    ],
+    [
+        {"SpecialistId":15,"MedicineReceiving":9,"PayFees":9,"Diagnosis":34,"AwaitingDiagnosis":29,"TotalTreatment":81,"Appointment":1.46,"StaticsTime":"2014-05-01","SpecialistName":"血液科"},
+        {"SpecialistId":15,"MedicineReceiving":5,"PayFees":5,"Diagnosis":31,"AwaitingDiagnosis":26,"TotalTreatment":67,"Appointment":1.51,"StaticsTime":"2014-05-02","SpecialistName":"血液科"},
+        {"SpecialistId":15,"MedicineReceiving":4,"PayFees":6,"Diagnosis":26,"AwaitingDiagnosis":25,"TotalTreatment":61,"Appointment":1.71,"StaticsTime":"2014-05-03","SpecialistName":"血液科"},
+        {"SpecialistId":15,"MedicineReceiving":8,"PayFees":6,"Diagnosis":33,"AwaitingDiagnosis":33,"TotalTreatment":80,"Appointment":1.72,"StaticsTime":"2014-05-04","SpecialistName":"血液科"},
+        {"SpecialistId":15,"MedicineReceiving":6,"PayFees":7,"Diagnosis":25,"AwaitingDiagnosis":29,"TotalTreatment":67,"Appointment":1.67,"StaticsTime":"2014-05-05","SpecialistName":"血液科"},
+        {"SpecialistId":15,"MedicineReceiving":3,"PayFees":7,"Diagnosis":29,"AwaitingDiagnosis":26,"TotalTreatment":65,"Appointment":1.59,"StaticsTime":"2014-05-06","SpecialistName":"血液科"}
+    ],
+    [
+        {"SpecialistId":16,"MedicineReceiving":3,"PayFees":8,"Diagnosis":33,"AwaitingDiagnosis":32,"TotalTreatment":76,"Appointment":1.76,"StaticsTime":"2014-05-01","SpecialistName":"内分泌"},
+        {"SpecialistId":16,"MedicineReceiving":0,"PayFees":8,"Diagnosis":30,"AwaitingDiagnosis":29,"TotalTreatment":67,"Appointment":1.8,"StaticsTime":"2014-05-02","SpecialistName":"内分泌"},
+        {"SpecialistId":16,"MedicineReceiving":5,"PayFees":8,"Diagnosis":32,"AwaitingDiagnosis":31,"TotalTreatment":76,"Appointment":1.78,"StaticsTime":"2014-05-03","SpecialistName":"内分泌"},
+        {"SpecialistId":16,"MedicineReceiving":4,"PayFees":9,"Diagnosis":25,"AwaitingDiagnosis":31,"TotalTreatment":69,"Appointment":1.68,"StaticsTime":"2014-05-04","SpecialistName":"内分泌"},
+        {"SpecialistId":16,"MedicineReceiving":8,"PayFees":8,"Diagnosis":27,"AwaitingDiagnosis":26,"TotalTreatment":69,"Appointment":1.63,"StaticsTime":"2014-05-05","SpecialistName":"内分泌"},
+        {"SpecialistId":16,"MedicineReceiving":4,"PayFees":7,"Diagnosis":28,"AwaitingDiagnosis":28,"TotalTreatment":67,"Appointment":1.72,"StaticsTime":"2014-05-06","SpecialistName":"内分泌"}
+    ],
+    [
+        {"SpecialistId":17,"MedicineReceiving":0,"PayFees":6,"Diagnosis":28,"AwaitingDiagnosis":31,"TotalTreatment":65,"Appointment":1.45,"StaticsTime":"2014-05-01","SpecialistName":"感染科"},
+        {"SpecialistId":17,"MedicineReceiving":6,"PayFees":6,"Diagnosis":32,"AwaitingDiagnosis":27,"TotalTreatment":71,"Appointment":1.81,"StaticsTime":"2014-05-02","SpecialistName":"感染科"},
+        {"SpecialistId":17,"MedicineReceiving":2,"PayFees":7,"Diagnosis":33,"AwaitingDiagnosis":27,"TotalTreatment":69,"Appointment":1.49,"StaticsTime":"2014-05-03","SpecialistName":"感染科"},
+        {"SpecialistId":17,"MedicineReceiving":9,"PayFees":9,"Diagnosis":30,"AwaitingDiagnosis":31,"TotalTreatment":79,"Appointment":1.83,"StaticsTime":"2014-05-04","SpecialistName":"感染科"},
+        {"SpecialistId":17,"MedicineReceiving":4,"PayFees":5,"Diagnosis":25,"AwaitingDiagnosis":25,"TotalTreatment":59,"Appointment":1.79,"StaticsTime":"2014-05-05","SpecialistName":"感染科"},
+        {"SpecialistId":17,"MedicineReceiving":7,"PayFees":5,"Diagnosis":34,"AwaitingDiagnosis":30,"TotalTreatment":76,"Appointment":1.69,"StaticsTime":"2014-05-06","SpecialistName":"感染科"}
+    ]
+]

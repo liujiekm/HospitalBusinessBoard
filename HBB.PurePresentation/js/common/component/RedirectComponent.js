@@ -29,10 +29,10 @@ var RedirectComponent = React.createClass({
 
 
 
-                    <div className="col-md-7" style={{"margin": "5px", "padding-top": "10px"}}>
+                    <div className="col-md-7" style={{"margin": "5px", "paddingTop": "10px"}}>
                         <div className="row">
                             <div className="col-md-12">
-                                <p className="lead text-nowrap text-center" style={{"margin-bottom": "3px"}}>{this.props.componentName}</p>
+                                <p className="lead text-nowrap text-center" style={{"marginbottom": "3px"}}>{this.props.componentName}</p>
                             </div>
                         </div>
 

@@ -1,0 +1,26 @@
+[
+    [
+        {"SpecialistId":14,"MedicineReceiving":2,"PayFees":6,"Diagnosis":25,"AwaitingDiagnosis":27,"TotalTreatment":60,"Appointment":1.52,"StaticsTime":"2014-05-01","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":7,"PayFees":8,"Diagnosis":31,"AwaitingDiagnosis":27,"TotalTreatment":73,"Appointment":1.65,"StaticsTime":"2014-05-02","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":5,"PayFees":6,"Diagnosis":30,"AwaitingDiagnosis":34,"TotalTreatment":75,"Appointment":1.71,"StaticsTime":"2014-05-03","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":8,"PayFees":7,"Diagnosis":25,"AwaitingDiagnosis":34,"TotalTreatment":74,"Appointment":1.57,"StaticsTime":"2014-05-04","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":2,"PayFees":6,"Diagnosis":34,"AwaitingDiagnosis":28,"TotalTreatment":70,"Appointment":1.86,"StaticsTime":"2014-05-05","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":4,"PayFees":5,"Diagnosis":32,"AwaitingDiagnosis":30,"TotalTreatment":71,"Appointment":1.87,"StaticsTime":"2014-05-06","SpecialistName":"肾内科"}
+    ],
+    [
+        {"SpecialistId":14,"MedicineReceiving":7,"PayFees":6,"Diagnosis":27,"AwaitingDiagnosis":27,"TotalTreatment":67,"Appointment":1.84,"StaticsTime":"2013-05-01","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":4,"PayFees":9,"Diagnosis":28,"AwaitingDiagnosis":34,"TotalTreatment":75,"Appointment":1.39,"StaticsTime":"2013-05-02","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":8,"PayFees":7,"Diagnosis":29,"AwaitingDiagnosis":33,"TotalTreatment":77,"Appointment":1.47,"StaticsTime":"2013-05-03","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":7,"PayFees":7,"Diagnosis":34,"AwaitingDiagnosis":30,"TotalTreatment":78,"Appointment":1.59,"StaticsTime":"2013-05-04","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":2,"PayFees":8,"Diagnosis":28,"AwaitingDiagnosis":33,"TotalTreatment":71,"Appointment":1.46,"StaticsTime":"2013-05-05","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":8,"PayFees":6,"Diagnosis":32,"AwaitingDiagnosis":28,"TotalTreatment":74,"Appointment":1.84,"StaticsTime":"2013-05-06","SpecialistName":"肾内科"}
+    ],
+    [
+        {"SpecialistId":14,"MedicineReceiving":6,"PayFees":9,"Diagnosis":27,"AwaitingDiagnosis":29,"TotalTreatment":71,"Appointment":1.85,"StaticsTime":"2012-05-01","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":2,"PayFees":6,"Diagnosis":32,"AwaitingDiagnosis":32,"TotalTreatment":72,"Appointment":1.6,"StaticsTime":"2012-05-02","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":9,"PayFees":6,"Diagnosis":30,"AwaitingDiagnosis":31,"TotalTreatment":76,"Appointment":1.61,"StaticsTime":"2012-05-03","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":8,"PayFees":9,"Diagnosis":26,"AwaitingDiagnosis":33,"TotalTreatment":76,"Appointment":1.43,"StaticsTime":"2012-05-04","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":9,"PayFees":9,"Diagnosis":25,"AwaitingDiagnosis":31,"TotalTreatment":74,"Appointment":1.61,"StaticsTime":"2012-05-05","SpecialistName":"肾内科"},
+        {"SpecialistId":14,"MedicineReceiving":0,"PayFees":7,"Diagnosis":34,"AwaitingDiagnosis":33,"TotalTreatment":74,"Appointment":1.4,"StaticsTime":"2012-05-06","SpecialistName":"肾内科"}
+    ]
+]

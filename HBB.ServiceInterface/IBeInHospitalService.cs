@@ -1,4 +1,4 @@
-﻿using HBB.ServiceInterface.Model;
+﻿
 //===================================================================================
 // 北京联想智慧医疗信息技术有限公司 & Net 开发组
 //=================================================================================== 
@@ -19,6 +19,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using HBB.ServiceInterface.Model;
 
 namespace HBB.ServiceInterface {
     public interface IBeInHospitalService

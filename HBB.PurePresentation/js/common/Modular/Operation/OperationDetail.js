@@ -7,7 +7,7 @@ import { render, findDOMNode } from 'react-dom'
 
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
-
+import RightTitle from "../../component/RightTitle"
 import 'react-datepicker/dist/react-datepicker.css';
 
 
@@ -45,16 +45,9 @@ var OperationDetail = React.createClass({
 
             <div className="col-md-12 col-sm-12 col-xs-12 operation-detail-content">
                 
-                <div className="row">
-                    <div className="col-md-2">
-                        <span className="glyphicon glyphicon-arrow-left operation-detail-return" aria-hidden="true" id="returnLink"></span>
-                    </div>
-                    <div className="col-md-6"></div>
-                    <div className="col-md-4 operation-detail-indicate">
-                        
-                        <span className="lead text-nowrap" id="moduleName" >手术查询</span>
-                    </div>
-                </div>
+                
+
+                <RightTitle titleName="手术查询" returnLink="Home"/>
 
                 <div className="row operation-detail-content-row">
                     <div className="col-md-12">
@@ -62,7 +55,7 @@ var OperationDetail = React.createClass({
                             <div className="col-md-2"></div>
                             <div className="col-md-6">
                                 
-                                <input type="text" className="input-lg" id="searchContent" autocomplete="off" />
+                                <input type="text" className="input-lg" id="searchContent" autoComplete="off" />
 
                                 
 

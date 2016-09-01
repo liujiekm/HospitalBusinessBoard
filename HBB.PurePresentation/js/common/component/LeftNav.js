@@ -21,7 +21,7 @@ var LeftNav = React.createClass({
 
     },
     activeClick:function (event) {
-        console.log(event.target);
+        //console.log(event.target);
         $(event.target).parent().addClass('active').siblings().removeClass('active');
     },
     render:function () {
@@ -31,7 +31,7 @@ var LeftNav = React.createClass({
 
         return (
               <ul className="nav nav-pills nav-stacked text-center navleft">
-                  <p>医院业务看板</p>
+                  <p>综合业务系统</p>
                   <li>&nbsp;</li>
                   <li role="presentation" className="active" onClick={this.activeClick}>
                       <Link to="Home">首页</Link>

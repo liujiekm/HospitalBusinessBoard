@@ -11,6 +11,7 @@ using Microsoft.Practices.Unity.Configuration;
 using HBB.API.Resolver;
 using HBB.API.LogAttribute;
 using HBB.API.Filter;
+using System.Web.Http.Cors;
 
 namespace HBB.API
 {
@@ -18,6 +19,10 @@ namespace HBB.API
     {
         public static void Register(HttpConfiguration config)
         {
+
+            var cors = new EnableCorsAttribute("http://localhost:3000/", "*", "*");
+            config.EnableCors(cors);
+
 
             // Web API 配置和服务
             // 将 Web API 配置为仅使用不记名令牌身份验证。

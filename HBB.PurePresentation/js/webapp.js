@@ -15,11 +15,9 @@ import Medicine from "./common/Modular/Medicine/Medicine"
 import Operation from "./common/Modular/Operation/Operation"
 import DoctorCheckin from "./common/Modular/DoctorCheckin/DoctorCheckin"
 import AdmissionDischarge from './common/Modular/AdmissionDischarge/AdmissionDischarge'
-
 import OutpatientExperience from './common/Modular/OutpatientExperience/OutpatientExperience'
-
-
 import MSS from "./common/Modular/MedicalServiceSituation/MedicalServiceSituation"
+import Emergency from "./common/Modular/Emergency/EmergencyDetail"
 import Login from "./common/Modular/Login/Login"
 import Config from "./common/Modular/Config/Config"
 import FileUploadComponenet from "./common/Modular/Config/FileUploadComponent"
@@ -27,7 +25,6 @@ import App from "./app"
 
 var Webapp = React.createClass({
     render:function () {
-
         return (
             <div>
                 {this.props.children}
@@ -48,7 +45,7 @@ function requireAuth(nextState, replace) {
 }
 
 render((
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
         <Route path="/" component={Webapp}>
             <IndexRoute component={Login} />
             <Route path="Login" component={Login} />
@@ -66,6 +63,7 @@ render((
                 <Route path="MSS" component={MSS} />
                 <Route path="AD" component={AdmissionDischarge} />
                 <Route path="OE" component={OutpatientExperience} />
+                <Route path="Emergency" component={Emergency} />
             </Route>
 
         </Route>

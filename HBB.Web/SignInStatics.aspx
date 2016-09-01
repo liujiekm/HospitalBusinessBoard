@@ -376,6 +376,8 @@
                         if (json != null) {
                             for (var i = 0; i < json.length; i++) {
                                 if (json[i].TimeType == "1") {
+
+                                    
                                     personSignInOption.xAxis[0].data.push(jsonDateFormat(json[i].ArrangeWorkTime) + "上午");
                                     personSignInOption.series[0].data.push(jsonDateFormatForHourAndMinutes(json[i].ArrangeWorkTime));//排班时间点
                                     personSignInOption.series[1].data.push(jsonDateFormatForHourAndMinutes(json[i].RegisterTime));//签到时间点
