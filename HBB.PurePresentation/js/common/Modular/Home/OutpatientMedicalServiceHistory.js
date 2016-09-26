@@ -1,7 +1,7 @@
 /**
  * Created by liu on 2016/4/22.
  */
-import React from 'react';
+import React,{Component,PropTypes} from 'react'
 import { render, findDOMNode } from 'react-dom'
 import classnames from "classnames"
 import ReactEcharts from "react-echarts-component"
@@ -11,9 +11,9 @@ import echarts from 'echarts'
 
 var intervalRef;
 
-var OutpatientMedicalServiceHistory=React.createClass({
+class OutpatientMedicalServiceHistory extends Component{
 
-    componentDidMount:function () {
+    componentDidMount() {
 
         const chartDom = this.refs.chart;
         const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
@@ -23,8 +23,8 @@ var OutpatientMedicalServiceHistory=React.createClass({
         intervalRef=setInterval(function () {
             this.getChartData(chart)
         }.bind(this), 10000);
-    },
-    getChartData:function (chart) {
+    }
+    getChartData(chart) {
 
         // chart.showLoading({
         //     text: '数据读取中...', effect: 'spin', textStyle: {
@@ -57,13 +57,13 @@ var OutpatientMedicalServiceHistory=React.createClass({
             chart.hideLoading();
 
         });
-    },
+    }
 
-    componentWillUnmount:function () {
+    componentWillUnmount() {
         clearInterval(intervalRef);
         echarts.dispose(this.refs.chart)
-    },
-    render:function () {
+    }
+    render() {
         return (
             <div  className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size div_chart">
 
@@ -74,6 +74,8 @@ var OutpatientMedicalServiceHistory=React.createClass({
 
         );
     }
-});
+}
 
-module.exports = OutpatientMedicalServiceHistory;
+//module.exports = OutpatientMedicalServiceHistory;
+
+export default OutpatientMedicalServiceHistory;

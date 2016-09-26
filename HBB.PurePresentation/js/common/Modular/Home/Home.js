@@ -3,39 +3,33 @@
  */
 
 
-import React from 'react';
+import React,{Component,PropTypes} from 'react'
 import { render, findDOMNode } from 'react-dom'
 
 
 import CheckinWgt from "./CheckinWgt"
-
 import Extension from "../../component/Extension"
-
 import CheckinHistory from "./CheckinHistory"
-
 import OutpatientMedicalServiceWgt from "./OutpatientMedicalServiceWgt"
 import OutpatientMedicalServiceHistory from "./OutpatientMedicalServiceHistory"
-
 import EmergencyWgt from "./EmergencyWgt"
-
 import SurgeryWgt  from "./SurgeryWgt"
-
 import HospitalizationWgt from "./HospitalizationWgt"
 import EmptyBedsDeptContrast from "./EmptyBedsDeptContrast"
-
 import OutpatientUEWgt from "./OutpatientUEWgt"
-
 import InspectionUEWgt from "./InspectionUEWgt"
 import Globle from "../../../Globle"
-
 import Es6Promise from 'es6-promise'
 
 var Promise = Es6Promise.Promise;
 
-var Home = React.createClass({
+class Home extends Component{
 
-    getInitialState:function () {
-        return {
+
+    constructor(props)
+    {
+        super(props);
+        this.state={
             morningSignInRate:95.3,
             morningSignInRateLow:false,
             morningHasSignIn:952,
@@ -71,11 +65,11 @@ var Home = React.createClass({
             endoscope:9.4
 
 
-        };
+        }
+    }
 
-    },
 
-    getHomeData:function () {
+    getHomeData() {
 
 
         var partData={};
@@ -131,17 +125,17 @@ var Home = React.createClass({
 
 
 
-    },
+    }
 
-    componentDidMount:function () {
+    componentDidMount() {
 
         this.getHomeData();
         // setInterval(function () {
         //     this.getHomeData()
         // }.bind(this), 10000);
 
-    },
-    render:function () {
+    }
+    render() {
         return (
 
             <div>
@@ -212,6 +206,6 @@ var Home = React.createClass({
 
         );
     }
-});
+}
 
-module.exports=Home;
+export default Home;

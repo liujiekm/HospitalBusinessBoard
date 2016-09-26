@@ -10,24 +10,22 @@ import ADList from './ADList'
 
 import RightTitle from '../../component/RightTitle'
 
-var AdmissionDischarge = React.createClass ({
+class AdmissionDischarge extends Component {
 
 
 
+    constructor(props){
+        super(props)
+        this.state={
 
-    getInitialState:function ()
-    {
-
-        return {
             adByDept:[],//各专科出入院情况
             ebByDept:[],//各专科空床情况
             wholeAD:[],//全院出入院情况
             wholeEB:[]//全院空床情况
-
         }
-    },
+    }
 
-    componentDidMount:function ()
+    componentDidMount()
     {
         //查询
         $.getJSON(Globle.baseUrl + 'IH/ADI', function (ad) {
@@ -53,7 +51,7 @@ var AdmissionDischarge = React.createClass ({
         });
 
 
-    },
+    }
 
 
     render(){
@@ -109,7 +107,7 @@ var AdmissionDischarge = React.createClass ({
 
     }
 
-})
+}
 
 
 export default AdmissionDischarge

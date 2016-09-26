@@ -2,7 +2,7 @@
  * Created by liu on 2016/4/22.
  */
 
-import React from 'react';
+import React,{Component,PropTypes} from 'react'
 import { render, findDOMNode } from 'react-dom'
 
 import classnames from "classnames"
@@ -13,9 +13,9 @@ import options from "../../../option"
 import echarts from 'echarts'
 
 var intervalRef;
-var EmptyBedsDeptContrast = React.createClass({
+class EmptyBedsDeptContrast extends Component{
 
-    componentDidMount:function () {
+    componentDidMount () {
         const chartDom = this.refs.chart;
         const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
         chart.setOption(options.homeEmptyBedOption);
@@ -24,8 +24,8 @@ var EmptyBedsDeptContrast = React.createClass({
         intervalRef=setInterval(function () {
             this.getChartData(chart)
         }.bind(this), 10000);
-    },
-    getChartData:function (chart) {
+    }
+    getChartData(chart) {
 
         // chart.showLoading({
         //     text: '数据读取中...', effect: 'spin', textStyle: {
@@ -54,12 +54,12 @@ var EmptyBedsDeptContrast = React.createClass({
             chart.hideLoading();
 
         });
-    },
-    componentWillUnmount:function () {
+    }
+    componentWillUnmount () {
         clearInterval(intervalRef);
         echarts.dispose(this.refs.chart)
-    },
-    render:function () {
+    }
+    render() {
 
 
         return (
@@ -76,6 +76,8 @@ var EmptyBedsDeptContrast = React.createClass({
     }
 
 
-});
+}
 
-module.exports = EmptyBedsDeptContrast;
+//module.exports = EmptyBedsDeptContrast;
+
+export default EmptyBedsDeptContrast;

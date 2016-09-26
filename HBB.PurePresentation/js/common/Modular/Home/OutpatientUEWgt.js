@@ -3,15 +3,15 @@
  */
 
 
-import React from 'react';
+import React,{Component,PropTypes} from 'react'
 import { render, findDOMNode } from 'react-dom'
 
 //import classnames from "classnames"
 import  {Link}  from 'react-router'
 
 
-var OutpatientUEWgt = React.createClass({
-    getDefaultProps: function () {
+class OutpatientUEWgt extends Component{
+    getDefaultProps() {
         return {
             appointmentLastMonth:1.62,
             awaitingDiagnosis:7.5,
@@ -19,10 +19,10 @@ var OutpatientUEWgt = React.createClass({
             payFees:2.9,
             medicineReceiving:9.4
         };
-    },
+    }
 
 
-   render: function () {
+   render() {
 
        return (
                <div className="col-md-12">
@@ -166,6 +166,8 @@ var OutpatientUEWgt = React.createClass({
        );
    }
 
-});
+}
 
-module.exports=OutpatientUEWgt;
+//module.exports=OutpatientUEWgt;
+
+export default OutpatientUEWgt;

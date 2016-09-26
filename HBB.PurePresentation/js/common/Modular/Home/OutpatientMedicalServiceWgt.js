@@ -1,16 +1,16 @@
 /**
  * Created by liu on 2016/4/22.
  */
-import React from 'react';
+import React,{Component,PropTypes} from 'react'
 import { render, findDOMNode } from 'react-dom'
 
 import classnames from "classnames"
 import  { Link }  from 'react-router'
 
 
-var OutpatientMedicalServiceWgt=React.createClass({
+class OutpatientMedicalServiceWgt extends Component{
 
-    getDefaultProps:function () {
+    getDefaultProps() {
         return {
 
 
@@ -19,8 +19,8 @@ var OutpatientMedicalServiceWgt=React.createClass({
 
         };
 
-    },
-    render:function () {
+    }
+    render() {
         return (
             <div className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size wgt-margin-right">
 
@@ -90,9 +90,11 @@ var OutpatientMedicalServiceWgt=React.createClass({
 
 
 
-});
+}
 
 
 
 
-module.exports=OutpatientMedicalServiceWgt;
+//module.exports=OutpatientMedicalServiceWgt;
+
+export default OutpatientMedicalServiceWgt;

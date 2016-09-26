@@ -1,15 +1,15 @@
 /**
  * Created by liu on 2016/4/22.
  */
-import React from 'react';
+import React,{Component,PropTypes} from 'react'
 import { render, findDOMNode } from 'react-dom'
 import { Link } from 'react-router'
 
 
 
-var HospitalzationWgt = React.createClass({
+class HospitalzationWgt extends Component{
 
-    getDefaultProps:function () {
+    getDefaultProps() {
 
         return{
             hospitalizedNum:2803,
@@ -21,10 +21,10 @@ var HospitalzationWgt = React.createClass({
 
         };
 
-    },
+    }
 
 
-    render:function () {
+    render() {
         return (
 
             <div className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size wgt-margin-right">
@@ -90,7 +90,9 @@ var HospitalzationWgt = React.createClass({
     
     
     
-});
+}
 
 
-module.exports = HospitalzationWgt;
+//module.exports = HospitalzationWgt;
+
+export default HospitalzationWgt;

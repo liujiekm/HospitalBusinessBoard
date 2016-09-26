@@ -6,15 +6,15 @@
  */
 
 
-import React from 'react';
+import React,{Component,PropTypes} from 'react'
 import { render, findDOMNode } from 'react-dom'
 
 import classnames from "classnames"
 import  Link  from 'react-router'
 
 
-var InspectionUEWgt = React.createClass({
-    getDefaultProps: function () {
+class InspectionUEWgt extends Component{
+    getDefaultProps() {
 
         return {
 
@@ -31,10 +31,10 @@ var InspectionUEWgt = React.createClass({
 
 
         };
-    },
+    }
 
 
-    render: function () {
+    render() {
 
         return (
 
@@ -179,6 +179,8 @@ var InspectionUEWgt = React.createClass({
         );
     }
 
-});
+}
 
-module.exports=InspectionUEWgt;
+//module.exports=InspectionUEWgt;
+
+export default InspectionUEWgt;

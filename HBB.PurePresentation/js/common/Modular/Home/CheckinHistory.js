@@ -1,7 +1,7 @@
 /**
  * Created by liu on 2016/4/20.
  */
-import React from 'react';
+import React,{Component,PropTypes} from 'react'
 import { render, findDOMNode } from 'react-dom'
 import ReactEcharts from "react-echarts-component"
 import Globle from "../../../Globle"
@@ -10,8 +10,8 @@ import echarts from 'echarts'
 
 var intervalRef;
 
-var CheckinHistory = React.createClass({
-    componentDidMount:function () {
+class CheckinHistory extends Component{
+    componentDidMount() {
 
         const chartDom = this.refs.chart;
         const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
@@ -21,9 +21,9 @@ var CheckinHistory = React.createClass({
         intervalRef=setInterval(function () {
             this.getChartData(chart)
         }.bind(this), 10000);
-    },
+    }
 
-    getChartData:function (chart) {
+    getChartData (chart) {
 
         // chart.showLoading({
         //     text: '数据读取中...', effect: 'spin', textStyle: {
@@ -51,12 +51,12 @@ var CheckinHistory = React.createClass({
             chart.hideLoading();
 
         });
-    },
-    componentWillUnmount:function () {
+    }
+    componentWillUnmount () {
         clearInterval(intervalRef);
         echarts.dispose(this.refs.chart)
-    },
-    render:function () {
+    }
+    render() {
         return (
             <div  className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size div_chart">
                 <div ref="chart" className="chart-size" />
@@ -65,6 +65,8 @@ var CheckinHistory = React.createClass({
     }
 
 
-});
+}
 
-module.exports = CheckinHistory;
+//module.exports = CheckinHistory;
+
+export default CheckinHistory;

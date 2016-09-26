@@ -1,7 +1,7 @@
 /**
  * Created by liu on 2016/4/22.
  */
-import React from 'react';
+import React,{Component,PropTypes} from 'react'
 import { render, findDOMNode } from 'react-dom'
 import { Link } from 'react-router'
 import classnames from "classnames"
@@ -11,9 +11,9 @@ import options from "../../../option"
 import echarts from 'echarts'
 
 var intervalRef;
-var SurgeryWgt=React.createClass({
+class SurgeryWgt extends Component{
 
-    componentDidMount:function () {
+    componentDidMount() {
 
         const chartDom = this.refs.chart;
         const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
@@ -23,9 +23,9 @@ var SurgeryWgt=React.createClass({
         intervalRef=setInterval(function () {
             this.getChartData(chart)
         }.bind(this), 10000);
-    },
+    }
 
-    getChartData:function (chart) {
+    getChartData(chart) {
 
         // chart.showLoading({
         //     text: '数据读取中...', effect: 'spin', textStyle: {
@@ -52,14 +52,14 @@ var SurgeryWgt=React.createClass({
             chart.hideLoading();
 
         });
-    },
+    }
 
 
-    componentWillUnmount:function () {
+    componentWillUnmount() {
         clearInterval(intervalRef);
         echarts.dispose(this.refs.chart)
-    },
-    render:function () {
+    }
+    render() {
         return (
 
 
@@ -94,8 +94,10 @@ var SurgeryWgt=React.createClass({
     }
 
 
-});
+}
 
 
 
-module.exports=SurgeryWgt;
+//module.exports=SurgeryWgt;
+
+export default SurgeryWgt;

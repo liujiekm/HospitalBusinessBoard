@@ -25,11 +25,13 @@ module.exports = {
             'webpack-dev-server/client?http://localhost:3000',
             'webpack/hot/only-dev-server',
             './js/webapp.js'
-        ]
+        ],
+        shared:['react','react-router','echarts','antd']
     },
     output: {
-        path:__dirname+'build',   //webpack HMR need absulte path
+        path:__dirname+'/build',   //webpack HMR need absulte path
         filename: '[name].js',
+        chunkFilename: '[name].chunk.js',
         publicPath:'http://localhost:3000/build/'
     },
     module: {
@@ -39,6 +41,32 @@ module.exports = {
                 exclude: /node_modules/,
                 loaders: ['react-hot','babel-loader?presets[]=es2015&presets[]=react'] //should be loaders not loader important!!
             },
+            //AdmissionDischarge
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                include: [path.resolve(__dirname, 'js/common/Modular/AdmissionDischarge')],
+                loaders: ['bundle?lazy&name=AdmissionDischarge','babel-loader?presets[]=es2015&presets[]=react']
+            },
+            //Home
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                include: [path.resolve(__dirname, 'js/common/Modular/Home')],
+                loaders: ['bundle?lazy&name=Home','babel-loader?presets[]=es2015&presets[]=react']
+            },
+            //Emergency
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                include: [path.resolve(__dirname, 'js/common/Modular/Emergency')],
+                loaders: ['bundle?lazy&name=Emergency','babel-loader?presets[]=es2015&presets[]=react']
+            },
+
+
+
+
+
             {
                 test: /\.css$/,
                 loader: ExtracTextPlugin.extract('style-loader','css-loader')
@@ -58,7 +86,7 @@ module.exports = {
 
     },
     plugins: [
-
+        new webpack.optimize.CommonsChunkPlugin('shared','shared.js'),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
 
@@ -68,6 +96,9 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery"
+        }),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
         })
     ]
 }

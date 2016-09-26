@@ -1,24 +1,24 @@
 /**
  * Created by liu on 2016/4/15.
  */
-import React from 'react';
+import React,{Component,PropTypes} from 'react'
 import { render, findDOMNode } from 'react-dom'
 
 import classnames from "classnames"
 import { Link } from 'react-router'
 
 //医生签到部件
-var CheckinWgt=React.createClass({
+class CheckinWgt extends Component{
 
-        getClass:function (warning) {
+        getClass(warning) {
 
             return classnames({
                 'lead':true,
                 'indicate-alarm':warning
 
             });
-        },
-        getDefaultProps:function () {
+        }
+        getDefaultProps () {
             return {
                 morningSignInRate:95.3,
                 morningSignInRateLow:false,
@@ -29,8 +29,8 @@ var CheckinWgt=React.createClass({
                 afternoonHasSignIn:948,
                 afternoonShouldSignIn:1000
             };
-        },
-        render:function () {
+        }
+        render() {
 
             return(
                 <div className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size wgt-margin-right">
@@ -93,6 +93,8 @@ var CheckinWgt=React.createClass({
             );
         }
 
-});
+}
 
-module.exports = CheckinWgt;
+//module.exports = CheckinWgt;
+
+export default CheckinWgt;

@@ -644,7 +644,7 @@ input:focus {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAuIwAALiMBeKU/dgAAABZ0RVh0Q3JlYXRpb24gVGltZQAwNS8yNS8xNWiKrlsAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAADUlEQVQImWNgYGDwBQAAUgBOtzTNbwAAAABJRU5ErkJggg==) repeat;
     margin-top: 20px;
     width: 100%;
-    height:365px;
+    
     overflow: hidden;
 }
 
@@ -666,6 +666,8 @@ input:focus {
 .operation-detail-content-row {
     margin-left: 5px;
     margin-right: 5px;
+        margin-bottom: 20px;
+    height: 400px;
     background-color: #F7F7F7;
 }
 

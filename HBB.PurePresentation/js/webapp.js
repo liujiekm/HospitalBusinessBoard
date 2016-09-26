@@ -4,7 +4,7 @@
 import "../lib/bootstrap/css/bootstrap.min.css"
 import "../css/layout.css"
 
-import React from 'react';
+import React, { Component, PropTypes } from 'react'
 import { render, findDOMNode } from 'react-dom'
 
 import { browserHistory, Router, Route, IndexRoute, Link ,hashHistory} from 'react-router'
@@ -23,8 +23,24 @@ import Config from "./common/Modular/Config/Config"
 import FileUploadComponenet from "./common/Modular/Config/FileUploadComponent"
 import App from "./app"
 
-var Webapp = React.createClass({
-    render:function () {
+
+
+var isReactComponent = (obj) => Boolean(obj && obj.prototype && Boolean(obj.prototype.isReactComponent));
+
+var component = (component) => {
+  return isReactComponent(component)
+    ? {component}
+    : {getComponent: (loc, cb)=> component(
+         comp=> cb(null, comp.default || comp))}
+};
+
+
+
+
+
+class Webapp extends Component{
+
+    render() {
         return (
             <div>
                 {this.props.children}
@@ -32,7 +48,7 @@ var Webapp = React.createClass({
         );
     }
 
-});
+}
 
 function hasLogin() {
     return localStorage.getItem('login') === 'true';
@@ -50,8 +66,8 @@ render((
             <IndexRoute component={Login} />
             <Route path="Login" component={Login} />
             <Route onEnter={requireAuth} path="/" component={App}>
-                <IndexRoute component={Home} />
-                <Route path="Home" component={Home} />
+                <IndexRoute {...component(Home)}/>
+                <Route path="Home" {...component(Home)}/>
                 <Route path="Inhospital" component={Inhospital} />
                 <Route path="Medicine" component={Medicine} />
                 <Route path="Operation" component={Operation} />
@@ -61,9 +77,9 @@ render((
                 <Route path="Operation" component={Operation} />
                 <Route path="DoctorCheckin" component={DoctorCheckin} />
                 <Route path="MSS" component={MSS} />
-                <Route path="AD" component={AdmissionDischarge} />
+                <Route path="AD"  {...component(Emergency)}/>
                 <Route path="OE" component={OutpatientExperience} />
-                <Route path="Emergency" component={Emergency} />
+                <Route path="Emergency" {...component(Emergency)} />
             </Route>
 
         </Route>
