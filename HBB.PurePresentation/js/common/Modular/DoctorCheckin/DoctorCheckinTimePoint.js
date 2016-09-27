@@ -2,7 +2,7 @@
  * Created by liu on 2016/4/29.
  */
 
-import React from 'react';
+import React, { Component, PropTypes } from 'react'
 import { render, findDOMNode } from 'react-dom'
 import Globle from "../../../Globle"
 import options from "../../../option"
@@ -50,14 +50,19 @@ function getTotalMinutesOfDay(jsonDate) {
 }
 
 
-var DoctorCheckinTimePoint = React.createClass({
+class DoctorCheckinTimePoint extends Component{
 
 
-    getInitialState:function () {
-        return {userID:8}
-    },
+    constructor(props)
+    {
+        super(props)
+        this.state={
+             userID:8
+        }
+    }
 
-    componentDidMount:function () {
+
+    componentDidMount() {
 
         const chartDom = this.refs.chart;
         const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
@@ -66,14 +71,14 @@ var DoctorCheckinTimePoint = React.createClass({
         this.getChartData(chart,5510);
         //chart.setOption(options.personSignInOption);
 
-    },
+    }
 
-    componentWillReceiveProps:function (nextProps) {
+    componentWillReceiveProps(nextProps) {
         const chartDom = this.refs.chart;
         const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
         this.getChartData(chart,nextProps.userID);
-    },
-    getChartData:function (chart,userId) {
+    }
+    getChartData(chart,userId) {
         options.personSignInOption.xAxis[0].data.length = 0;
         options.personSignInOption.series[0].data.length = 0;
         options.personSignInOption.series[1].data.length = 0;
@@ -95,14 +100,14 @@ var DoctorCheckinTimePoint = React.createClass({
 
 
         });
-    },
-    componentWillUnmount:function () {
+    }
+    componentWillUnmount() {
 
         echarts.dispose(this.refs.chart)
-    },
+    }
 
 
-    render:function () {
+    render() {
         return (
             <div>
                 <div className="row">
@@ -125,6 +130,8 @@ var DoctorCheckinTimePoint = React.createClass({
 
         );
     }
-});
+}
 
-module.exports=DoctorCheckinTimePoint;
+//module.exports=DoctorCheckinTimePoint;
+
+export default DoctorCheckinTimePoint;

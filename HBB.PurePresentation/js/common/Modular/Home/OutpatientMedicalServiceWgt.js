@@ -10,16 +10,7 @@ import  { Link }  from 'react-router'
 
 class OutpatientMedicalServiceWgt extends Component{
 
-    getDefaultProps() {
-        return {
-
-
-            waitingNum:498,
-            treatedNum:502
-
-        };
-
-    }
+    
     render() {
         return (
             <div className="col-md-6 col-sm-6 col-xs-6 div_nav wgt-size wgt-margin-right">
@@ -96,5 +87,8 @@ class OutpatientMedicalServiceWgt extends Component{
 
 
 //module.exports=OutpatientMedicalServiceWgt;
-
+OutpatientMedicalServiceWgt.defaultProps={
+    waitingNum:498,
+    treatedNum:502
+}
 export default OutpatientMedicalServiceWgt;

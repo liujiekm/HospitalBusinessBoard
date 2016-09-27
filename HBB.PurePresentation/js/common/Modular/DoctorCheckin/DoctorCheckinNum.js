@@ -1,7 +1,7 @@
 /**
  * Created by liu on 2016/4/29.
  */
-import React from 'react';
+import React, { Component, PropTypes } from 'react'
 import { render, findDOMNode } from 'react-dom'
 
 
@@ -10,14 +10,20 @@ import options from "../../../option"
 import echarts from "echarts"
 
 
-var DoctorCheckinNum = React.createClass({
+class DoctorCheckinNum extends Component{
 
-    getInitialState:function () {
-      return {option:options.signInChangeOption,
-                timePoint:8}
-    },
 
-    componentDidMount:function () {
+    constructor(props)
+    {
+        super(props)
+        this.state={
+            option:options.signInChangeOption,
+            timePoint:8
+        }
+    }
+
+
+    componentDidMount() {
 
         const chartDom = this.refs.chart;
         const chart = echarts.getInstanceByDom(chartDom) || echarts.init(chartDom);
@@ -31,10 +37,10 @@ var DoctorCheckinNum = React.createClass({
             this.props.handleClickTimePoint(params.name);
         }.bind(this));
 
-    },
+    }
 
 
-    getChartData:function (chart) {
+    getChartData(chart) {
         options.signInChangeOption.xAxis[0].data.length = 0;
         options.signInChangeOption.series[0].data.length = 0;
         options.signInChangeOption.series[1].data.length = 0;
@@ -61,13 +67,13 @@ var DoctorCheckinNum = React.createClass({
             chart.setOption(options.signInChangeOption);
 
         });
-    },
+    }
     
-    componentWillUnmount:function () {
+    componentWillUnmount() {
 
         echarts.dispose(this.refs.chart)
-    },
-    render:function () {
+    }
+    render() {
         return (
 
             <div>
@@ -97,6 +103,8 @@ var DoctorCheckinNum = React.createClass({
     }
 
 
-});
+}
 
-module.exports=DoctorCheckinNum;
+//module.exports=DoctorCheckinNum;
+
+export default DoctorCheckinNum;

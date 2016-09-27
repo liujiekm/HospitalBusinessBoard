@@ -1,7 +1,7 @@
 /**
  * Created by liu on 2016/4/29.
  */
-import React from 'react';
+import React, { Component, PropTypes } from 'react'
 import { render, findDOMNode } from 'react-dom'
 import Globle from "../../../Globle"
 
@@ -9,16 +9,18 @@ import Globle from "../../../Globle"
 import uuid from "uuid";
 import DoctorListItem from "./DoctorListItem"
 
-var DoctorList=React.createClass({
+class DoctorList extends Component{
 
-
-    getInitialState:function () {
-      
-        return {regItems:[],unRegItems:[]};
-    },
+    constructor(props)
+    {
+        super(props)
+        this.state={
+            regItems:[],unRegItems:[]
+        }
+    }
 
     //获取已签到医生
-    getRegisterList:function (timePoint) {
+    getRegisterList(timePoint) {
         var items =[];
         var that = this;
         $.getJSON(Globle.baseUrl+'DCI/RDI/' + timePoint,function (data) {
@@ -28,10 +30,10 @@ var DoctorList=React.createClass({
 
             that.setState({regItems:items});
         });
-    },
+    }
 
     //获取未签到
-    getUnregList:function (timePoint) {
+    getUnregList(timePoint) {
         var items =[];
         var that=this;
         $.getJSON(Globle.baseUrl + 'DCI/URDI/' + timePoint,function (data) {
@@ -41,24 +43,24 @@ var DoctorList=React.createClass({
 
             that.setState({unRegItems:items});
         });
-    },
+    }
 
-    componentWillReceiveProps:function (nextProps) {
+    componentWillReceiveProps(nextProps) {
         this.getRegisterList(nextProps.timePoint);
         this.getUnregList(nextProps.timePoint);
-    },
+    }
 
-    componentDidMount:function () {
+    componentDidMount() {
 
         this.getRegisterList(8);
         this.getUnregList(8);
-    },
+    }
 
 
 
 
 
-    render:function () {
+    render() {
 
         var tableRegItems=[];
         var that = this;
@@ -130,6 +132,8 @@ var DoctorList=React.createClass({
     }
 
 
-});
+}
 
-module.exports= DoctorList;
+//module.exports= DoctorList;
+
+export default DoctorList;

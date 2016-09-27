@@ -9,19 +9,7 @@ import { Link } from 'react-router'
 
 class HospitalzationWgt extends Component{
 
-    getDefaultProps() {
-
-        return{
-            hospitalizedNum:2803,
-            leaveYeaterday:503,
-            IncomeYeaterday:620,
-            ratedBeds:60,
-            addedBeds:54,
-            virtualBeds:12
-
-        };
-
-    }
+    
 
 
     render() {
@@ -94,5 +82,17 @@ class HospitalzationWgt extends Component{
 
 
 //module.exports = HospitalzationWgt;
+HospitalzationWgt.defaultProps={
+            hospitalizedNum:2803,
+            leaveYeaterday:503,
+            IncomeYeaterday:620,
+            ratedBeds:60,
+            addedBeds:54,
+            virtualBeds:12
+
+};
+
+    
+
 
 export default HospitalzationWgt;

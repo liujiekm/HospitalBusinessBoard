@@ -1,7 +1,7 @@
 /**
  * Created by liu on 2016/4/29.
  */
-import React from 'react';
+import React, { Component, PropTypes } from 'react'
 import { render, findDOMNode } from 'react-dom'
 
 import DoctorCheckinNum from  "./DoctorCheckinNum"
@@ -12,28 +12,30 @@ import DoctorList from "./DoctorList"
 import RightTitle from "../../component/RightTitle"
 
 
-var DoctorCheckin= React.createClass({
-
-    getInitialState:function () {
-
-        return {
+class DoctorCheckin extends Component{
 
 
-            userID:8,
+    constructor(props)
+    {
+        super(props)
+        this.state={
+             userID:8,
             timePoint:9
-        };
-    },
+        }
+    }
+
+
 
 
     //医生签到、排班时间条目点击事件
-    handleItemClick:function (userId) {
+    handleItemClick(userId) {
         this.setState({userID:userId});
-    },
-    handleClickTimePoint:function (timePointString) {
+    }
+    handleClickTimePoint(timePointString) {
         var timePoint = parseInt(timePointString.substr(0,2));
         this.setState({timePoint:timePoint});
-    },
-    render:function () {
+    }
+    render() {
         return (
 
     <div className="detail-content">
@@ -79,6 +81,8 @@ var DoctorCheckin= React.createClass({
     }
 
 
-});
+}
 
-module.exports=DoctorCheckin;
+//module.exports=DoctorCheckin;
+
+export default DoctorCheckin;

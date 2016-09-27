@@ -7,7 +7,7 @@ import React, { Component, PropTypes } from 'react'
 import ADNum from './ADNum'
 import EmptyBedNum from './EmptyBedNum'
 import ADList from './ADList'
-
+import Globle from "../../../Globle"
 import RightTitle from '../../component/RightTitle'
 
 class AdmissionDischarge extends Component {

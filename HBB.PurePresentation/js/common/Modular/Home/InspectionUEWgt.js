@@ -14,24 +14,7 @@ import  Link  from 'react-router'
 
 
 class InspectionUEWgt extends Component{
-    getDefaultProps() {
-
-        return {
-
-            xray:1.62,
-
-            ct:7.5,
-
-            mri:5.1,
-
-            BUltrasonic:2.9,
-
-            endoscope:9.4
-
-
-
-        };
-    }
+    
 
 
     render() {
@@ -182,5 +165,22 @@ class InspectionUEWgt extends Component{
 }
 
 //module.exports=InspectionUEWgt;
+
+
+InspectionUEWgt.defaultProps={
+
+
+            xray:1.62,
+
+            ct:7.5,
+
+            mri:5.1,
+
+            BUltrasonic:2.9,
+
+            endoscope:9.4
+
+}
+
 
 export default InspectionUEWgt;

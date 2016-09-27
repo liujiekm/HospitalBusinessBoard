@@ -45,14 +45,14 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                include: [path.resolve(__dirname, 'js/common/Modular/AdmissionDischarge')],
+                include: [path.resolve(__dirname, 'js/common/Modular/AdmissionDischarge/AdmissionDischarge')],
                 loaders: ['bundle?lazy&name=AdmissionDischarge','babel-loader?presets[]=es2015&presets[]=react']
             },
             //Home
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                include: [path.resolve(__dirname, 'js/common/Modular/Home')],
+                include: [path.resolve(__dirname, 'js/common/Modular/Home/Home')],
                 loaders: ['bundle?lazy&name=Home','babel-loader?presets[]=es2015&presets[]=react']
             },
             //Emergency
@@ -62,6 +62,69 @@ module.exports = {
                 include: [path.resolve(__dirname, 'js/common/Modular/Emergency')],
                 loaders: ['bundle?lazy&name=Emergency','babel-loader?presets[]=es2015&presets[]=react']
             },
+            //DoctorCheckin
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                include: [path.resolve(__dirname, 'js/common/Modular/DoctorCheckin/DoctorCheckin.js')],
+                loaders: ['bundle?lazy&name=DoctorCheckin','babel-loader?presets[]=es2015&presets[]=react']
+            },
+            //Inhospital
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                include: [path.resolve(__dirname, 'js/common/Modular/Inhospital/Inhospital.js')],
+                loaders: ['bundle?lazy&name=Inhospital','babel-loader?presets[]=es2015&presets[]=react']
+            },
+            //MedicalServiceSituation
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                include: [path.resolve(__dirname, 'js/common/Modular/MedicalServiceSituation/MedicalServiceSituation.js')],
+                loaders: ['bundle?lazy&name=MedicalServiceSituation','babel-loader?presets[]=es2015&presets[]=react']
+            },
+            //Medicine
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                include: [path.resolve(__dirname, 'js/common/Modular/Medicine/Medicine.js')],
+                loaders: ['bundle?lazy&name=Medicine','babel-loader?presets[]=es2015&presets[]=react']
+            },
+            //Operation
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                include: [path.resolve(__dirname, 'js/common/Modular/Operation/Operation.js')],
+                loaders: ['bundle?lazy&name=Operation','babel-loader?presets[]=es2015&presets[]=react']
+            },
+            //Outpatient
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                include: [path.resolve(__dirname, 'js/common/Modular/Outpatient/Outpatient.js')],
+                loaders: ['bundle?lazy&name=Outpatient','babel-loader?presets[]=es2015&presets[]=react']
+            },
+            //OutpatientExperience
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                include: [path.resolve(__dirname, 'js/common/Modular/OutpatientExperience/OutpatientExperience.js')],
+                loaders: ['bundle?lazy&name=OutpatientExperience','babel-loader?presets[]=es2015&presets[]=react']
+            },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

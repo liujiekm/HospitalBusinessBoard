@@ -68,17 +68,17 @@ render((
             <Route onEnter={requireAuth} path="/" component={App}>
                 <IndexRoute {...component(Home)}/>
                 <Route path="Home" {...component(Home)}/>
-                <Route path="Inhospital" component={Inhospital} />
-                <Route path="Medicine" component={Medicine} />
-                <Route path="Operation" component={Operation} />
-                <Route path="Outpatient" component={Outpatient} />
-                <Route path="Config" component={Config} />
+                <Route path="Inhospital" {...component(Inhospital)}/>
+                <Route path="Medicine" {...component(Medicine)}/>
+                <Route path="Operation" {...component(Operation)}/>
+                <Route path="Outpatient" {...component(Outpatient)}/>
+                <Route path="Config" {...component(Config)}/>
                 <Route path="FileUpload" component={FileUploadComponenet} />
-                <Route path="Operation" component={Operation} />
-                <Route path="DoctorCheckin" component={DoctorCheckin} />
-                <Route path="MSS" component={MSS} />
-                <Route path="AD"  {...component(Emergency)}/>
-                <Route path="OE" component={OutpatientExperience} />
+                <Route path="Operation"  {...component(Operation)}/>
+                <Route path="DoctorCheckin"  {...component(DoctorCheckin)}/>
+                <Route path="MSS"  {...component(MSS)}/>
+                <Route path="AD"  {...component(AdmissionDischarge)}/>
+                <Route path="OE"  {...component(OutpatientExperience)}/>
                 <Route path="Emergency" {...component(Emergency)} />
             </Route>
 

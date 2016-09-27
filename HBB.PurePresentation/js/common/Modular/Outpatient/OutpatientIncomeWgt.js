@@ -8,13 +8,7 @@ import classnames from "classnames"
 import  Link  from 'react-router'
 
 var OutpatientIncomeWgt = React.createClass({
-    getDefaultProps:function () {
-        return {
 
-            outpatientIncomingYesterday:647,
-            outpatientIncomingCurrent:598
-        };
-    },
     render :function () {
         return (
 
@@ -63,5 +57,14 @@ var OutpatientIncomeWgt = React.createClass({
     
     
 });
+
+
+OutpatientIncomeWgt.defaultProps={
+
+    outpatientIncomingYesterday:647,
+    outpatientIncomingCurrent:598
+
+}
+
 
 module.exports=OutpatientIncomeWgt;

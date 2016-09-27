@@ -10,15 +10,9 @@ import { Link } from 'react-router'
 class EmergencyWgt extends Component{
 
 
-    getDefaultProps() {
-      return {
 
 
-          severeObservingQuanty:39,
-          firstAidQuanty:5
-      };
-    }
-
+    
     render() {
         return(
 
@@ -88,5 +82,8 @@ class EmergencyWgt extends Component{
 
 
 //module.exports = EmergencyWgt;
-
+EmergencyWgt.defaultProps={
+          severeObservingQuanty:39,
+          firstAidQuanty:5
+}
 export default EmergencyWgt;

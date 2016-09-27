@@ -18,18 +18,10 @@ class CheckinWgt extends Component{
 
             });
         }
-        getDefaultProps () {
-            return {
-                morningSignInRate:95.3,
-                morningSignInRateLow:false,
-                morningHasSignIn:953,
-                morningShouldSignIn:1000,
-                afternoonSignInRate:94.8,
-                afternoonSignInRateLow:false,
-                afternoonHasSignIn:948,
-                afternoonShouldSignIn:1000
-            };
-        }
+
+       
+
+
         render() {
 
             return(
@@ -94,7 +86,16 @@ class CheckinWgt extends Component{
         }
 
 }
-
+CheckinWgt.defaultProps = {
+              morningSignInRate:95.3,
+                morningSignInRateLow:false,
+                morningHasSignIn:953,
+                morningShouldSignIn:1000,
+                afternoonSignInRate:94.8,
+                afternoonSignInRateLow:false,
+                afternoonHasSignIn:948,
+                afternoonShouldSignIn:1000
+        }
 //module.exports = CheckinWgt;
 
 export default CheckinWgt;

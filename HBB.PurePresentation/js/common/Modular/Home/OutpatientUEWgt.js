@@ -11,16 +11,7 @@ import  {Link}  from 'react-router'
 
 
 class OutpatientUEWgt extends Component{
-    getDefaultProps() {
-        return {
-            appointmentLastMonth:1.62,
-            awaitingDiagnosis:7.5,
-            diagnosis:5.1,
-            payFees:2.9,
-            medicineReceiving:9.4
-        };
-    }
-
+    
 
    render() {
 
@@ -169,5 +160,16 @@ class OutpatientUEWgt extends Component{
 }
 
 //module.exports=OutpatientUEWgt;
+
+OutpatientUEWgt.defaultProps={
+
+            appointmentLastMonth:1.62,
+            awaitingDiagnosis:7.5,
+            diagnosis:5.1,
+            payFees:2.9,
+            medicineReceiving:9.4
+
+}
+
 
 export default OutpatientUEWgt;
